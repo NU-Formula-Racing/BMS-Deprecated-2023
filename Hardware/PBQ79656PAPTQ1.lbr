@@ -143,7 +143,7 @@
 </package>
 </packages>
 <symbols>
-<symbol name="PBQ79616PAPTQ1">
+<symbol name="PBQ79656PAPTQ1">
 <wire x1="5.08" y1="7.62" x2="50.8" y2="7.62" width="0.254" layer="94"/>
 <wire x1="50.8" y1="-45.72" x2="50.8" y2="7.62" width="0.254" layer="94"/>
 <wire x1="50.8" y1="-45.72" x2="5.08" y2="-45.72" width="0.254" layer="94"/>
@@ -160,7 +160,7 @@
 <pin name="CB13" x="0" y="-17.78" length="middle" direction="io" rot="R0"/>
 <pin name="VC13" x="0" y="-20.32" length="middle" direction="io" rot="R0"/>
 <pin name="CB12" x="0" y="-22.86" length="middle" direction="io" rot="R0"/>
-<pin name="1VC12" x="0" y="-25.4" length="middle" direction="io" rot="R0"/>
+<pin name="VC12" x="0" y="-25.4" length="middle" direction="io" rot="R0"/>
 <pin name="CB11" x="0" y="-27.94" length="middle" direction="io" rot="R0"/>
 <pin name="VC11" x="0" y="-30.48" length="middle" direction="io" rot="R0"/>
 <pin name="CB10" x="0" y="-33.02" length="middle" direction="io" rot="R0"/>
@@ -218,12 +218,93 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="PBQ79616PAPTQ1" prefix="IC">
-<description>&lt;b&gt;BQ7961x-Q1 Family of 12S, 14S, 16S Precision Automotive Battery Monitor, Balancer and Integrated Hardware Protector with up to SafeTITM-26262 ASIL-D Compliance&lt;/b&gt;&lt;p&gt;
+<deviceset name="PBQ79656PAPTQ1" prefix="IC">
+<description>&lt;b&gt;BQ7965x-Q1 Family of 12S, 14S, 16S Precision Automotive Battery Monitor, Balancer and Integrated Hardware Protector with up to SafeTITM-26262 ASIL-D Compliance&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.ti.com/lit/ds/symlink/bq79616-q1.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
-<gate name="G$1" symbol="PBQ79616PAPTQ1" x="0" y="0"/>
+<gate name="G$1" symbol="PBQ79656PAPTQ1" x="0" y="0"/>
 </gates>
+<devices>
+<device name="" package="QFP50P1200X1200X120-65N">
+<connects>
+<connect gate="G$1" pin="BAT" pad="1"/>
+<connect gate="G$1" pin="CB16" pad="2"/>
+<connect gate="G$1" pin="VC16" pad="3"/>
+<connect gate="G$1" pin="CB15" pad="4"/>
+<connect gate="G$1" pin="VC15" pad="5"/>
+<connect gate="G$1" pin="CB14" pad="6"/>
+<connect gate="G$1" pin="VC14" pad="7"/>
+<connect gate="G$1" pin="CB13" pad="8"/>
+<connect gate="G$1" pin="VC13" pad="9"/>
+<connect gate="G$1" pin="CB12" pad="10"/>
+<connect gate="G$1" pin="VC12" pad="11"/>
+<connect gate="G$1" pin="CB11" pad="12"/>
+<connect gate="G$1" pin="VC11" pad="13"/>
+<connect gate="G$1" pin="CB10" pad="14"/>
+<connect gate="G$1" pin="VC10" pad="15"/>
+<connect gate="G$1" pin="CB9" pad="16"/>
+<connect gate="G$1" pin="VC9" pad="17"/>
+<connect gate="G$1" pin="CB8" pad="18"/>
+<connect gate="G$1" pin="VC8" pad="19"/>
+<connect gate="G$1" pin="CB7" pad="20"/>
+<connect gate="G$1" pin="VC7" pad="21"/>
+<connect gate="G$1" pin="CB6" pad="22"/>
+<connect gate="G$1" pin="VC6" pad="23"/>
+<connect gate="G$1" pin="CB5" pad="24"/>
+<connect gate="G$1" pin="VC5" pad="25"/>
+<connect gate="G$1" pin="CB4" pad="26"/>
+<connect gate="G$1" pin="VC4" pad="27"/>
+<connect gate="G$1" pin="CB3" pad="28"/>
+<connect gate="G$1" pin="VC3" pad="29"/>
+<connect gate="G$1" pin="CB2" pad="30"/>
+<connect gate="G$1" pin="VC2" pad="31"/>
+<connect gate="G$1" pin="CB1" pad="32"/>
+<connect gate="G$1" pin="VC1" pad="33"/>
+<connect gate="G$1" pin="CB0" pad="34"/>
+<connect gate="G$1" pin="VC0" pad="35"/>
+<connect gate="G$1" pin="REFHM" pad="36"/>
+<connect gate="G$1" pin="REFHP" pad="37"/>
+<connect gate="G$1" pin="AVDD" pad="38"/>
+<connect gate="G$1" pin="AVSS" pad="39"/>
+<connect gate="G$1" pin="COMLP" pad="40"/>
+<connect gate="G$1" pin="COMLN" pad="41"/>
+<connect gate="G$1" pin="COMHN" pad="42"/>
+<connect gate="G$1" pin="COMHP" pad="43"/>
+<connect gate="G$1" pin="NEG5V" pad="44"/>
+<connect gate="G$1" pin="CVDD" pad="45"/>
+<connect gate="G$1" pin="CVSS" pad="46"/>
+<connect gate="G$1" pin="LDOIN" pad="47"/>
+<connect gate="G$1" pin="NPNB" pad="48"/>
+<connect gate="G$1" pin="DVDD" pad="49"/>
+<connect gate="G$1" pin="DVSS" pad="50"/>
+<connect gate="G$1" pin="TSREF" pad="51"/>
+<connect gate="G$1" pin="RX" pad="52"/>
+<connect gate="G$1" pin="TX" pad="53"/>
+<connect gate="G$1" pin="GPIO8" pad="54"/>
+<connect gate="G$1" pin="GPIO7" pad="55"/>
+<connect gate="G$1" pin="GPIO6" pad="56"/>
+<connect gate="G$1" pin="GPIO5" pad="57"/>
+<connect gate="G$1" pin="GPIO4" pad="58"/>
+<connect gate="G$1" pin="GPIO3" pad="59"/>
+<connect gate="G$1" pin="GPIO2" pad="60"/>
+<connect gate="G$1" pin="GPIO1" pad="61"/>
+<connect gate="G$1" pin="NFAULT" pad="62"/>
+<connect gate="G$1" pin="BBN(SRN)" pad="63"/>
+<connect gate="G$1" pin="BBP(SRP)" pad="64"/>
+<connect gate="G$1" pin="AVSS?" pad="65"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="Mouser_Part_Number" value="" constant="no"/>
+<attribute name="Mouser_Price-Stock" value="" constant="no"/>
+<attribute name="Manufacturer_Name" value="Texas Instruments" constant="no"/>
+<attribute name="Manufacturer_Part_Number" value="PBQ79656PAPTQ1" constant="no"/>
+<attribute name="Description" value="BQ7965x-Q1 Family of 12S, 14S, 16S Precision Automotive Battery Monitor, Balancer and Integrated Hardware Protector with up to SafeTITM-26262 ASIL-D Compliance" constant="no"/>
+<attribute name="Height" value="1.2mm" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
 </deviceset>
 </devicesets>
 </library>
