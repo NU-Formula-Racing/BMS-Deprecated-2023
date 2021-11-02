@@ -137,9 +137,9 @@
 #define DIE_ID3 0x503
 #define DIE_ID4 0x504
 #define DIE_ID5 0x505
-#define DIE_ID6 0x506
-#define DIE_ID7 0x507
-#define DIE_ID8 0x508
+#define CURRENT_HI 0x506 //DIE_ID6
+#define CURRENT_MID 0x507 //DIE_ID7
+#define CURRENT_LO 0x508 //DIE_ID8
 #define DIE_ID9 0x509
 #define DIE_ID [0x501, 0x502, 0x503, 0x504, 0x505, 0x506, 0x507, 0x508, 0x509]
 #define CUST_CRC_RSLT_HI 0x50C
@@ -228,8 +228,8 @@
 #define VCELL2_LO 0x585
 #define VCELL1_HI 0x586
 #define VCELL1_LO 0x587
-#define BUSBAR_HI 0x588
-#define BUSBAR_LO 0x589
+#define MAIN_CURRENT_HI 0x588 //BUSBAR_HI
+#define MAIN_CURRENT_LO 0x589 //BUSBAR_LO
 #define TSREF_HI 0x58C
 #define TSREF_LO 0x58D
 #define GPIO1_HI 0x58E
