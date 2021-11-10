@@ -6712,6 +6712,15 @@ Source: http://www.molex.com</description>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="RVC11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="RVC12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="CCB16" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
+<part name="CCB17" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
+<part name="RVC13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="RVC14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="RVC15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
+<part name="CCB18" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220pf"/>
+<part name="CCB19" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220pf"/>
 </parts>
 <sheets>
 <sheet>
@@ -7076,6 +7085,42 @@ Source: http://www.molex.com</description>
 <instance part="R8" gate="G$1" x="243.84" y="76.2" smashed="yes">
 <attribute name="NAME" x="240.03" y="77.6986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="72.898" size="1.778" layer="96"/>
+</instance>
+<instance part="RVC11" gate="G$1" x="162.56" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="161.0614" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="165.862" y="-6.35" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RVC12" gate="G$1" x="165.1" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="163.6014" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="168.402" y="-6.35" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="CCB16" gate="G$1" x="162.56" y="-12.7" smashed="yes" rot="R180">
+<attribute name="NAME" x="161.036" y="-13.081" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="161.036" y="-8.001" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB17" gate="G$1" x="165.1" y="-12.7" smashed="yes" rot="R180">
+<attribute name="NAME" x="163.576" y="-13.081" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="163.576" y="-8.001" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RVC13" gate="G$1" x="162.56" y="-20.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="161.0614" y="-24.13" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="165.862" y="-24.13" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RVC14" gate="G$1" x="165.1" y="-20.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="163.6014" y="-24.13" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="168.402" y="-24.13" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RVC15" gate="G$1" x="165.1" y="5.08" smashed="yes" rot="R180">
+<attribute name="NAME" x="168.91" y="3.5814" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="168.91" y="8.382" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB18" gate="G$1" x="160.02" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="160.401" y="6.096" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="155.321" y="6.096" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="CCB19" gate="G$1" x="170.18" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="170.561" y="6.096" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="165.481" y="6.096" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
 <busses>
@@ -7692,13 +7737,23 @@ Source: http://www.molex.com</description>
 <pinref part="CCB15" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="38.1" x2="198.12" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="35.56" x2="198.12" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="20.32" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="20.32" x2="175.26" y2="20.32" width="0.1524" layer="91"/>
 <junction x="198.12" y="35.56"/>
 <junction x="172.72" y="20.32"/>
 <pinref part="IC1" gate="G$1" pin="AVSS?"/>
+<wire x1="175.26" y1="20.32" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="76.2" x2="198.12" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="76.2" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
 <junction x="198.12" y="38.1"/>
+<pinref part="CCB18" gate="G$1" pin="2"/>
+<wire x1="154.94" y1="7.62" x2="154.94" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="CCB19" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="10.16" x2="172.72" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="10.16" x2="172.72" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="7.62" x2="175.26" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="7.62" x2="175.26" y2="20.32" width="0.1524" layer="91"/>
+<junction x="172.72" y="7.62"/>
+<junction x="175.26" y="20.32"/>
 </segment>
 </net>
 <net name="N$46" class="0">
@@ -7877,6 +7932,56 @@ Source: http://www.molex.com</description>
 <junction x="228.6" y="68.58"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="76.2" x2="238.76" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$59" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="COMHN"/>
+<wire x1="162.56" y1="27.94" x2="162.56" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="RVC11" gate="G$1" pin="2"/>
+<pinref part="RVC15" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="7.62" x2="162.56" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="5.08" x2="160.02" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="7.62" x2="162.56" y2="7.62" width="0.1524" layer="91"/>
+<junction x="162.56" y="7.62"/>
+<pinref part="CCB18" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$60" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="COMHP"/>
+<wire x1="165.1" y1="27.94" x2="165.1" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="RVC12" gate="G$1" pin="2"/>
+<pinref part="RVC15" gate="G$1" pin="1"/>
+<wire x1="165.1" y1="7.62" x2="165.1" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="5.08" x2="170.18" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="7.62" x2="165.1" y2="7.62" width="0.1524" layer="91"/>
+<junction x="165.1" y="7.62"/>
+<pinref part="CCB19" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$61" class="0">
+<segment>
+<pinref part="CCB16" gate="G$1" pin="2"/>
+<pinref part="RVC11" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$62" class="0">
+<segment>
+<pinref part="CCB17" gate="G$1" pin="2"/>
+<pinref part="RVC12" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$63" class="0">
+<segment>
+<pinref part="RVC13" gate="G$1" pin="2"/>
+<pinref part="CCB16" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$64" class="0">
+<segment>
+<pinref part="RVC14" gate="G$1" pin="2"/>
+<pinref part="CCB17" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
