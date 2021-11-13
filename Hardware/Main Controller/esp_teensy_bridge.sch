@@ -6636,6 +6636,140 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26925/1" library_version="1">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VCC" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="dc-dc-converter" urn="urn:adsk.eagle:library:208">
+<description>&lt;b&gt;DC-DC Converters&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="NME" urn="urn:adsk.eagle:footprint:12288/1" library_version="2">
+<description>&lt;b&gt;DC-DC CONVERTER&lt;/b&gt;</description>
+<wire x1="-1.143" y1="5.842" x2="4.953" y2="5.842" width="0.1524" layer="21"/>
+<wire x1="4.953" y1="5.842" x2="4.953" y2="-5.842" width="0.1524" layer="21"/>
+<wire x1="4.953" y1="-5.842" x2="-1.143" y2="-5.842" width="0.1524" layer="21"/>
+<wire x1="-1.143" y1="-5.842" x2="-1.143" y2="-4.572" width="0.1524" layer="21"/>
+<wire x1="-1.143" y1="-4.572" x2="-1.143" y2="-3.048" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="4.572" x2="-1.143" y2="5.842" width="0.1524" layer="21"/>
+<wire x1="-1.143" y1="-2.032" x2="-1.143" y2="-0.508" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="-3.048" x2="-1.143" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="-1.143" y1="-0.508" x2="-1.143" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-1.143" y1="0.508" x2="-1.143" y2="2.032" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="2.032" x2="-1.143" y2="3.048" width="0.1524" layer="21"/>
+<wire x1="-1.143" y1="3.048" x2="-1.143" y2="4.572" width="0.1524" layer="51"/>
+<circle x="0" y="5.08" radius="0.254" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="3.81" drill="0.8128" shape="long"/>
+<pad name="2" x="0" y="1.27" drill="0.8128" shape="long"/>
+<pad name="3" x="0" y="-1.27" drill="0.8128" shape="long"/>
+<pad name="4" x="0" y="-3.81" drill="0.8128" shape="long"/>
+<text x="-1.143" y="6.223" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.048" y="-5.08" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="4.572" y="-5.08" size="1.016" layer="21" ratio="12" rot="R90">DC-DC</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="NME" urn="urn:adsk.eagle:package:12313/1" type="box" library_version="2">
+<description>DC-DC CONVERTER</description>
+<packageinstances>
+<packageinstance name="NME"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="DC+" urn="urn:adsk.eagle:symbol:12287/1" library_version="2">
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-10.16" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="5.08" width="0.4064" layer="94"/>
+<text x="-10.16" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-8.636" y="-6.731" size="1.27" layer="94">DC/DC CONVERTER</text>
+<pin name="+VIN" x="-12.7" y="2.54" length="short" direction="pas"/>
+<pin name="-VIN" x="-12.7" y="-2.54" length="short" direction="pas"/>
+<pin name="+VOUT" x="12.7" y="2.54" length="short" direction="pas" rot="R180"/>
+<pin name="-VOUT" x="12.7" y="-2.54" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NME" urn="urn:adsk.eagle:component:12326/2" prefix="DC" uservalue="yes" library_version="2">
+<description>&lt;b&gt;DC-DC CONVERTER&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="DC+" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NME">
+<connects>
+<connect gate="G$1" pin="+VIN" pad="2"/>
+<connect gate="G$1" pin="+VOUT" pad="4"/>
+<connect gate="G$1" pin="-VIN" pad="1"/>
+<connect gate="G$1" pin="-VOUT" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:12313/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="C &amp; D TECHNOLOGIES, INC" constant="no"/>
+<attribute name="MPN" value="NME1205D" constant="no"/>
+<attribute name="OC_FARNELL" value="1021466" constant="no"/>
+<attribute name="OC_NEWARK" value="98B8198" constant="no"/>
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6653,7 +6787,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.1μF"/>
 <part name="C3" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="0.22uF"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="100k ohms"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="10ohm"/>
+<part name="TME1205S" library="dc-dc-converter" library_urn="urn:adsk.eagle:library:208" deviceset="NME" device="" package3d_urn="urn:adsk.eagle:package:12313/1"/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C5" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.22μF"/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="12v"/>
 <part name="C4" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.1μF"/>
 </parts>
 <sheets>
@@ -6685,40 +6822,28 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <attribute name="NAME" x="-13.97" y="67.5386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-8.89" y="67.818" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="10.16" y="63.5" smashed="yes">
-<attribute name="NAME" x="6.35" y="64.9986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="11.43" y="65.278" size="1.778" layer="96"/>
+<instance part="TME1205S" gate="G$1" x="-30.48" y="111.76" smashed="yes">
+<attribute name="NAME" x="-40.64" y="117.475" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-40.64" y="101.6" size="1.778" layer="96"/>
 </instance>
-<instance part="C4" gate="G$1" x="10.16" y="71.12" smashed="yes" rot="R270">
-<attribute name="NAME" x="2.921" y="72.136" size="1.778" layer="95"/>
-<attribute name="VALUE" x="8.001" y="74.676" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="-30.48" y="96.52" smashed="yes">
+<attribute name="VALUE" x="-33.02" y="93.98" size="1.778" layer="96"/>
+</instance>
+<instance part="C5" gate="G$1" x="-10.16" y="114.3" smashed="yes">
+<attribute name="NAME" x="-8.636" y="114.681" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-8.636" y="109.601" size="1.778" layer="96"/>
+</instance>
+<instance part="P+1" gate="VCC" x="-76.2" y="121.92" smashed="yes">
+<attribute name="VALUE" x="-78.74" y="119.38" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C4" gate="G$1" x="-66.04" y="109.22" smashed="yes">
+<attribute name="NAME" x="-64.516" y="109.601" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-64.516" y="104.521" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="DAISY_CHAIN" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="COMHP"/>
-<wire x1="-15.24" y1="58.42" x2="-5.08" y2="58.42" width="0.1524" layer="91"/>
-<label x="-2.54" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="COMHN"/>
-<wire x1="-15.24" y1="55.88" x2="-5.08" y2="55.88" width="0.1524" layer="91"/>
-<label x="-2.54" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="COMLN"/>
-<wire x1="-15.24" y1="53.34" x2="-5.08" y2="53.34" width="0.1524" layer="91"/>
-<label x="-2.54" y="53.34" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="COMLP"/>
-<wire x1="-15.24" y1="50.8" x2="-5.08" y2="50.8" width="0.1524" layer="91"/>
-<label x="-2.54" y="50.8" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>
@@ -6771,11 +6896,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="0" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="71.12" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
-<label x="15.24" y="71.12" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="SCLK"/>
 <wire x1="-63.5" y1="53.34" x2="-68.58" y2="53.34" width="0.1524" layer="91"/>
 <label x="-73.66" y="53.34" size="1.778" layer="95"/>
@@ -6789,6 +6909,26 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="IC1" gate="G$1" pin="NCS"/>
 <wire x1="-63.5" y1="50.8" x2="-68.58" y2="50.8" width="0.1524" layer="91"/>
 <label x="-73.66" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TME1205S" gate="G$1" pin="-VIN"/>
+<wire x1="-50.8" y1="109.22" x2="-43.18" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="109.22" x2="-50.8" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="99.06" x2="-30.48" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="99.06" x2="-12.7" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<junction x="-30.48" y="99.06"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="-66.04" y1="104.14" x2="-66.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="99.06" x2="-50.8" y2="99.06" width="0.1524" layer="91"/>
+<junction x="-50.8" y="99.06"/>
+<pinref part="TME1205S" gate="G$1" pin="-VOUT"/>
+<wire x1="-17.78" y1="109.22" x2="-12.7" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="109.22" x2="-12.7" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="99.06" x2="-10.16" y2="99.06" width="0.1524" layer="91"/>
+<junction x="-12.7" y="99.06"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="-10.16" y1="99.06" x2="-10.16" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NCS/CS" class="0">
@@ -6824,23 +6964,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="INH"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="BAT"/>
-<wire x1="-15.24" y1="63.5" x2="5.08" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="5.08" y1="71.12" x2="5.08" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<junction x="5.08" y="63.5"/>
-</segment>
-</net>
-<net name="EXT_PWR" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="63.5" x2="17.78" y2="63.5" width="0.1524" layer="91"/>
-<label x="15.24" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX_ESP" class="0">
@@ -6889,6 +7012,46 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="IC1" gate="G$1" pin="MOSI/RX"/>
 <wire x1="-63.5" y1="58.42" x2="-76.2" y2="58.42" width="0.1524" layer="91"/>
 <label x="-91.44" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VIN"/>
+<wire x1="73.66" y1="106.68" x2="73.66" y2="111.76" width="0.1524" layer="91"/>
+<label x="73.66" y="111.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="VIN"/>
+<wire x1="45.72" y1="-33.02" x2="40.64" y2="-33.02" width="0.1524" layer="91"/>
+<label x="35.56" y="-33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TME1205S" gate="G$1" pin="+VOUT"/>
+<wire x1="-17.78" y1="114.3" x2="-15.24" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="114.3" x2="-15.24" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="-15.24" y1="116.84" x2="-10.16" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="116.84" x2="2.54" y2="116.84" width="0.1524" layer="91"/>
+<junction x="-10.16" y="116.84"/>
+<label x="5.08" y="116.84" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<wire x1="-76.2" y1="119.38" x2="-76.2" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="TME1205S" gate="G$1" pin="+VIN"/>
+<wire x1="-76.2" y1="114.3" x2="-66.04" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="-66.04" y1="114.3" x2="-43.18" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="111.76" x2="-66.04" y2="114.3" width="0.1524" layer="91"/>
+<junction x="-66.04" y="114.3"/>
+<label x="-76.2" y="109.22" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="BAT"/>
+<wire x1="-15.24" y1="63.5" x2="-12.7" y2="63.5" width="0.1524" layer="91"/>
+<label x="-12.7" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
