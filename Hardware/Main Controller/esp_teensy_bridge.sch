@@ -814,24 +814,6 @@ DWG NO. 3030</description>
 <wire x1="104.14" y1="88.9" x2="104.14" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<wire x1="134.62" y1="-17.78" x2="134.62" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="28-RX7"/>
-<wire x1="134.62" y1="83.82" x2="93.98" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="IO17"/>
-<wire x1="81.28" y1="-17.78" x2="134.62" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="29-TX7"/>
-<wire x1="93.98" y1="81.28" x2="129.54" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="IO16"/>
-<wire x1="81.28" y1="-20.32" x2="129.54" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="-20.32" x2="129.54" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="5V" class="0">
 <segment>
 <wire x1="-7.62" y1="63.5" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
@@ -851,6 +833,15 @@ DWG NO. 3030</description>
 <wire x1="-15.24" y1="63.5" x2="-10.16" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="63.5" x2="-10.16" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="68.58" x2="5.08" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="11-MOSI/CTX1"/>
+<wire x1="93.98" y1="71.12" x2="114.3" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="71.12" x2="114.3" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="IO19"/>
+<wire x1="114.3" y1="-10.16" x2="81.28" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
