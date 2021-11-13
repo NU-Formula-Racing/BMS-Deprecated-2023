@@ -6770,6 +6770,156 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="con-molex" urn="urn:adsk.eagle:library:165">
+<description>&lt;b&gt;Molex Connectors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="5566-2" urn="urn:adsk.eagle:footprint:8078209/1" library_version="5">
+<description>&lt;b&gt;Mini-Fit Jr.™ Vertical Header, 4.20mm Pitch, Dual Row, 2 Circuits, without Snap-in Plastic Peg PCB Lock, Tin, Natural&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/039281023_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="-2.6" y1="4.5" x2="2.6" y2="4.5" width="0.254" layer="21"/>
+<wire x1="2.6" y1="4.5" x2="2.6" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="2.6" y1="-3.3" x2="2.6" y2="-4.9" width="0.254" layer="21"/>
+<wire x1="2.6" y1="-4.9" x2="-2.6" y2="-4.9" width="0.254" layer="21"/>
+<wire x1="-2.6" y1="-4.9" x2="-2.6" y2="4.5" width="0.254" layer="21"/>
+<wire x1="-6.1" y1="3.2" x2="-3.3" y2="3.2" width="0.254" layer="21" curve="-114.529547"/>
+<wire x1="-6.1" y1="1.4" x2="-3.3" y2="1.4" width="0.254" layer="21" curve="114.529547"/>
+<wire x1="-6.1" y1="3.2" x2="-6.1" y2="1.4" width="0.254" layer="21"/>
+<wire x1="-3.4" y1="3.3" x2="-2.7" y2="3.3" width="0.254" layer="21"/>
+<wire x1="-3.4" y1="1.3" x2="-2.7" y2="1.3" width="0.254" layer="21"/>
+<wire x1="3.3" y1="1.4" x2="6.1" y2="1.4" width="0.254" layer="21" curve="114.529547"/>
+<wire x1="3.3" y1="3.2" x2="6.1" y2="3.2" width="0.254" layer="21" curve="-114.529547"/>
+<wire x1="6.1" y1="1.4" x2="6.1" y2="3.2" width="0.254" layer="21"/>
+<wire x1="3.4" y1="1.3" x2="2.7" y2="1.3" width="0.254" layer="21"/>
+<wire x1="3.4" y1="3.3" x2="2.7" y2="3.3" width="0.254" layer="21"/>
+<wire x1="2.6" y1="-2.2" x2="2.6" y2="-3.3" width="0.254" layer="21" curve="-180"/>
+<pad name="1" x="0" y="-2.75" drill="1.4" shape="square"/>
+<pad name="2" x="0" y="2.75" drill="1.4" shape="square"/>
+<text x="-1.27" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
+<hole x="4.7" y="2.29" drill="3"/>
+<hole x="-4.7" y="2.29" drill="3"/>
+</package>
+<package name="5566-4" urn="urn:adsk.eagle:footprint:8078208/1" library_version="5">
+<description>&lt;b&gt;Mini-Fit Jr.™ Vertical Header, 4.20mm Pitch, Dual Row, 4 Circuits, without Snap-in Plastic Peg PCB Lock, Tin, Natural&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/039281043_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="-4.7" y1="4.5" x2="4.7" y2="4.5" width="0.254" layer="21"/>
+<wire x1="4.7" y1="4.5" x2="4.7" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="4.7" y1="-3.3" x2="4.7" y2="-4.9" width="0.254" layer="21"/>
+<wire x1="4.7" y1="-4.9" x2="-4.7" y2="-4.9" width="0.254" layer="21"/>
+<wire x1="-4.7" y1="-4.9" x2="-4.7" y2="4.5" width="0.254" layer="21"/>
+<wire x1="-8.2" y1="3.2" x2="-5.4" y2="3.2" width="0.254" layer="21" curve="-114.529547"/>
+<wire x1="-8.2" y1="1.4" x2="-5.4" y2="1.4" width="0.254" layer="21" curve="114.529547"/>
+<wire x1="-8.2" y1="3.2" x2="-8.2" y2="1.4" width="0.254" layer="21"/>
+<wire x1="-5.5" y1="3.3" x2="-4.8" y2="3.3" width="0.254" layer="21"/>
+<wire x1="-5.5" y1="1.3" x2="-4.8" y2="1.3" width="0.254" layer="21"/>
+<wire x1="5.4" y1="1.4" x2="8.2" y2="1.4" width="0.254" layer="21" curve="114.529547"/>
+<wire x1="5.4" y1="3.2" x2="8.2" y2="3.2" width="0.254" layer="21" curve="-114.529547"/>
+<wire x1="8.2" y1="1.4" x2="8.2" y2="3.2" width="0.254" layer="21"/>
+<wire x1="5.5" y1="1.3" x2="4.8" y2="1.3" width="0.254" layer="21"/>
+<wire x1="5.5" y1="3.3" x2="4.8" y2="3.3" width="0.254" layer="21"/>
+<wire x1="4.7" y1="-2.2" x2="4.7" y2="-3.3" width="0.254" layer="21" curve="-180"/>
+<wire x1="-2.1" y1="6.3" x2="2.1" y2="6.3" width="0.254" layer="27"/>
+<wire x1="-2.1" y1="6.3" x2="-2.1" y2="4.6" width="0.254" layer="27"/>
+<wire x1="2.1" y1="6.3" x2="2.1" y2="4.6" width="0.254" layer="27"/>
+<pad name="1" x="2.1" y="-2.75" drill="1.4" shape="square"/>
+<pad name="2" x="-2.1" y="-2.75" drill="1.4" shape="square"/>
+<pad name="4" x="-2.1" y="2.75" drill="1.4" shape="square"/>
+<pad name="3" x="2.1" y="2.75" drill="1.4" shape="square"/>
+<text x="-1.27" y="-6.985" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="6.985" size="1.27" layer="27">&gt;VALUE</text>
+<hole x="6.8" y="2.29" drill="3"/>
+<hole x="-6.8" y="2.29" drill="3"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="5566-2" urn="urn:adsk.eagle:package:8078583/1" type="box" library_version="5">
+<description>&lt;b&gt;Mini-Fit Jr.™ Vertical Header, 4.20mm Pitch, Dual Row, 2 Circuits, without Snap-in Plastic Peg PCB Lock, Tin, Natural&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/039281023_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="5566-2"/>
+</packageinstances>
+</package3d>
+<package3d name="5566-4" urn="urn:adsk.eagle:package:8078582/1" type="box" library_version="5">
+<description>&lt;b&gt;Mini-Fit Jr.™ Vertical Header, 4.20mm Pitch, Dual Row, 4 Circuits, without Snap-in Plastic Peg PCB Lock, Tin, Natural&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/039281043_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="5566-4"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="MV" urn="urn:adsk.eagle:symbol:6783/2" library_version="5">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+<symbol name="M" urn="urn:adsk.eagle:symbol:6785/2" library_version="5">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="5566-2" urn="urn:adsk.eagle:component:8079092/3" prefix="X" library_version="5">
+<description>&lt;b&gt;Mini FIT connector 2 pol&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always"/>
+<gate name="-2" symbol="MV" x="0" y="-2.54" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="5566-2">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="1822072" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="5566-4" urn="urn:adsk.eagle:component:8079093/3" prefix="X" library_version="5">
+<description>&lt;b&gt;Mini FIT connector 4 pol&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="5.08" addlevel="always"/>
+<gate name="-2" symbol="M" x="0" y="2.54" addlevel="always"/>
+<gate name="-3" symbol="M" x="0" y="0" addlevel="always"/>
+<gate name="-4" symbol="M" x="0" y="-2.54" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="5566-4">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078582/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6792,6 +6942,27 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C5" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.22μF"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="12v"/>
 <part name="C4" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.1μF"/>
+<part name="RVC17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
+<part name="CCB22" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
+<part name="RVC18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="RVC19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="CCB24" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
+<part name="CCB25" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
+<part name="CCB23" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
+<part name="RVC1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
+<part name="CCB1" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
+<part name="RVC2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="RVC3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="CCB2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
+<part name="CCB3" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
+<part name="CCB4" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
+<part name="COMH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="COML" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="CAN" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-4" device="" package3d_urn="urn:adsk.eagle:package:8078582/1"/>
+<part name="PWR_IN" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="CONTACTOR_N" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="CONTACTOR_P" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="CONTACTOR_PRECHARGE" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -6827,18 +6998,135 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <attribute name="VALUE" x="-40.64" y="101.6" size="1.778" layer="96"/>
 </instance>
 <instance part="GND1" gate="1" x="-30.48" y="96.52" smashed="yes">
-<attribute name="VALUE" x="-33.02" y="93.98" size="1.778" layer="96"/>
+<attribute name="VALUE" x="-40.64" y="93.98" size="1.778" layer="96"/>
 </instance>
 <instance part="C5" gate="G$1" x="-10.16" y="114.3" smashed="yes">
 <attribute name="NAME" x="-8.636" y="114.681" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-8.636" y="109.601" size="1.778" layer="96"/>
 </instance>
 <instance part="P+1" gate="VCC" x="-76.2" y="121.92" smashed="yes">
-<attribute name="VALUE" x="-78.74" y="119.38" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="-81.28" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C4" gate="G$1" x="-66.04" y="109.22" smashed="yes">
 <attribute name="NAME" x="-64.516" y="109.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-64.516" y="104.521" size="1.778" layer="96"/>
+</instance>
+<instance part="RVC17" gate="G$1" x="-73.66" y="5.08" smashed="yes" rot="R180">
+<attribute name="NAME" x="-69.85" y="3.5814" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-69.85" y="8.382" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB22" gate="G$1" x="-68.58" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="-66.421" y="-1.016" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-66.421" y="-3.556" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RVC18" gate="G$1" x="-63.5" y="-10.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="-64.9986" y="-13.97" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-60.198" y="-13.97" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RVC19" gate="G$1" x="-83.82" y="-10.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="-85.3186" y="-13.97" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-80.518" y="-13.97" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB24" gate="G$1" x="-63.5" y="-27.94" smashed="yes" rot="R180">
+<attribute name="NAME" x="-65.024" y="-28.321" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-65.024" y="-23.241" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB25" gate="G$1" x="-83.82" y="-27.94" smashed="yes" rot="R180">
+<attribute name="NAME" x="-85.344" y="-28.321" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-85.344" y="-23.241" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB23" gate="G$1" x="-88.9" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="-86.741" y="1.524" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-86.741" y="-6.096" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RVC1" gate="G$1" x="-27.94" y="7.62" smashed="yes" rot="R180">
+<attribute name="NAME" x="-24.13" y="6.1214" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-24.13" y="10.922" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB1" gate="G$1" x="-22.86" y="0" smashed="yes" rot="R90">
+<attribute name="NAME" x="-20.701" y="1.524" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-20.701" y="-1.016" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RVC2" gate="G$1" x="-17.78" y="-7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-19.2786" y="-11.43" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-14.478" y="-11.43" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RVC3" gate="G$1" x="-38.1" y="-7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-39.5986" y="-11.43" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-34.798" y="-11.43" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB2" gate="G$1" x="-17.78" y="-25.4" smashed="yes" rot="R180">
+<attribute name="NAME" x="-19.304" y="-25.781" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-19.304" y="-20.701" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB3" gate="G$1" x="-38.1" y="-25.4" smashed="yes" rot="R180">
+<attribute name="NAME" x="-39.624" y="-25.781" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-39.624" y="-20.701" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCB4" gate="G$1" x="-43.18" y="0" smashed="yes" rot="R90">
+<attribute name="NAME" x="-41.021" y="4.064" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-41.021" y="-3.556" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="COMH" gate="-1" x="-63.5" y="-38.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="-64.262" y="-40.64" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-62.103" y="-37.338" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="COMH" gate="-2" x="-83.82" y="-38.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="-84.582" y="-40.64" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-82.423" y="-37.338" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="COML" gate="-1" x="-17.78" y="-35.56" smashed="yes" rot="R270">
+<attribute name="NAME" x="-18.542" y="-38.1" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-16.383" y="-34.798" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="COML" gate="-2" x="-38.1" y="-35.56" smashed="yes" rot="R270">
+<attribute name="NAME" x="-38.862" y="-38.1" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-36.703" y="-34.798" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="CAN" gate="-1" x="30.48" y="60.96" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.94" y="61.722" size="1.524" layer="95" rot="R180"/>
+<attribute name="VALUE" x="31.242" y="59.563" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CAN" gate="-2" x="30.48" y="55.88" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.94" y="56.642" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="CAN" gate="-3" x="30.48" y="53.34" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.94" y="54.102" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="CAN" gate="-4" x="30.48" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.94" y="51.562" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="PWR_IN" gate="-1" x="-76.2" y="124.46" smashed="yes" rot="R90">
+<attribute name="NAME" x="-75.438" y="127" size="1.524" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-77.597" y="123.698" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PWR_IN" gate="-2" x="-30.48" y="96.52" smashed="yes" rot="R270">
+<attribute name="NAME" x="-31.242" y="93.98" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-29.083" y="97.282" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="CONTACTOR_N" gate="-1" x="-119.38" y="71.12" smashed="yes">
+<attribute name="NAME" x="-116.84" y="70.358" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="72.517" size="1.778" layer="96"/>
+</instance>
+<instance part="CONTACTOR_N" gate="-2" x="-119.38" y="66.04" smashed="yes">
+<attribute name="NAME" x="-116.84" y="65.278" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="67.437" size="1.778" layer="96"/>
+</instance>
+<instance part="CONTACTOR_P" gate="-1" x="-119.38" y="53.34" smashed="yes">
+<attribute name="NAME" x="-116.84" y="52.578" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="54.737" size="1.778" layer="96"/>
+</instance>
+<instance part="CONTACTOR_P" gate="-2" x="-119.38" y="48.26" smashed="yes">
+<attribute name="NAME" x="-116.84" y="47.498" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="49.657" size="1.778" layer="96"/>
+</instance>
+<instance part="CONTACTOR_PRECHARGE" gate="-1" x="-119.38" y="35.56" smashed="yes">
+<attribute name="NAME" x="-116.84" y="34.798" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="36.957" size="1.778" layer="96"/>
+</instance>
+<instance part="CONTACTOR_PRECHARGE" gate="-2" x="-119.38" y="30.48" smashed="yes">
+<attribute name="NAME" x="-116.84" y="29.718" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="31.877" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -6929,6 +7217,32 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <junction x="-12.7" y="99.06"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-10.16" y1="99.06" x2="-10.16" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="PWR_IN" gate="-2" pin="S"/>
+</segment>
+<segment>
+<pinref part="CCB22" gate="G$1" pin="1"/>
+<wire x1="-71.12" y1="-2.54" x2="-76.2" y2="-2.54" width="0.1524" layer="91"/>
+<label x="-78.74" y="-2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-91.44" y1="-2.54" x2="-96.52" y2="-2.54" width="0.1524" layer="91"/>
+<label x="-96.52" y="-5.08" size="1.778" layer="95"/>
+<pinref part="CCB23" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CCB1" gate="G$1" pin="1"/>
+<wire x1="-25.4" y1="0" x2="-30.48" y2="0" width="0.1524" layer="91"/>
+<label x="-33.02" y="0" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-45.72" y1="0" x2="-50.8" y2="0" width="0.1524" layer="91"/>
+<label x="-50.8" y="-2.54" size="1.778" layer="95"/>
+<pinref part="CCB4" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CAN" gate="-3" pin="S"/>
+<wire x1="33.02" y1="53.34" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
+<label x="35.56" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NCS/CS" class="0">
@@ -7052,6 +7366,168 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="IC1" gate="G$1" pin="BAT"/>
 <wire x1="-15.24" y1="63.5" x2="-12.7" y2="63.5" width="0.1524" layer="91"/>
 <label x="-12.7" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$67" class="0">
+<segment>
+<pinref part="RVC19" gate="G$1" pin="1"/>
+<pinref part="CCB25" gate="G$1" pin="2"/>
+<wire x1="-83.82" y1="-15.24" x2="-83.82" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-20.32" x2="-83.82" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-20.32" x2="-76.2" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="-83.82" y="-20.32"/>
+</segment>
+</net>
+<net name="N$68" class="0">
+<segment>
+<pinref part="RVC18" gate="G$1" pin="1"/>
+<pinref part="CCB24" gate="G$1" pin="2"/>
+<wire x1="-63.5" y1="-15.24" x2="-63.5" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-20.32" x2="-63.5" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-17.78" x2="-63.5" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-20.32" x2="-71.12" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$69" class="0">
+<segment>
+<pinref part="CCB24" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="-30.48" x2="-63.5" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="COMH" gate="-1" pin="S"/>
+</segment>
+</net>
+<net name="N$66" class="0">
+<segment>
+<pinref part="CCB25" gate="G$1" pin="1"/>
+<wire x1="-83.82" y1="-30.48" x2="-83.82" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="COMH" gate="-2" pin="S"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="RVC3" gate="G$1" pin="1"/>
+<pinref part="CCB3" gate="G$1" pin="2"/>
+<wire x1="-38.1" y1="-12.7" x2="-38.1" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-17.78" x2="-38.1" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-17.78" x2="-30.48" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-17.78"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="RVC2" gate="G$1" pin="1"/>
+<pinref part="CCB2" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="-12.7" x2="-17.78" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-17.78" x2="-17.78" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-15.24" x2="-17.78" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-17.78" x2="-25.4" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="CCB2" gate="G$1" pin="1"/>
+<wire x1="-17.78" y1="-27.94" x2="-17.78" y2="-33.02" width="0.1524" layer="91"/>
+<pinref part="COML" gate="-1" pin="S"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="CCB3" gate="G$1" pin="1"/>
+<wire x1="-38.1" y1="-27.94" x2="-38.1" y2="-33.02" width="0.1524" layer="91"/>
+<pinref part="COML" gate="-2" pin="S"/>
+</segment>
+</net>
+<net name="COMHP" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="COMHP"/>
+<wire x1="-15.24" y1="58.42" x2="-10.16" y2="58.42" width="0.1524" layer="91"/>
+<label x="-2.54" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-83.82" y1="10.16" x2="-83.82" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="RVC17" gate="G$1" pin="2"/>
+<wire x1="-83.82" y1="5.08" x2="-78.74" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="5.08" x2="-83.82" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="-83.82" y="5.08"/>
+<pinref part="RVC19" gate="G$1" pin="2"/>
+<pinref part="CCB23" gate="G$1" pin="2"/>
+<wire x1="-83.82" y1="-2.54" x2="-83.82" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-83.82" y="-2.54"/>
+<label x="-83.82" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="COMHN" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="COMHN"/>
+<wire x1="-15.24" y1="55.88" x2="-10.16" y2="55.88" width="0.1524" layer="91"/>
+<label x="-2.54" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="RVC17" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="5.08" x2="-68.58" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="5.08" x2="-63.5" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-2.54" x2="-63.5" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-5.08" x2="-63.5" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="CCB22" gate="G$1" pin="2"/>
+<junction x="-63.5" y="-2.54"/>
+<pinref part="RVC18" gate="G$1" pin="2"/>
+<wire x1="-63.5" y1="5.08" x2="-63.5" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-63.5" y="5.08"/>
+<label x="-63.5" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="COMLN" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="COMLN"/>
+<wire x1="-15.24" y1="53.34" x2="-10.16" y2="53.34" width="0.1524" layer="91"/>
+<label x="-2.54" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="12.7" x2="-38.1" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="RVC1" gate="G$1" pin="2"/>
+<wire x1="-38.1" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="7.62" x2="-38.1" y2="0" width="0.1524" layer="91"/>
+<junction x="-38.1" y="7.62"/>
+<pinref part="RVC3" gate="G$1" pin="2"/>
+<pinref part="CCB4" gate="G$1" pin="2"/>
+<wire x1="-38.1" y1="0" x2="-38.1" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="-38.1" y="0"/>
+<label x="-38.1" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="COMLP" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="COMLP"/>
+<wire x1="-15.24" y1="50.8" x2="-10.16" y2="50.8" width="0.1524" layer="91"/>
+<label x="-2.54" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="RVC1" gate="G$1" pin="1"/>
+<wire x1="-17.78" y1="7.62" x2="-22.86" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="7.62" x2="-17.78" y2="0" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="0" x2="-17.78" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-2.54" x2="-17.78" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="CCB1" gate="G$1" pin="2"/>
+<junction x="-17.78" y="0"/>
+<pinref part="RVC2" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="7.62" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-17.78" y="7.62"/>
+<label x="-17.78" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CRX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="30-CRX3"/>
+<wire x1="38.1" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
+<label x="25.4" y="60.96" size="1.778" layer="95"/>
+<pinref part="CAN" gate="-1" pin="S"/>
+</segment>
+</net>
+<net name="CTX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="31-CTX3"/>
+<wire x1="38.1" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
+<label x="25.4" y="55.88" size="1.778" layer="95"/>
+<pinref part="CAN" gate="-2" pin="S"/>
 </segment>
 </net>
 </nets>
