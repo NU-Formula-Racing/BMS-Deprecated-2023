@@ -10765,23 +10765,23 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="CVC0" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CCB0" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CBL" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-12" device="" package3d_urn="urn:adsk.eagle:package:8078578/1"/>
-<part name="CCB10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 nf"/>
-<part name="RCB11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="30"/>
-<part name="CCB11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
-<part name="CCB12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
-<part name="CCB13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
-<part name="CCB14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uf"/>
-<part name="CCB15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
+<part name="CBAT" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 nf"/>
+<part name="RBAT" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="30"/>
+<part name="CREFHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
+<part name="CAVDD" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
+<part name="CNEG5V" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
+<part name="CCVDD" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uf"/>
+<part name="CDVDD" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
 <part name="TEMPL" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-16" device="" package3d_urn="urn:adsk.eagle:package:8078576/1"/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1 uF"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="CTSREF1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1 uF"/>
+<part name="TEMPR2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="RCOMMLN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
 <part name="RCOMMLP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
 <part name="CCOMMN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2nf"/>
@@ -10789,9 +10789,9 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="RCOMML" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="CCOMMLN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="CCOMMLP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
-<part name="CCB20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
-<part name="RVC16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCB21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.22uf"/>
+<part name="CNPN2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
+<part name="RNPN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="CNPN1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.22uf"/>
 <part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT89-BCE" package3d_urn="urn:adsk.eagle:package:29925/3" technology="BC868" value="PBHV8115X, 115"/>
 <part name="RCOML" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="CCOMLNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220 pF"/>
@@ -10803,75 +10803,75 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="ESDCOML" library="ESDAVLC6-2BLY" deviceset="ESDAVLC6-2BLY" device=""/>
 <part name="COML" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 <part name="IC2" library="PBQ79656PAPTQ1" deviceset="PBQ79656PAPTQ1" device=""/>
-<part name="RCB12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="RVC20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RVC21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="CVC10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CVC11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RVC22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="CVC12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RCB15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="RVC23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="CVC13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RCB16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="RVC24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="CVC14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RVC25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="CVC15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RVC26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="CVC16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RVC27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="CVC17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB33" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RVC28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="CVC18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB34" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RVC29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="RCB1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="RVC1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RVC2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="CVC1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CVC2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RVC3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="CVC3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RCB4-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="RVC4-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="CVC4-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB4-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RCB5-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="RVC5-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="CVC5-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB5-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RVC6-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB6-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="CVC6-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB6-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RVC7-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB7-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="CVC7-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB7-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RVC8-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB8-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="CVC8-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB8-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RVC9-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB9-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="CVC9-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB9-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RVC10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="RCB10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
 <part name="VCH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-12" device="" package3d_urn="urn:adsk.eagle:package:8078578/1"/>
-<part name="RCB22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
-<part name="RVC30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="CVC19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB35" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="RCB0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
+<part name="RVC0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="CVC0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CBH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-12" device="" package3d_urn="urn:adsk.eagle:package:8078578/1"/>
-<part name="CCB36" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 nf"/>
-<part name="RCB23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="30"/>
-<part name="CCB37" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
-<part name="CCB38" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
-<part name="CCB39" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
-<part name="CCB40" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uf"/>
-<part name="CCB41" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
+<part name="CBAT-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 nf"/>
+<part name="RBAT-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="30"/>
+<part name="CREFHP-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
+<part name="CAVDD-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
+<part name="CNEG5V-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
+<part name="CCVDD-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uf"/>
+<part name="CDVDD-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
 <part name="TEMPH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-16" device="" package3d_urn="urn:adsk.eagle:package:8078576/1"/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1 uF"/>
-<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="CTSREF2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1 uF"/>
+<part name="TEMPR10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="TEMPR16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="RCOMMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
 <part name="RCOMMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
 <part name="RCOMMH" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="CCOMMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="CCOMMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
-<part name="CCB46" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
-<part name="RVC36" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCB47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.22uf"/>
+<part name="CNPN2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
+<part name="RNPN-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="CNPN1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.22uf"/>
 <part name="T2" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT89-BCE" package3d_urn="urn:adsk.eagle:package:29925/3" technology="BC868" value="PBHV8115X, 115"/>
 <part name="CCOMH" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="CCOMHPG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220 pF"/>
@@ -11134,31 +11134,31 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="CBL" gate="-12" x="40.64" y="132.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="38.1" y="132.842" size="1.524" layer="95" rot="R180"/>
 </instance>
-<instance part="CCB10" gate="G$1" x="172.72" y="91.44" smashed="yes" rot="R90">
+<instance part="CBAT" gate="G$1" x="172.72" y="91.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="172.339" y="92.964" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="177.419" y="92.964" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RCB11" gate="G$1" x="177.8" y="99.06" smashed="yes" rot="R90">
+<instance part="RBAT" gate="G$1" x="177.8" y="99.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="176.3014" y="95.25" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="181.102" y="95.25" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="CCB11" gate="G$1" x="149.86" y="22.86" smashed="yes" rot="R180">
+<instance part="CREFHP" gate="G$1" x="149.86" y="22.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="148.336" y="22.479" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="148.336" y="27.559" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB12" gate="G$1" x="152.4" y="22.86" smashed="yes" rot="R180">
+<instance part="CAVDD" gate="G$1" x="152.4" y="22.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="150.876" y="22.479" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="150.876" y="27.559" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB13" gate="G$1" x="167.64" y="22.86" smashed="yes" rot="R180">
+<instance part="CNEG5V" gate="G$1" x="167.64" y="22.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="166.116" y="22.479" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="166.116" y="27.559" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB14" gate="G$1" x="170.18" y="22.86" smashed="yes" rot="R180">
+<instance part="CCVDD" gate="G$1" x="170.18" y="22.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="168.656" y="22.479" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="168.656" y="27.559" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB15" gate="G$1" x="195.58" y="35.56" smashed="yes" rot="R270">
+<instance part="CDVDD" gate="G$1" x="195.58" y="35.56" smashed="yes" rot="R270">
 <attribute name="NAME" x="195.961" y="34.036" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="190.881" y="34.036" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -11211,39 +11211,39 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="TEMPL" gate="-16" x="266.7" y="25.4" smashed="yes">
 <attribute name="NAME" x="269.24" y="24.638" size="1.524" layer="95"/>
 </instance>
-<instance part="R1" gate="G$1" x="243.84" y="17.78" smashed="yes">
+<instance part="TEMPR1" gate="G$1" x="243.84" y="17.78" smashed="yes">
 <attribute name="NAME" x="240.03" y="19.2786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="14.478" size="1.778" layer="96"/>
 </instance>
-<instance part="C1" gate="G$1" x="238.76" y="10.16" smashed="yes" rot="R270">
+<instance part="CTSREF1" gate="G$1" x="238.76" y="10.16" smashed="yes" rot="R270">
 <attribute name="NAME" x="239.141" y="8.636" size="1.778" layer="95"/>
 <attribute name="VALUE" x="234.061" y="6.096" size="1.778" layer="96"/>
 </instance>
-<instance part="R2" gate="G$1" x="243.84" y="30.48" smashed="yes">
+<instance part="TEMPR2" gate="G$1" x="243.84" y="30.48" smashed="yes">
 <attribute name="NAME" x="240.03" y="31.9786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="27.178" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="243.84" y="38.1" smashed="yes">
+<instance part="TEMPR3" gate="G$1" x="243.84" y="38.1" smashed="yes">
 <attribute name="NAME" x="240.03" y="39.5986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="34.798" size="1.778" layer="96"/>
 </instance>
-<instance part="R4" gate="G$1" x="243.84" y="45.72" smashed="yes">
+<instance part="TEMPR4" gate="G$1" x="243.84" y="45.72" smashed="yes">
 <attribute name="NAME" x="240.03" y="47.2186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="42.418" size="1.778" layer="96"/>
 </instance>
-<instance part="R5" gate="G$1" x="243.84" y="53.34" smashed="yes">
+<instance part="TEMPR5" gate="G$1" x="243.84" y="53.34" smashed="yes">
 <attribute name="NAME" x="240.03" y="54.8386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="50.038" size="1.778" layer="96"/>
 </instance>
-<instance part="R6" gate="G$1" x="243.84" y="60.96" smashed="yes">
+<instance part="TEMPR6" gate="G$1" x="243.84" y="60.96" smashed="yes">
 <attribute name="NAME" x="240.03" y="62.4586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="57.658" size="1.778" layer="96"/>
 </instance>
-<instance part="R7" gate="G$1" x="243.84" y="68.58" smashed="yes">
+<instance part="TEMPR7" gate="G$1" x="243.84" y="68.58" smashed="yes">
 <attribute name="NAME" x="240.03" y="70.0786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="65.278" size="1.778" layer="96"/>
 </instance>
-<instance part="R8" gate="G$1" x="243.84" y="76.2" smashed="yes">
+<instance part="TEMPR8" gate="G$1" x="243.84" y="76.2" smashed="yes">
 <attribute name="NAME" x="240.03" y="77.6986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="240.03" y="72.898" size="1.778" layer="96"/>
 </instance>
@@ -11275,15 +11275,15 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="170.561" y="3.556" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="165.481" y="3.556" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="CCB20" gate="G$1" x="116.84" y="7.62" smashed="yes" rot="R90">
+<instance part="CNPN2" gate="G$1" x="116.84" y="7.62" smashed="yes" rot="R90">
 <attribute name="NAME" x="116.459" y="9.144" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="121.539" y="9.144" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RVC16" gate="G$1" x="109.22" y="-7.62" smashed="yes" rot="R180">
+<instance part="RNPN" gate="G$1" x="109.22" y="-7.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="113.03" y="-9.1186" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="113.03" y="-4.318" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB21" gate="G$1" x="106.68" y="0" smashed="yes" rot="R90">
+<instance part="CNPN1" gate="G$1" x="106.68" y="0" smashed="yes" rot="R90">
 <attribute name="NAME" x="106.299" y="1.524" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="111.379" y="1.524" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -11335,155 +11335,155 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="180.34" y="280.67" size="1.778" layer="95" rot="R270" align="center-left"/>
 <attribute name="VALUE" x="177.8" y="280.67" size="1.778" layer="96" rot="R270" align="center-left"/>
 </instance>
-<instance part="RCB12" gate="G$1" x="66.04" y="279.4" smashed="yes">
+<instance part="RCB1-1" gate="G$1" x="66.04" y="279.4" smashed="yes">
 <attribute name="NAME" x="62.23" y="280.8986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="276.098" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC20" gate="G$1" x="55.88" y="276.86" smashed="yes">
+<instance part="RVC1-1" gate="G$1" x="55.88" y="276.86" smashed="yes">
 <attribute name="NAME" x="52.07" y="278.3586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="273.558" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC21" gate="G$1" x="55.88" y="287.02" smashed="yes">
+<instance part="RVC2-1" gate="G$1" x="55.88" y="287.02" smashed="yes">
 <attribute name="NAME" x="52.07" y="288.5186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="283.718" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB13" gate="G$1" x="66.04" y="289.56" smashed="yes">
+<instance part="RCB2-1" gate="G$1" x="66.04" y="289.56" smashed="yes">
 <attribute name="NAME" x="62.23" y="291.0586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="286.258" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC10" gate="G$1" x="45.72" y="281.94" smashed="yes">
+<instance part="CVC1-1" gate="G$1" x="45.72" y="281.94" smashed="yes">
 <attribute name="NAME" x="47.244" y="282.321" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="277.241" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB26" gate="G$1" x="73.66" y="287.02" smashed="yes">
+<instance part="CCB1-1" gate="G$1" x="73.66" y="287.02" smashed="yes">
 <attribute name="NAME" x="75.184" y="287.401" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="282.321" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB27" gate="G$1" x="73.66" y="294.64" smashed="yes">
+<instance part="CCB2-1" gate="G$1" x="73.66" y="294.64" smashed="yes">
 <attribute name="NAME" x="75.184" y="295.021" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="289.941" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC11" gate="G$1" x="45.72" y="292.1" smashed="yes">
+<instance part="CVC2-1" gate="G$1" x="45.72" y="292.1" smashed="yes">
 <attribute name="NAME" x="47.244" y="292.481" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="287.401" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC22" gate="G$1" x="55.88" y="294.64" smashed="yes">
+<instance part="RVC3-1" gate="G$1" x="55.88" y="294.64" smashed="yes">
 <attribute name="NAME" x="52.07" y="296.1386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="291.338" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB14" gate="G$1" x="66.04" y="297.18" smashed="yes">
+<instance part="RCB3-1" gate="G$1" x="66.04" y="297.18" smashed="yes">
 <attribute name="NAME" x="62.23" y="298.6786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="293.878" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC12" gate="G$1" x="45.72" y="302.26" smashed="yes">
+<instance part="CVC3-1" gate="G$1" x="45.72" y="302.26" smashed="yes">
 <attribute name="NAME" x="47.244" y="302.641" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="297.561" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB28" gate="G$1" x="73.66" y="302.26" smashed="yes">
+<instance part="CCB3-1" gate="G$1" x="73.66" y="302.26" smashed="yes">
 <attribute name="NAME" x="75.184" y="302.641" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="297.561" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB15" gate="G$1" x="66.04" y="307.34" smashed="yes">
+<instance part="RCB4-1" gate="G$1" x="66.04" y="307.34" smashed="yes">
 <attribute name="NAME" x="62.23" y="308.8386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="304.038" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC23" gate="G$1" x="55.88" y="304.8" smashed="yes">
+<instance part="RVC4-1" gate="G$1" x="55.88" y="304.8" smashed="yes">
 <attribute name="NAME" x="52.07" y="306.2986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="301.498" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC13" gate="G$1" x="45.72" y="312.42" smashed="yes">
+<instance part="CVC4-1" gate="G$1" x="45.72" y="312.42" smashed="yes">
 <attribute name="NAME" x="47.244" y="312.801" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="307.721" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB29" gate="G$1" x="73.66" y="312.42" smashed="yes">
+<instance part="CCB4-1" gate="G$1" x="73.66" y="312.42" smashed="yes">
 <attribute name="NAME" x="75.184" y="312.801" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="307.721" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB16" gate="G$1" x="66.04" y="317.5" smashed="yes">
+<instance part="RCB5-1" gate="G$1" x="66.04" y="317.5" smashed="yes">
 <attribute name="NAME" x="62.23" y="318.9986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="314.198" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC24" gate="G$1" x="55.88" y="314.96" smashed="yes">
+<instance part="RVC5-1" gate="G$1" x="55.88" y="314.96" smashed="yes">
 <attribute name="NAME" x="52.07" y="316.4586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="311.658" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC14" gate="G$1" x="45.72" y="320.04" smashed="yes">
+<instance part="CVC5-1" gate="G$1" x="45.72" y="320.04" smashed="yes">
 <attribute name="NAME" x="47.244" y="320.421" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="315.341" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB30" gate="G$1" x="73.66" y="322.58" smashed="yes">
+<instance part="CCB5-1" gate="G$1" x="73.66" y="322.58" smashed="yes">
 <attribute name="NAME" x="75.184" y="322.961" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="317.881" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC25" gate="G$1" x="55.88" y="325.12" smashed="yes">
+<instance part="RVC6-1" gate="G$1" x="55.88" y="325.12" smashed="yes">
 <attribute name="NAME" x="52.07" y="326.6186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="321.818" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB17" gate="G$1" x="66.04" y="327.66" smashed="yes">
+<instance part="RCB6-1" gate="G$1" x="66.04" y="327.66" smashed="yes">
 <attribute name="NAME" x="62.23" y="329.1586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="324.358" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC15" gate="G$1" x="45.72" y="330.2" smashed="yes">
+<instance part="CVC6-1" gate="G$1" x="45.72" y="330.2" smashed="yes">
 <attribute name="NAME" x="47.244" y="330.581" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="325.501" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB31" gate="G$1" x="73.66" y="332.74" smashed="yes">
+<instance part="CCB6-1" gate="G$1" x="73.66" y="332.74" smashed="yes">
 <attribute name="NAME" x="75.184" y="333.121" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="328.041" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC26" gate="G$1" x="55.88" y="335.28" smashed="yes">
+<instance part="RVC7-1" gate="G$1" x="55.88" y="335.28" smashed="yes">
 <attribute name="NAME" x="52.07" y="336.7786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="331.978" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB18" gate="G$1" x="66.04" y="337.82" smashed="yes">
+<instance part="RCB7-1" gate="G$1" x="66.04" y="337.82" smashed="yes">
 <attribute name="NAME" x="62.23" y="339.3186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="334.518" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC16" gate="G$1" x="45.72" y="340.36" smashed="yes">
+<instance part="CVC7-1" gate="G$1" x="45.72" y="340.36" smashed="yes">
 <attribute name="NAME" x="47.244" y="340.741" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="335.661" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB32" gate="G$1" x="73.66" y="342.9" smashed="yes">
+<instance part="CCB7-1" gate="G$1" x="73.66" y="342.9" smashed="yes">
 <attribute name="NAME" x="75.184" y="343.281" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="338.201" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC27" gate="G$1" x="55.88" y="345.44" smashed="yes">
+<instance part="RVC8-1" gate="G$1" x="55.88" y="345.44" smashed="yes">
 <attribute name="NAME" x="52.07" y="346.9386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="342.138" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB19" gate="G$1" x="66.04" y="347.98" smashed="yes">
+<instance part="RCB8-1" gate="G$1" x="66.04" y="347.98" smashed="yes">
 <attribute name="NAME" x="62.23" y="349.4786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="344.678" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC17" gate="G$1" x="45.72" y="350.52" smashed="yes">
+<instance part="CVC8-1" gate="G$1" x="45.72" y="350.52" smashed="yes">
 <attribute name="NAME" x="47.244" y="350.901" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="345.821" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB33" gate="G$1" x="73.66" y="353.06" smashed="yes">
+<instance part="CCB8-1" gate="G$1" x="73.66" y="353.06" smashed="yes">
 <attribute name="NAME" x="75.184" y="353.441" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="348.361" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC28" gate="G$1" x="55.88" y="355.6" smashed="yes">
+<instance part="RVC9-1" gate="G$1" x="55.88" y="355.6" smashed="yes">
 <attribute name="NAME" x="52.07" y="357.0986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="352.298" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB20" gate="G$1" x="66.04" y="358.14" smashed="yes">
+<instance part="RCB9-1" gate="G$1" x="66.04" y="358.14" smashed="yes">
 <attribute name="NAME" x="62.23" y="359.6386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="354.838" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC18" gate="G$1" x="45.72" y="360.68" smashed="yes">
+<instance part="CVC9-1" gate="G$1" x="45.72" y="360.68" smashed="yes">
 <attribute name="NAME" x="47.244" y="361.061" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="355.981" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB34" gate="G$1" x="73.66" y="363.22" smashed="yes">
+<instance part="CCB9-1" gate="G$1" x="73.66" y="363.22" smashed="yes">
 <attribute name="NAME" x="75.184" y="363.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="358.521" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC29" gate="G$1" x="55.88" y="365.76" smashed="yes">
+<instance part="RVC10-1" gate="G$1" x="55.88" y="365.76" smashed="yes">
 <attribute name="NAME" x="52.07" y="367.2586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="362.458" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB21" gate="G$1" x="66.04" y="368.3" smashed="yes">
+<instance part="RCB10-1" gate="G$1" x="66.04" y="368.3" smashed="yes">
 <attribute name="NAME" x="62.23" y="369.7986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="364.998" size="1.778" layer="96"/>
 </instance>
@@ -11524,19 +11524,19 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="VCH" gate="-12" x="30.48" y="378.46" smashed="yes" rot="R180">
 <attribute name="NAME" x="27.94" y="379.222" size="1.524" layer="95" rot="R180"/>
 </instance>
-<instance part="RCB22" gate="G$1" x="66.04" y="269.24" smashed="yes">
+<instance part="RCB0-1" gate="G$1" x="66.04" y="269.24" smashed="yes">
 <attribute name="NAME" x="62.23" y="270.7386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="265.938" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC30" gate="G$1" x="55.88" y="266.7" smashed="yes">
+<instance part="RVC0-1" gate="G$1" x="55.88" y="266.7" smashed="yes">
 <attribute name="NAME" x="52.07" y="268.1986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="263.398" size="1.778" layer="96"/>
 </instance>
-<instance part="CVC19" gate="G$1" x="45.72" y="271.78" smashed="yes">
+<instance part="CVC0-1" gate="G$1" x="45.72" y="271.78" smashed="yes">
 <attribute name="NAME" x="47.244" y="272.161" size="1.778" layer="95"/>
 <attribute name="VALUE" x="47.244" y="267.081" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB35" gate="G$1" x="73.66" y="276.86" smashed="yes">
+<instance part="CCB0-1" gate="G$1" x="73.66" y="276.86" smashed="yes">
 <attribute name="NAME" x="75.184" y="277.241" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="272.161" size="1.778" layer="96"/>
 </instance>
@@ -11577,31 +11577,31 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="CBH" gate="-12" x="30.48" y="381" smashed="yes" rot="R180">
 <attribute name="NAME" x="27.94" y="381.762" size="1.524" layer="95" rot="R180"/>
 </instance>
-<instance part="CCB36" gate="G$1" x="162.56" y="340.36" smashed="yes" rot="R90">
+<instance part="CBAT-1" gate="G$1" x="162.56" y="340.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="162.179" y="341.884" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="167.259" y="341.884" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RCB23" gate="G$1" x="167.64" y="347.98" smashed="yes" rot="R90">
+<instance part="RBAT-1" gate="G$1" x="167.64" y="347.98" smashed="yes" rot="R90">
 <attribute name="NAME" x="166.1414" y="344.17" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="170.942" y="344.17" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="CCB37" gate="G$1" x="139.7" y="271.78" smashed="yes" rot="R180">
+<instance part="CREFHP-1" gate="G$1" x="139.7" y="271.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="138.176" y="271.399" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="138.176" y="276.479" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB38" gate="G$1" x="142.24" y="271.78" smashed="yes" rot="R180">
+<instance part="CAVDD-1" gate="G$1" x="142.24" y="271.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="140.716" y="271.399" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="140.716" y="276.479" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB39" gate="G$1" x="157.48" y="271.78" smashed="yes" rot="R180">
+<instance part="CNEG5V-1" gate="G$1" x="157.48" y="271.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="155.956" y="271.399" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="155.956" y="276.479" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB40" gate="G$1" x="160.02" y="271.78" smashed="yes" rot="R180">
+<instance part="CCVDD-1" gate="G$1" x="160.02" y="271.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="158.496" y="271.399" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="158.496" y="276.479" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB41" gate="G$1" x="185.42" y="284.48" smashed="yes" rot="R270">
+<instance part="CDVDD-1" gate="G$1" x="185.42" y="284.48" smashed="yes" rot="R270">
 <attribute name="NAME" x="185.801" y="282.956" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="180.721" y="282.956" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -11654,39 +11654,39 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="TEMPH" gate="-16" x="256.54" y="274.32" smashed="yes">
 <attribute name="NAME" x="259.08" y="273.558" size="1.524" layer="95"/>
 </instance>
-<instance part="R9" gate="G$1" x="233.68" y="266.7" smashed="yes">
+<instance part="TEMPR9" gate="G$1" x="233.68" y="266.7" smashed="yes">
 <attribute name="NAME" x="229.87" y="268.1986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="263.398" size="1.778" layer="96"/>
 </instance>
-<instance part="C2" gate="G$1" x="228.6" y="259.08" smashed="yes" rot="R270">
+<instance part="CTSREF2" gate="G$1" x="228.6" y="259.08" smashed="yes" rot="R270">
 <attribute name="NAME" x="228.981" y="257.556" size="1.778" layer="95"/>
 <attribute name="VALUE" x="223.901" y="255.016" size="1.778" layer="96"/>
 </instance>
-<instance part="R10" gate="G$1" x="233.68" y="279.4" smashed="yes">
+<instance part="TEMPR10" gate="G$1" x="233.68" y="279.4" smashed="yes">
 <attribute name="NAME" x="229.87" y="280.8986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="276.098" size="1.778" layer="96"/>
 </instance>
-<instance part="R11" gate="G$1" x="233.68" y="287.02" smashed="yes">
+<instance part="TEMPR11" gate="G$1" x="233.68" y="287.02" smashed="yes">
 <attribute name="NAME" x="229.87" y="288.5186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="283.718" size="1.778" layer="96"/>
 </instance>
-<instance part="R12" gate="G$1" x="233.68" y="294.64" smashed="yes">
+<instance part="TEMPR12" gate="G$1" x="233.68" y="294.64" smashed="yes">
 <attribute name="NAME" x="229.87" y="296.1386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="291.338" size="1.778" layer="96"/>
 </instance>
-<instance part="R13" gate="G$1" x="233.68" y="302.26" smashed="yes">
+<instance part="TEMPR13" gate="G$1" x="233.68" y="302.26" smashed="yes">
 <attribute name="NAME" x="229.87" y="303.7586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="298.958" size="1.778" layer="96"/>
 </instance>
-<instance part="R14" gate="G$1" x="233.68" y="309.88" smashed="yes">
+<instance part="TEMPR14" gate="G$1" x="233.68" y="309.88" smashed="yes">
 <attribute name="NAME" x="229.87" y="311.3786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="306.578" size="1.778" layer="96"/>
 </instance>
-<instance part="R15" gate="G$1" x="233.68" y="317.5" smashed="yes">
+<instance part="TEMPR15" gate="G$1" x="233.68" y="317.5" smashed="yes">
 <attribute name="NAME" x="229.87" y="318.9986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="314.198" size="1.778" layer="96"/>
 </instance>
-<instance part="R16" gate="G$1" x="233.68" y="325.12" smashed="yes">
+<instance part="TEMPR16" gate="G$1" x="233.68" y="325.12" smashed="yes">
 <attribute name="NAME" x="229.87" y="326.6186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="321.818" size="1.778" layer="96"/>
 </instance>
@@ -11710,15 +11710,15 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="150.241" y="252.476" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="145.161" y="252.476" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="CCB46" gate="G$1" x="106.68" y="256.54" smashed="yes" rot="R90">
+<instance part="CNPN2-1" gate="G$1" x="106.68" y="256.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="106.299" y="258.064" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="111.379" y="258.064" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RVC36" gate="G$1" x="99.06" y="241.3" smashed="yes" rot="R180">
+<instance part="RNPN-1" gate="G$1" x="99.06" y="241.3" smashed="yes" rot="R180">
 <attribute name="NAME" x="102.87" y="239.8014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="102.87" y="244.602" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB47" gate="G$1" x="96.52" y="248.92" smashed="yes" rot="R90">
+<instance part="CNPN1-1" gate="G$1" x="96.52" y="248.92" smashed="yes" rot="R90">
 <attribute name="NAME" x="96.139" y="250.444" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="101.219" y="250.444" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -12277,15 +12277,15 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="175.26" y="83.82"/>
 <wire x1="177.8" y1="83.82" x2="177.8" y2="91.44" width="0.1524" layer="91"/>
 <junction x="177.8" y="83.82"/>
-<pinref part="RCB11" gate="G$1" pin="1"/>
-<pinref part="CCB10" gate="G$1" pin="2"/>
+<pinref part="RBAT" gate="G$1" pin="1"/>
+<pinref part="CBAT" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="91.44" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 <junction x="177.8" y="91.44"/>
 </segment>
 </net>
 <net name="GND1" class="0">
 <segment>
-<pinref part="CCB10" gate="G$1" pin="1"/>
+<pinref part="CBAT" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="91"/>
 <label x="165.1" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -12328,39 +12328,39 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="259.08" y="33.02"/>
 </segment>
 <segment>
-<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="CTSREF1" gate="G$1" pin="1"/>
 <wire x1="241.3" y1="10.16" x2="254" y2="10.16" width="0.1524" layer="91"/>
 <label x="251.46" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
-<pinref part="CCB11" gate="G$1" pin="2"/>
+<pinref part="CREFHP" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="REFHP"/>
 </segment>
 </net>
 <net name="GNDN" class="0">
 <segment>
-<pinref part="CCB20" gate="G$1" pin="1"/>
+<pinref part="CNPN2" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="7.62" x2="93.98" y2="7.62" width="0.1524" layer="91"/>
 <label x="93.98" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$46" class="0">
 <segment>
-<pinref part="CCB12" gate="G$1" pin="2"/>
+<pinref part="CAVDD" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="AVDD"/>
 </segment>
 </net>
 <net name="N$48" class="0">
 <segment>
-<pinref part="CCB13" gate="G$1" pin="2"/>
+<pinref part="CNEG5V" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="NEG5V"/>
 </segment>
 </net>
 <net name="N$50" class="0">
 <segment>
-<pinref part="CCB15" gate="G$1" pin="2"/>
+<pinref part="CDVDD" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="DVDD"/>
 </segment>
 </net>
@@ -12371,7 +12371,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="213.36" y1="66.04" x2="213.36" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-1" pin="S"/>
 <wire x1="213.36" y1="81.28" x2="254" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="TEMPR8" gate="G$1" pin="2"/>
 <wire x1="254" y1="81.28" x2="264.16" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="76.2" x2="254" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="254" y1="76.2" x2="254" y2="81.28" width="0.1524" layer="91"/>
@@ -12385,7 +12385,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="215.9" y1="63.5" x2="215.9" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-2" pin="S"/>
 <wire x1="215.9" y1="73.66" x2="254" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="TEMPR7" gate="G$1" pin="2"/>
 <wire x1="254" y1="73.66" x2="264.16" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="68.58" x2="254" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="254" y1="68.58" x2="254" y2="73.66" width="0.1524" layer="91"/>
@@ -12399,7 +12399,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="218.44" y1="60.96" x2="218.44" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-3" pin="S"/>
 <wire x1="218.44" y1="66.04" x2="254" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="TEMPR6" gate="G$1" pin="2"/>
 <wire x1="254" y1="66.04" x2="264.16" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="60.96" x2="254" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="254" y1="60.96" x2="254" y2="66.04" width="0.1524" layer="91"/>
@@ -12411,7 +12411,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="GPIO4"/>
 <pinref part="TEMPL" gate="-4" pin="S"/>
 <wire x1="190.5" y1="58.42" x2="254" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="TEMPR5" gate="G$1" pin="2"/>
 <wire x1="254" y1="58.42" x2="264.16" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="53.34" x2="254" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="254" y1="53.34" x2="254" y2="58.42" width="0.1524" layer="91"/>
@@ -12425,7 +12425,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="218.44" y1="55.88" x2="218.44" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-5" pin="S"/>
 <wire x1="218.44" y1="50.8" x2="254" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="TEMPR4" gate="G$1" pin="2"/>
 <wire x1="254" y1="50.8" x2="264.16" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="45.72" x2="254" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="254" y1="45.72" x2="254" y2="50.8" width="0.1524" layer="91"/>
@@ -12439,7 +12439,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="215.9" y1="53.34" x2="215.9" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-6" pin="S"/>
 <wire x1="215.9" y1="43.18" x2="254" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="TEMPR3" gate="G$1" pin="2"/>
 <wire x1="254" y1="43.18" x2="264.16" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="38.1" x2="254" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="254" y1="38.1" x2="254" y2="43.18" width="0.1524" layer="91"/>
@@ -12453,7 +12453,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="213.36" y1="50.8" x2="213.36" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-7" pin="S"/>
 <wire x1="213.36" y1="35.56" x2="254" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="TEMPR2" gate="G$1" pin="2"/>
 <wire x1="254" y1="35.56" x2="264.16" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="30.48" x2="254" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="254" y1="30.48" x2="254" y2="35.56" width="0.1524" layer="91"/>
@@ -12467,7 +12467,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="210.82" y1="48.26" x2="210.82" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="TEMPL" gate="-8" pin="S"/>
 <wire x1="210.82" y1="27.94" x2="254" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="TEMPR1" gate="G$1" pin="2"/>
 <wire x1="254" y1="27.94" x2="264.16" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="17.78" x2="254" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="254" y1="17.78" x2="254" y2="27.94" width="0.1524" layer="91"/>
@@ -12479,38 +12479,38 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="TSREF"/>
 <wire x1="190.5" y1="40.64" x2="208.28" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="40.64" x2="208.28" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="TEMPR1" gate="G$1" pin="1"/>
 <wire x1="208.28" y1="17.78" x2="228.6" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="CTSREF1" gate="G$1" pin="2"/>
 <wire x1="228.6" y1="17.78" x2="238.76" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="10.16" x2="228.6" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="10.16" x2="228.6" y2="17.78" width="0.1524" layer="91"/>
 <junction x="228.6" y="17.78"/>
 <wire x1="228.6" y1="17.78" x2="228.6" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="TEMPR2" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="30.48" x2="238.76" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="30.48" x2="228.6" y2="38.1" width="0.1524" layer="91"/>
 <junction x="228.6" y="30.48"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="TEMPR3" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="38.1" x2="238.76" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="38.1" x2="228.6" y2="45.72" width="0.1524" layer="91"/>
 <junction x="228.6" y="38.1"/>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="TEMPR4" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="45.72" x2="238.76" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="45.72" x2="228.6" y2="53.34" width="0.1524" layer="91"/>
 <junction x="228.6" y="45.72"/>
-<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="TEMPR5" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="53.34" x2="238.76" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="53.34" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
 <junction x="228.6" y="53.34"/>
-<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="TEMPR6" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="60.96" x2="238.76" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="60.96" x2="228.6" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="TEMPR7" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="68.58" x2="238.76" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="68.58" x2="228.6" y2="76.2" width="0.1524" layer="91"/>
 <junction x="228.6" y="68.58"/>
-<pinref part="R8" gate="G$1" pin="1"/>
+<pinref part="TEMPR8" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="76.2" x2="238.76" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -12554,19 +12554,19 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="N$65" class="0">
 <segment>
-<pinref part="RVC16" gate="G$1" pin="1"/>
+<pinref part="RNPN" gate="G$1" pin="1"/>
 <wire x1="124.46" y1="-7.62" x2="116.84" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="-7.62" x2="114.3" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="-7.62" x2="116.84" y2="0" width="0.1524" layer="91"/>
 <junction x="116.84" y="-7.62"/>
 <wire x1="116.84" y1="0" x2="111.76" y2="0" width="0.1524" layer="91"/>
-<pinref part="CCB21" gate="G$1" pin="2"/>
+<pinref part="CNPN1" gate="G$1" pin="2"/>
 <pinref part="T1" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="BATC" class="0">
 <segment>
-<pinref part="RVC16" gate="G$1" pin="2"/>
+<pinref part="RNPN" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="-7.62" x2="93.98" y2="-7.62" width="0.1524" layer="91"/>
 <label x="93.98" y="-7.62" size="1.778" layer="95"/>
 </segment>
@@ -12576,7 +12576,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="CBL" gate="-11" pin="S"/>
 <wire x1="45.72" y1="119.38" x2="45.72" y2="124.46" width="0.1524" layer="91"/>
 <junction x="45.72" y="119.38"/>
-<pinref part="RCB11" gate="G$1" pin="2"/>
+<pinref part="RBAT" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="124.46" x2="177.8" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="124.46" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="124.46" x2="190.5" y2="124.46" width="0.1524" layer="91"/>
@@ -12592,7 +12592,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </segment>
 <segment>
 <wire x1="124.46" y1="2.54" x2="124.46" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="CCB20" gate="G$1" pin="2"/>
+<pinref part="CNPN2" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="7.62" x2="121.92" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="7.62" x2="137.16" y2="7.62" width="0.1524" layer="91"/>
 <junction x="124.46" y="7.62"/>
@@ -12616,7 +12616,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC1" gate="G$1" pin="RX"/>
 <wire x1="190.5" y1="43.18" x2="170.18" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="CCB14" gate="G$1" pin="2"/>
+<pinref part="CCVDD" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="CVDD"/>
 <wire x1="170.18" y1="43.18" x2="170.18" y2="27.94" width="0.1524" layer="91"/>
 <junction x="170.18" y="27.94"/>
@@ -12624,7 +12624,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="CCB21" gate="G$1" pin="1"/>
+<pinref part="CNPN1" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="0" x2="93.98" y2="0" width="0.1524" layer="91"/>
 <label x="93.98" y="0" size="1.778" layer="95"/>
 </segment>
@@ -12632,20 +12632,20 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="REFHM"/>
 <wire x1="147.32" y1="27.94" x2="147.32" y2="15.24" width="0.1524" layer="91"/>
 <label x="144.78" y="12.7" size="1.778" layer="95"/>
-<pinref part="CCB11" gate="G$1" pin="1"/>
+<pinref part="CREFHP" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="15.24" x2="149.86" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="15.24" x2="149.86" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="AVSS"/>
 <wire x1="154.94" y1="27.94" x2="154.94" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="CCB12" gate="G$1" pin="1"/>
+<pinref part="CAVDD" gate="G$1" pin="1"/>
 <wire x1="154.94" y1="20.32" x2="152.4" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="20.32" x2="149.86" y2="20.32" width="0.1524" layer="91"/>
 <junction x="152.4" y="20.32"/>
 <junction x="149.86" y="20.32"/>
-<pinref part="CCB13" gate="G$1" pin="1"/>
+<pinref part="CNEG5V" gate="G$1" pin="1"/>
 <wire x1="167.64" y1="20.32" x2="154.94" y2="20.32" width="0.1524" layer="91"/>
 <junction x="154.94" y="20.32"/>
-<pinref part="CCB14" gate="G$1" pin="1"/>
+<pinref part="CCVDD" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="20.32" x2="167.64" y2="20.32" width="0.1524" layer="91"/>
 <junction x="167.64" y="20.32"/>
 <pinref part="IC1" gate="G$1" pin="CVSS"/>
@@ -12654,7 +12654,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="170.18" y="20.32"/>
 <pinref part="IC1" gate="G$1" pin="DVSS"/>
 <wire x1="190.5" y1="38.1" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="CCB15" gate="G$1" pin="1"/>
+<pinref part="CDVDD" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="38.1" x2="198.12" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="35.56" x2="198.12" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="20.32" x2="175.26" y2="20.32" width="0.1524" layer="91"/>
@@ -12766,7 +12766,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <net name="N$66" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="VC1"/>
-<pinref part="RVC20" gate="G$1" pin="2"/>
+<pinref part="RVC1-1" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="276.86" x2="60.96" y2="276.86" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -12774,13 +12774,13 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC2" gate="G$1" pin="CB1"/>
 <wire x1="116.84" y1="287.02" x2="116.84" y2="279.4" width="0.1524" layer="91"/>
-<pinref part="RCB12" gate="G$1" pin="2"/>
+<pinref part="RCB1-1" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="279.4" x2="73.66" y2="279.4" width="0.1524" layer="91"/>
-<pinref part="CCB26" gate="G$1" pin="2"/>
+<pinref part="CCB1-1" gate="G$1" pin="2"/>
 <wire x1="73.66" y1="279.4" x2="71.12" y2="279.4" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="281.94" x2="73.66" y2="279.4" width="0.1524" layer="91"/>
 <junction x="73.66" y="279.4"/>
-<pinref part="CCB35" gate="G$1" pin="1"/>
+<pinref part="CCB0-1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$70" class="0">
@@ -12788,7 +12788,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="VC2"/>
 <wire x1="116.84" y1="289.56" x2="81.28" y2="289.56" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="289.56" x2="81.28" y2="287.02" width="0.1524" layer="91"/>
-<pinref part="RVC21" gate="G$1" pin="2"/>
+<pinref part="RVC2-1" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="287.02" x2="60.96" y2="287.02" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -12797,24 +12797,24 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="CB2"/>
 <wire x1="116.84" y1="292.1" x2="78.74" y2="292.1" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="292.1" x2="78.74" y2="289.56" width="0.1524" layer="91"/>
-<pinref part="RCB13" gate="G$1" pin="2"/>
+<pinref part="RCB2-1" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="289.56" x2="73.66" y2="289.56" width="0.1524" layer="91"/>
-<pinref part="CCB26" gate="G$1" pin="1"/>
+<pinref part="CCB1-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="289.56" x2="71.12" y2="289.56" width="0.1524" layer="91"/>
 <junction x="73.66" y="289.56"/>
-<pinref part="CCB27" gate="G$1" pin="2"/>
+<pinref part="CCB2-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$72" class="0">
 <segment>
-<pinref part="RCB13" gate="G$1" pin="1"/>
+<pinref part="RCB2-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="289.56" x2="35.56" y2="289.56" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-3" pin="S"/>
 </segment>
 </net>
 <net name="N$73" class="0">
 <segment>
-<pinref part="RCB12" gate="G$1" pin="1"/>
+<pinref part="RCB1-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="279.4" x2="40.64" y2="279.4" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-2" pin="S"/>
 </segment>
@@ -12824,15 +12824,15 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="CB3"/>
 <wire x1="116.84" y1="297.18" x2="73.66" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="297.18" x2="71.12" y2="297.18" width="0.1524" layer="91"/>
-<pinref part="CCB27" gate="G$1" pin="1"/>
+<pinref part="CCB2-1" gate="G$1" pin="1"/>
 <junction x="73.66" y="297.18"/>
-<pinref part="CCB28" gate="G$1" pin="2"/>
-<pinref part="RCB14" gate="G$1" pin="2"/>
+<pinref part="CCB3-1" gate="G$1" pin="2"/>
+<pinref part="RCB3-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$75" class="0">
 <segment>
-<pinref part="RCB14" gate="G$1" pin="1"/>
+<pinref part="RCB3-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="297.18" x2="50.8" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="297.18" x2="50.8" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="299.72" x2="35.56" y2="299.72" width="0.1524" layer="91"/>
@@ -12843,7 +12843,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC2" gate="G$1" pin="VC3"/>
 <wire x1="116.84" y1="294.64" x2="60.96" y2="294.64" width="0.1524" layer="91"/>
-<pinref part="RVC22" gate="G$1" pin="2"/>
+<pinref part="RVC3-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$77" class="0">
@@ -12852,13 +12852,13 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="116.84" y1="299.72" x2="78.74" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="299.72" x2="78.74" y2="302.26" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="302.26" x2="60.96" y2="302.26" width="0.1524" layer="91"/>
-<pinref part="RVC23" gate="G$1" pin="2"/>
+<pinref part="RVC4-1" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="302.26" x2="60.96" y2="304.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$78" class="0">
 <segment>
-<pinref part="RCB15" gate="G$1" pin="1"/>
+<pinref part="RCB4-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="309.88" x2="60.96" y2="309.88" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="309.88" x2="60.96" y2="307.34" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-5" pin="S"/>
@@ -12866,11 +12866,11 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="N$79" class="0">
 <segment>
-<pinref part="RCB15" gate="G$1" pin="2"/>
+<pinref part="RCB4-1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="307.34" x2="73.66" y2="307.34" width="0.1524" layer="91"/>
-<pinref part="CCB29" gate="G$1" pin="2"/>
+<pinref part="CCB4-1" gate="G$1" pin="2"/>
 <junction x="73.66" y="307.34"/>
-<pinref part="CCB28" gate="G$1" pin="1"/>
+<pinref part="CCB3-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="304.8" x2="73.66" y2="307.34" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB4"/>
 <wire x1="116.84" y1="302.26" x2="81.28" y2="302.26" width="0.1524" layer="91"/>
@@ -12884,29 +12884,29 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="116.84" y1="304.8" x2="83.82" y2="304.8" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="304.8" x2="83.82" y2="312.42" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="312.42" x2="60.96" y2="312.42" width="0.1524" layer="91"/>
-<pinref part="RVC24" gate="G$1" pin="2"/>
+<pinref part="RVC5-1" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="312.42" x2="60.96" y2="314.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$81" class="0">
 <segment>
-<pinref part="RCB16" gate="G$1" pin="1"/>
+<pinref part="RCB5-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="317.5" x2="60.96" y2="317.5" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-6" pin="S"/>
 </segment>
 </net>
 <net name="N$82" class="0">
 <segment>
-<pinref part="RCB16" gate="G$1" pin="2"/>
+<pinref part="RCB5-1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="317.5" x2="73.66" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="317.5" x2="86.36" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="317.5" x2="86.36" y2="307.34" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB5"/>
 <wire x1="86.36" y1="307.34" x2="116.84" y2="307.34" width="0.1524" layer="91"/>
-<pinref part="CCB29" gate="G$1" pin="1"/>
+<pinref part="CCB4-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="314.96" x2="73.66" y2="317.5" width="0.1524" layer="91"/>
 <junction x="73.66" y="317.5"/>
-<pinref part="CCB30" gate="G$1" pin="2"/>
+<pinref part="CCB5-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$83" class="0">
@@ -12914,14 +12914,14 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="VC6"/>
 <wire x1="116.84" y1="309.88" x2="88.9" y2="309.88" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="309.88" x2="88.9" y2="320.04" width="0.1524" layer="91"/>
-<pinref part="RVC25" gate="G$1" pin="2"/>
+<pinref part="RVC6-1" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="320.04" x2="60.96" y2="320.04" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="320.04" x2="60.96" y2="325.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$84" class="0">
 <segment>
-<pinref part="RCB17" gate="G$1" pin="1"/>
+<pinref part="RCB6-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="327.66" x2="35.56" y2="327.66" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-7" pin="S"/>
 </segment>
@@ -12930,14 +12930,14 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC2" gate="G$1" pin="CB6"/>
 <wire x1="116.84" y1="312.42" x2="91.44" y2="312.42" width="0.1524" layer="91"/>
-<pinref part="RCB17" gate="G$1" pin="2"/>
+<pinref part="RCB6-1" gate="G$1" pin="2"/>
 <wire x1="91.44" y1="312.42" x2="91.44" y2="327.66" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="327.66" x2="73.66" y2="327.66" width="0.1524" layer="91"/>
-<pinref part="CCB30" gate="G$1" pin="1"/>
+<pinref part="CCB5-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="327.66" x2="71.12" y2="327.66" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="325.12" x2="73.66" y2="327.66" width="0.1524" layer="91"/>
 <junction x="73.66" y="327.66"/>
-<pinref part="CCB31" gate="G$1" pin="2"/>
+<pinref part="CCB6-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$86" class="0">
@@ -12945,21 +12945,21 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="VC7"/>
 <wire x1="116.84" y1="314.96" x2="93.98" y2="314.96" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="314.96" x2="93.98" y2="330.2" width="0.1524" layer="91"/>
-<pinref part="RVC26" gate="G$1" pin="2"/>
+<pinref part="RVC7-1" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="330.2" x2="60.96" y2="330.2" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="330.2" x2="60.96" y2="335.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$87" class="0">
 <segment>
-<pinref part="RCB18" gate="G$1" pin="1"/>
+<pinref part="RCB7-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="337.82" x2="60.96" y2="337.82" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-8" pin="S"/>
 </segment>
 </net>
 <net name="N$88" class="0">
 <segment>
-<pinref part="RCB18" gate="G$1" pin="2"/>
+<pinref part="RCB7-1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="337.82" x2="73.66" y2="337.82" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="337.82" x2="78.74" y2="337.82" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="337.82" x2="78.74" y2="332.74" width="0.1524" layer="91"/>
@@ -12967,10 +12967,10 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="96.52" y1="332.74" x2="96.52" y2="317.5" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB7"/>
 <wire x1="96.52" y1="317.5" x2="116.84" y2="317.5" width="0.1524" layer="91"/>
-<pinref part="CCB31" gate="G$1" pin="1"/>
+<pinref part="CCB6-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="335.28" x2="73.66" y2="337.82" width="0.1524" layer="91"/>
 <junction x="73.66" y="337.82"/>
-<pinref part="CCB32" gate="G$1" pin="2"/>
+<pinref part="CCB7-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$89" class="0">
@@ -12980,21 +12980,21 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="99.06" y1="320.04" x2="99.06" y2="335.28" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="335.28" x2="81.28" y2="335.28" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="335.28" x2="81.28" y2="340.36" width="0.1524" layer="91"/>
-<pinref part="RVC27" gate="G$1" pin="2"/>
+<pinref part="RVC8-1" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="340.36" x2="60.96" y2="340.36" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="340.36" x2="60.96" y2="345.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$90" class="0">
 <segment>
-<pinref part="RCB19" gate="G$1" pin="1"/>
+<pinref part="RCB8-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="347.98" x2="60.96" y2="347.98" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-9" pin="S"/>
 </segment>
 </net>
 <net name="N$91" class="0">
 <segment>
-<pinref part="RCB19" gate="G$1" pin="2"/>
+<pinref part="RCB8-1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="347.98" x2="73.66" y2="347.98" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="347.98" x2="78.74" y2="347.98" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="347.98" x2="78.74" y2="342.9" width="0.1524" layer="91"/>
@@ -13004,10 +13004,10 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="101.6" y1="337.82" x2="101.6" y2="322.58" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB8"/>
 <wire x1="101.6" y1="322.58" x2="116.84" y2="322.58" width="0.1524" layer="91"/>
-<pinref part="CCB32" gate="G$1" pin="1"/>
+<pinref part="CCB7-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="345.44" x2="73.66" y2="347.98" width="0.1524" layer="91"/>
 <junction x="73.66" y="347.98"/>
-<pinref part="CCB33" gate="G$1" pin="2"/>
+<pinref part="CCB8-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$92" class="0">
@@ -13020,20 +13020,20 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="86.36" y1="345.44" x2="81.28" y2="345.44" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="345.44" x2="81.28" y2="350.52" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="350.52" x2="60.96" y2="350.52" width="0.1524" layer="91"/>
-<pinref part="RVC28" gate="G$1" pin="2"/>
+<pinref part="RVC9-1" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="350.52" x2="60.96" y2="355.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$93" class="0">
 <segment>
-<pinref part="RCB20" gate="G$1" pin="1"/>
+<pinref part="RCB9-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="358.14" x2="60.96" y2="358.14" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-10" pin="S"/>
 </segment>
 </net>
 <net name="N$94" class="0">
 <segment>
-<pinref part="RCB20" gate="G$1" pin="2"/>
+<pinref part="RCB9-1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="358.14" x2="73.66" y2="358.14" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="358.14" x2="83.82" y2="358.14" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="358.14" x2="83.82" y2="347.98" width="0.1524" layer="91"/>
@@ -13043,10 +13043,10 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="106.68" y1="342.9" x2="106.68" y2="332.74" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB9"/>
 <wire x1="106.68" y1="332.74" x2="129.54" y2="332.74" width="0.1524" layer="91"/>
-<pinref part="CCB33" gate="G$1" pin="1"/>
+<pinref part="CCB8-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="355.6" x2="73.66" y2="358.14" width="0.1524" layer="91"/>
 <junction x="73.66" y="358.14"/>
-<pinref part="CCB34" gate="G$1" pin="2"/>
+<pinref part="CCB9-1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$95" class="0">
@@ -13060,13 +13060,13 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="91.44" y1="350.52" x2="86.36" y2="350.52" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="350.52" x2="86.36" y2="360.68" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="360.68" x2="60.96" y2="360.68" width="0.1524" layer="91"/>
-<pinref part="RVC29" gate="G$1" pin="2"/>
+<pinref part="RVC10-1" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="360.68" x2="60.96" y2="365.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$96" class="0">
 <segment>
-<pinref part="RCB21" gate="G$1" pin="2"/>
+<pinref part="RCB10-1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="368.3" x2="73.66" y2="368.3" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="368.3" x2="88.9" y2="368.3" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="368.3" x2="88.9" y2="353.06" width="0.1524" layer="91"/>
@@ -13077,7 +13077,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="111.76" y1="337.82" x2="134.62" y2="337.82" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB10"/>
 <wire x1="134.62" y1="337.82" x2="134.62" y2="332.74" width="0.1524" layer="91"/>
-<pinref part="CCB34" gate="G$1" pin="1"/>
+<pinref part="CCB9-1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="365.76" x2="73.66" y2="368.3" width="0.1524" layer="91"/>
 <junction x="73.66" y="368.3"/>
 </segment>
@@ -13085,7 +13085,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <net name="N$97" class="0">
 <segment>
 <wire x1="134.62" y1="266.7" x2="60.96" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="RVC30" gate="G$1" pin="2"/>
+<pinref part="RVC0-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="VC0"/>
 <wire x1="134.62" y1="266.7" x2="134.62" y2="276.86" width="0.1524" layer="91"/>
 </segment>
@@ -13096,28 +13096,28 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="73.66" y1="269.24" x2="71.12" y2="269.24" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="271.78" x2="73.66" y2="269.24" width="0.1524" layer="91"/>
 <junction x="73.66" y="269.24"/>
-<pinref part="RCB22" gate="G$1" pin="2"/>
-<pinref part="CCB35" gate="G$1" pin="2"/>
+<pinref part="RCB0-1" gate="G$1" pin="2"/>
+<pinref part="CCB0-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="CB0"/>
 <wire x1="132.08" y1="269.24" x2="132.08" y2="276.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$99" class="0">
 <segment>
-<pinref part="RVC30" gate="G$1" pin="1"/>
+<pinref part="RVC0-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="266.7" x2="45.72" y2="266.7" width="0.1524" layer="91"/>
 <junction x="45.72" y="266.7"/>
-<pinref part="CVC19" gate="G$1" pin="2"/>
+<pinref part="CVC0-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="266.7" x2="40.64" y2="266.7" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$100" class="0">
 <segment>
-<pinref part="CVC19" gate="G$1" pin="1"/>
-<pinref part="RVC20" gate="G$1" pin="1"/>
+<pinref part="CVC0-1" gate="G$1" pin="1"/>
+<pinref part="RVC1-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="276.86" x2="45.72" y2="276.86" width="0.1524" layer="91"/>
-<pinref part="CVC10" gate="G$1" pin="2"/>
+<pinref part="CVC1-1" gate="G$1" pin="2"/>
 <junction x="45.72" y="276.86"/>
 <wire x1="45.72" y1="276.86" x2="45.72" y2="274.32" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="276.86" x2="40.64" y2="276.86" width="0.1524" layer="91"/>
@@ -13126,22 +13126,22 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="N$101" class="0">
 <segment>
-<pinref part="RVC21" gate="G$1" pin="1"/>
+<pinref part="RVC2-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="287.02" x2="45.72" y2="287.02" width="0.1524" layer="91"/>
-<pinref part="CVC10" gate="G$1" pin="1"/>
+<pinref part="CVC1-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="284.48" x2="45.72" y2="287.02" width="0.1524" layer="91"/>
 <junction x="45.72" y="287.02"/>
-<pinref part="CVC11" gate="G$1" pin="2"/>
+<pinref part="CVC2-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="287.02" x2="35.56" y2="287.02" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-3" pin="S"/>
 </segment>
 </net>
 <net name="N$102" class="0">
 <segment>
-<pinref part="RVC22" gate="G$1" pin="1"/>
+<pinref part="RVC3-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="294.64" x2="45.72" y2="294.64" width="0.1524" layer="91"/>
-<pinref part="CVC11" gate="G$1" pin="1"/>
-<pinref part="CVC12" gate="G$1" pin="2"/>
+<pinref part="CVC2-1" gate="G$1" pin="1"/>
+<pinref part="CVC3-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="297.18" x2="45.72" y2="294.64" width="0.1524" layer="91"/>
 <junction x="45.72" y="294.64"/>
 <wire x1="45.72" y1="294.64" x2="35.56" y2="294.64" width="0.1524" layer="91"/>
@@ -13150,10 +13150,10 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="N$103" class="0">
 <segment>
-<pinref part="CVC13" gate="G$1" pin="2"/>
-<pinref part="RVC23" gate="G$1" pin="1"/>
+<pinref part="CVC4-1" gate="G$1" pin="2"/>
+<pinref part="RVC4-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="304.8" x2="45.72" y2="304.8" width="0.1524" layer="91"/>
-<pinref part="CVC12" gate="G$1" pin="1"/>
+<pinref part="CVC3-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="304.8" x2="45.72" y2="307.34" width="0.1524" layer="91"/>
 <junction x="45.72" y="304.8"/>
 <wire x1="45.72" y1="304.8" x2="35.56" y2="304.8" width="0.1524" layer="91"/>
@@ -13162,68 +13162,68 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="N$104" class="0">
 <segment>
-<pinref part="RVC24" gate="G$1" pin="1"/>
+<pinref part="RVC5-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="314.96" x2="45.72" y2="314.96" width="0.1524" layer="91"/>
-<pinref part="CVC13" gate="G$1" pin="1"/>
+<pinref part="CVC4-1" gate="G$1" pin="1"/>
 <junction x="45.72" y="314.96"/>
-<pinref part="CVC14" gate="G$1" pin="2"/>
+<pinref part="CVC5-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="314.96" x2="35.56" y2="314.96" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-6" pin="S"/>
 </segment>
 </net>
 <net name="N$105" class="0">
 <segment>
-<pinref part="RVC25" gate="G$1" pin="1"/>
+<pinref part="RVC6-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="325.12" x2="45.72" y2="325.12" width="0.1524" layer="91"/>
-<pinref part="CVC14" gate="G$1" pin="1"/>
+<pinref part="CVC5-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="322.58" x2="45.72" y2="325.12" width="0.1524" layer="91"/>
 <junction x="45.72" y="325.12"/>
-<pinref part="CVC15" gate="G$1" pin="2"/>
+<pinref part="CVC6-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="325.12" x2="35.56" y2="325.12" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-7" pin="S"/>
 </segment>
 </net>
 <net name="N$106" class="0">
 <segment>
-<pinref part="RVC26" gate="G$1" pin="1"/>
+<pinref part="RVC7-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="335.28" x2="45.72" y2="335.28" width="0.1524" layer="91"/>
-<pinref part="CVC15" gate="G$1" pin="1"/>
+<pinref part="CVC6-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="332.74" x2="45.72" y2="335.28" width="0.1524" layer="91"/>
 <junction x="45.72" y="335.28"/>
-<pinref part="CVC16" gate="G$1" pin="2"/>
+<pinref part="CVC7-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="335.28" x2="35.56" y2="335.28" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-8" pin="S"/>
 </segment>
 </net>
 <net name="N$107" class="0">
 <segment>
-<pinref part="RVC27" gate="G$1" pin="1"/>
+<pinref part="RVC8-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="345.44" x2="45.72" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="CVC16" gate="G$1" pin="1"/>
+<pinref part="CVC7-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="342.9" x2="45.72" y2="345.44" width="0.1524" layer="91"/>
 <junction x="45.72" y="345.44"/>
-<pinref part="CVC17" gate="G$1" pin="2"/>
+<pinref part="CVC8-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="345.44" x2="35.56" y2="345.44" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-9" pin="S"/>
 </segment>
 </net>
 <net name="N$108" class="0">
 <segment>
-<pinref part="RVC28" gate="G$1" pin="1"/>
+<pinref part="RVC9-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="355.6" x2="45.72" y2="355.6" width="0.1524" layer="91"/>
-<pinref part="CVC17" gate="G$1" pin="1"/>
+<pinref part="CVC8-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="353.06" x2="45.72" y2="355.6" width="0.1524" layer="91"/>
 <junction x="45.72" y="355.6"/>
-<pinref part="CVC18" gate="G$1" pin="2"/>
+<pinref part="CVC9-1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="355.6" x2="35.56" y2="355.6" width="0.1524" layer="91"/>
 <pinref part="VCH" gate="-10" pin="S"/>
 </segment>
 </net>
 <net name="N$109" class="0">
 <segment>
-<pinref part="RVC29" gate="G$1" pin="1"/>
+<pinref part="RVC10-1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="365.76" x2="45.72" y2="365.76" width="0.1524" layer="91"/>
-<pinref part="CVC18" gate="G$1" pin="1"/>
+<pinref part="CVC9-1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="363.22" x2="45.72" y2="365.76" width="0.1524" layer="91"/>
 <junction x="45.72" y="365.76"/>
 <wire x1="45.72" y1="365.76" x2="35.56" y2="365.76" width="0.1524" layer="91"/>
@@ -13270,21 +13270,21 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="165.1" y="332.74"/>
 <wire x1="167.64" y1="332.74" x2="167.64" y2="340.36" width="0.1524" layer="91"/>
 <junction x="167.64" y="332.74"/>
-<pinref part="RCB23" gate="G$1" pin="1"/>
-<pinref part="CCB36" gate="G$1" pin="2"/>
+<pinref part="RBAT-1" gate="G$1" pin="1"/>
+<pinref part="CBAT-1" gate="G$1" pin="2"/>
 <wire x1="167.64" y1="340.36" x2="167.64" y2="342.9" width="0.1524" layer="91"/>
 <junction x="167.64" y="340.36"/>
 </segment>
 </net>
 <net name="GND1-1" class="0">
 <segment>
-<pinref part="CCB36" gate="G$1" pin="1"/>
+<pinref part="CBAT-1" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="340.36" x2="154.94" y2="340.36" width="0.1524" layer="91"/>
 <label x="154.94" y="340.36" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="60.96" y1="269.24" x2="40.64" y2="269.24" width="0.1524" layer="91"/>
-<pinref part="RCB22" gate="G$1" pin="1"/>
+<pinref part="RCB0-1" gate="G$1" pin="1"/>
 <pinref part="CBH" gate="-1" pin="S"/>
 <label x="40.64" y="269.24" size="1.778" layer="95"/>
 </segment>
@@ -13321,39 +13321,39 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="248.92" y="281.94"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="CTSREF2" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="259.08" x2="243.84" y2="259.08" width="0.1524" layer="91"/>
 <label x="241.3" y="256.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$111" class="0">
 <segment>
-<pinref part="CCB37" gate="G$1" pin="2"/>
+<pinref part="CREFHP-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="REFHP"/>
 </segment>
 </net>
 <net name="GNDN-1" class="0">
 <segment>
-<pinref part="CCB46" gate="G$1" pin="1"/>
+<pinref part="CNPN2-1" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="256.54" x2="83.82" y2="256.54" width="0.1524" layer="91"/>
 <label x="83.82" y="256.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$112" class="0">
 <segment>
-<pinref part="CCB38" gate="G$1" pin="2"/>
+<pinref part="CAVDD-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="AVDD"/>
 </segment>
 </net>
 <net name="N$113" class="0">
 <segment>
-<pinref part="CCB39" gate="G$1" pin="2"/>
+<pinref part="CNEG5V-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="NEG5V"/>
 </segment>
 </net>
 <net name="N$114" class="0">
 <segment>
-<pinref part="CCB41" gate="G$1" pin="2"/>
+<pinref part="CDVDD-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="DVDD"/>
 </segment>
 </net>
@@ -13364,7 +13364,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="203.2" y1="314.96" x2="203.2" y2="330.2" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-1" pin="S"/>
 <wire x1="203.2" y1="330.2" x2="243.84" y2="330.2" width="0.1524" layer="91"/>
-<pinref part="R16" gate="G$1" pin="2"/>
+<pinref part="TEMPR16" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="330.2" x2="254" y2="330.2" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="325.12" x2="243.84" y2="325.12" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="325.12" x2="243.84" y2="330.2" width="0.1524" layer="91"/>
@@ -13378,7 +13378,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="205.74" y1="312.42" x2="205.74" y2="322.58" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-2" pin="S"/>
 <wire x1="205.74" y1="322.58" x2="243.84" y2="322.58" width="0.1524" layer="91"/>
-<pinref part="R15" gate="G$1" pin="2"/>
+<pinref part="TEMPR15" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="322.58" x2="254" y2="322.58" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="317.5" x2="243.84" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="317.5" x2="243.84" y2="322.58" width="0.1524" layer="91"/>
@@ -13392,7 +13392,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="208.28" y1="309.88" x2="208.28" y2="314.96" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-3" pin="S"/>
 <wire x1="208.28" y1="314.96" x2="243.84" y2="314.96" width="0.1524" layer="91"/>
-<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="TEMPR14" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="314.96" x2="254" y2="314.96" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="309.88" x2="243.84" y2="309.88" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="309.88" x2="243.84" y2="314.96" width="0.1524" layer="91"/>
@@ -13404,7 +13404,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="GPIO4"/>
 <pinref part="TEMPH" gate="-4" pin="S"/>
 <wire x1="180.34" y1="307.34" x2="243.84" y2="307.34" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="TEMPR13" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="307.34" x2="254" y2="307.34" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="302.26" x2="243.84" y2="302.26" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="302.26" x2="243.84" y2="307.34" width="0.1524" layer="91"/>
@@ -13418,7 +13418,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="208.28" y1="304.8" x2="208.28" y2="299.72" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-5" pin="S"/>
 <wire x1="208.28" y1="299.72" x2="243.84" y2="299.72" width="0.1524" layer="91"/>
-<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="TEMPR12" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="299.72" x2="254" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="294.64" x2="243.84" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="294.64" x2="243.84" y2="299.72" width="0.1524" layer="91"/>
@@ -13432,7 +13432,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="205.74" y1="302.26" x2="205.74" y2="292.1" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-6" pin="S"/>
 <wire x1="205.74" y1="292.1" x2="243.84" y2="292.1" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="TEMPR11" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="292.1" x2="254" y2="292.1" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="287.02" x2="243.84" y2="287.02" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="287.02" x2="243.84" y2="292.1" width="0.1524" layer="91"/>
@@ -13446,7 +13446,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="203.2" y1="299.72" x2="203.2" y2="284.48" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-7" pin="S"/>
 <wire x1="203.2" y1="284.48" x2="243.84" y2="284.48" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="TEMPR10" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="284.48" x2="254" y2="284.48" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="279.4" x2="243.84" y2="279.4" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="279.4" x2="243.84" y2="284.48" width="0.1524" layer="91"/>
@@ -13460,7 +13460,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="200.66" y1="297.18" x2="200.66" y2="276.86" width="0.1524" layer="91"/>
 <pinref part="TEMPH" gate="-8" pin="S"/>
 <wire x1="200.66" y1="276.86" x2="243.84" y2="276.86" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="TEMPR9" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="276.86" x2="254" y2="276.86" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="266.7" x2="243.84" y2="266.7" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="266.7" x2="243.84" y2="276.86" width="0.1524" layer="91"/>
@@ -13472,38 +13472,38 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="TSREF"/>
 <wire x1="180.34" y1="289.56" x2="198.12" y2="289.56" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="289.56" x2="198.12" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="TEMPR9" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="266.7" x2="218.44" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="CTSREF2" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="266.7" x2="228.6" y2="266.7" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="259.08" x2="218.44" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="259.08" x2="218.44" y2="266.7" width="0.1524" layer="91"/>
 <junction x="218.44" y="266.7"/>
 <wire x1="218.44" y1="266.7" x2="218.44" y2="279.4" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="TEMPR10" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="279.4" x2="228.6" y2="279.4" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="279.4" x2="218.44" y2="287.02" width="0.1524" layer="91"/>
 <junction x="218.44" y="279.4"/>
-<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="TEMPR11" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="287.02" x2="228.6" y2="287.02" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="287.02" x2="218.44" y2="294.64" width="0.1524" layer="91"/>
 <junction x="218.44" y="287.02"/>
-<pinref part="R12" gate="G$1" pin="1"/>
+<pinref part="TEMPR12" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="294.64" x2="228.6" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="294.64" x2="218.44" y2="302.26" width="0.1524" layer="91"/>
 <junction x="218.44" y="294.64"/>
-<pinref part="R13" gate="G$1" pin="1"/>
+<pinref part="TEMPR13" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="302.26" x2="228.6" y2="302.26" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="302.26" x2="218.44" y2="309.88" width="0.1524" layer="91"/>
 <junction x="218.44" y="302.26"/>
-<pinref part="R14" gate="G$1" pin="1"/>
+<pinref part="TEMPR14" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="309.88" x2="228.6" y2="309.88" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="309.88" x2="218.44" y2="317.5" width="0.1524" layer="91"/>
-<pinref part="R15" gate="G$1" pin="1"/>
+<pinref part="TEMPR15" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="317.5" x2="228.6" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="317.5" x2="218.44" y2="325.12" width="0.1524" layer="91"/>
 <junction x="218.44" y="317.5"/>
-<pinref part="R16" gate="G$1" pin="1"/>
+<pinref part="TEMPR16" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="325.12" x2="228.6" y2="325.12" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13524,29 +13524,29 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="N$130" class="0">
 <segment>
-<pinref part="RVC36" gate="G$1" pin="1"/>
+<pinref part="RNPN-1" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="241.3" x2="106.68" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="241.3" x2="104.14" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="241.3" x2="106.68" y2="248.92" width="0.1524" layer="91"/>
 <junction x="106.68" y="241.3"/>
 <wire x1="106.68" y1="248.92" x2="101.6" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="CCB47" gate="G$1" pin="2"/>
+<pinref part="CNPN1-1" gate="G$1" pin="2"/>
 <pinref part="T2" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="BATC-1" class="0">
 <segment>
-<pinref part="RVC36" gate="G$1" pin="2"/>
+<pinref part="RNPN-1" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="241.3" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
 <label x="83.82" y="241.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RCB21" gate="G$1" pin="1"/>
+<pinref part="RCB10-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="368.3" x2="60.96" y2="368.3" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-11" pin="S"/>
 <wire x1="35.56" y1="368.3" x2="35.56" y2="373.38" width="0.1524" layer="91"/>
 <junction x="35.56" y="368.3"/>
-<pinref part="RCB23" gate="G$1" pin="2"/>
+<pinref part="RBAT-1" gate="G$1" pin="2"/>
 <wire x1="35.56" y1="373.38" x2="167.64" y2="373.38" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="373.38" x2="167.64" y2="353.06" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="373.38" x2="180.34" y2="373.38" width="0.1524" layer="91"/>
@@ -13562,7 +13562,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </segment>
 <segment>
 <wire x1="114.3" y1="251.46" x2="114.3" y2="256.54" width="0.1524" layer="91"/>
-<pinref part="CCB46" gate="G$1" pin="2"/>
+<pinref part="CNPN2-1" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="256.54" x2="111.76" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="256.54" x2="127" y2="256.54" width="0.1524" layer="91"/>
 <junction x="114.3" y="256.54"/>
@@ -13586,7 +13586,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC2" gate="G$1" pin="RX"/>
 <wire x1="180.34" y1="292.1" x2="160.02" y2="292.1" width="0.1524" layer="91"/>
-<pinref part="CCB40" gate="G$1" pin="2"/>
+<pinref part="CCVDD-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="CVDD"/>
 <wire x1="160.02" y1="292.1" x2="160.02" y2="276.86" width="0.1524" layer="91"/>
 <junction x="160.02" y="276.86"/>
@@ -13594,7 +13594,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="GND-1" class="0">
 <segment>
-<pinref part="CCB47" gate="G$1" pin="1"/>
+<pinref part="CNPN1-1" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="248.92" x2="83.82" y2="248.92" width="0.1524" layer="91"/>
 <label x="83.82" y="248.92" size="1.778" layer="95"/>
 </segment>
@@ -13602,20 +13602,20 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC2" gate="G$1" pin="REFHM"/>
 <wire x1="137.16" y1="276.86" x2="137.16" y2="264.16" width="0.1524" layer="91"/>
 <label x="134.62" y="261.62" size="1.778" layer="95"/>
-<pinref part="CCB37" gate="G$1" pin="1"/>
+<pinref part="CREFHP-1" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="264.16" x2="139.7" y2="264.16" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="264.16" x2="139.7" y2="269.24" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="AVSS"/>
 <wire x1="144.78" y1="276.86" x2="144.78" y2="269.24" width="0.1524" layer="91"/>
-<pinref part="CCB38" gate="G$1" pin="1"/>
+<pinref part="CAVDD-1" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="269.24" x2="142.24" y2="269.24" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="269.24" x2="139.7" y2="269.24" width="0.1524" layer="91"/>
 <junction x="142.24" y="269.24"/>
 <junction x="139.7" y="269.24"/>
-<pinref part="CCB39" gate="G$1" pin="1"/>
+<pinref part="CNEG5V-1" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="269.24" x2="144.78" y2="269.24" width="0.1524" layer="91"/>
 <junction x="144.78" y="269.24"/>
-<pinref part="CCB40" gate="G$1" pin="1"/>
+<pinref part="CCVDD-1" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="269.24" x2="157.48" y2="269.24" width="0.1524" layer="91"/>
 <junction x="157.48" y="269.24"/>
 <pinref part="IC2" gate="G$1" pin="CVSS"/>
@@ -13624,7 +13624,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="160.02" y="269.24"/>
 <pinref part="IC2" gate="G$1" pin="DVSS"/>
 <wire x1="180.34" y1="287.02" x2="187.96" y2="287.02" width="0.1524" layer="91"/>
-<pinref part="CCB41" gate="G$1" pin="1"/>
+<pinref part="CDVDD-1" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="287.02" x2="187.96" y2="284.48" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="284.48" x2="187.96" y2="269.24" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="269.24" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
