@@ -6920,6 +6920,102 @@ Source: http://www.molex.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SI7611DN-T1-GE3">
+<packages>
+<package name="VISHAY_SIS468DN-T1-GE3">
+<wire x1="-1.575" y1="1.575" x2="1.575" y2="1.575" width="0.127" layer="51"/>
+<wire x1="1.575" y1="1.575" x2="1.575" y2="-1.575" width="0.127" layer="51"/>
+<wire x1="1.575" y1="-1.575" x2="-1.575" y2="-1.575" width="0.127" layer="51"/>
+<wire x1="-1.575" y1="-1.575" x2="-1.575" y2="1.575" width="0.127" layer="51"/>
+<wire x1="-1.575" y1="1.575" x2="1.575" y2="1.575" width="0.127" layer="21"/>
+<wire x1="-1.575" y1="-1.575" x2="1.575" y2="-1.575" width="0.127" layer="21"/>
+<circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
+<circle x="-2.502" y="0.997" radius="0.1" width="0.2" layer="51"/>
+<wire x1="-2.18" y1="1.825" x2="2.18" y2="1.825" width="0.05" layer="39"/>
+<wire x1="2.18" y1="1.825" x2="2.18" y2="-1.825" width="0.05" layer="39"/>
+<wire x1="2.18" y1="-1.825" x2="-2.18" y2="-1.825" width="0.05" layer="39"/>
+<wire x1="-2.18" y1="-1.825" x2="-2.18" y2="1.825" width="0.05" layer="39"/>
+<text x="-2.254459375" y="2.00396875" size="0.81343125" layer="25">&gt;NAME</text>
+<text x="-2.25581875" y="-2.958340625" size="0.812984375" layer="27">&gt;VALUE</text>
+<smd name="1" x="-1.435" y="0.99" dx="0.99" dy="0.405" layer="1"/>
+<smd name="2" x="-1.435" y="0.33" dx="0.99" dy="0.405" layer="1"/>
+<smd name="3" x="-1.435" y="-0.33" dx="0.99" dy="0.405" layer="1"/>
+<smd name="4" x="-1.435" y="-0.99" dx="0.99" dy="0.405" layer="1"/>
+<smd name="9" x="0.5575" y="0" dx="1.725" dy="2.235" layer="1"/>
+<smd name="5" x="1.55" y="-0.99" dx="0.76" dy="0.405" layer="1"/>
+<smd name="6" x="1.55" y="-0.33" dx="0.76" dy="0.405" layer="1"/>
+<smd name="7" x="1.55" y="0.33" dx="0.76" dy="0.405" layer="1"/>
+<smd name="8" x="1.55" y="0.99" dx="0.76" dy="0.405" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SI7611DN-T1-GE3">
+<wire x1="0.762" y1="-0.762" x2="0.762" y2="0" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="0.762" y2="0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-3.175" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="0.762" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="1.905" x2="0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="2.54" x2="0.762" y2="3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="0.762" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="3.302" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.508" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="4.318" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="0.508" x2="4.572" y2="0.254" width="0.1524" layer="94"/>
+<circle x="2.54" y="2.54" radius="0.3592" width="0" layer="94"/>
+<circle x="2.54" y="-2.54" radius="0.3592" width="0" layer="94"/>
+<text x="-8.89796875" y="-6.355690625" size="1.779590625" layer="96">&gt;VALUE</text>
+<text x="-8.907490625" y="3.817490625" size="1.7815" layer="95">&gt;NAME</text>
+<polygon width="0.1524" layer="94">
+<vertex x="3.81" y="0.508"/>
+<vertex x="4.318" y="-0.254"/>
+<vertex x="3.302" y="-0.254"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="2.54" y="0"/>
+<vertex x="1.524" y="0.762"/>
+<vertex x="1.524" y="-0.762"/>
+</polygon>
+<pin name="S" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="G" x="-2.54" y="2.54" visible="off" length="short" direction="pas"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SI7611DN-T1-GE3" prefix="Q">
+<description>P-Channel 40 V 0.025 Ohm 39 W Surface Mount Power Mosfet - PowerPAK-1212-8 &lt;a href="https://pricing.snapeda.com/parts/SI7611DN-T1-GE3/Vishay%20Siliconix/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="SI7611DN-T1-GE3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="VISHAY_SIS468DN-T1-GE3">
+<connects>
+<connect gate="G$1" pin="D" pad="5 6 7 8 9"/>
+<connect gate="G$1" pin="G" pad="4"/>
+<connect gate="G$1" pin="S" pad="1 2 3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="In Stock"/>
+<attribute name="DESCRIPTION" value=" P-Channel 40 V 18A (Tc) 3.7W (Ta), 39W (Tc) Surface Mount PowerPAK® 1212-8 "/>
+<attribute name="MF" value="Vishay Siliconix"/>
+<attribute name="MP" value="SI7611DN-T1-GE3"/>
+<attribute name="PACKAGE" value="PowerPAK®-1212 Vishay"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SI7611DN-T1-GE3/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6963,6 +7059,12 @@ Source: http://www.molex.com</description>
 <part name="CONTACTOR_N" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 <part name="CONTACTOR_P" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 <part name="CONTACTOR_PRECHARGE" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="Q1" library="SI7611DN-T1-GE3" deviceset="SI7611DN-T1-GE3" device=""/>
+<part name="Q2" library="SI7611DN-T1-GE3" deviceset="SI7611DN-T1-GE3" device=""/>
+<part name="Q3" library="SI7611DN-T1-GE3" deviceset="SI7611DN-T1-GE3" device=""/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/2V" package3d_urn="urn:adsk.eagle:package:23495/1" value="10k ohm"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/2V" package3d_urn="urn:adsk.eagle:package:23495/1" value="10k ohm"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/2V" package3d_urn="urn:adsk.eagle:package:23495/1" value="10km"/>
 </parts>
 <sheets>
 <sheet>
@@ -7128,6 +7230,30 @@ Source: http://www.molex.com</description>
 <attribute name="NAME" x="-116.84" y="29.718" size="1.524" layer="95"/>
 <attribute name="VALUE" x="-120.142" y="31.877" size="1.778" layer="96"/>
 </instance>
+<instance part="Q1" gate="G$1" x="-132.08" y="68.58" smashed="yes">
+<attribute name="VALUE" x="-140.97796875" y="62.224309375" size="1.779590625" layer="96"/>
+<attribute name="NAME" x="-140.987490625" y="72.397490625" size="1.7815" layer="95"/>
+</instance>
+<instance part="Q2" gate="G$1" x="-132.08" y="50.8" smashed="yes">
+<attribute name="VALUE" x="-140.97796875" y="44.444309375" size="1.779590625" layer="96"/>
+<attribute name="NAME" x="-140.987490625" y="54.617490625" size="1.7815" layer="95"/>
+</instance>
+<instance part="Q3" gate="G$1" x="-132.08" y="33.02" smashed="yes">
+<attribute name="VALUE" x="-140.97796875" y="26.664309375" size="1.779590625" layer="96"/>
+<attribute name="NAME" x="-140.987490625" y="36.837490625" size="1.7815" layer="95"/>
+</instance>
+<instance part="R1" gate="G$1" x="-139.7" y="76.2" smashed="yes">
+<attribute name="NAME" x="-143.51" y="77.6986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-143.51" y="72.898" size="1.778" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="-139.7" y="58.42" smashed="yes">
+<attribute name="NAME" x="-143.51" y="59.9186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-143.51" y="55.118" size="1.778" layer="96"/>
+</instance>
+<instance part="R4" gate="G$1" x="-139.7" y="40.64" smashed="yes">
+<attribute name="NAME" x="-143.51" y="42.1386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-143.51" y="37.338" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7243,6 +7369,30 @@ Source: http://www.molex.com</description>
 <pinref part="CAN" gate="-3" pin="S"/>
 <wire x1="33.02" y1="53.34" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
 <label x="35.56" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Q1" gate="G$1" pin="D"/>
+<wire x1="-129.54" y1="63.5" x2="-129.54" y2="60.96" width="0.1524" layer="91"/>
+<label x="-129.54" y="58.42" size="1.778" layer="95"/>
+<wire x1="-129.54" y1="60.96" x2="-144.78" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-144.78" y1="76.2" x2="-144.78" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q2" gate="G$1" pin="D"/>
+<wire x1="-129.54" y1="45.72" x2="-129.54" y2="43.18" width="0.1524" layer="91"/>
+<label x="-129.54" y="43.18" size="1.778" layer="95"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-144.78" y1="58.42" x2="-144.78" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="43.18" x2="-129.54" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q3" gate="G$1" pin="D"/>
+<wire x1="-129.54" y1="27.94" x2="-129.54" y2="25.4" width="0.1524" layer="91"/>
+<label x="-129.54" y="22.86" size="1.778" layer="95"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-144.78" y1="40.64" x2="-144.78" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="25.4" x2="-129.54" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NCS/CS" class="0">
@@ -7528,6 +7678,72 @@ Source: http://www.molex.com</description>
 <wire x1="38.1" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
 <label x="25.4" y="55.88" size="1.778" layer="95"/>
 <pinref part="CAN" gate="-2" pin="S"/>
+</segment>
+</net>
+<net name="CONTACTORN_CTRL" class="0">
+<segment>
+<pinref part="Q1" gate="G$1" pin="G"/>
+<wire x1="-134.62" y1="71.12" x2="-134.62" y2="76.2" width="0.1524" layer="91"/>
+<label x="-137.16" y="76.2" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="32-OUT1B"/>
+<wire x1="93.98" y1="58.42" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
+<label x="109.22" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="Q1" gate="G$1" pin="S"/>
+<wire x1="-129.54" y1="73.66" x2="-127" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-127" y1="73.66" x2="-127" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="CONTACTOR_N" gate="-2" pin="S"/>
+<wire x1="-127" y1="66.04" x2="-121.92" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="Q2" gate="G$1" pin="S"/>
+<wire x1="-129.54" y1="55.88" x2="-127" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="CONTACTOR_P" gate="-2" pin="S"/>
+<wire x1="-127" y1="55.88" x2="-127" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-127" y1="48.26" x2="-121.92" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CONTACTORP_CTRL" class="0">
+<segment>
+<pinref part="Q2" gate="G$1" pin="G"/>
+<wire x1="-134.62" y1="53.34" x2="-134.62" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<label x="-127" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="9-OUT1C"/>
+<wire x1="93.98" y1="55.88" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
+<label x="109.22" y="55.88" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CONTACTORPRECHARGE_CTRL" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="Q3" gate="G$1" pin="G"/>
+<wire x1="-134.62" y1="40.64" x2="-134.62" y2="35.56" width="0.1524" layer="91"/>
+<label x="-132.08" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="6-OUT1D"/>
+<wire x1="93.98" y1="53.34" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
+<label x="109.22" y="53.34" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="Q3" gate="G$1" pin="S"/>
+<wire x1="-129.54" y1="38.1" x2="-127" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-127" y1="38.1" x2="-127" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="CONTACTOR_PRECHARGE" gate="-2" pin="S"/>
+<wire x1="-127" y1="30.48" x2="-121.92" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
