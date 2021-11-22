@@ -10874,12 +10874,12 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="CNPN1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.22uf"/>
 <part name="T2" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT89-BCE" package3d_urn="urn:adsk.eagle:package:29925/3" technology="BC868" value="PBHV8115X, 115"/>
 <part name="RCOMH" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
-<part name="CCOMHNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220 pF"/>
-<part name="RCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="RCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2nf"/>
-<part name="CCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2nf"/>
 <part name="CCOMHPG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220 pF"/>
+<part name="RCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="RCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
+<part name="CCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2nf"/>
+<part name="CCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2nf"/>
+<part name="CCOMHNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220 pF"/>
 <part name="ESDCOMH" library="ESDAVLC6-2BLY" deviceset="ESDAVLC6-2BLY" device=""/>
 <part name="COMH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 </parts>
@@ -11730,27 +11730,27 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="173.99" y="239.8014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="173.99" y="244.602" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHNG" gate="G$1" x="175.26" y="233.68" smashed="yes" rot="R90">
+<instance part="CCOMHPG" gate="G$1" x="175.26" y="233.68" smashed="yes" rot="R90">
 <attribute name="NAME" x="177.419" y="235.204" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="177.419" y="232.664" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RCOMHN" gate="G$1" x="180.34" y="226.06" smashed="yes" rot="R90">
+<instance part="RCOMHP" gate="G$1" x="180.34" y="226.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="178.8414" y="222.25" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="183.642" y="222.25" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RCOMHP" gate="G$1" x="160.02" y="226.06" smashed="yes" rot="R90">
+<instance part="RCOMHN" gate="G$1" x="160.02" y="226.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="158.5214" y="222.25" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="163.322" y="222.25" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHN" gate="G$1" x="180.34" y="208.28" smashed="yes" rot="R180">
+<instance part="CCOMHP" gate="G$1" x="180.34" y="208.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="178.816" y="207.899" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="178.816" y="212.979" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHP" gate="G$1" x="160.02" y="208.28" smashed="yes" rot="R180">
+<instance part="CCOMHN" gate="G$1" x="160.02" y="208.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="158.496" y="207.899" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="158.496" y="212.979" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHPG" gate="G$1" x="154.94" y="233.68" smashed="yes" rot="R90">
+<instance part="CCOMHNG" gate="G$1" x="154.94" y="233.68" smashed="yes" rot="R90">
 <attribute name="NAME" x="157.099" y="237.744" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="157.099" y="230.124" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -13661,14 +13661,14 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="83.82" y="248.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="CCOMHNG" gate="G$1" pin="1"/>
+<pinref part="CCOMHPG" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="233.68" x2="167.64" y2="233.68" width="0.1524" layer="91"/>
 <label x="165.1" y="233.68" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="152.4" y1="233.68" x2="147.32" y2="233.68" width="0.1524" layer="91"/>
 <label x="147.32" y="231.14" size="1.778" layer="95"/>
-<pinref part="CCOMHPG" gate="G$1" pin="1"/>
+<pinref part="CCOMHNG" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="ESDCOMH" gate="G$1" pin="3"/>
@@ -13682,16 +13682,17 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="157.48" y1="264.16" x2="154.94" y2="264.16" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="COMHP"/>
 <wire x1="154.94" y1="264.16" x2="154.94" y2="276.86" width="0.1524" layer="91"/>
-<pinref part="RCOMHP" gate="G$1" pin="2"/>
-<pinref part="RCOMH" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="241.3" x2="165.1" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="241.3" x2="160.02" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="RCOMH" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="241.3" x2="175.26" y2="241.3" width="0.1524" layer="91"/>
+<junction x="180.34" y="241.3"/>
+<wire x1="180.34" y1="241.3" x2="180.34" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="CCOMHPG" gate="G$1" pin="2"/>
-<junction x="160.02" y="233.68"/>
-<wire x1="160.02" y1="233.68" x2="160.02" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="251.46" x2="160.02" y2="251.46" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="251.46" x2="160.02" y2="241.3" width="0.1524" layer="91"/>
-<junction x="160.02" y="241.3"/>
+<junction x="180.34" y="233.68"/>
+<wire x1="180.34" y1="233.68" x2="180.34" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="RCOMHP" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="231.14" x2="180.34" y2="226.06" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="251.46" x2="180.34" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="251.46" x2="180.34" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$132" class="0">
@@ -13700,40 +13701,16 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="154.94" y1="261.62" x2="152.4" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="COMHN"/>
 <wire x1="152.4" y1="261.62" x2="152.4" y2="276.86" width="0.1524" layer="91"/>
-<pinref part="RCOMH" gate="G$1" pin="1"/>
-<wire x1="180.34" y1="241.3" x2="175.26" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="241.3" x2="180.34" y2="233.68" width="0.1524" layer="91"/>
-<pinref part="CCOMHNG" gate="G$1" pin="2"/>
-<junction x="180.34" y="233.68"/>
-<wire x1="180.34" y1="233.68" x2="180.34" y2="231.14" width="0.1524" layer="91"/>
 <pinref part="RCOMHN" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="231.14" x2="180.34" y2="226.06" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="246.38" x2="180.34" y2="246.38" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="246.38" x2="180.34" y2="241.3" width="0.1524" layer="91"/>
-<junction x="180.34" y="241.3"/>
-</segment>
-</net>
-<net name="N$133" class="0">
-<segment>
-<pinref part="RCOMHP" gate="G$1" pin="1"/>
-<pinref part="CCOMHP" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="220.98" x2="160.02" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="ESDCOMH" gate="G$1" pin="1"/>
-<wire x1="160.02" y1="218.44" x2="160.02" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="215.9" x2="170.18" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="218.44" x2="160.02" y2="218.44" width="0.1524" layer="91"/>
-<junction x="160.02" y="218.44"/>
-</segment>
-</net>
-<net name="N$134" class="0">
-<segment>
-<pinref part="RCOMHN" gate="G$1" pin="1"/>
-<pinref part="CCOMHN" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="220.98" x2="180.34" y2="213.36" width="0.1524" layer="91"/>
-<pinref part="ESDCOMH" gate="G$1" pin="2"/>
-<wire x1="167.64" y1="215.9" x2="167.64" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="220.98" x2="180.34" y2="220.98" width="0.1524" layer="91"/>
-<junction x="180.34" y="220.98"/>
+<pinref part="RCOMH" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="241.3" x2="165.1" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="241.3" x2="160.02" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="CCOMHNG" gate="G$1" pin="2"/>
+<junction x="160.02" y="233.68"/>
+<wire x1="160.02" y1="233.68" x2="160.02" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="246.38" x2="160.02" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="246.38" x2="160.02" y2="241.3" width="0.1524" layer="91"/>
+<junction x="160.02" y="241.3"/>
 </segment>
 </net>
 <net name="N$126" class="0">
@@ -13775,17 +13752,17 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="154.94" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="COMHP" class="0">
+<net name="COMHN" class="0">
 <segment>
-<pinref part="CCOMHP" gate="G$1" pin="1"/>
+<pinref part="CCOMHN" gate="G$1" pin="1"/>
 <pinref part="COMH" gate="-1" pin="S"/>
 <wire x1="160.02" y1="205.74" x2="160.02" y2="200.66" width="0.1524" layer="91"/>
 <label x="152.4" y="203.2" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="COMHN" class="0">
+<net name="COMHP" class="0">
 <segment>
-<pinref part="CCOMHN" gate="G$1" pin="1"/>
+<pinref part="CCOMHP" gate="G$1" pin="1"/>
 <pinref part="COMH" gate="-2" pin="S"/>
 <wire x1="180.34" y1="205.74" x2="180.34" y2="200.66" width="0.1524" layer="91"/>
 <label x="180.34" y="203.2" size="1.778" layer="95"/>
@@ -13843,6 +13820,29 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="165.1" y1="254" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
 <junction x="152.4" y="254"/>
 <junction x="165.1" y="269.24"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="ESDCOMH" gate="G$1" pin="1"/>
+<wire x1="170.18" y1="215.9" x2="170.18" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="RCOMHP" gate="G$1" pin="1"/>
+<pinref part="CCOMHP" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="220.98" x2="180.34" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="218.44" x2="180.34" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="218.44" x2="180.34" y2="218.44" width="0.1524" layer="91"/>
+<junction x="180.34" y="218.44"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="ESDCOMH" gate="G$1" pin="2"/>
+<wire x1="167.64" y1="215.9" x2="167.64" y2="220.98" width="0.1524" layer="91"/>
+<pinref part="RCOMHN" gate="G$1" pin="1"/>
+<pinref part="CCOMHN" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="220.98" x2="160.02" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="220.98" x2="160.02" y2="220.98" width="0.1524" layer="91"/>
+<junction x="160.02" y="220.98"/>
 </segment>
 </net>
 </nets>
