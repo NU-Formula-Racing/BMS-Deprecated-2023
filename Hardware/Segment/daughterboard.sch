@@ -12415,6 +12415,16 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="172.72" y="5.08"/>
 <junction x="175.26" y="20.32"/>
 </segment>
+<segment>
+<wire x1="124.46" y1="-30.48" x2="119.38" y2="-30.48" width="0.1524" layer="91"/>
+<label x="119.38" y="-33.02" size="1.778" layer="95"/>
+<pinref part="CCOMLPG" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CCOMLNG" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="-30.48" x2="139.7" y2="-30.48" width="0.1524" layer="91"/>
+<label x="137.16" y="-30.48" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$46" class="0">
 <segment>
@@ -12706,16 +12716,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="CNPN1" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="0" x2="93.98" y2="0" width="0.1524" layer="91"/>
 <label x="93.98" y="0" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="CCOMLNG" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="-30.48" x2="139.7" y2="-30.48" width="0.1524" layer="91"/>
-<label x="137.16" y="-30.48" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="124.46" y1="-30.48" x2="119.38" y2="-30.48" width="0.1524" layer="91"/>
-<label x="119.38" y="-33.02" size="1.778" layer="95"/>
-<pinref part="CCOMLPG" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="ESDCOML" gate="G$1" pin="3"/>
@@ -13661,16 +13661,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="83.82" y="248.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="CCOMHPG" gate="G$1" pin="1"/>
-<wire x1="172.72" y1="233.68" x2="167.64" y2="233.68" width="0.1524" layer="91"/>
-<label x="165.1" y="233.68" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="152.4" y1="233.68" x2="147.32" y2="233.68" width="0.1524" layer="91"/>
-<label x="147.32" y="231.14" size="1.778" layer="95"/>
-<pinref part="CCOMHNG" gate="G$1" pin="1"/>
-</segment>
-<segment>
 <pinref part="ESDCOMH" gate="G$1" pin="3"/>
 <wire x1="170.18" y1="195.58" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
 <label x="167.64" y="190.5" size="1.778" layer="95"/>
@@ -13820,6 +13810,16 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="165.1" y1="254" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
 <junction x="152.4" y="254"/>
 <junction x="165.1" y="269.24"/>
+</segment>
+<segment>
+<wire x1="152.4" y1="233.68" x2="147.32" y2="233.68" width="0.1524" layer="91"/>
+<label x="147.32" y="231.14" size="1.778" layer="95"/>
+<pinref part="CCOMHNG" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CCOMHPG" gate="G$1" pin="1"/>
+<wire x1="172.72" y1="233.68" x2="167.64" y2="233.68" width="0.1524" layer="91"/>
+<label x="165.1" y="233.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
