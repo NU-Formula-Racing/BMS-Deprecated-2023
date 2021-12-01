@@ -10506,77 +10506,77 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="-64.516" y="109.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-64.516" y="104.521" size="1.778" layer="96"/>
 </instance>
-<instance part="RVC17" gate="G$1" x="-73.66" y="5.08" smashed="yes" rot="R180">
-<attribute name="NAME" x="-69.85" y="3.5814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-69.85" y="8.382" size="1.778" layer="96" rot="R180"/>
+<instance part="RVC17" gate="G$1" x="-271.78" y="259.08" smashed="yes" rot="R180">
+<attribute name="NAME" x="-267.97" y="257.5814" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-267.97" y="262.382" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB22" gate="G$1" x="-68.58" y="-2.54" smashed="yes" rot="R90">
-<attribute name="NAME" x="-66.421" y="-1.016" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-66.421" y="-3.556" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB22" gate="G$1" x="-266.7" y="251.46" smashed="yes" rot="R90">
+<attribute name="NAME" x="-264.541" y="252.984" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-264.541" y="250.444" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RVC18" gate="G$1" x="-63.5" y="-10.16" smashed="yes" rot="R90">
-<attribute name="NAME" x="-64.9986" y="-13.97" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-60.198" y="-13.97" size="1.778" layer="96" rot="R180"/>
+<instance part="RVC18" gate="G$1" x="-261.62" y="243.84" smashed="yes" rot="R90">
+<attribute name="NAME" x="-263.1186" y="240.03" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-258.318" y="240.03" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RVC19" gate="G$1" x="-83.82" y="-10.16" smashed="yes" rot="R90">
-<attribute name="NAME" x="-85.3186" y="-13.97" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-80.518" y="-13.97" size="1.778" layer="96" rot="R180"/>
+<instance part="RVC19" gate="G$1" x="-281.94" y="243.84" smashed="yes" rot="R90">
+<attribute name="NAME" x="-283.4386" y="240.03" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-278.638" y="240.03" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB24" gate="G$1" x="-63.5" y="-27.94" smashed="yes" rot="R180">
-<attribute name="NAME" x="-65.024" y="-28.321" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-65.024" y="-23.241" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB24" gate="G$1" x="-261.62" y="226.06" smashed="yes" rot="R180">
+<attribute name="NAME" x="-263.144" y="225.679" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-263.144" y="230.759" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB25" gate="G$1" x="-83.82" y="-27.94" smashed="yes" rot="R180">
-<attribute name="NAME" x="-85.344" y="-28.321" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-85.344" y="-23.241" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB25" gate="G$1" x="-281.94" y="226.06" smashed="yes" rot="R180">
+<attribute name="NAME" x="-283.464" y="225.679" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-283.464" y="230.759" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB23" gate="G$1" x="-88.9" y="-2.54" smashed="yes" rot="R90">
-<attribute name="NAME" x="-86.741" y="1.524" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-86.741" y="-6.096" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB23" gate="G$1" x="-287.02" y="251.46" smashed="yes" rot="R90">
+<attribute name="NAME" x="-284.861" y="255.524" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-284.861" y="247.904" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RVC1" gate="G$1" x="-27.94" y="7.62" smashed="yes" rot="R180">
-<attribute name="NAME" x="-24.13" y="6.1214" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-24.13" y="10.922" size="1.778" layer="96" rot="R180"/>
+<instance part="RVC1" gate="G$1" x="-226.06" y="261.62" smashed="yes" rot="R180">
+<attribute name="NAME" x="-222.25" y="260.1214" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-222.25" y="264.922" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB1" gate="G$1" x="-22.86" y="0" smashed="yes" rot="R90">
-<attribute name="NAME" x="-20.701" y="1.524" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-20.701" y="-1.016" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB1" gate="G$1" x="-220.98" y="254" smashed="yes" rot="R90">
+<attribute name="NAME" x="-218.821" y="255.524" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-218.821" y="252.984" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RVC2" gate="G$1" x="-17.78" y="-7.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="-19.2786" y="-11.43" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-14.478" y="-11.43" size="1.778" layer="96" rot="R180"/>
+<instance part="RVC2" gate="G$1" x="-215.9" y="246.38" smashed="yes" rot="R90">
+<attribute name="NAME" x="-217.3986" y="242.57" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-212.598" y="242.57" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RVC3" gate="G$1" x="-38.1" y="-7.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="-39.5986" y="-11.43" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-34.798" y="-11.43" size="1.778" layer="96" rot="R180"/>
+<instance part="RVC3" gate="G$1" x="-236.22" y="246.38" smashed="yes" rot="R90">
+<attribute name="NAME" x="-237.7186" y="242.57" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-232.918" y="242.57" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB2" gate="G$1" x="-17.78" y="-25.4" smashed="yes" rot="R180">
-<attribute name="NAME" x="-19.304" y="-25.781" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-19.304" y="-20.701" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB2" gate="G$1" x="-215.9" y="228.6" smashed="yes" rot="R180">
+<attribute name="NAME" x="-217.424" y="228.219" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-217.424" y="233.299" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB3" gate="G$1" x="-38.1" y="-25.4" smashed="yes" rot="R180">
-<attribute name="NAME" x="-39.624" y="-25.781" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.624" y="-20.701" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB3" gate="G$1" x="-236.22" y="228.6" smashed="yes" rot="R180">
+<attribute name="NAME" x="-237.744" y="228.219" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-237.744" y="233.299" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCB4" gate="G$1" x="-43.18" y="0" smashed="yes" rot="R90">
-<attribute name="NAME" x="-41.021" y="4.064" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-41.021" y="-3.556" size="1.778" layer="96" rot="R180"/>
+<instance part="CCB4" gate="G$1" x="-241.3" y="254" smashed="yes" rot="R90">
+<attribute name="NAME" x="-239.141" y="258.064" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-239.141" y="250.444" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="COMH" gate="-1" x="-63.5" y="-38.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="-64.262" y="-40.64" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-62.103" y="-37.338" size="1.778" layer="96" rot="R270"/>
+<instance part="COMH" gate="-1" x="-261.62" y="215.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="-262.382" y="213.36" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-260.223" y="216.662" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="COMH" gate="-2" x="-83.82" y="-38.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="-84.582" y="-40.64" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-82.423" y="-37.338" size="1.778" layer="96" rot="R270"/>
+<instance part="COMH" gate="-2" x="-281.94" y="215.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="-282.702" y="213.36" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-280.543" y="216.662" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="COML" gate="-1" x="-17.78" y="-35.56" smashed="yes" rot="R270">
-<attribute name="NAME" x="-18.542" y="-38.1" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-16.383" y="-34.798" size="1.778" layer="96" rot="R270"/>
+<instance part="COML" gate="-1" x="-215.9" y="218.44" smashed="yes" rot="R270">
+<attribute name="NAME" x="-216.662" y="215.9" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-214.503" y="219.202" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="COML" gate="-2" x="-38.1" y="-35.56" smashed="yes" rot="R270">
-<attribute name="NAME" x="-38.862" y="-38.1" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-36.703" y="-34.798" size="1.778" layer="96" rot="R270"/>
+<instance part="COML" gate="-2" x="-236.22" y="218.44" smashed="yes" rot="R270">
+<attribute name="NAME" x="-236.982" y="215.9" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-234.823" y="219.202" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="CAN" gate="-1" x="30.48" y="60.96" smashed="yes" rot="R180">
 <attribute name="NAME" x="27.94" y="61.722" size="1.524" layer="95" rot="R180"/>
@@ -10635,85 +10635,85 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="VALUE" x="-140.97796875" y="26.664309375" size="1.779590625" layer="96"/>
 <attribute name="NAME" x="-140.987490625" y="36.837490625" size="1.7815" layer="95"/>
 </instance>
-<instance part="RCOML" gate="G$1" x="-200.66" y="-22.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="-196.85" y="-24.3586" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-196.85" y="-19.558" size="1.778" layer="96" rot="R180"/>
+<instance part="RCOML" gate="G$1" x="-50.8" y="0" smashed="yes" rot="R180">
+<attribute name="NAME" x="-46.99" y="-1.4986" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-46.99" y="3.302" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMLNG" gate="G$1" x="-195.58" y="-30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="-193.421" y="-28.956" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-193.421" y="-31.496" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMLNG" gate="G$1" x="-45.72" y="-7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-43.561" y="-6.096" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-43.561" y="-8.636" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RCOMLN" gate="G$1" x="-190.5" y="-38.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="-191.9986" y="-41.91" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-187.198" y="-41.91" size="1.778" layer="96" rot="R180"/>
+<instance part="RCOMLN" gate="G$1" x="-40.64" y="-15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="-42.1386" y="-19.05" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-37.338" y="-19.05" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RCOMLP" gate="G$1" x="-210.82" y="-38.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="-212.3186" y="-41.91" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-207.518" y="-41.91" size="1.778" layer="96" rot="R180"/>
+<instance part="RCOMLP" gate="G$1" x="-60.96" y="-15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="-62.4586" y="-19.05" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-57.658" y="-19.05" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMLN" gate="G$1" x="-190.5" y="-55.88" smashed="yes" rot="R180">
-<attribute name="NAME" x="-192.024" y="-56.261" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-192.024" y="-51.181" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMLN" gate="G$1" x="-40.64" y="-33.02" smashed="yes" rot="R180">
+<attribute name="NAME" x="-42.164" y="-33.401" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-42.164" y="-28.321" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMLP" gate="G$1" x="-210.82" y="-55.88" smashed="yes" rot="R180">
-<attribute name="NAME" x="-212.344" y="-56.261" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-212.344" y="-51.181" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMLP" gate="G$1" x="-60.96" y="-33.02" smashed="yes" rot="R180">
+<attribute name="NAME" x="-62.484" y="-33.401" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-62.484" y="-28.321" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMLPG" gate="G$1" x="-215.9" y="-30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="-213.741" y="-26.416" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-213.741" y="-34.036" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMLPG" gate="G$1" x="-66.04" y="-7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-63.881" y="-3.556" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-63.881" y="-11.176" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="ESDCOML" gate="G$1" x="-200.66" y="-48.26" smashed="yes" rot="R270">
-<attribute name="NAME" x="-193.04" y="-64.77" size="1.778" layer="95" rot="R270" align="center-left"/>
-<attribute name="VALUE" x="-195.58" y="-64.77" size="1.778" layer="96" rot="R270" align="center-left"/>
+<instance part="ESDCOML" gate="G$1" x="-50.8" y="-25.4" smashed="yes" rot="R270">
+<attribute name="NAME" x="-43.18" y="-41.91" size="1.778" layer="95" rot="R270" align="center-left"/>
+<attribute name="VALUE" x="-45.72" y="-41.91" size="1.778" layer="96" rot="R270" align="center-left"/>
 </instance>
-<instance part="COML1" gate="-1" x="-190.5" y="-66.04" smashed="yes" rot="R270">
-<attribute name="NAME" x="-191.262" y="-68.58" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-189.103" y="-65.278" size="1.778" layer="96" rot="R270"/>
+<instance part="COML1" gate="-1" x="-40.64" y="-43.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="-41.402" y="-45.72" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-39.243" y="-42.418" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="COML1" gate="-2" x="-210.82" y="-66.04" smashed="yes" rot="R270">
-<attribute name="NAME" x="-211.582" y="-68.58" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-209.423" y="-65.278" size="1.778" layer="96" rot="R270"/>
+<instance part="COML1" gate="-2" x="-60.96" y="-43.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="-61.722" y="-45.72" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-59.563" y="-42.418" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="RCOMH" gate="G$1" x="-162.56" y="-22.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="-158.75" y="-24.3586" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-158.75" y="-19.558" size="1.778" layer="96" rot="R180"/>
+<instance part="RCOMH" gate="G$1" x="-12.7" y="0" smashed="yes" rot="R180">
+<attribute name="NAME" x="-8.89" y="-1.4986" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-8.89" y="3.302" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHNG" gate="G$1" x="-157.48" y="-30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="-155.321" y="-28.956" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-155.321" y="-31.496" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMHNG" gate="G$1" x="-7.62" y="-7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-5.461" y="-6.096" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-5.461" y="-8.636" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RCOMHN" gate="G$1" x="-152.4" y="-38.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="-153.8986" y="-41.91" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-149.098" y="-41.91" size="1.778" layer="96" rot="R180"/>
+<instance part="RCOMHN" gate="G$1" x="-2.54" y="-15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="-4.0386" y="-19.05" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="0.762" y="-19.05" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="RCOMHP" gate="G$1" x="-172.72" y="-38.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="-174.2186" y="-41.91" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-169.418" y="-41.91" size="1.778" layer="96" rot="R180"/>
+<instance part="RCOMHP" gate="G$1" x="-22.86" y="-15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="-24.3586" y="-19.05" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-19.558" y="-19.05" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHN" gate="G$1" x="-152.4" y="-55.88" smashed="yes" rot="R180">
-<attribute name="NAME" x="-153.924" y="-56.261" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-153.924" y="-51.181" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMHN" gate="G$1" x="-2.54" y="-33.02" smashed="yes" rot="R180">
+<attribute name="NAME" x="-4.064" y="-33.401" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-4.064" y="-28.321" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHP" gate="G$1" x="-172.72" y="-55.88" smashed="yes" rot="R180">
-<attribute name="NAME" x="-174.244" y="-56.261" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-174.244" y="-51.181" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMHP" gate="G$1" x="-22.86" y="-33.02" smashed="yes" rot="R180">
+<attribute name="NAME" x="-24.384" y="-33.401" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-24.384" y="-28.321" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CCOMHPG" gate="G$1" x="-177.8" y="-30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="-175.641" y="-26.416" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-175.641" y="-34.036" size="1.778" layer="96" rot="R180"/>
+<instance part="CCOMHPG" gate="G$1" x="-27.94" y="-7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-25.781" y="-3.556" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-25.781" y="-11.176" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="ESDCOMH" gate="G$1" x="-162.56" y="-48.26" smashed="yes" rot="R270">
-<attribute name="NAME" x="-154.94" y="-64.77" size="1.778" layer="95" rot="R270" align="center-left"/>
-<attribute name="VALUE" x="-157.48" y="-64.77" size="1.778" layer="96" rot="R270" align="center-left"/>
+<instance part="ESDCOMH" gate="G$1" x="-12.7" y="-25.4" smashed="yes" rot="R270">
+<attribute name="NAME" x="-5.08" y="-41.91" size="1.778" layer="95" rot="R270" align="center-left"/>
+<attribute name="VALUE" x="-7.62" y="-41.91" size="1.778" layer="96" rot="R270" align="center-left"/>
 </instance>
-<instance part="COML2" gate="-1" x="-152.4" y="-66.04" smashed="yes" rot="R270">
-<attribute name="NAME" x="-153.162" y="-68.58" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-151.003" y="-65.278" size="1.778" layer="96" rot="R270"/>
+<instance part="COML2" gate="-1" x="-2.54" y="-43.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="-3.302" y="-45.72" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-1.143" y="-42.418" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="COML2" gate="-2" x="-172.72" y="-66.04" smashed="yes" rot="R270">
-<attribute name="NAME" x="-173.482" y="-68.58" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-171.323" y="-65.278" size="1.778" layer="96" rot="R270"/>
+<instance part="COML2" gate="-2" x="-22.86" y="-43.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="-23.622" y="-45.72" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-21.463" y="-42.418" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R5" gate="G$1" x="-139.7" y="76.2" smashed="yes">
 <attribute name="NAME" x="-143.51" y="77.6986" size="1.778" layer="95"/>
@@ -10824,22 +10824,22 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </segment>
 <segment>
 <pinref part="CCB22" gate="G$1" pin="1"/>
-<wire x1="-71.12" y1="-2.54" x2="-76.2" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-78.74" y="-2.54" size="1.778" layer="95"/>
+<wire x1="-269.24" y1="251.46" x2="-274.32" y2="251.46" width="0.1524" layer="91"/>
+<label x="-276.86" y="251.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-91.44" y1="-2.54" x2="-96.52" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-96.52" y="-5.08" size="1.778" layer="95"/>
+<wire x1="-289.56" y1="251.46" x2="-294.64" y2="251.46" width="0.1524" layer="91"/>
+<label x="-294.64" y="248.92" size="1.778" layer="95"/>
 <pinref part="CCB23" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="CCB1" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="0" x2="-30.48" y2="0" width="0.1524" layer="91"/>
-<label x="-33.02" y="0" size="1.778" layer="95"/>
+<wire x1="-223.52" y1="254" x2="-228.6" y2="254" width="0.1524" layer="91"/>
+<label x="-231.14" y="254" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-45.72" y1="0" x2="-50.8" y2="0" width="0.1524" layer="91"/>
-<label x="-50.8" y="-2.54" size="1.778" layer="95"/>
+<wire x1="-243.84" y1="254" x2="-248.92" y2="254" width="0.1524" layer="91"/>
+<label x="-248.92" y="251.46" size="1.778" layer="95"/>
 <pinref part="CCB4" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -10873,13 +10873,13 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </segment>
 <segment>
 <pinref part="ESDCOML" gate="G$1" pin="3"/>
-<wire x1="-200.66" y1="-68.58" x2="-200.66" y2="-73.66" width="0.1524" layer="91"/>
-<label x="-203.2" y="-73.66" size="1.778" layer="95"/>
+<wire x1="-50.8" y1="-45.72" x2="-50.8" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-53.34" y="-50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="ESDCOMH" gate="G$1" pin="3"/>
-<wire x1="-162.56" y1="-68.58" x2="-162.56" y2="-73.66" width="0.1524" layer="91"/>
-<label x="-165.1" y="-73.66" size="1.778" layer="95"/>
+<wire x1="-12.7" y1="-45.72" x2="-12.7" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-15.24" y="-50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NCS/CS" class="0">
@@ -11003,33 +11003,32 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="RVC19" gate="G$1" pin="1"/>
 <pinref part="CCB25" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="-15.24" x2="-83.82" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="-20.32" x2="-83.82" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="-20.32" x2="-76.2" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="-83.82" y="-20.32"/>
+<wire x1="-281.94" y1="238.76" x2="-281.94" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="-281.94" y1="233.68" x2="-281.94" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="-281.94" y1="233.68" x2="-274.32" y2="233.68" width="0.1524" layer="91"/>
+<junction x="-281.94" y="233.68"/>
 </segment>
 </net>
 <net name="N$68" class="0">
 <segment>
 <pinref part="RVC18" gate="G$1" pin="1"/>
 <pinref part="CCB24" gate="G$1" pin="2"/>
-<wire x1="-63.5" y1="-15.24" x2="-63.5" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="-20.32" x2="-63.5" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="-17.78" x2="-63.5" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="-20.32" x2="-71.12" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="233.68" x2="-261.62" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="238.76" x2="-261.62" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="233.68" x2="-269.24" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$69" class="0">
 <segment>
 <pinref part="CCB24" gate="G$1" pin="1"/>
-<wire x1="-63.5" y1="-30.48" x2="-63.5" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="223.52" x2="-261.62" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="COMH" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$66" class="0">
 <segment>
 <pinref part="CCB25" gate="G$1" pin="1"/>
-<wire x1="-83.82" y1="-30.48" x2="-83.82" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-281.94" y1="223.52" x2="-281.94" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="COMH" gate="-2" pin="S"/>
 </segment>
 </net>
@@ -11037,33 +11036,32 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="RVC3" gate="G$1" pin="1"/>
 <pinref part="CCB3" gate="G$1" pin="2"/>
-<wire x1="-38.1" y1="-12.7" x2="-38.1" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="-17.78" x2="-38.1" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="-17.78" x2="-30.48" y2="-17.78" width="0.1524" layer="91"/>
-<junction x="-38.1" y="-17.78"/>
+<wire x1="-236.22" y1="241.3" x2="-236.22" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="236.22" x2="-236.22" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="236.22" x2="-228.6" y2="236.22" width="0.1524" layer="91"/>
+<junction x="-236.22" y="236.22"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="RVC2" gate="G$1" pin="1"/>
 <pinref part="CCB2" gate="G$1" pin="2"/>
-<wire x1="-17.78" y1="-12.7" x2="-17.78" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="-17.78" x2="-17.78" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="-15.24" x2="-17.78" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="-17.78" x2="-25.4" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="236.22" x2="-215.9" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="241.3" x2="-215.9" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="236.22" x2="-223.52" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="CCB2" gate="G$1" pin="1"/>
-<wire x1="-17.78" y1="-27.94" x2="-17.78" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="226.06" x2="-215.9" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="COML" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="CCB3" gate="G$1" pin="1"/>
-<wire x1="-38.1" y1="-27.94" x2="-38.1" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="226.06" x2="-236.22" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="COML" gate="-2" pin="S"/>
 </segment>
 </net>
@@ -11074,30 +11072,30 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="-2.54" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-83.82" y1="10.16" x2="-83.82" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-281.94" y1="264.16" x2="-281.94" y2="259.08" width="0.1524" layer="91"/>
 <pinref part="RVC17" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="5.08" x2="-78.74" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="5.08" x2="-83.82" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="-83.82" y="5.08"/>
+<wire x1="-281.94" y1="259.08" x2="-276.86" y2="259.08" width="0.1524" layer="91"/>
+<wire x1="-281.94" y1="259.08" x2="-281.94" y2="251.46" width="0.1524" layer="91"/>
+<junction x="-281.94" y="259.08"/>
 <pinref part="RVC19" gate="G$1" pin="2"/>
 <pinref part="CCB23" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="-2.54" x2="-83.82" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-83.82" y="-2.54"/>
-<label x="-83.82" y="12.7" size="1.778" layer="95"/>
+<wire x1="-281.94" y1="251.46" x2="-281.94" y2="248.92" width="0.1524" layer="91"/>
+<junction x="-281.94" y="251.46"/>
+<label x="-281.94" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-154.94" y1="12.7" x2="-154.94" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-154.94" y1="-17.78" x2="-172.72" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-172.72" y1="-17.78" x2="-172.72" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="33.02" x2="-5.08" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="5.08" x2="-22.86" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="5.08" x2="-22.86" y2="0" width="0.1524" layer="91"/>
 <pinref part="RCOMH" gate="G$1" pin="2"/>
-<wire x1="-172.72" y1="-22.86" x2="-167.64" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-172.72" y1="-22.86" x2="-172.72" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-172.72" y="-22.86"/>
+<wire x1="-22.86" y1="0" x2="-17.78" y2="0" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="0" x2="-22.86" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-22.86" y="0"/>
 <pinref part="RCOMHP" gate="G$1" pin="2"/>
 <pinref part="CCOMHPG" gate="G$1" pin="2"/>
-<wire x1="-172.72" y1="-30.48" x2="-172.72" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-172.72" y="-30.48"/>
-<label x="-165.1" y="-7.62" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="-7.62" x2="-22.86" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-7.62"/>
+<label x="-15.24" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COMHN" class="0">
@@ -11108,29 +11106,29 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </segment>
 <segment>
 <pinref part="RVC17" gate="G$1" pin="1"/>
-<wire x1="-63.5" y1="5.08" x2="-68.58" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="5.08" x2="-63.5" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="-2.54" x2="-63.5" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="-5.08" x2="-63.5" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="259.08" x2="-266.7" y2="259.08" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="259.08" x2="-261.62" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="251.46" x2="-261.62" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="248.92" x2="-261.62" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="CCB22" gate="G$1" pin="2"/>
-<junction x="-63.5" y="-2.54"/>
+<junction x="-261.62" y="251.46"/>
 <pinref part="RVC18" gate="G$1" pin="2"/>
-<wire x1="-63.5" y1="5.08" x2="-63.5" y2="10.16" width="0.1524" layer="91"/>
-<junction x="-63.5" y="5.08"/>
-<label x="-63.5" y="12.7" size="1.778" layer="95"/>
+<wire x1="-261.62" y1="259.08" x2="-261.62" y2="264.16" width="0.1524" layer="91"/>
+<junction x="-261.62" y="259.08"/>
+<label x="-261.62" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-152.4" y1="10.16" x2="-152.4" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="33.02" x2="-2.54" y2="0" width="0.1524" layer="91"/>
 <pinref part="RCOMH" gate="G$1" pin="1"/>
-<wire x1="-152.4" y1="-22.86" x2="-157.48" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-152.4" y1="-22.86" x2="-152.4" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-152.4" y="-22.86"/>
-<wire x1="-152.4" y1="-30.48" x2="-152.4" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="-152.4" y1="-33.02" x2="-152.4" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="0" x2="-7.62" y2="0" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-2.54" y="0"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="CCOMHNG" gate="G$1" pin="2"/>
-<junction x="-152.4" y="-30.48"/>
+<junction x="-2.54" y="-7.62"/>
 <pinref part="RCOMHN" gate="G$1" pin="2"/>
-<label x="-152.4" y="-7.62" size="1.778" layer="95"/>
+<label x="-2.54" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COMLN" class="0">
@@ -11140,29 +11138,29 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="-2.54" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-38.1" y1="12.7" x2="-38.1" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="266.7" x2="-236.22" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="RVC1" gate="G$1" pin="2"/>
-<wire x1="-38.1" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="7.62" x2="-38.1" y2="0" width="0.1524" layer="91"/>
-<junction x="-38.1" y="7.62"/>
+<wire x1="-236.22" y1="261.62" x2="-231.14" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="261.62" x2="-236.22" y2="254" width="0.1524" layer="91"/>
+<junction x="-236.22" y="261.62"/>
 <pinref part="RVC3" gate="G$1" pin="2"/>
 <pinref part="CCB4" gate="G$1" pin="2"/>
-<wire x1="-38.1" y1="0" x2="-38.1" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="-38.1" y="0"/>
-<label x="-38.1" y="12.7" size="1.778" layer="95"/>
+<wire x1="-236.22" y1="254" x2="-236.22" y2="251.46" width="0.1524" layer="91"/>
+<junction x="-236.22" y="254"/>
+<label x="-236.22" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-190.5" y1="10.16" x2="-190.5" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="33.02" x2="-40.64" y2="0" width="0.1524" layer="91"/>
 <pinref part="RCOML" gate="G$1" pin="1"/>
-<wire x1="-190.5" y1="-22.86" x2="-195.58" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="-22.86" x2="-190.5" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-190.5" y="-22.86"/>
-<wire x1="-190.5" y1="-30.48" x2="-190.5" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="-33.02" x2="-190.5" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="0" x2="-45.72" y2="0" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="0" x2="-40.64" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-40.64" y="0"/>
+<wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-10.16" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="CCOMLNG" gate="G$1" pin="2"/>
-<junction x="-190.5" y="-30.48"/>
+<junction x="-40.64" y="-7.62"/>
 <pinref part="RCOMLN" gate="G$1" pin="2"/>
-<label x="-190.5" y="-12.7" size="1.778" layer="95"/>
+<label x="-40.64" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COMLP" class="0">
@@ -11173,30 +11171,30 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </segment>
 <segment>
 <pinref part="RVC1" gate="G$1" pin="1"/>
-<wire x1="-17.78" y1="7.62" x2="-22.86" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="7.62" x2="-17.78" y2="0" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="0" x2="-17.78" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="-2.54" x2="-17.78" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="261.62" x2="-220.98" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="261.62" x2="-215.9" y2="254" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="254" x2="-215.9" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="251.46" x2="-215.9" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="CCB1" gate="G$1" pin="2"/>
-<junction x="-17.78" y="0"/>
+<junction x="-215.9" y="254"/>
 <pinref part="RVC2" gate="G$1" pin="2"/>
-<wire x1="-17.78" y1="7.62" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-17.78" y="7.62"/>
-<label x="-17.78" y="12.7" size="1.778" layer="95"/>
+<wire x1="-215.9" y1="261.62" x2="-215.9" y2="266.7" width="0.1524" layer="91"/>
+<junction x="-215.9" y="261.62"/>
+<label x="-215.9" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-193.04" y1="12.7" x2="-193.04" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-193.04" y1="-17.78" x2="-210.82" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-210.82" y1="-17.78" x2="-210.82" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="33.02" x2="-43.18" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="5.08" x2="-60.96" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="5.08" x2="-60.96" y2="0" width="0.1524" layer="91"/>
 <pinref part="RCOML" gate="G$1" pin="2"/>
-<wire x1="-210.82" y1="-22.86" x2="-205.74" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-210.82" y1="-22.86" x2="-210.82" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-210.82" y="-22.86"/>
+<wire x1="-60.96" y1="0" x2="-55.88" y2="0" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="0" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-60.96" y="0"/>
 <pinref part="RCOMLP" gate="G$1" pin="2"/>
 <pinref part="CCOMLPG" gate="G$1" pin="2"/>
-<wire x1="-210.82" y1="-30.48" x2="-210.82" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-210.82" y="-30.48"/>
-<label x="-200.66" y="-12.7" size="1.778" layer="95"/>
+<wire x1="-60.96" y1="-7.62" x2="-60.96" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-60.96" y="-7.62"/>
+<label x="-50.8" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CRX" class="0">
@@ -11283,34 +11281,34 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="GNDN" class="0">
 <segment>
-<wire x1="-218.44" y1="-30.48" x2="-223.52" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-223.52" y="-33.02" size="1.778" layer="95"/>
+<wire x1="-68.58" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-73.66" y="-10.16" size="1.778" layer="95"/>
 <pinref part="CCOMLPG" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="CCOMLNG" gate="G$1" pin="1"/>
-<wire x1="-198.12" y1="-30.48" x2="-203.2" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-205.74" y="-30.48" size="1.778" layer="95"/>
+<wire x1="-48.26" y1="-7.62" x2="-53.34" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-55.88" y="-7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-180.34" y1="-30.48" x2="-185.42" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-185.42" y="-33.02" size="1.778" layer="95"/>
+<wire x1="-30.48" y1="-7.62" x2="-35.56" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-35.56" y="-10.16" size="1.778" layer="95"/>
 <pinref part="CCOMHPG" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="CCOMHNG" gate="G$1" pin="1"/>
-<wire x1="-160.02" y1="-30.48" x2="-165.1" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-167.64" y="-30.48" size="1.778" layer="95"/>
+<wire x1="-10.16" y1="-7.62" x2="-15.24" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-17.78" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="RCOMLP" gate="G$1" pin="1"/>
 <pinref part="CCOMLP" gate="G$1" pin="2"/>
-<wire x1="-210.82" y1="-43.18" x2="-210.82" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-210.82" y1="-48.26" x2="-210.82" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="-210.82" y1="-48.26" x2="-203.2" y2="-48.26" width="0.1524" layer="91"/>
-<junction x="-210.82" y="-48.26"/>
+<wire x1="-60.96" y1="-20.32" x2="-60.96" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-25.4" x2="-60.96" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-25.4" x2="-53.34" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="-60.96" y="-25.4"/>
 <pinref part="ESDCOML" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -11318,28 +11316,28 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="RCOMLN" gate="G$1" pin="1"/>
 <pinref part="CCOMLN" gate="G$1" pin="2"/>
-<wire x1="-190.5" y1="-48.26" x2="-190.5" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="-43.18" x2="-190.5" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="-48.26" x2="-200.66" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-25.4" x2="-40.64" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-20.32" x2="-40.64" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-25.4" x2="-50.8" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="ESDCOML" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="COMMN" class="0">
 <segment>
-<label x="-187.96" y="-22.86" size="1.778" layer="95"/>
+<label x="-38.1" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="-149.86" y="-22.86" size="1.778" layer="95"/>
+<label x="0" y="0" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="RCOMHP" gate="G$1" pin="1"/>
 <pinref part="CCOMHP" gate="G$1" pin="2"/>
-<wire x1="-172.72" y1="-43.18" x2="-172.72" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-172.72" y1="-48.26" x2="-172.72" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="-172.72" y1="-48.26" x2="-165.1" y2="-48.26" width="0.1524" layer="91"/>
-<junction x="-172.72" y="-48.26"/>
+<wire x1="-22.86" y1="-20.32" x2="-22.86" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-25.4" x2="-22.86" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-25.4" x2="-15.24" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-25.4"/>
 <pinref part="ESDCOMH" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -11347,41 +11345,41 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="RCOMHN" gate="G$1" pin="1"/>
 <pinref part="CCOMHN" gate="G$1" pin="2"/>
-<wire x1="-152.4" y1="-48.26" x2="-152.4" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="-152.4" y1="-43.18" x2="-152.4" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-152.4" y1="-48.26" x2="-162.56" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-25.4" x2="-2.54" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-20.32" x2="-2.54" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-25.4" x2="-12.7" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="ESDCOMH" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="COMLP_ISO" class="0">
 <segment>
 <pinref part="CCOMLP" gate="G$1" pin="1"/>
-<wire x1="-210.82" y1="-58.42" x2="-210.82" y2="-63.5" width="0.1524" layer="91"/>
-<label x="-210.82" y="-60.96" size="1.778" layer="95" rot="R270"/>
+<wire x1="-60.96" y1="-35.56" x2="-60.96" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-60.96" y="-38.1" size="1.778" layer="95" rot="R270"/>
 <pinref part="COML1" gate="-2" pin="S"/>
 </segment>
 </net>
 <net name="COMLN_ISO" class="0">
 <segment>
 <pinref part="CCOMLN" gate="G$1" pin="1"/>
-<wire x1="-190.5" y1="-58.42" x2="-190.5" y2="-63.5" width="0.1524" layer="91"/>
-<label x="-190.5" y="-60.96" size="1.778" layer="95" rot="R270"/>
+<wire x1="-40.64" y1="-35.56" x2="-40.64" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-40.64" y="-38.1" size="1.778" layer="95" rot="R270"/>
 <pinref part="COML1" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="COMHP_ISO" class="0">
 <segment>
 <pinref part="CCOMHP" gate="G$1" pin="1"/>
-<wire x1="-172.72" y1="-58.42" x2="-172.72" y2="-63.5" width="0.1524" layer="91"/>
-<label x="-172.72" y="-60.96" size="1.778" layer="95" rot="R270"/>
+<wire x1="-22.86" y1="-35.56" x2="-22.86" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-22.86" y="-38.1" size="1.778" layer="95" rot="R270"/>
 <pinref part="COML2" gate="-2" pin="S"/>
 </segment>
 </net>
 <net name="COMHN_ISO" class="0">
 <segment>
 <pinref part="CCOMHN" gate="G$1" pin="1"/>
-<wire x1="-152.4" y1="-58.42" x2="-152.4" y2="-63.5" width="0.1524" layer="91"/>
-<label x="-152.4" y="-60.96" size="1.778" layer="95" rot="R270"/>
+<wire x1="-2.54" y1="-35.56" x2="-2.54" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-2.54" y="-38.1" size="1.778" layer="95" rot="R270"/>
 <pinref part="COML2" gate="-1" pin="S"/>
 </segment>
 </net>
