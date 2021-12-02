@@ -10416,22 +10416,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="C5" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.22μF"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="12v"/>
 <part name="C4" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="0.1μF"/>
-<part name="RVC17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
-<part name="CCB22" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
-<part name="RVC18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="RVC19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCB24" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
-<part name="CCB25" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
-<part name="CCB23" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
-<part name="RVC1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
-<part name="CCB1" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
-<part name="RVC2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="RVC3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCB2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
-<part name="CCB3" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="2.2nf"/>
-<part name="CCB4" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2.5/2" package3d_urn="urn:adsk.eagle:package:5415/1" value="220 pF"/>
-<part name="COMH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
-<part name="COML" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 <part name="CAN" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-4" device="" package3d_urn="urn:adsk.eagle:package:8078582/1"/>
 <part name="PWR_IN" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 <part name="CONTACTOR_N" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
@@ -10505,78 +10489,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="C4" gate="G$1" x="-66.04" y="109.22" smashed="yes">
 <attribute name="NAME" x="-64.516" y="109.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-64.516" y="104.521" size="1.778" layer="96"/>
-</instance>
-<instance part="RVC17" gate="G$1" x="-271.78" y="259.08" smashed="yes" rot="R180">
-<attribute name="NAME" x="-267.97" y="257.5814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-267.97" y="262.382" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB22" gate="G$1" x="-266.7" y="251.46" smashed="yes" rot="R90">
-<attribute name="NAME" x="-264.541" y="252.984" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-264.541" y="250.444" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="RVC18" gate="G$1" x="-261.62" y="243.84" smashed="yes" rot="R90">
-<attribute name="NAME" x="-263.1186" y="240.03" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-258.318" y="240.03" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="RVC19" gate="G$1" x="-281.94" y="243.84" smashed="yes" rot="R90">
-<attribute name="NAME" x="-283.4386" y="240.03" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-278.638" y="240.03" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB24" gate="G$1" x="-261.62" y="226.06" smashed="yes" rot="R180">
-<attribute name="NAME" x="-263.144" y="225.679" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-263.144" y="230.759" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB25" gate="G$1" x="-281.94" y="226.06" smashed="yes" rot="R180">
-<attribute name="NAME" x="-283.464" y="225.679" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-283.464" y="230.759" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB23" gate="G$1" x="-287.02" y="251.46" smashed="yes" rot="R90">
-<attribute name="NAME" x="-284.861" y="255.524" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-284.861" y="247.904" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="RVC1" gate="G$1" x="-226.06" y="261.62" smashed="yes" rot="R180">
-<attribute name="NAME" x="-222.25" y="260.1214" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-222.25" y="264.922" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB1" gate="G$1" x="-220.98" y="254" smashed="yes" rot="R90">
-<attribute name="NAME" x="-218.821" y="255.524" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-218.821" y="252.984" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="RVC2" gate="G$1" x="-215.9" y="246.38" smashed="yes" rot="R90">
-<attribute name="NAME" x="-217.3986" y="242.57" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-212.598" y="242.57" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="RVC3" gate="G$1" x="-236.22" y="246.38" smashed="yes" rot="R90">
-<attribute name="NAME" x="-237.7186" y="242.57" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-232.918" y="242.57" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB2" gate="G$1" x="-215.9" y="228.6" smashed="yes" rot="R180">
-<attribute name="NAME" x="-217.424" y="228.219" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-217.424" y="233.299" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB3" gate="G$1" x="-236.22" y="228.6" smashed="yes" rot="R180">
-<attribute name="NAME" x="-237.744" y="228.219" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-237.744" y="233.299" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CCB4" gate="G$1" x="-241.3" y="254" smashed="yes" rot="R90">
-<attribute name="NAME" x="-239.141" y="258.064" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-239.141" y="250.444" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="COMH" gate="-1" x="-261.62" y="215.9" smashed="yes" rot="R270">
-<attribute name="NAME" x="-262.382" y="213.36" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-260.223" y="216.662" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="COMH" gate="-2" x="-281.94" y="215.9" smashed="yes" rot="R270">
-<attribute name="NAME" x="-282.702" y="213.36" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-280.543" y="216.662" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="COML" gate="-1" x="-215.9" y="218.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="-216.662" y="215.9" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-214.503" y="219.202" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="COML" gate="-2" x="-236.22" y="218.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="-236.982" y="215.9" size="1.524" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-234.823" y="219.202" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="CAN" gate="-1" x="30.48" y="60.96" smashed="yes" rot="R180">
 <attribute name="NAME" x="27.94" y="61.722" size="1.524" layer="95" rot="R180"/>
@@ -10823,26 +10735,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="PWR_IN" gate="-2" pin="S"/>
 </segment>
 <segment>
-<pinref part="CCB22" gate="G$1" pin="1"/>
-<wire x1="-269.24" y1="251.46" x2="-274.32" y2="251.46" width="0.1524" layer="91"/>
-<label x="-276.86" y="251.46" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="-289.56" y1="251.46" x2="-294.64" y2="251.46" width="0.1524" layer="91"/>
-<label x="-294.64" y="248.92" size="1.778" layer="95"/>
-<pinref part="CCB23" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="CCB1" gate="G$1" pin="1"/>
-<wire x1="-223.52" y1="254" x2="-228.6" y2="254" width="0.1524" layer="91"/>
-<label x="-231.14" y="254" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="-243.84" y1="254" x2="-248.92" y2="254" width="0.1524" layer="91"/>
-<label x="-248.92" y="251.46" size="1.778" layer="95"/>
-<pinref part="CCB4" gate="G$1" pin="1"/>
-</segment>
-<segment>
 <pinref part="CAN" gate="-3" pin="S"/>
 <wire x1="33.02" y1="53.34" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
 <label x="35.56" y="53.34" size="1.778" layer="95"/>
@@ -10998,71 +10890,20 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="-15.24" y1="63.5" x2="-12.7" y2="63.5" width="0.1524" layer="91"/>
 <label x="-12.7" y="63.5" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$67" class="0">
 <segment>
-<pinref part="RVC19" gate="G$1" pin="1"/>
-<pinref part="CCB25" gate="G$1" pin="2"/>
-<wire x1="-281.94" y1="238.76" x2="-281.94" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="-281.94" y1="233.68" x2="-281.94" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="-281.94" y1="233.68" x2="-274.32" y2="233.68" width="0.1524" layer="91"/>
-<junction x="-281.94" y="233.68"/>
+<pinref part="CONTACTOR_N" gate="-1" pin="S"/>
+<wire x1="-121.92" y1="71.12" x2="-124.46" y2="71.12" width="0.1524" layer="91"/>
+<label x="-124.46" y="71.12" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$68" class="0">
 <segment>
-<pinref part="RVC18" gate="G$1" pin="1"/>
-<pinref part="CCB24" gate="G$1" pin="2"/>
-<wire x1="-261.62" y1="233.68" x2="-261.62" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="238.76" x2="-261.62" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="233.68" x2="-269.24" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="CONTACTOR_P" gate="-1" pin="S"/>
+<wire x1="-121.92" y1="53.34" x2="-124.46" y2="53.34" width="0.1524" layer="91"/>
+<label x="-124.46" y="53.34" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$69" class="0">
 <segment>
-<pinref part="CCB24" gate="G$1" pin="1"/>
-<wire x1="-261.62" y1="223.52" x2="-261.62" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="COMH" gate="-1" pin="S"/>
-</segment>
-</net>
-<net name="N$66" class="0">
-<segment>
-<pinref part="CCB25" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="223.52" x2="-281.94" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="COMH" gate="-2" pin="S"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="RVC3" gate="G$1" pin="1"/>
-<pinref part="CCB3" gate="G$1" pin="2"/>
-<wire x1="-236.22" y1="241.3" x2="-236.22" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="-236.22" y1="236.22" x2="-236.22" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="-236.22" y1="236.22" x2="-228.6" y2="236.22" width="0.1524" layer="91"/>
-<junction x="-236.22" y="236.22"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="RVC2" gate="G$1" pin="1"/>
-<pinref part="CCB2" gate="G$1" pin="2"/>
-<wire x1="-215.9" y1="236.22" x2="-215.9" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="-215.9" y1="241.3" x2="-215.9" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="-215.9" y1="236.22" x2="-223.52" y2="236.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="CCB2" gate="G$1" pin="1"/>
-<wire x1="-215.9" y1="226.06" x2="-215.9" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="COML" gate="-1" pin="S"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="CCB3" gate="G$1" pin="1"/>
-<wire x1="-236.22" y1="226.06" x2="-236.22" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="COML" gate="-2" pin="S"/>
+<pinref part="CONTACTOR_PRECHARGE" gate="-1" pin="S"/>
+<wire x1="-121.92" y1="35.56" x2="-124.46" y2="35.56" width="0.1524" layer="91"/>
+<label x="-124.46" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COMHP" class="0">
@@ -11070,18 +10911,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="COMHP"/>
 <wire x1="-15.24" y1="58.42" x2="-10.16" y2="58.42" width="0.1524" layer="91"/>
 <label x="-2.54" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="-281.94" y1="264.16" x2="-281.94" y2="259.08" width="0.1524" layer="91"/>
-<pinref part="RVC17" gate="G$1" pin="2"/>
-<wire x1="-281.94" y1="259.08" x2="-276.86" y2="259.08" width="0.1524" layer="91"/>
-<wire x1="-281.94" y1="259.08" x2="-281.94" y2="251.46" width="0.1524" layer="91"/>
-<junction x="-281.94" y="259.08"/>
-<pinref part="RVC19" gate="G$1" pin="2"/>
-<pinref part="CCB23" gate="G$1" pin="2"/>
-<wire x1="-281.94" y1="251.46" x2="-281.94" y2="248.92" width="0.1524" layer="91"/>
-<junction x="-281.94" y="251.46"/>
-<label x="-281.94" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-5.08" y1="33.02" x2="-5.08" y2="5.08" width="0.1524" layer="91"/>
@@ -11105,19 +10934,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="-2.54" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RVC17" gate="G$1" pin="1"/>
-<wire x1="-261.62" y1="259.08" x2="-266.7" y2="259.08" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="259.08" x2="-261.62" y2="251.46" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="251.46" x2="-261.62" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="248.92" x2="-261.62" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="CCB22" gate="G$1" pin="2"/>
-<junction x="-261.62" y="251.46"/>
-<pinref part="RVC18" gate="G$1" pin="2"/>
-<wire x1="-261.62" y1="259.08" x2="-261.62" y2="264.16" width="0.1524" layer="91"/>
-<junction x="-261.62" y="259.08"/>
-<label x="-261.62" y="266.7" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="-2.54" y1="33.02" x2="-2.54" y2="0" width="0.1524" layer="91"/>
 <pinref part="RCOMH" gate="G$1" pin="1"/>
 <wire x1="-2.54" y1="0" x2="-7.62" y2="0" width="0.1524" layer="91"/>
@@ -11138,18 +10954,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="-2.54" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-236.22" y1="266.7" x2="-236.22" y2="261.62" width="0.1524" layer="91"/>
-<pinref part="RVC1" gate="G$1" pin="2"/>
-<wire x1="-236.22" y1="261.62" x2="-231.14" y2="261.62" width="0.1524" layer="91"/>
-<wire x1="-236.22" y1="261.62" x2="-236.22" y2="254" width="0.1524" layer="91"/>
-<junction x="-236.22" y="261.62"/>
-<pinref part="RVC3" gate="G$1" pin="2"/>
-<pinref part="CCB4" gate="G$1" pin="2"/>
-<wire x1="-236.22" y1="254" x2="-236.22" y2="251.46" width="0.1524" layer="91"/>
-<junction x="-236.22" y="254"/>
-<label x="-236.22" y="266.7" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="-40.64" y1="33.02" x2="-40.64" y2="0" width="0.1524" layer="91"/>
 <pinref part="RCOML" gate="G$1" pin="1"/>
 <wire x1="-40.64" y1="0" x2="-45.72" y2="0" width="0.1524" layer="91"/>
@@ -11168,19 +10972,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="COMLP"/>
 <wire x1="-15.24" y1="50.8" x2="-10.16" y2="50.8" width="0.1524" layer="91"/>
 <label x="-2.54" y="50.8" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="RVC1" gate="G$1" pin="1"/>
-<wire x1="-215.9" y1="261.62" x2="-220.98" y2="261.62" width="0.1524" layer="91"/>
-<wire x1="-215.9" y1="261.62" x2="-215.9" y2="254" width="0.1524" layer="91"/>
-<wire x1="-215.9" y1="254" x2="-215.9" y2="251.46" width="0.1524" layer="91"/>
-<wire x1="-215.9" y1="251.46" x2="-215.9" y2="246.38" width="0.1524" layer="91"/>
-<pinref part="CCB1" gate="G$1" pin="2"/>
-<junction x="-215.9" y="254"/>
-<pinref part="RVC2" gate="G$1" pin="2"/>
-<wire x1="-215.9" y1="261.62" x2="-215.9" y2="266.7" width="0.1524" layer="91"/>
-<junction x="-215.9" y="261.62"/>
-<label x="-215.9" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-43.18" y1="33.02" x2="-43.18" y2="5.08" width="0.1524" layer="91"/>
