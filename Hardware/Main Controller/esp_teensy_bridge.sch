@@ -10446,6 +10446,9 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k"/>
+<part name="COOLANT-1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="Q4" library="SI7611DN-T1-GE3" deviceset="SI7611DN-T1-GE3" device=""/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -10643,6 +10646,22 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="-13.97" y="67.5386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-13.97" y="62.738" size="1.778" layer="96"/>
 </instance>
+<instance part="COOLANT-1" gate="-1" x="-119.38" y="12.7" smashed="yes">
+<attribute name="NAME" x="-116.84" y="11.938" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="14.097" size="1.778" layer="96"/>
+</instance>
+<instance part="COOLANT-1" gate="-2" x="-119.38" y="7.62" smashed="yes">
+<attribute name="NAME" x="-116.84" y="6.858" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-120.142" y="9.017" size="1.778" layer="96"/>
+</instance>
+<instance part="Q4" gate="G$1" x="-132.08" y="10.16" smashed="yes">
+<attribute name="VALUE" x="-140.97796875" y="3.804309375" size="1.779590625" layer="96"/>
+<attribute name="NAME" x="-140.987490625" y="13.977490625" size="1.7815" layer="95"/>
+</instance>
+<instance part="R1" gate="G$1" x="-139.7" y="17.78" smashed="yes">
+<attribute name="NAME" x="-143.51" y="19.2786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-143.51" y="14.478" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10772,6 +10791,14 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="ESDCOMH" gate="G$1" pin="3"/>
 <wire x1="-12.7" y1="-45.72" x2="-12.7" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-15.24" y="-50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Q4" gate="G$1" pin="D"/>
+<wire x1="-129.54" y1="5.08" x2="-129.54" y2="2.54" width="0.1524" layer="91"/>
+<label x="-129.54" y="0" size="1.778" layer="95"/>
+<wire x1="-144.78" y1="17.78" x2="-144.78" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="2.54" x2="-129.54" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="NCS/CS" class="0">
@@ -10904,6 +10931,11 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="CONTACTOR_PRECHARGE" gate="-1" pin="S"/>
 <wire x1="-121.92" y1="35.56" x2="-124.46" y2="35.56" width="0.1524" layer="91"/>
 <label x="-124.46" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="COOLANT-1" gate="-1" pin="S"/>
+<wire x1="-121.92" y1="12.7" x2="-124.46" y2="12.7" width="0.1524" layer="91"/>
+<label x="-124.46" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COMHP" class="0">
@@ -11178,6 +11210,23 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC1" gate="G$1" pin="INH"/>
 <pinref part="R8" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="Q4" gate="G$1" pin="S"/>
+<wire x1="-129.54" y1="15.24" x2="-127" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-127" y1="15.24" x2="-127" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="COOLANT-1" gate="-2" pin="S"/>
+<wire x1="-127" y1="7.62" x2="-121.92" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="COOLANT_CTRL" class="0">
+<segment>
+<pinref part="Q4" gate="G$1" pin="G"/>
+<wire x1="-134.62" y1="17.78" x2="-134.62" y2="12.7" width="0.1524" layer="91"/>
+<label x="-132.08" y="17.78" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
