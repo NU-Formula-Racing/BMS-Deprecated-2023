@@ -10882,6 +10882,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="CCOMHNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220 pF"/>
 <part name="ESDCOMH" library="ESDAVLC6-2BLY" deviceset="ESDAVLC6-2BLY" device=""/>
 <part name="COMH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="SR" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -11766,6 +11767,14 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="179.578" y="195.58" size="1.524" layer="95" rot="R270"/>
 <attribute name="VALUE" x="181.737" y="198.882" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="SR" gate="-1" x="195.58" y="86.36" smashed="yes">
+<attribute name="NAME" x="198.12" y="85.598" size="1.524" layer="95"/>
+<attribute name="VALUE" x="194.818" y="87.757" size="1.778" layer="96"/>
+</instance>
+<instance part="SR" gate="-2" x="195.58" y="81.28" smashed="yes">
+<attribute name="NAME" x="198.12" y="80.518" size="1.524" layer="95"/>
+<attribute name="VALUE" x="194.818" y="82.677" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12306,63 +12315,13 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="154.94" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GND1" class="0">
-<segment>
-<pinref part="CBAT" gate="G$1" pin="1"/>
-<wire x1="170.18" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="91"/>
-<label x="165.1" y="91.44" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="71.12" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="RCB0" gate="G$1" pin="1"/>
-<pinref part="CBL" gate="-1" pin="S"/>
-<label x="50.8" y="20.32" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="TEMPL" gate="-16" pin="S"/>
-<wire x1="264.16" y1="25.4" x2="259.08" y2="25.4" width="0.1524" layer="91"/>
-<label x="259.08" y="22.86" size="1.778" layer="95"/>
-<pinref part="TEMPL" gate="-14" pin="S"/>
-<wire x1="264.16" y1="40.64" x2="259.08" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="TEMPL" gate="-13" pin="S"/>
-<wire x1="259.08" y1="40.64" x2="259.08" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="48.26" x2="264.16" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="TEMPL" gate="-12" pin="S"/>
-<wire x1="264.16" y1="55.88" x2="259.08" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="55.88" x2="259.08" y2="48.26" width="0.1524" layer="91"/>
-<junction x="259.08" y="48.26"/>
-<pinref part="TEMPL" gate="-11" pin="S"/>
-<wire x1="264.16" y1="63.5" x2="259.08" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="63.5" x2="259.08" y2="55.88" width="0.1524" layer="91"/>
-<junction x="259.08" y="55.88"/>
-<pinref part="TEMPL" gate="-10" pin="S"/>
-<wire x1="264.16" y1="71.12" x2="259.08" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="71.12" x2="259.08" y2="63.5" width="0.1524" layer="91"/>
-<junction x="259.08" y="63.5"/>
-<pinref part="TEMPL" gate="-9" pin="S"/>
-<wire x1="264.16" y1="78.74" x2="259.08" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="78.74" x2="259.08" y2="71.12" width="0.1524" layer="91"/>
-<junction x="259.08" y="71.12"/>
-<wire x1="259.08" y1="40.64" x2="259.08" y2="33.02" width="0.1524" layer="91"/>
-<junction x="259.08" y="40.64"/>
-<pinref part="TEMPL" gate="-15" pin="S"/>
-<wire x1="259.08" y1="33.02" x2="259.08" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="33.02" x2="259.08" y2="33.02" width="0.1524" layer="91"/>
-<junction x="259.08" y="33.02"/>
-</segment>
-<segment>
-<pinref part="CTSREF1" gate="G$1" pin="1"/>
-<wire x1="241.3" y1="10.16" x2="254" y2="10.16" width="0.1524" layer="91"/>
-<label x="251.46" y="7.62" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="CREFHP" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="REFHP"/>
 </segment>
 </net>
-<net name="GNDN" class="0">
+<net name="GNDL" class="0">
 <segment>
 <pinref part="CNPN2" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="7.62" x2="93.98" y2="7.62" width="0.1524" layer="91"/>
@@ -12424,6 +12383,64 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="CCOMLNG" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="-30.48" x2="139.7" y2="-30.48" width="0.1524" layer="91"/>
 <label x="137.16" y="-30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CNPN1" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="0" x2="93.98" y2="0" width="0.1524" layer="91"/>
+<label x="93.98" y="0" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ESDCOML" gate="G$1" pin="3"/>
+<wire x1="142.24" y1="-68.58" x2="142.24" y2="-73.66" width="0.1524" layer="91"/>
+<label x="139.7" y="-73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="71.12" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="RCB0" gate="G$1" pin="1"/>
+<pinref part="CBL" gate="-1" pin="S"/>
+<label x="50.8" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CBAT" gate="G$1" pin="1"/>
+<wire x1="170.18" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="91"/>
+<label x="165.1" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TEMPL" gate="-16" pin="S"/>
+<wire x1="264.16" y1="25.4" x2="259.08" y2="25.4" width="0.1524" layer="91"/>
+<label x="259.08" y="22.86" size="1.778" layer="95"/>
+<pinref part="TEMPL" gate="-14" pin="S"/>
+<wire x1="264.16" y1="40.64" x2="259.08" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="TEMPL" gate="-13" pin="S"/>
+<wire x1="259.08" y1="40.64" x2="259.08" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="48.26" x2="264.16" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="TEMPL" gate="-12" pin="S"/>
+<wire x1="264.16" y1="55.88" x2="259.08" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="55.88" x2="259.08" y2="48.26" width="0.1524" layer="91"/>
+<junction x="259.08" y="48.26"/>
+<pinref part="TEMPL" gate="-11" pin="S"/>
+<wire x1="264.16" y1="63.5" x2="259.08" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="63.5" x2="259.08" y2="55.88" width="0.1524" layer="91"/>
+<junction x="259.08" y="55.88"/>
+<pinref part="TEMPL" gate="-10" pin="S"/>
+<wire x1="264.16" y1="71.12" x2="259.08" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="71.12" x2="259.08" y2="63.5" width="0.1524" layer="91"/>
+<junction x="259.08" y="63.5"/>
+<pinref part="TEMPL" gate="-9" pin="S"/>
+<wire x1="264.16" y1="78.74" x2="259.08" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="78.74" x2="259.08" y2="71.12" width="0.1524" layer="91"/>
+<junction x="259.08" y="71.12"/>
+<wire x1="259.08" y1="40.64" x2="259.08" y2="33.02" width="0.1524" layer="91"/>
+<junction x="259.08" y="40.64"/>
+<pinref part="TEMPL" gate="-15" pin="S"/>
+<wire x1="259.08" y1="33.02" x2="259.08" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="33.02" x2="259.08" y2="33.02" width="0.1524" layer="91"/>
+<junction x="259.08" y="33.02"/>
+</segment>
+<segment>
+<pinref part="CTSREF1" gate="G$1" pin="1"/>
+<wire x1="241.3" y1="10.16" x2="254" y2="10.16" width="0.1524" layer="91"/>
+<label x="251.46" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$46" class="0">
@@ -12709,18 +12726,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="CVDD"/>
 <wire x1="170.18" y1="43.18" x2="170.18" y2="27.94" width="0.1524" layer="91"/>
 <junction x="170.18" y="27.94"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="CNPN1" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="0" x2="93.98" y2="0" width="0.1524" layer="91"/>
-<label x="93.98" y="0" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="ESDCOML" gate="G$1" pin="3"/>
-<wire x1="142.24" y1="-68.58" x2="142.24" y2="-73.66" width="0.1524" layer="91"/>
-<label x="139.7" y="-73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -13331,56 +13336,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="147.32" y="332.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GND1-1" class="0">
-<segment>
-<pinref part="CBAT-1" gate="G$1" pin="1"/>
-<wire x1="160.02" y1="340.36" x2="154.94" y2="340.36" width="0.1524" layer="91"/>
-<label x="154.94" y="340.36" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="60.96" y1="269.24" x2="40.64" y2="269.24" width="0.1524" layer="91"/>
-<pinref part="RCB0-1" gate="G$1" pin="1"/>
-<pinref part="CBH" gate="-1" pin="S"/>
-<label x="40.64" y="269.24" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="TEMPH" gate="-16" pin="S"/>
-<wire x1="254" y1="274.32" x2="248.92" y2="274.32" width="0.1524" layer="91"/>
-<label x="248.92" y="271.78" size="1.778" layer="95"/>
-<pinref part="TEMPH" gate="-14" pin="S"/>
-<wire x1="254" y1="289.56" x2="248.92" y2="289.56" width="0.1524" layer="91"/>
-<pinref part="TEMPH" gate="-13" pin="S"/>
-<wire x1="248.92" y1="289.56" x2="248.92" y2="297.18" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="297.18" x2="254" y2="297.18" width="0.1524" layer="91"/>
-<pinref part="TEMPH" gate="-12" pin="S"/>
-<wire x1="254" y1="304.8" x2="248.92" y2="304.8" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="304.8" x2="248.92" y2="297.18" width="0.1524" layer="91"/>
-<junction x="248.92" y="297.18"/>
-<pinref part="TEMPH" gate="-11" pin="S"/>
-<wire x1="254" y1="312.42" x2="248.92" y2="312.42" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="312.42" x2="248.92" y2="304.8" width="0.1524" layer="91"/>
-<junction x="248.92" y="304.8"/>
-<pinref part="TEMPH" gate="-10" pin="S"/>
-<wire x1="254" y1="320.04" x2="248.92" y2="320.04" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="320.04" x2="248.92" y2="312.42" width="0.1524" layer="91"/>
-<junction x="248.92" y="312.42"/>
-<pinref part="TEMPH" gate="-9" pin="S"/>
-<wire x1="254" y1="327.66" x2="248.92" y2="327.66" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="327.66" x2="248.92" y2="320.04" width="0.1524" layer="91"/>
-<junction x="248.92" y="320.04"/>
-<wire x1="248.92" y1="289.56" x2="248.92" y2="281.94" width="0.1524" layer="91"/>
-<junction x="248.92" y="289.56"/>
-<pinref part="TEMPH" gate="-15" pin="S"/>
-<wire x1="248.92" y1="281.94" x2="248.92" y2="274.32" width="0.1524" layer="91"/>
-<wire x1="254" y1="281.94" x2="248.92" y2="281.94" width="0.1524" layer="91"/>
-<junction x="248.92" y="281.94"/>
-</segment>
-<segment>
-<pinref part="CTSREF2" gate="G$1" pin="1"/>
-<wire x1="231.14" y1="259.08" x2="243.84" y2="259.08" width="0.1524" layer="91"/>
-<label x="241.3" y="256.54" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$111" class="0">
 <segment>
 <pinref part="CREFHP-1" gate="G$1" pin="2"/>
@@ -13654,7 +13609,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="160.02" y1="274.32" x2="160.02" y2="276.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND-1" class="0">
+<net name="GNDH" class="0">
 <segment>
 <pinref part="CNPN1-1" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="248.92" x2="83.82" y2="248.92" width="0.1524" layer="91"/>
@@ -13664,6 +13619,116 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="ESDCOMH" gate="G$1" pin="3"/>
 <wire x1="170.18" y1="195.58" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
 <label x="167.64" y="190.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CNPN2-1" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="256.54" x2="83.82" y2="256.54" width="0.1524" layer="91"/>
+<label x="83.82" y="256.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="REFHM"/>
+<wire x1="137.16" y1="276.86" x2="137.16" y2="264.16" width="0.1524" layer="91"/>
+<label x="134.62" y="261.62" size="1.778" layer="95"/>
+<pinref part="CREFHP-1" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="264.16" x2="139.7" y2="264.16" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="264.16" x2="139.7" y2="266.7" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="AVSS"/>
+<wire x1="144.78" y1="276.86" x2="144.78" y2="269.24" width="0.1524" layer="91"/>
+<pinref part="CAVDD-1" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="269.24" x2="142.24" y2="266.7" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="266.7" x2="139.7" y2="266.7" width="0.1524" layer="91"/>
+<junction x="142.24" y="266.7"/>
+<junction x="139.7" y="266.7"/>
+<pinref part="CNEG5V-1" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="266.7" x2="144.78" y2="269.24" width="0.1524" layer="91"/>
+<junction x="144.78" y="269.24"/>
+<pinref part="CCVDD-1" gate="G$1" pin="1"/>
+<wire x1="160.02" y1="266.7" x2="157.48" y2="266.7" width="0.1524" layer="91"/>
+<junction x="157.48" y="266.7"/>
+<pinref part="IC2" gate="G$1" pin="CVSS"/>
+<wire x1="162.56" y1="276.86" x2="162.56" y2="269.24" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="269.24" x2="160.02" y2="266.7" width="0.1524" layer="91"/>
+<junction x="160.02" y="266.7"/>
+<pinref part="IC2" gate="G$1" pin="DVSS"/>
+<wire x1="180.34" y1="287.02" x2="187.96" y2="287.02" width="0.1524" layer="91"/>
+<pinref part="CDVDD-1" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="287.02" x2="190.5" y2="284.48" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="284.48" x2="187.96" y2="269.24" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="269.24" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
+<junction x="190.5" y="284.48"/>
+<junction x="162.56" y="269.24"/>
+<pinref part="IC2" gate="G$1" pin="AVSS?"/>
+<wire x1="165.1" y1="269.24" x2="162.56" y2="269.24" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="325.12" x2="187.96" y2="325.12" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="325.12" x2="187.96" y2="287.02" width="0.1524" layer="91"/>
+<junction x="187.96" y="287.02"/>
+<pinref part="CCOMMHP" gate="G$1" pin="2"/>
+<wire x1="134.62" y1="254" x2="134.62" y2="256.54" width="0.1524" layer="91"/>
+<pinref part="CCOMMHN" gate="G$1" pin="1"/>
+<wire x1="134.62" y1="256.54" x2="152.4" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="256.54" x2="152.4" y2="254" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="254" x2="165.1" y2="254" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="254" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
+<junction x="152.4" y="254"/>
+<junction x="165.1" y="269.24"/>
+</segment>
+<segment>
+<wire x1="152.4" y1="233.68" x2="147.32" y2="233.68" width="0.1524" layer="91"/>
+<label x="147.32" y="231.14" size="1.778" layer="95"/>
+<pinref part="CCOMHNG" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CCOMHPG" gate="G$1" pin="1"/>
+<wire x1="172.72" y1="233.68" x2="167.64" y2="233.68" width="0.1524" layer="91"/>
+<label x="165.1" y="233.68" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CBAT-1" gate="G$1" pin="1"/>
+<wire x1="160.02" y1="340.36" x2="154.94" y2="340.36" width="0.1524" layer="91"/>
+<label x="154.94" y="340.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="60.96" y1="269.24" x2="40.64" y2="269.24" width="0.1524" layer="91"/>
+<pinref part="RCB0-1" gate="G$1" pin="1"/>
+<pinref part="CBH" gate="-1" pin="S"/>
+<label x="40.64" y="269.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TEMPH" gate="-16" pin="S"/>
+<wire x1="254" y1="274.32" x2="248.92" y2="274.32" width="0.1524" layer="91"/>
+<label x="248.92" y="271.78" size="1.778" layer="95"/>
+<pinref part="TEMPH" gate="-14" pin="S"/>
+<wire x1="254" y1="289.56" x2="248.92" y2="289.56" width="0.1524" layer="91"/>
+<pinref part="TEMPH" gate="-13" pin="S"/>
+<wire x1="248.92" y1="289.56" x2="248.92" y2="297.18" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="297.18" x2="254" y2="297.18" width="0.1524" layer="91"/>
+<pinref part="TEMPH" gate="-12" pin="S"/>
+<wire x1="254" y1="304.8" x2="248.92" y2="304.8" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="304.8" x2="248.92" y2="297.18" width="0.1524" layer="91"/>
+<junction x="248.92" y="297.18"/>
+<pinref part="TEMPH" gate="-11" pin="S"/>
+<wire x1="254" y1="312.42" x2="248.92" y2="312.42" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="312.42" x2="248.92" y2="304.8" width="0.1524" layer="91"/>
+<junction x="248.92" y="304.8"/>
+<pinref part="TEMPH" gate="-10" pin="S"/>
+<wire x1="254" y1="320.04" x2="248.92" y2="320.04" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="320.04" x2="248.92" y2="312.42" width="0.1524" layer="91"/>
+<junction x="248.92" y="312.42"/>
+<pinref part="TEMPH" gate="-9" pin="S"/>
+<wire x1="254" y1="327.66" x2="248.92" y2="327.66" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="327.66" x2="248.92" y2="320.04" width="0.1524" layer="91"/>
+<junction x="248.92" y="320.04"/>
+<wire x1="248.92" y1="289.56" x2="248.92" y2="281.94" width="0.1524" layer="91"/>
+<junction x="248.92" y="289.56"/>
+<pinref part="TEMPH" gate="-15" pin="S"/>
+<wire x1="248.92" y1="281.94" x2="248.92" y2="274.32" width="0.1524" layer="91"/>
+<wire x1="254" y1="281.94" x2="248.92" y2="281.94" width="0.1524" layer="91"/>
+<junction x="248.92" y="281.94"/>
+</segment>
+<segment>
+<pinref part="CTSREF2" gate="G$1" pin="1"/>
+<wire x1="231.14" y1="259.08" x2="243.84" y2="259.08" width="0.1524" layer="91"/>
+<label x="241.3" y="256.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$131" class="0">
@@ -13758,70 +13823,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="180.34" y="203.2" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GNDN-1" class="0">
-<segment>
-<pinref part="CNPN2-1" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="256.54" x2="83.82" y2="256.54" width="0.1524" layer="91"/>
-<label x="83.82" y="256.54" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="REFHM"/>
-<wire x1="137.16" y1="276.86" x2="137.16" y2="264.16" width="0.1524" layer="91"/>
-<label x="134.62" y="261.62" size="1.778" layer="95"/>
-<pinref part="CREFHP-1" gate="G$1" pin="1"/>
-<wire x1="137.16" y1="264.16" x2="139.7" y2="264.16" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="264.16" x2="139.7" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="AVSS"/>
-<wire x1="144.78" y1="276.86" x2="144.78" y2="269.24" width="0.1524" layer="91"/>
-<pinref part="CAVDD-1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="269.24" x2="142.24" y2="266.7" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="266.7" x2="139.7" y2="266.7" width="0.1524" layer="91"/>
-<junction x="142.24" y="266.7"/>
-<junction x="139.7" y="266.7"/>
-<pinref part="CNEG5V-1" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="266.7" x2="144.78" y2="269.24" width="0.1524" layer="91"/>
-<junction x="144.78" y="269.24"/>
-<pinref part="CCVDD-1" gate="G$1" pin="1"/>
-<wire x1="160.02" y1="266.7" x2="157.48" y2="266.7" width="0.1524" layer="91"/>
-<junction x="157.48" y="266.7"/>
-<pinref part="IC2" gate="G$1" pin="CVSS"/>
-<wire x1="162.56" y1="276.86" x2="162.56" y2="269.24" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="269.24" x2="160.02" y2="266.7" width="0.1524" layer="91"/>
-<junction x="160.02" y="266.7"/>
-<pinref part="IC2" gate="G$1" pin="DVSS"/>
-<wire x1="180.34" y1="287.02" x2="187.96" y2="287.02" width="0.1524" layer="91"/>
-<pinref part="CDVDD-1" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="287.02" x2="190.5" y2="284.48" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="284.48" x2="187.96" y2="269.24" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="269.24" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
-<junction x="190.5" y="284.48"/>
-<junction x="162.56" y="269.24"/>
-<pinref part="IC2" gate="G$1" pin="AVSS?"/>
-<wire x1="165.1" y1="269.24" x2="162.56" y2="269.24" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="325.12" x2="187.96" y2="325.12" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="325.12" x2="187.96" y2="287.02" width="0.1524" layer="91"/>
-<junction x="187.96" y="287.02"/>
-<pinref part="CCOMMHP" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="254" x2="134.62" y2="256.54" width="0.1524" layer="91"/>
-<pinref part="CCOMMHN" gate="G$1" pin="1"/>
-<wire x1="134.62" y1="256.54" x2="152.4" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="256.54" x2="152.4" y2="254" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="254" x2="165.1" y2="254" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="254" x2="165.1" y2="269.24" width="0.1524" layer="91"/>
-<junction x="152.4" y="254"/>
-<junction x="165.1" y="269.24"/>
-</segment>
-<segment>
-<wire x1="152.4" y1="233.68" x2="147.32" y2="233.68" width="0.1524" layer="91"/>
-<label x="147.32" y="231.14" size="1.778" layer="95"/>
-<pinref part="CCOMHNG" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="CCOMHPG" gate="G$1" pin="1"/>
-<wire x1="172.72" y1="233.68" x2="167.64" y2="233.68" width="0.1524" layer="91"/>
-<label x="165.1" y="233.68" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="ESDCOMH" gate="G$1" pin="1"/>
@@ -13843,6 +13844,23 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="160.02" y1="220.98" x2="160.02" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="220.98" x2="160.02" y2="220.98" width="0.1524" layer="91"/>
 <junction x="160.02" y="220.98"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BBP(SRP)"/>
+<wire x1="190.5" y1="73.66" x2="190.5" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="86.36" x2="187.96" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="SR" gate="-1" pin="S"/>
+<wire x1="190.5" y1="86.36" x2="193.04" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="SR" gate="-2" pin="S"/>
+<wire x1="193.04" y1="81.28" x2="193.04" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="BBN(SRN)"/>
+<wire x1="193.04" y1="71.12" x2="190.5" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
