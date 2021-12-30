@@ -12618,6 +12618,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="TEMPR1" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="76.2" x2="238.76" y2="76.2" width="0.1524" layer="91"/>
 <label x="200.66" y="40.64" size="1.778" layer="95"/>
+<junction x="228.6" y="60.96"/>
 </segment>
 </net>
 <net name="N$59" class="0">
@@ -12739,7 +12740,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="152.4" y1="-22.86" x2="152.4" y2="-30.48" width="0.1524" layer="91"/>
 <junction x="152.4" y="-22.86"/>
 <wire x1="152.4" y1="-30.48" x2="152.4" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="-33.02" x2="152.4" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="CCOMLNG" gate="G$1" pin="2"/>
 <junction x="152.4" y="-30.48"/>
 <pinref part="RCOMLN" gate="G$1" pin="2"/>
@@ -12782,6 +12782,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="152.4" y1="-43.18" x2="152.4" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="-48.26" x2="142.24" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="ESDCOML" gate="G$1" pin="1"/>
+<junction x="152.4" y="-48.26"/>
 </segment>
 </net>
 <net name="COMLN" class="0">
@@ -13521,6 +13522,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="TEMPR9" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="325.12" x2="228.6" y2="325.12" width="0.1524" layer="91"/>
 <label x="190.5" y="289.56" size="1.778" layer="95"/>
+<junction x="218.44" y="309.88"/>
 </segment>
 </net>
 <net name="N$125" class="0">
@@ -13745,7 +13747,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <junction x="180.34" y="233.68"/>
 <wire x1="180.34" y1="233.68" x2="180.34" y2="231.14" width="0.1524" layer="91"/>
 <pinref part="RCOMHP" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="231.14" x2="180.34" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="251.46" x2="180.34" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="251.46" x2="180.34" y2="241.3" width="0.1524" layer="91"/>
 </segment>
@@ -13850,7 +13851,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <segment>
 <pinref part="IC1" gate="G$1" pin="BBP(SRP)"/>
 <wire x1="190.5" y1="73.66" x2="190.5" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="86.36" x2="187.96" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="SR" gate="-1" pin="S"/>
 <wire x1="190.5" y1="86.36" x2="193.04" y2="86.36" width="0.1524" layer="91"/>
 </segment>
@@ -13866,6 +13866,57 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="101,1,43.18,129.54,VCL-12,S,,,,"/>
+<approved hash="101,1,43.18,132.08,CBL-12,S,,,,"/>
+<approved hash="101,1,33.02,378.46,VCH-12,S,,,,"/>
+<approved hash="101,1,33.02,381,CBH-12,S,,,,"/>
+<approved hash="110,1,190.5,76.2,N$4,GNDL,,,,"/>
+<approved hash="111,1,190.5,76.2,N$4,,,,,"/>
+<approved hash="111,1,55.88,30.48,N$5,,,,,"/>
+<approved hash="111,1,83.82,38.1,VC2,,,,,"/>
+<approved hash="111,1,83.82,45.72,VC3,,,,,"/>
+<approved hash="111,1,55.88,40.64,N$6,,,,,"/>
+<approved hash="111,1,55.88,50.8,N$8,,,,,"/>
+<approved hash="111,1,83.82,53.34,VC4,,,,,"/>
+<approved hash="111,1,55.88,60.96,N$12,,,,,"/>
+<approved hash="111,1,83.82,63.5,VC5,,,,,"/>
+<approved hash="111,1,55.88,68.58,N$15,,,,,"/>
+<approved hash="111,1,83.82,71.12,VC6,,,,,"/>
+<approved hash="111,1,55.88,78.74,N$27,,,,,"/>
+<approved hash="111,1,83.82,81.28,VC7,,,,,"/>
+<approved hash="111,1,55.88,88.9,N$31,,,,,"/>
+<approved hash="111,1,83.82,91.44,VC8,,,,,"/>
+<approved hash="111,1,55.88,99.06,N$18,,,,,"/>
+<approved hash="111,1,83.82,101.6,VC9,,,,,"/>
+<approved hash="111,1,55.88,109.22,N$21,,,,,"/>
+<approved hash="111,1,83.82,111.76,VC10,,,,,"/>
+<approved hash="111,1,55.88,20.32,GNDL,,,,,"/>
+<approved hash="111,1,83.82,27.94,VC1,,,,,"/>
+<approved hash="111,1,170.18,5.08,N$60,,,,,"/>
+<approved hash="111,1,170.18,5.08,N$60,,,,,"/>
+<approved hash="111,1,160.02,279.4,CVDD-1,,,,,"/>
+<approved hash="111,1,45.72,279.4,N$73,,,,,"/>
+<approved hash="111,1,73.66,287.02,VC2-1,,,,,"/>
+<approved hash="111,1,73.66,294.64,VC3-1,,,,,"/>
+<approved hash="111,1,45.72,289.56,N$72,,,,,"/>
+<approved hash="111,1,45.72,299.72,N$75,,,,,"/>
+<approved hash="111,1,73.66,302.26,VC4-1,,,,,"/>
+<approved hash="111,1,45.72,309.88,N$78,,,,,"/>
+<approved hash="111,1,73.66,312.42,VC5-1,,,,,"/>
+<approved hash="111,1,45.72,317.5,N$81,,,,,"/>
+<approved hash="111,1,73.66,320.04,VC6-1,,,,,"/>
+<approved hash="111,1,45.72,327.66,N$84,,,,,"/>
+<approved hash="111,1,73.66,330.2,VC7-1,,,,,"/>
+<approved hash="111,1,45.72,337.82,N$87,,,,,"/>
+<approved hash="111,1,73.66,340.36,VC8-1,,,,,"/>
+<approved hash="111,1,45.72,347.98,N$90,,,,,"/>
+<approved hash="111,1,73.66,350.52,VC9-1,,,,,"/>
+<approved hash="111,1,45.72,358.14,N$93,,,,,"/>
+<approved hash="111,1,73.66,360.68,VC10-1,,,,,"/>
+<approved hash="111,1,45.72,269.24,GNDH,,,,,"/>
+<approved hash="111,1,73.66,276.86,VC1-1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
