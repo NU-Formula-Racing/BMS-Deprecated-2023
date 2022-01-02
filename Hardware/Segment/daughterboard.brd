@@ -4193,7 +4193,14 @@ design rules under a new name.</description>
 <wire x1="130.97055" y1="28.92" x2="133.22055" y2="26.67" width="0.3048" layer="1"/>
 <via x="125.73" y="27.559" extent="1-16" drill="0.35"/>
 <via x="138.43" y="3.81" extent="1-16" drill="0.35"/>
-<wire x1="127.381" y1="27.559" x2="130.152" y2="27.42" width="0" layer="19" extent="1-1"/>
+<via x="115.57" y="22.86" extent="1-2" drill="0.35"/>
+<via x="116.84" y="22.86" extent="1-2" drill="0.35"/>
+<via x="118.11" y="22.86" extent="1-2" drill="0.35"/>
+<via x="123.19" y="24.13" extent="1-2" drill="0.35"/>
+<via x="123.825" y="25.019" extent="1-2" drill="0.35"/>
+<via x="125.222" y="25.019" extent="1-2" drill="0.35"/>
+<via x="124.46" y="24.13" extent="1-2" drill="0.35"/>
+<via x="140.843" y="21.971" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$131">
 <contactref element="RCOMH" pad="1"/>
