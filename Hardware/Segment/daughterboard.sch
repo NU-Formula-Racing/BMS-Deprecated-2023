@@ -10887,6 +10887,15 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <sheets>
 <sheet>
 <plain>
+<text x="-22.86" y="71.12" size="1.778" layer="91">Voltage sense and cell balancing connectors 0-10</text>
+<text x="-45.72" y="322.58" size="1.778" layer="91">Voltage sense and cell balancing connectors 10-20</text>
+<text x="124.46" y="-78.74" size="1.778" layer="91">External com</text>
+<text x="157.48" y="182.88" size="1.778" layer="91">External com</text>
+<text x="132.08" y="231.14" size="1.778" layer="91">Internal com</text>
+<text x="162.56" y="-25.4" size="1.778" layer="91">Internal com</text>
+<text x="129.54" y="2.54" size="1.778" layer="91">Voltage source</text>
+<text x="116.84" y="251.46" size="1.778" layer="91">Voltage source</text>
+<text x="274.32" y="307.34" size="1.778" layer="91">Thermistor connections</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="177.8" y="83.82" smashed="yes" rot="R270">
