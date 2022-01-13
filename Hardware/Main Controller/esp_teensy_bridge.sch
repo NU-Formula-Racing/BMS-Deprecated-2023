@@ -9183,19 +9183,9 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="R8" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SCLK"/>
-<wire x1="-63.5" y1="53.34" x2="-68.58" y2="53.34" width="0.1524" layer="91"/>
-<label x="-73.66" y="53.34" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="NUART/SPI_(SPI_RDY)"/>
 <wire x1="-63.5" y1="48.26" x2="-68.58" y2="48.26" width="0.1524" layer="91"/>
 <label x="-73.66" y="48.26" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="NCS"/>
-<wire x1="-63.5" y1="50.8" x2="-68.58" y2="50.8" width="0.1524" layer="91"/>
-<label x="-73.66" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="TME1205S" gate="G$1" pin="-VIN"/>
@@ -9312,22 +9302,12 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="TX_ESP" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="IO1"/>
-<wire x1="81.28" y1="-2.54" x2="86.36" y2="-2.54" width="0.1524" layer="91"/>
-<label x="88.9" y="-2.54" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="0-RX1/CS1/CRX2"/>
 <wire x1="96.52" y1="101.6" x2="104.14" y2="101.6" width="0.1524" layer="91"/>
 <label x="106.68" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX_ESP" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="IO3"/>
-<wire x1="81.28" y1="-5.08" x2="86.36" y2="-5.08" width="0.1524" layer="91"/>
-<label x="88.9" y="-5.08" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="1-TX1/MISO1/CTX2"/>
 <wire x1="96.52" y1="99.06" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
@@ -9336,26 +9316,14 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="TX_BRIDGE" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="MISO/TX"/>
-<wire x1="-63.5" y1="55.88" x2="-76.2" y2="55.88" width="0.1524" layer="91"/>
-<label x="-91.44" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="28-RX7"/>
 <wire x1="96.52" y1="86.36" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
-<label x="106.68" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX_BRIDGE" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="MOSI/RX"/>
-<wire x1="-63.5" y1="58.42" x2="-76.2" y2="58.42" width="0.1524" layer="91"/>
-<label x="-91.44" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="29-TX7"/>
 <wire x1="96.52" y1="83.82" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
-<label x="106.68" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -9710,6 +9678,90 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="U$3" gate="G$1" pin="31-CTX3"/>
 <wire x1="40.64" y1="68.58" x2="33.02" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="CAN1" gate="-2" pin="S"/>
+</segment>
+</net>
+<net name="MOSI" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="MOSI/RX"/>
+<wire x1="-63.5" y1="58.42" x2="-76.2" y2="58.42" width="0.1524" layer="91"/>
+<label x="-81.28" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="11-MOSI/CTX1"/>
+<wire x1="96.52" y1="68.58" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
+<label x="106.68" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO13"/>
+<wire x1="45.72" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
+<label x="33.02" y="-27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="MISO/TX"/>
+<wire x1="-63.5" y1="55.88" x2="-76.2" y2="55.88" width="0.1524" layer="91"/>
+<label x="-81.28" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="12-MISO/MQSL"/>
+<wire x1="96.52" y1="66.04" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
+<label x="106.68" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO12"/>
+<wire x1="45.72" y1="-25.4" x2="40.64" y2="-25.4" width="0.1524" layer="91"/>
+<label x="33.02" y="-25.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCK" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SCLK"/>
+<wire x1="-63.5" y1="53.34" x2="-76.2" y2="53.34" width="0.1524" layer="91"/>
+<label x="-81.28" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="13-SCK/LED"/>
+<wire x1="96.52" y1="63.5" x2="104.14" y2="63.5" width="0.1524" layer="91"/>
+<label x="106.68" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO14"/>
+<wire x1="45.72" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
+<label x="33.02" y="-22.86" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CS2" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="40-A16/CS1"/>
+<wire x1="40.64" y1="76.2" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="76.2" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
+<label x="25.4" y="76.2" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CS1" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="39-A15/CS/OUT1A"/>
+<wire x1="40.64" y1="78.74" x2="30.48" y2="78.74" width="0.1524" layer="91"/>
+<label x="25.4" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO15"/>
+<wire x1="81.28" y1="-27.94" x2="88.9" y2="-27.94" width="0.1524" layer="91"/>
+<label x="91.44" y="-27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CS0" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="38-A14/CS/IN1"/>
+<wire x1="40.64" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
+<label x="25.4" y="81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="NCS"/>
+<wire x1="-63.5" y1="50.8" x2="-76.2" y2="50.8" width="0.1524" layer="91"/>
+<label x="-81.28" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
