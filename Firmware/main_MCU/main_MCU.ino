@@ -1,6 +1,5 @@
 #include "bq_comm.h"
-#include "CRC16.h"
-#include "CRC.h"
+//#include "Crc16.h"
 
 void setup() {
   // put your setup code here, to run once:
@@ -12,17 +11,16 @@ void setup() {
   txBuf[2] = 0x02;
   txBuf[3] = 0x0F;
   txBuf[4] = 0x0B;
-  uint8_t buf[5] = {0x01, 0x00, 0x40, 0xF0, 0xD0};
+  uint8_t buf[5] = {0x80, 0x00, 0x02, 0x0F, 0x0B};
 
   int *txDataLen = getTxDataLen();
-  txDataLen = 5;
+  *txDataLen = 5;
 
-  Serial.begin(115200);
-  CRC16 crc;
-  //Serial.println(calculateCRC());
+  Serial.begin(9600);
+  Serial.println(calculateCRC(), HEX);
   //Serial.println(CRC16.x25(buf, sizeof(buf)));
   //Serial.println(sizeof(buf));
-  Serial.println(crc16(buf, 5, 0xC002, 0x0000), HEX);
+  //Serial.println(crc.Modbus(buf, 0, 5), HEX);
 }
 
 void loop() {
