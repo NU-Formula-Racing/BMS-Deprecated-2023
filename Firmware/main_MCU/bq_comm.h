@@ -2,7 +2,7 @@
 #include "bq79656_reg_defs.h"
 #include <stdbool.h>
 #include <Arduino.h>
-#include <FastCRC.hpp>
+
 
 #define BQ_FAULT_PIN 2
 
