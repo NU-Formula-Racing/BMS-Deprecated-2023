@@ -15215,6 +15215,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="180.34" y1="43.18" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="43.18" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="RX" gate="P" pin="P"/>
+<junction x="190.5" y="43.18"/>
 </segment>
 </net>
 <net name="N$9" class="0">
