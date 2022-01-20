@@ -9344,18 +9344,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="91.44" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX_BRIDGE" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="28-RX7"/>
-<wire x1="96.52" y1="86.36" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="RX_BRIDGE" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="29-TX7"/>
-<wire x1="96.52" y1="83.82" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="5V" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="VIN"/>
@@ -9732,11 +9720,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="96.52" y1="68.58" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
 <label x="106.68" y="68.58" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="IO13"/>
-<wire x1="45.72" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
-<label x="33.02" y="-27.94" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
@@ -9750,11 +9733,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="96.52" y1="66.04" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
 <label x="106.68" y="66.04" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="IO12"/>
-<wire x1="45.72" y1="-25.4" x2="40.64" y2="-25.4" width="0.1524" layer="91"/>
-<label x="33.02" y="-25.4" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="SCK" class="0">
 <segment>
@@ -9766,12 +9744,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="U$3" gate="G$1" pin="13-SCK/LED"/>
 <wire x1="96.52" y1="63.5" x2="104.14" y2="63.5" width="0.1524" layer="91"/>
 <label x="106.68" y="63.5" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="IO14"/>
-<wire x1="45.72" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
-<label x="33.02" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CS1" class="0">
@@ -9807,9 +9779,9 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="-68.58" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="40-A16/CS1"/>
-<wire x1="40.64" y1="76.2" x2="30.48" y2="76.2" width="0.1524" layer="91"/>
-<label x="30.48" y="76.2" size="1.778" layer="95"/>
+<pinref part="U$3" gate="G$1" pin="16-A2/RX4/SCL1"/>
+<wire x1="40.64" y1="111.76" x2="30.48" y2="111.76" width="0.1524" layer="91"/>
+<label x="20.32" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_RDY" class="0">
@@ -9820,9 +9792,46 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="-68.58" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
+<pinref part="U$3" gate="G$1" pin="17-A3/TX4/SDA1"/>
+<wire x1="40.64" y1="109.22" x2="30.48" y2="109.22" width="0.1524" layer="91"/>
+<label x="20.32" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MOSI_ESP" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="26-A12/MOSI1"/>
+<wire x1="40.64" y1="86.36" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
+<label x="17.78" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO13"/>
+<wire x1="45.72" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
+<label x="33.02" y="-27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MISO_ESP" class="0">
+<segment>
 <pinref part="U$3" gate="G$1" pin="41-A17/MISO1"/>
 <wire x1="40.64" y1="73.66" x2="30.48" y2="73.66" width="0.1524" layer="91"/>
-<label x="30.48" y="73.66" size="1.778" layer="95"/>
+<label x="25.4" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO12"/>
+<wire x1="45.72" y1="-25.4" x2="40.64" y2="-25.4" width="0.1524" layer="91"/>
+<label x="33.02" y="-25.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCK_ESP" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="27-A13/SCK1"/>
+<wire x1="40.64" y1="83.82" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
+<label x="17.78" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO14"/>
+<wire x1="45.72" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
+<label x="33.02" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
