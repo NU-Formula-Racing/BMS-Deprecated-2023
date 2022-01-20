@@ -8932,6 +8932,11 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="U$3" library="teensy" deviceset="TEENSY41" device=""/>
 <part name="CAN1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-4" device="" package3d_urn="urn:adsk.eagle:package:8078582/1"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9108,9 +9113,9 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="-143.51" y="42.1386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-143.51" y="37.338" size="1.778" layer="96"/>
 </instance>
-<instance part="R8" gate="G$1" x="-10.16" y="66.04" smashed="yes">
-<attribute name="NAME" x="-13.97" y="67.5386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-13.97" y="62.738" size="1.778" layer="96"/>
+<instance part="R8" gate="G$1" x="-7.62" y="66.04" smashed="yes">
+<attribute name="NAME" x="-11.43" y="67.5386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-11.43" y="62.738" size="1.778" layer="96"/>
 </instance>
 <instance part="COOLANT-1" gate="-1" x="-119.38" y="12.7" smashed="yes">
 <attribute name="NAME" x="-116.84" y="11.938" size="1.524" layer="95"/>
@@ -9142,6 +9147,26 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <instance part="CAN1" gate="-4" x="27.94" y="60.96" smashed="yes" rot="R180">
 <attribute name="NAME" x="25.4" y="61.722" size="1.524" layer="95" rot="R180"/>
 </instance>
+<instance part="R2" gate="G$1" x="-76.2" y="63.5" smashed="yes">
+<attribute name="NAME" x="-80.01" y="64.9986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-80.01" y="60.198" size="1.778" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="-73.66" y="48.26" smashed="yes">
+<attribute name="NAME" x="-77.47" y="49.7586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-77.47" y="44.958" size="1.778" layer="96"/>
+</instance>
+<instance part="R4" gate="G$1" x="-81.28" y="50.8" smashed="yes">
+<attribute name="NAME" x="-85.09" y="52.2986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-85.09" y="47.498" size="1.778" layer="96"/>
+</instance>
+<instance part="R9" gate="G$1" x="-81.28" y="55.88" smashed="yes">
+<attribute name="NAME" x="-85.09" y="57.3786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-85.09" y="52.578" size="1.778" layer="96"/>
+</instance>
+<instance part="R10" gate="G$1" x="-81.28" y="58.42" smashed="yes">
+<attribute name="NAME" x="-85.09" y="59.9186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-85.09" y="55.118" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9156,11 +9181,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="U$2" gate="G$1" pin="GND"/>
 <wire x1="81.28" y1="-30.48" x2="88.9" y2="-30.48" width="0.1524" layer="91"/>
 <label x="91.44" y="-30.48" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="NFAULT"/>
-<wire x1="-63.5" y1="63.5" x2="-71.12" y2="63.5" width="0.1524" layer="91"/>
-<label x="-78.74" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -9178,14 +9198,9 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="0" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-5.08" y1="66.04" x2="-2.54" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="66.04" x2="0" y2="66.04" width="0.1524" layer="91"/>
 <label x="0" y="66.04" size="1.778" layer="95"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="NUART/SPI_(SPI_RDY)"/>
-<wire x1="-63.5" y1="48.26" x2="-68.58" y2="48.26" width="0.1524" layer="91"/>
-<label x="-73.66" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="TME1205S" gate="G$1" pin="-VIN"/>
@@ -9270,20 +9285,32 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="66.04" y1="35.56" x2="66.04" y2="20.32" width="0.1524" layer="91"/>
 <label x="60.96" y="20.32" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-68.58" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-73.66" y="-10.16" size="1.778" layer="95"/>
+<pinref part="CCOMLPG" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CCOMLNG" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="-7.62" x2="-53.34" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-55.88" y="-7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-30.48" y1="-7.62" x2="-35.56" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-35.56" y="-10.16" size="1.778" layer="95"/>
+<pinref part="CCOMHPG" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="CCOMHNG" gate="G$1" pin="1"/>
+<wire x1="-10.16" y1="-7.62" x2="-15.24" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-17.78" y="-7.62" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="NCS/CS" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="10-CS/MQSR"/>
 <wire x1="96.52" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <label x="106.68" y="71.12" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="VIO" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="VIO"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-63.5" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
-<label x="-58.42" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -9293,18 +9320,16 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="-63.5" y1="66.04" x2="-66.04" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="CVDD"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="-15.24" y1="60.96" x2="-12.7" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="TX_ESP" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="0-RX1/CS1/CRX2"/>
 <wire x1="96.52" y1="101.6" x2="104.14" y2="101.6" width="0.1524" layer="91"/>
 <label x="106.68" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO1"/>
+<wire x1="81.28" y1="-2.54" x2="88.9" y2="-2.54" width="0.1524" layer="91"/>
+<label x="91.44" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX_ESP" class="0">
@@ -9312,6 +9337,11 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="U$3" gate="G$1" pin="1-TX1/MISO1/CTX2"/>
 <wire x1="96.52" y1="99.06" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
 <label x="106.68" y="99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="IO3"/>
+<wire x1="81.28" y1="-5.08" x2="88.9" y2="-5.08" width="0.1524" layer="91"/>
+<label x="91.44" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX_BRIDGE" class="0">
@@ -9347,13 +9377,51 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="71.12" y1="127" x2="71.12" y2="132.08" width="0.1524" layer="91"/>
 <label x="68.58" y="134.62" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="VCC" class="0">
 <segment>
+<pinref part="IC1" gate="G$1" pin="VIO"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
+<label x="-58.42" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<label x="-86.36" y="63.5" size="1.778" layer="95"/>
+<wire x1="-81.28" y1="63.5" x2="-93.98" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="63.5" x2="-93.98" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="58.42" x2="-93.98" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="55.88" x2="-93.98" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="50.8" x2="-93.98" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="48.26" x2="-78.74" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="-86.36" y1="58.42" x2="-93.98" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-93.98" y="58.42"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="-86.36" y1="55.88" x2="-93.98" y2="55.88" width="0.1524" layer="91"/>
+<junction x="-93.98" y="55.88"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-86.36" y1="50.8" x2="-93.98" y2="50.8" width="0.1524" layer="91"/>
+<junction x="-93.98" y="50.8"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="CVDD"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="-15.24" y1="60.96" x2="-12.7" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="BAT"/>
 <wire x1="-15.24" y1="63.5" x2="-12.7" y2="63.5" width="0.1524" layer="91"/>
 <label x="-12.7" y="63.5" size="1.778" layer="95"/>
+<wire x1="-15.24" y1="60.96" x2="-15.24" y2="63.5" width="0.1524" layer="91"/>
+<junction x="-15.24" y="60.96"/>
+<junction x="-15.24" y="63.5"/>
+<pinref part="IC1" gate="G$1" pin="INH"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="-12.7" y1="66.04" x2="-15.24" y2="66.04" width="0.1524" layer="91"/>
+<label x="-15.24" y="66.04" size="1.778" layer="95"/>
+<wire x1="-15.24" y1="63.5" x2="-15.24" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-15.24" y="66.04"/>
 </segment>
+</net>
+<net name="VCC" class="0">
 <segment>
 <pinref part="CONTACTOR_N" gate="-1" pin="S"/>
 <wire x1="-121.92" y1="71.12" x2="-124.46" y2="71.12" width="0.1524" layer="91"/>
@@ -9534,28 +9602,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="-127" y1="30.48" x2="-121.92" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GNDN" class="0">
-<segment>
-<wire x1="-68.58" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-73.66" y="-10.16" size="1.778" layer="95"/>
-<pinref part="CCOMLPG" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="CCOMLNG" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="-7.62" x2="-53.34" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-55.88" y="-7.62" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="-30.48" y1="-7.62" x2="-35.56" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-35.56" y="-10.16" size="1.778" layer="95"/>
-<pinref part="CCOMHPG" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="CCOMHNG" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="-7.62" x2="-15.24" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-17.78" y="-7.62" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="RCOMLP" gate="G$1" pin="1"/>
@@ -9638,12 +9684,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="COMH" gate="-1" pin="S"/>
 </segment>
 </net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="INH"/>
-<pinref part="R8" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="Q4" gate="G$1" pin="S"/>
@@ -9685,6 +9725,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="MOSI/RX"/>
 <wire x1="-63.5" y1="58.42" x2="-76.2" y2="58.42" width="0.1524" layer="91"/>
 <label x="-81.28" y="58.42" size="1.778" layer="95"/>
+<pinref part="R10" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="11-MOSI/CTX1"/>
@@ -9702,6 +9743,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="MISO/TX"/>
 <wire x1="-63.5" y1="55.88" x2="-76.2" y2="55.88" width="0.1524" layer="91"/>
 <label x="-81.28" y="55.88" size="1.778" layer="95"/>
+<pinref part="R9" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="12-MISO/MQSL"/>
@@ -9732,14 +9774,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="33.02" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="CS2" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="40-A16/CS1"/>
-<wire x1="40.64" y1="76.2" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="76.2" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
-<label x="25.4" y="76.2" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="CS1" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="39-A15/CS/OUT1A"/>
@@ -9762,6 +9796,33 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <pinref part="IC1" gate="G$1" pin="NCS"/>
 <wire x1="-63.5" y1="50.8" x2="-76.2" y2="50.8" width="0.1524" layer="91"/>
 <label x="-81.28" y="50.8" size="1.778" layer="95"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="NFAULT" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="NFAULT"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="-63.5" y1="63.5" x2="-71.12" y2="63.5" width="0.1524" layer="91"/>
+<label x="-68.58" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="40-A16/CS1"/>
+<wire x1="40.64" y1="76.2" x2="30.48" y2="76.2" width="0.1524" layer="91"/>
+<label x="30.48" y="76.2" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPI_RDY" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="NUART/SPI_(SPI_RDY)"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-63.5" y1="48.26" x2="-68.58" y2="48.26" width="0.1524" layer="91"/>
+<label x="-68.58" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="41-A17/MISO1"/>
+<wire x1="40.64" y1="73.66" x2="30.48" y2="73.66" width="0.1524" layer="91"/>
+<label x="30.48" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
