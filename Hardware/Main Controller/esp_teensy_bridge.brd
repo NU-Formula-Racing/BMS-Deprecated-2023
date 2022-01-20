@@ -105,7 +105,7 @@
 <hole x="95.25" y="4.445" drill="4.445"/>
 <hole x="95.25" y="83.82" drill="4.445"/>
 <hole x="4.445" y="83.5025" drill="4.445"/>
-<text x="9.8425" y="43.4975" size="1.9304" layer="21">BMS Main Board V1</text>
+<text x="9.8425" y="43.4975" size="1.9304" layer="21">BMS Main Board V1.0</text>
 <text x="9.8425" y="40.9575" size="0.8128" layer="21">Luc Ah-Hot, Joshua Feist, Lance Go, Isaac Kim
 Jan 2022</text>
 <text x="91.1225" y="19.3675" size="1.27" layer="21">COML</text>
