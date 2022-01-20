@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -77,6 +77,8 @@
 <wire x1="82.53" y1="0" x2="82.53" y2="72.06" width="0" layer="20"/>
 <wire x1="82.53" y1="72.06" x2="0" y2="72.06" width="0" layer="20"/>
 <wire x1="0" y1="72.06" x2="0" y2="0" width="0" layer="20"/>
+<dimension x1="0" y1="72.06" x2="0" y2="0" x3="-7.62" y3="36.03" textsize="1.778" layer="47"/>
+<dimension x1="82.53" y1="72.06" x2="0" y2="72.06" x3="41.265" y3="76.2" textsize="1.778" layer="47"/>
 </plain>
 <libraries>
 <library name="con-molex" urn="urn:adsk.eagle:library:165">
