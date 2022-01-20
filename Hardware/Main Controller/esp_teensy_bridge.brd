@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -98,19 +98,22 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="99.675" y2="0" width="0" layer="20"/>
-<wire x1="99.675" y1="0" x2="99.675" y2="88.2525" width="0" layer="20"/>
-<wire x1="99.675" y1="88.2525" x2="0" y2="87.935" width="0" layer="20"/>
-<wire x1="0" y1="87.935" x2="0" y2="0" width="0" layer="20"/>
-<hole x="3.175" y="3.175" drill="4.445"/>
-<hole x="96.52" y="3.175" drill="4.445"/>
-<hole x="96.52" y="85.09" drill="4.445"/>
-<hole x="3.175" y="84.7725" drill="4.445"/>
-<text x="9.8425" y="43.4975" size="1.9304" layer="22">BMS Main Board V1</text>
+<wire x1="99.675" y1="0" x2="99.802" y2="88.1255" width="0" layer="20"/>
+<wire x1="99.802" y1="88.1255" x2="0" y2="88.1255" width="0" layer="20"/>
+<wire x1="0" y1="88.1255" x2="0" y2="0" width="0" layer="20"/>
+<hole x="4.445" y="4.445" drill="4.445"/>
+<hole x="95.25" y="4.445" drill="4.445"/>
+<hole x="95.25" y="83.82" drill="4.445"/>
+<hole x="4.445" y="83.5025" drill="4.445"/>
+<text x="9.8425" y="43.4975" size="1.9304" layer="21">BMS Main Board V1.0</text>
 <text x="9.8425" y="40.9575" size="0.8128" layer="21">Luc Ah-Hot, Joshua Feist, Lance Go, Isaac Kim
 Jan 2022</text>
 <text x="91.1225" y="19.3675" size="1.27" layer="21">COML</text>
 <text x="90.805" y="37.7825" size="1.27" layer="21">COMH</text>
 <text x="94.615" y="57.785" size="1.27" layer="21" rot="R90">CAN</text>
+<dimension x1="99.802" y1="88.1255" x2="0" y2="87.935" x3="49.892046875" y3="92.720390625" textsize="1.778" layer="47"/>
+<dimension x1="0" y1="87.935" x2="0" y2="0" x3="-6.35" y3="43.9675" textsize="1.778" layer="47"/>
+<text x="72.39" y="74.93" size="1.778" layer="21">DIEEEEEE!!!!!!</text>
 </plain>
 <libraries>
 <library name="con-molex" urn="urn:adsk.eagle:library:165">
@@ -1400,35 +1403,6 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </package>
 </packages>
 </library>
-<library name="SI7611DN-T1-GE3">
-<packages>
-<package name="VISHAY_SIS468DN-T1-GE3">
-<wire x1="-1.575" y1="1.575" x2="1.575" y2="1.575" width="0.127" layer="51"/>
-<wire x1="1.575" y1="1.575" x2="1.575" y2="-1.575" width="0.127" layer="51"/>
-<wire x1="1.575" y1="-1.575" x2="-1.575" y2="-1.575" width="0.127" layer="51"/>
-<wire x1="-1.575" y1="-1.575" x2="-1.575" y2="1.575" width="0.127" layer="51"/>
-<wire x1="-1.575" y1="1.575" x2="1.575" y2="1.575" width="0.127" layer="21"/>
-<wire x1="-1.575" y1="-1.575" x2="1.575" y2="-1.575" width="0.127" layer="21"/>
-<circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
-<circle x="-2.502" y="0.997" radius="0.1" width="0.2" layer="51"/>
-<wire x1="-2.18" y1="1.825" x2="2.18" y2="1.825" width="0.05" layer="39"/>
-<wire x1="2.18" y1="1.825" x2="2.18" y2="-1.825" width="0.05" layer="39"/>
-<wire x1="2.18" y1="-1.825" x2="-2.18" y2="-1.825" width="0.05" layer="39"/>
-<wire x1="-2.18" y1="-1.825" x2="-2.18" y2="1.825" width="0.05" layer="39"/>
-<text x="-2.254459375" y="2.00396875" size="0.81343125" layer="25">&gt;NAME</text>
-<text x="-2.25581875" y="-2.958340625" size="0.812984375" layer="27">&gt;VALUE</text>
-<smd name="1" x="-1.435" y="0.99" dx="0.99" dy="0.405" layer="1"/>
-<smd name="2" x="-1.435" y="0.33" dx="0.99" dy="0.405" layer="1"/>
-<smd name="3" x="-1.435" y="-0.33" dx="0.99" dy="0.405" layer="1"/>
-<smd name="4" x="-1.435" y="-0.99" dx="0.99" dy="0.405" layer="1"/>
-<smd name="9" x="0.5575" y="0" dx="1.725" dy="2.235" layer="1"/>
-<smd name="5" x="1.55" y="-0.99" dx="0.76" dy="0.405" layer="1"/>
-<smd name="6" x="1.55" y="-0.33" dx="0.76" dy="0.405" layer="1"/>
-<smd name="7" x="1.55" y="0.33" dx="0.76" dy="0.405" layer="1"/>
-<smd name="8" x="1.55" y="0.99" dx="0.76" dy="0.405" layer="1"/>
-</package>
-</packages>
-</library>
 <library name="dc-dc-converter" urn="urn:adsk.eagle:library:208">
 <description>&lt;b&gt;DC-DC Converters&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -1704,6 +1678,41 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 </packageinstances>
 </package3d>
 </packages3d>
+</library>
+<library name="Vishay - SIS862DN-T1-GE3">
+<description>Upverter Parts Library
+
+Created by Upverter.com</description>
+<packages>
+<package name="VISHAY_SIS862DN-T1-GE3_0">
+<description>MOSFET Transistor, N Channel, 40 A, 60 V, 0.007 ohm, 10 V</description>
+<wire x1="-1.575" y1="-1.575" x2="-1.575" y2="1.575" width="0.15" layer="51"/>
+<wire x1="-1.575" y1="1.575" x2="1.575" y2="1.575" width="0.15" layer="51"/>
+<wire x1="1.575" y1="1.575" x2="1.575" y2="-1.575" width="0.15" layer="51"/>
+<wire x1="1.575" y1="-1.575" x2="-1.575" y2="-1.575" width="0.15" layer="51"/>
+<wire x1="-2.03" y1="-1.8" x2="-2.03" y2="1.8" width="0.1" layer="39"/>
+<wire x1="-2.03" y1="1.8" x2="2.03" y2="1.8" width="0.1" layer="39"/>
+<wire x1="2.03" y1="1.8" x2="2.03" y2="-1.8" width="0.1" layer="39"/>
+<wire x1="2.03" y1="-1.8" x2="-2.03" y2="-1.8" width="0.1" layer="39"/>
+<wire x1="-1.575" y1="1.575" x2="1.575" y2="1.575" width="0.15" layer="21"/>
+<wire x1="1.575" y1="-1.575" x2="1.575" y2="-1.567" width="0.15" layer="21"/>
+<wire x1="1.575" y1="1.567" x2="1.575" y2="1.575" width="0.15" layer="21"/>
+<wire x1="-1.575" y1="-1.575" x2="1.575" y2="-1.575" width="0.15" layer="21"/>
+<wire x1="-1.575" y1="-1.575" x2="-1.575" y2="-1.567" width="0.15" layer="21"/>
+<wire x1="-1.575" y1="1.567" x2="-1.575" y2="1.575" width="0.15" layer="21"/>
+<text x="-1.575" y="1.875" size="1" layer="25">&gt;NAME</text>
+<circle x="-2.525" y="0.99" radius="0.25" width="0" layer="21"/>
+<smd name="4" x="-1.435" y="-0.99" dx="0.99" dy="0.405" layer="1"/>
+<smd name="3" x="-1.435" y="-0.33" dx="0.99" dy="0.405" layer="1"/>
+<smd name="2" x="-1.435" y="0.33" dx="0.99" dy="0.405" layer="1"/>
+<smd name="1" x="-1.435" y="0.99" dx="0.99" dy="0.405" layer="1"/>
+<smd name="5,6,7,8" x="1.55" y="-0.99" dx="0.76" dy="0.405" layer="1"/>
+<smd name="5,6,7,8-2" x="1.55" y="-0.33" dx="0.76" dy="0.405" layer="1"/>
+<smd name="5,6,7,8-3" x="1.55" y="0.33" dx="0.76" dy="0.405" layer="1"/>
+<smd name="5,6,7,8-4" x="1.55" y="0.99" dx="0.76" dy="0.405" layer="1"/>
+<smd name="5,6,7,8-5" x="0.557" y="0" dx="1.725" dy="2.235" layer="1"/>
+</package>
+</packages>
 </library>
 </libraries>
 <attributes>
@@ -1990,32 +1999,32 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="unknown" x="125.095" y="-40.9575" size="1.778" layer="27" display="off"/>
 <attribute name="POPULARITY" value="0" x="125.095" y="-40.9575" size="1.778" layer="27" display="off"/>
 </element>
-<element name="CONTACTOR_N" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="10.795" y="81.28" smashed="yes" rot="R180">
-<attribute name="MF" value="MOLEX" x="-46.355" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="-46.355" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="8.255" y="75.565" size="0.6096" layer="25"/>
-<attribute name="OC_FARNELL" value="1822072" x="-46.355" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="-46.355" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="POPULARITY" value="0" x="-46.355" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="13.335" y="87.63" size="1.27" layer="27" rot="R180"/>
+<element name="CONTACTOR_N" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="13.335" y="81.28" smashed="yes" rot="R180">
+<attribute name="MF" value="MOLEX" x="-43.815" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="-43.815" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="10.795" y="75.565" size="0.6096" layer="25"/>
+<attribute name="OC_FARNELL" value="1822072" x="-43.815" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="-43.815" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="POPULARITY" value="0" x="-43.815" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="15.875" y="87.63" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="CONTACTOR_P" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="23.495" y="81.28" smashed="yes" rot="R180">
-<attribute name="MF" value="MOLEX" x="-52.705" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="-52.705" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="26.035" y="76.2" size="0.6096" layer="25" rot="R180"/>
-<attribute name="OC_FARNELL" value="1822072" x="-52.705" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="-52.705" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="POPULARITY" value="0" x="-52.705" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="26.035" y="87.63" size="1.27" layer="27" rot="R180"/>
+<element name="CONTACTOR_P" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="26.035" y="81.28" smashed="yes" rot="R180">
+<attribute name="MF" value="MOLEX" x="-50.165" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="-50.165" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="28.575" y="76.2" size="0.6096" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1822072" x="-50.165" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="-50.165" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="POPULARITY" value="0" x="-50.165" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="28.575" y="87.63" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="CONTACTOR_PRECHARGE" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="36.195" y="81.28" smashed="yes" rot="R180">
-<attribute name="MF" value="MOLEX" x="-0.635" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="-0.635" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="41.5925" y="76.2" size="0.6096" layer="25" rot="R180"/>
-<attribute name="OC_FARNELL" value="1822072" x="-0.635" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="-0.635" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="POPULARITY" value="0" x="-0.635" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="38.735" y="87.63" size="1.27" layer="27" rot="R180"/>
+<element name="CONTACTOR_PRECHARGE" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="38.735" y="81.28" smashed="yes" rot="R180">
+<attribute name="MF" value="MOLEX" x="1.905" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="1.905" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="44.1325" y="76.2" size="0.6096" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1822072" x="1.905" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="1.905" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="POPULARITY" value="0" x="1.905" y="140.97" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="41.275" y="87.63" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="ESDCOMH" library="ESDAVLC6-2BLY" package="SOT95P255X150-3N" value="ESDAVLC6-2BLY" x="83.82" y="30.1625" smashed="yes" rot="R180">
 <attribute name="DESCRIPTION" value="STMICROELECTRONICS - ESDAVLC6-2BLY - ESD Protection Device, 17 V, SOT-23, 3 Pins, 5 V, 140 W, ESDA Transil Series" x="63.5" y="131.7625" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2045,47 +2054,14 @@ design rules under a new name.</description>
 <attribute name="NAME" x="66.9925" y="15.5575" size="1.27" layer="25" align="center"/>
 <attribute name="VALUE" x="67.31" y="13.6525" size="0.6096" layer="27" align="center"/>
 </element>
-<element name="PWR_IN" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="61.595" y="81.28" smashed="yes" rot="R180">
-<attribute name="MF" value="MOLEX" x="17.145" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="17.145" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="62.865" y="76.2" size="1.27" layer="25" rot="R180"/>
-<attribute name="OC_FARNELL" value="1822072" x="17.145" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="17.145" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="POPULARITY" value="0" x="17.145" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="64.135" y="87.63" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="Q1" library="SI7611DN-T1-GE3" package="VISHAY_SIS468DN-T1-GE3" value="SI7611DN-T1-GE3" x="10.795" y="73.025" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" P-Channel 40 V 18A (Tc) 3.7W (Ta), 39W (Tc) Surface Mount PowerPAK® 1212-8 " x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Vishay Siliconix" x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="SI7611DN-T1-GE3" x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="7.270540625" y="72.80646875" size="0.81343125" layer="25"/>
-<attribute name="PACKAGE" value="PowerPAK®-1212 Vishay" x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SI7611DN-T1-GE3/?ref=eda" x="32.385" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="8.53918125" y="70.066659375" size="0.812984375" layer="27"/>
-</element>
-<element name="Q2" library="SI7611DN-T1-GE3" package="VISHAY_SIS468DN-T1-GE3" value="SI7611DN-T1-GE3" x="23.495" y="73.025" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" P-Channel 40 V 18A (Tc) 3.7W (Ta), 39W (Tc) Surface Mount PowerPAK® 1212-8 " x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Vishay Siliconix" x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="SI7611DN-T1-GE3" x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="19.335540625" y="73.12396875" size="0.81343125" layer="25"/>
-<attribute name="PACKAGE" value="PowerPAK®-1212 Vishay" x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SI7611DN-T1-GE3/?ref=eda" x="56.515" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="21.23918125" y="70.066659375" size="0.812984375" layer="27"/>
-</element>
-<element name="Q3" library="SI7611DN-T1-GE3" package="VISHAY_SIS468DN-T1-GE3" value="SI7611DN-T1-GE3" x="36.195" y="73.025" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" P-Channel 40 V 18A (Tc) 3.7W (Ta), 39W (Tc) Surface Mount PowerPAK® 1212-8 " x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Vishay Siliconix" x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="SI7611DN-T1-GE3" x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="32.353040625" y="72.80646875" size="0.81343125" layer="25"/>
-<attribute name="PACKAGE" value="PowerPAK®-1212 Vishay" x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SI7611DN-T1-GE3/?ref=eda" x="80.645" y="-12.065" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="33.93918125" y="70.066659375" size="0.812984375" layer="27"/>
+<element name="PWR_IN" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="64.135" y="81.28" smashed="yes" rot="R180">
+<attribute name="MF" value="MOLEX" x="19.685" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="19.685" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="65.405" y="76.2" size="1.27" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1822072" x="19.685" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="19.685" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="POPULARITY" value="0" x="19.685" y="154.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="66.675" y="87.63" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k" x="10.795" y="68.58" smashed="yes" rot="R180">
 <attribute name="NAME" x="11.43" y="67.945" size="1.27" layer="25" rot="R180"/>
@@ -2157,25 +2133,14 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="58.293" y="26.9875" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="U$2" library="ESP32-DEVKITV1" package="ESP32-DEVKITV1" value="ESP32DEVKITV1" x="33.655" y="25.4" smashed="yes"/>
-<element name="COOLANT-1" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="48.895" y="81.28" smashed="yes" rot="R180">
-<attribute name="MF" value="MOLEX" x="62.865" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="62.865" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="51.1175" y="76.2" size="0.6096" layer="25" rot="R180"/>
-<attribute name="OC_FARNELL" value="1822072" x="62.865" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="62.865" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="POPULARITY" value="0" x="62.865" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="51.435" y="87.63" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="Q4" library="SI7611DN-T1-GE3" package="VISHAY_SIS468DN-T1-GE3" value="SI7611DN-T1-GE3" x="48.895" y="73.025" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" P-Channel 40 V 18A (Tc) 3.7W (Ta), 39W (Tc) Surface Mount PowerPAK® 1212-8 " x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Vishay Siliconix" x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="SI7611DN-T1-GE3" x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="44.735540625" y="71.85396875" size="0.81343125" layer="25"/>
-<attribute name="PACKAGE" value="PowerPAK®-1212 Vishay" x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SI7611DN-T1-GE3/?ref=eda" x="29.845" y="94.615" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="46.63918125" y="70.066659375" size="0.812984375" layer="27"/>
+<element name="COOLANT-1" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="5566-2" package3d_urn="urn:adsk.eagle:package:8078583/1" value="5566-2" x="51.435" y="81.28" smashed="yes" rot="R180">
+<attribute name="MF" value="MOLEX" x="65.405" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="65.405" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="53.6575" y="76.2" size="0.6096" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1822072" x="65.405" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="65.405" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="POPULARITY" value="0" x="65.405" y="66.04" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="53.975" y="87.63" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k" x="48.895" y="68.58" smashed="yes" rot="R180">
 <attribute name="NAME" x="49.53" y="67.945" size="1.27" layer="25" rot="R180"/>
@@ -2317,6 +2282,166 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="17" x="26.035" y="2.2225" size="1.27" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="28.035" y="1.2225" size="1.27" layer="27" rot="R90"/>
 </element>
+<element name="Q5" library="Vishay - SIS862DN-T1-GE3" package="VISHAY_SIS862DN-T1-GE3_0" value="VISHAY_SIS862DN-T1-GE3VISHAY_SIS862DN-T1-GE3_0_0" x="11.43" y="72.39" smashed="yes">
+<attribute name="CENTROID_NOT_SPECIFIED" value="No" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="CONTINUOUS_DRAIN_CURRENT" value="40A" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DATASHEET" value="http://www.vishay.com/docs/63346/sis862dn.pdf" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L1" value="Discrete Semiconductors" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L2" value="Transistors" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L3" value="MOSFETs" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="TRANS MOSFET N-CH 60V 40A 1212" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="SIS862DN-T1-GE3CT-ND" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_BREAKDOWN_VOLTAGE" value="60V" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_RESISTANCE" value="0.007Ω" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_VOLTAGE" value="60V" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="GATE_TO_SOURCE_VOLTAGE" value="20V" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.12mm" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="INPUT_CAPACITACE_AT_VDS" value="1320pF @ 30V" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="LEAD_FREE" value="yes" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Vishay" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT" value="S16-2667" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="01/2017" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="M" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_DESCRIPTION" value="N-Channel 60 V 8.5 mOhm 52 W TrenchFET Power Mosfet - PowerPAK 1212-8" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="78-SIS862DN-T1-GE3" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="SIS862DN-T1-GE3" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="9.855" y="74.265" size="1" layer="25"/>
+<attribute name="NUMBER_OF_CHANNELS" value="1" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NUMBER_OF_N_CHANNELS" value="1" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="PowerPAK1212-8" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="POWER_DISSIPATION" value="52W" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PREFIX" value="Q" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="ROHS" value="yes" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="STANDOFF_HEIGHT" value="0mm" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TECHNOLOGY" value="MOSFET" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+150°C" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-55°C" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="THRESHOLD_VGS" value="2.6V" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_OFF_DELAY_TIME" value="15ns" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_ON_DELAY_TIME" value="23ns" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.1" x="11.43" y="72.39" size="1.778" layer="27" display="off"/>
+</element>
+<element name="Q6" library="Vishay - SIS862DN-T1-GE3" package="VISHAY_SIS862DN-T1-GE3_0" value="VISHAY_SIS862DN-T1-GE3VISHAY_SIS862DN-T1-GE3_0_0" x="24.13" y="72.39" smashed="yes">
+<attribute name="CENTROID_NOT_SPECIFIED" value="No" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="CONTINUOUS_DRAIN_CURRENT" value="40A" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DATASHEET" value="http://www.vishay.com/docs/63346/sis862dn.pdf" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L1" value="Discrete Semiconductors" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L2" value="Transistors" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L3" value="MOSFETs" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="TRANS MOSFET N-CH 60V 40A 1212" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="SIS862DN-T1-GE3CT-ND" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_BREAKDOWN_VOLTAGE" value="60V" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_RESISTANCE" value="0.007Ω" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_VOLTAGE" value="60V" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="GATE_TO_SOURCE_VOLTAGE" value="20V" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.12mm" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="INPUT_CAPACITACE_AT_VDS" value="1320pF @ 30V" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="LEAD_FREE" value="yes" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Vishay" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT" value="S16-2667" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="01/2017" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="M" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_DESCRIPTION" value="N-Channel 60 V 8.5 mOhm 52 W TrenchFET Power Mosfet - PowerPAK 1212-8" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="78-SIS862DN-T1-GE3" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="SIS862DN-T1-GE3" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.555" y="74.265" size="1" layer="25"/>
+<attribute name="NUMBER_OF_CHANNELS" value="1" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NUMBER_OF_N_CHANNELS" value="1" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="PowerPAK1212-8" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="POWER_DISSIPATION" value="52W" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PREFIX" value="Q" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="ROHS" value="yes" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="STANDOFF_HEIGHT" value="0mm" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TECHNOLOGY" value="MOSFET" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+150°C" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-55°C" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="THRESHOLD_VGS" value="2.6V" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_OFF_DELAY_TIME" value="15ns" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_ON_DELAY_TIME" value="23ns" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.1" x="24.13" y="72.39" size="1.778" layer="27" display="off"/>
+</element>
+<element name="Q7" library="Vishay - SIS862DN-T1-GE3" package="VISHAY_SIS862DN-T1-GE3_0" value="VISHAY_SIS862DN-T1-GE3VISHAY_SIS862DN-T1-GE3_0_0" x="36.83" y="72.39" smashed="yes">
+<attribute name="CENTROID_NOT_SPECIFIED" value="No" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="CONTINUOUS_DRAIN_CURRENT" value="40A" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DATASHEET" value="http://www.vishay.com/docs/63346/sis862dn.pdf" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L1" value="Discrete Semiconductors" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L2" value="Transistors" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L3" value="MOSFETs" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="TRANS MOSFET N-CH 60V 40A 1212" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="SIS862DN-T1-GE3CT-ND" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_BREAKDOWN_VOLTAGE" value="60V" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_RESISTANCE" value="0.007Ω" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_VOLTAGE" value="60V" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="GATE_TO_SOURCE_VOLTAGE" value="20V" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.12mm" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="INPUT_CAPACITACE_AT_VDS" value="1320pF @ 30V" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="LEAD_FREE" value="yes" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Vishay" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT" value="S16-2667" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="01/2017" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="M" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_DESCRIPTION" value="N-Channel 60 V 8.5 mOhm 52 W TrenchFET Power Mosfet - PowerPAK 1212-8" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="78-SIS862DN-T1-GE3" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="SIS862DN-T1-GE3" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="35.255" y="74.265" size="1" layer="25"/>
+<attribute name="NUMBER_OF_CHANNELS" value="1" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NUMBER_OF_N_CHANNELS" value="1" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="PowerPAK1212-8" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="POWER_DISSIPATION" value="52W" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PREFIX" value="Q" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="ROHS" value="yes" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="STANDOFF_HEIGHT" value="0mm" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TECHNOLOGY" value="MOSFET" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+150°C" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-55°C" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="THRESHOLD_VGS" value="2.6V" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_OFF_DELAY_TIME" value="15ns" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_ON_DELAY_TIME" value="23ns" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.1" x="36.83" y="72.39" size="1.778" layer="27" display="off"/>
+</element>
+<element name="Q8" library="Vishay - SIS862DN-T1-GE3" package="VISHAY_SIS862DN-T1-GE3_0" value="VISHAY_SIS862DN-T1-GE3VISHAY_SIS862DN-T1-GE3_0_0" x="49.53" y="72.39" smashed="yes">
+<attribute name="CENTROID_NOT_SPECIFIED" value="No" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="CONTINUOUS_DRAIN_CURRENT" value="40A" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DATASHEET" value="http://www.vishay.com/docs/63346/sis862dn.pdf" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L1" value="Discrete Semiconductors" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L2" value="Transistors" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DEVICE_CLASS_L3" value="MOSFETs" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="TRANS MOSFET N-CH 60V 40A 1212" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="SIS862DN-T1-GE3CT-ND" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_BREAKDOWN_VOLTAGE" value="60V" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_RESISTANCE" value="0.007Ω" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="DRAIN_TO_SOURCE_VOLTAGE" value="60V" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="GATE_TO_SOURCE_VOLTAGE" value="20V" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.12mm" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="INPUT_CAPACITACE_AT_VDS" value="1320pF @ 30V" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="LEAD_FREE" value="yes" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Vishay" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT" value="S16-2667" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="01/2017" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="M" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_DESCRIPTION" value="N-Channel 60 V 8.5 mOhm 52 W TrenchFET Power Mosfet - PowerPAK 1212-8" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="78-SIS862DN-T1-GE3" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="SIS862DN-T1-GE3" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="47.955" y="74.265" size="1" layer="25"/>
+<attribute name="NUMBER_OF_CHANNELS" value="1" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="NUMBER_OF_N_CHANNELS" value="1" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="PowerPAK1212-8" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="POWER_DISSIPATION" value="52W" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="PREFIX" value="Q" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="ROHS" value="yes" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="STANDOFF_HEIGHT" value="0mm" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TECHNOLOGY" value="MOSFET" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+150°C" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-55°C" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="THRESHOLD_VGS" value="2.6V" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_OFF_DELAY_TIME" value="15ns" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="TURN_ON_DELAY_TIME" value="23ns" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.1" x="49.53" y="72.39" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2331,31 +2456,11 @@ design rules under a new name.</description>
 <contactref element="TME1205S" pad="3"/>
 <contactref element="C5" pad="2"/>
 <contactref element="PWR_IN" pad="2"/>
-<contactref element="Q1" pad="5"/>
-<contactref element="Q1" pad="6"/>
-<contactref element="Q1" pad="7"/>
-<contactref element="Q1" pad="8"/>
-<contactref element="Q1" pad="9"/>
 <contactref element="R5" pad="1"/>
-<contactref element="Q2" pad="5"/>
-<contactref element="Q2" pad="6"/>
-<contactref element="Q2" pad="7"/>
-<contactref element="Q2" pad="8"/>
-<contactref element="Q2" pad="9"/>
 <contactref element="R6" pad="1"/>
-<contactref element="Q3" pad="5"/>
-<contactref element="Q3" pad="6"/>
-<contactref element="Q3" pad="7"/>
-<contactref element="Q3" pad="8"/>
-<contactref element="Q3" pad="9"/>
 <contactref element="R7" pad="1"/>
 <contactref element="ESDCOML" pad="3"/>
 <contactref element="ESDCOMH" pad="3"/>
-<contactref element="Q4" pad="9"/>
-<contactref element="Q4" pad="7"/>
-<contactref element="Q4" pad="6"/>
-<contactref element="Q4" pad="5"/>
-<contactref element="Q4" pad="8"/>
 <contactref element="R1" pad="1"/>
 <contactref element="CAN1" pad="3"/>
 <contactref element="U$3" pad="GND1"/>
@@ -2402,7 +2507,23 @@ design rules under a new name.</description>
 <contactref element="LED7" pad="C"/>
 <contactref element="LED5" pad="C"/>
 <contactref element="LED6" pad="C"/>
-<wire x1="26.035" y1="1.4725" x2="13.325" y2="11.86" width="0" layer="19" extent="1-1"/>
+<wire x1="26.035" y1="1.4725" x2="22.4275" y2="5.08" width="0.3048" layer="1"/>
+<wire x1="22.4275" y1="5.08" x2="17.78" y2="5.08" width="0.3048" layer="1"/>
+<via x="17.78" y="5.08" extent="1-16" drill="0.35"/>
+<wire x1="17.78" y1="5.08" x2="13.325" y2="9.535" width="0.3048" layer="16"/>
+<wire x1="13.325" y1="9.535" x2="13.325" y2="11.86" width="0.3048" layer="16"/>
+<contactref element="Q5" pad="2"/>
+<contactref element="Q5" pad="1"/>
+<contactref element="Q5" pad="3"/>
+<contactref element="Q6" pad="2"/>
+<contactref element="Q6" pad="1"/>
+<contactref element="Q6" pad="3"/>
+<contactref element="Q7" pad="2"/>
+<contactref element="Q7" pad="1"/>
+<contactref element="Q7" pad="3"/>
+<contactref element="Q8" pad="2"/>
+<contactref element="Q8" pad="1"/>
+<contactref element="Q8" pad="3"/>
 </signal>
 <signal name="NCS/CS">
 <contactref element="U$3" pad="10-CS\MQSR"/>
@@ -2517,21 +2638,15 @@ design rules under a new name.</description>
 <contactref element="CONTACTOR_P" pad="1"/>
 <contactref element="CONTACTOR_PRECHARGE" pad="1"/>
 <contactref element="COOLANT-1" pad="1"/>
-<wire x1="23.368" y1="84.157" x2="10.795" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="10.795" y1="84.157" x2="10.795" y2="84.03" width="5.2832" layer="1"/>
-<wire x1="23.495" y1="84.03" x2="23.368" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="36.195" y1="84.03" x2="36.068" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="36.068" y1="84.157" x2="23.622" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="23.622" y1="84.157" x2="23.495" y2="84.03" width="5.2832" layer="1"/>
-<wire x1="48.895" y1="84.03" x2="48.768" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="48.768" y1="84.157" x2="36.322" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="36.322" y1="84.157" x2="36.195" y2="84.03" width="5.2832" layer="1"/>
+<wire x1="23.368" y1="84.157" x2="13.335" y2="84.157" width="5.2832" layer="1"/>
+<wire x1="13.335" y1="84.157" x2="13.335" y2="84.03" width="5.2832" layer="1"/>
+<wire x1="38.735" y1="84.03" x2="38.608" y2="84.157" width="5.2832" layer="1"/>
+<wire x1="38.608" y1="84.157" x2="23.622" y2="84.157" width="5.2832" layer="1"/>
+<wire x1="51.435" y1="84.03" x2="51.308" y2="84.157" width="5.2832" layer="1"/>
+<wire x1="51.308" y1="84.157" x2="36.322" y2="84.157" width="5.2832" layer="1"/>
 <contactref element="TME1205S" pad="2"/>
 <contactref element="C4" pad="1"/>
 <contactref element="PWR_IN" pad="1"/>
-<wire x1="48.895" y1="84.03" x2="49.022" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="61.468" y1="84.157" x2="49.022" y2="84.157" width="5.2832" layer="1"/>
-<wire x1="61.468" y1="84.157" x2="61.595" y2="84.03" width="5.2832" layer="1"/>
 <wire x1="61.599725" y1="30.484725" x2="58.74695" y2="33.3375" width="0.3048" layer="1"/>
 <wire x1="55.245" y1="33.3375" x2="58.74695" y2="33.3375" width="0.3048" layer="1"/>
 <wire x1="61.595" y1="28.79" x2="61.595" y2="30.48" width="0.3048" layer="1"/>
@@ -2545,16 +2660,20 @@ design rules under a new name.</description>
 <vertex x="0" y="88.265"/>
 </polygon>
 <wire x1="56.9722" y1="36.3193875" x2="56.9722" y2="35.4356125" width="0.508" layer="16"/>
-<wire x1="56.6246" y1="52.474475" x2="61.595" y2="57.444875" width="0.508" layer="16"/>
+<wire x1="61.595" y1="57.444875" x2="56.6246" y2="52.474475" width="0.508" layer="16"/>
 <wire x1="55.245" y1="33.7084125" x2="55.245" y2="33.3375" width="0.508" layer="16"/>
 <wire x1="56.9722" y1="35.4356125" x2="55.245" y2="33.7084125" width="0.508" layer="16"/>
 <wire x1="56.6246" y1="52.474475" x2="56.6246" y2="36.6669875" width="0.508" layer="16"/>
 <wire x1="56.6246" y1="36.6669875" x2="56.9722" y2="36.3193875" width="0.508" layer="16"/>
-<wire x1="60.1386" y1="77.3116625" x2="60.1386" y2="79.7483375" width="0.508" layer="16"/>
-<wire x1="61.595" y1="57.444875" x2="61.595" y2="75.8552625" width="0.508" layer="16"/>
-<wire x1="61.595" y1="81.2047375" x2="61.595" y2="84.03" width="0.508" layer="16"/>
-<wire x1="61.595" y1="75.8552625" x2="60.1386" y2="77.3116625" width="0.508" layer="16"/>
-<wire x1="60.1386" y1="79.7483375" x2="61.595" y2="81.2047375" width="0.508" layer="16"/>
+<wire x1="62.205" y1="77.842625" x2="61.595" y2="77.232625" width="0.508" layer="16"/>
+<wire x1="61.595" y1="77.232625" x2="61.595" y2="57.444875" width="0.508" layer="16"/>
+<wire x1="64.135" y1="84.03" x2="62.205" y2="82.1" width="0.508" layer="16"/>
+<wire x1="62.205" y1="82.1" x2="62.205" y2="77.842625" width="0.508" layer="16"/>
+<wire x1="51.435" y1="84.03" x2="53.88105" y2="84.03" width="5.2832" layer="1"/>
+<wire x1="53.88105" y1="84.03" x2="53.99865" y2="84.1476" width="5.2832" layer="1"/>
+<wire x1="61.57135" y1="84.1476" x2="61.68895" y2="84.03" width="5.2832" layer="1"/>
+<wire x1="61.68895" y1="84.03" x2="64.135" y2="84.03" width="5.2832" layer="1"/>
+<wire x1="53.99865" y1="84.1476" x2="61.57135" y2="84.1476" width="5.2832" layer="1"/>
 </signal>
 <signal name="COMHP">
 <contactref element="IC1" pad="13"/>
@@ -2621,7 +2740,6 @@ design rules under a new name.</description>
 <wire x1="71.05655" y1="15.455" x2="70.79425" y2="15.7173" width="0.3048" layer="1"/>
 </signal>
 <signal name="CONTACTORN_CTRL">
-<contactref element="Q1" pad="4"/>
 <contactref element="R5" pad="2"/>
 <contactref element="U$3" pad="23-A9/CRX1/MCLK1"/>
 <wire x1="11.6498" y1="67.7252" x2="11.01875" y2="67.7252" width="0.3048" layer="1"/>
@@ -2629,68 +2747,98 @@ design rules under a new name.</description>
 <wire x1="11.01875" y1="67.7252" x2="10.16395" y2="68.58" width="0.3048" layer="1"/>
 <wire x1="9.525" y1="62.5475" x2="9.525" y2="65.6004" width="0.3048" layer="1"/>
 <wire x1="11.6498" y1="67.7252" x2="9.525" y2="65.6004" width="0.3048" layer="1"/>
-<wire x1="9.36" y1="72.035" x2="9.945" y2="71.45" width="0.3048" layer="1"/>
-<wire x1="9.945" y1="71.45" x2="9.945" y2="68.58" width="0.3048" layer="1"/>
+<contactref element="Q5" pad="4"/>
+<wire x1="9.945" y1="68.58" x2="9.995" y2="68.63" width="0.3048" layer="1"/>
+<wire x1="9.995" y1="68.63" x2="9.995" y2="71.4" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$5">
-<contactref element="Q1" pad="1"/>
-<contactref element="Q1" pad="2"/>
-<contactref element="Q1" pad="3"/>
 <contactref element="CONTACTOR_N" pad="2"/>
-<wire x1="9.36" y1="74.015" x2="9.36" y2="73.355" width="1.3716" layer="1"/>
-<wire x1="9.36" y1="74.015" x2="9.36" y2="77.095" width="1.3716" layer="1"/>
-<wire x1="9.36" y1="77.095" x2="10.795" y2="78.53" width="1.3716" layer="1"/>
-<wire x1="9.36" y1="72.695" x2="9.36" y2="73.355" width="0.1524" layer="1"/>
 <contactref element="R14" pad="1"/>
-<wire x1="9.36" y1="73.355" x2="7.8225" y2="73.355" width="1.3716" layer="1"/>
-<wire x1="7.8225" y1="73.355" x2="7.2" y2="73.9775" width="1.3716" layer="1"/>
+<contactref element="Q5" pad="5,6,7,8-2"/>
+<contactref element="Q5" pad="5,6,7,8-5"/>
+<contactref element="Q5" pad="5,6,7,8"/>
+<contactref element="Q5" pad="5,6,7,8-3"/>
+<contactref element="Q5" pad="5,6,7,8-4"/>
+<wire x1="13.335" y1="78.53" x2="13.335" y2="73.738" width="1.3716" layer="1"/>
+<wire x1="13.335" y1="73.738" x2="12.9785" y2="73.3815" width="1.3716" layer="1"/>
+<wire x1="12.9785" y1="73.3815" x2="11.987" y2="72.39" width="1.3716" layer="1"/>
+<wire x1="11.987" y1="72.39" x2="10.7948" y2="73.5822" width="0.3048" layer="1"/>
+<wire x1="10.7948" y1="73.5822" x2="10.7948" y2="73.70875" width="0.3048" layer="1"/>
+<wire x1="10.7948" y1="73.70875" x2="10.52605" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="10.52605" y1="73.9775" x2="7.2" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="12.98" y1="72.06" x2="12.98" y2="72.72" width="0.3048" layer="1"/>
+<wire x1="11.987" y1="72.39" x2="12.65" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="12.65" y1="72.39" x2="12.98" y2="72.06" width="0.3048" layer="1"/>
+<wire x1="12.98" y1="71.4" x2="12.98" y2="72.06" width="0.3048" layer="1"/>
+<wire x1="12.98" y1="72.72" x2="12.98" y2="73.38" width="0.3048" layer="1"/>
+<wire x1="12.98" y1="73.38" x2="12.9785" y2="73.3815" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$2">
-<contactref element="Q2" pad="1"/>
-<contactref element="Q2" pad="2"/>
-<contactref element="Q2" pad="3"/>
 <contactref element="CONTACTOR_P" pad="2"/>
-<wire x1="22.06" y1="74.015" x2="22.06" y2="73.355" width="1.3716" layer="1"/>
-<wire x1="22.06" y1="74.015" x2="22.06" y2="77.095" width="1.3716" layer="1"/>
-<wire x1="22.06" y1="77.095" x2="23.495" y2="78.53" width="1.3716" layer="1"/>
-<wire x1="22.06" y1="73.355" x2="22.06" y2="73.0757" width="0.1524" layer="1"/>
 <contactref element="R13" pad="1"/>
-<wire x1="22.06" y1="73.0757" x2="22.06" y2="72.695" width="0.1524" layer="1"/>
-<wire x1="19.9" y1="73.9775" x2="20.8018" y2="73.0757" width="1.3716" layer="1"/>
-<wire x1="20.8018" y1="73.0757" x2="22.06" y2="73.0757" width="1.3716" layer="1"/>
+<contactref element="Q6" pad="5,6,7,8-2"/>
+<contactref element="Q6" pad="5,6,7,8-5"/>
+<contactref element="Q6" pad="5,6,7,8"/>
+<contactref element="Q6" pad="5,6,7,8-3"/>
+<contactref element="Q6" pad="5,6,7,8-4"/>
+<wire x1="26.035" y1="78.53" x2="26.035" y2="73.738" width="1.3716" layer="1"/>
+<wire x1="26.035" y1="73.738" x2="25.6785" y2="73.3815" width="1.3716" layer="1"/>
+<wire x1="25.6785" y1="73.3815" x2="24.687" y2="72.39" width="1.3716" layer="1"/>
+<wire x1="24.687" y1="72.39" x2="23.4948" y2="73.5822" width="0.3048" layer="1"/>
+<wire x1="23.4948" y1="73.5822" x2="23.4948" y2="73.70875" width="0.3048" layer="1"/>
+<wire x1="23.4948" y1="73.70875" x2="23.22605" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="23.22605" y1="73.9775" x2="19.9" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="25.68" y1="72.06" x2="25.68" y2="72.72" width="0.3048" layer="1"/>
+<wire x1="25.68" y1="72.06" x2="25.35" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="25.35" y1="72.39" x2="24.687" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="25.68" y1="71.4" x2="25.68" y2="72.06" width="0.3048" layer="1"/>
+<wire x1="25.68" y1="72.72" x2="25.6785" y2="72.7215" width="0.3048" layer="1"/>
+<wire x1="25.6785" y1="72.7215" x2="25.6785" y2="73.3815" width="0.3048" layer="1"/>
+<wire x1="25.68" y1="73.38" x2="25.677" y2="73.38" width="0.3048" layer="1"/>
+<wire x1="25.677" y1="73.38" x2="24.687" y2="72.39" width="0.3048" layer="1"/>
 </signal>
 <signal name="CONTACTORP_CTRL">
-<contactref element="Q2" pad="4"/>
 <contactref element="R6" pad="2"/>
 <contactref element="U$3" pad="22-A8/CTX1"/>
-<wire x1="22.06" y1="72.035" x2="22.645" y2="71.45" width="0.3048" layer="1"/>
-<wire x1="22.645" y1="71.45" x2="22.645" y2="68.58" width="0.3048" layer="1"/>
 <wire x1="22.645" y1="68.58" x2="18.0975" y2="68.58" width="0.3048" layer="1"/>
 <wire x1="18.0975" y1="68.58" x2="12.065" y2="62.5475" width="0.3048" layer="1"/>
+<contactref element="Q6" pad="4"/>
+<wire x1="22.645" y1="68.58" x2="22.695" y2="68.63" width="0.3048" layer="1"/>
+<wire x1="22.695" y1="68.63" x2="22.695" y2="71.4" width="0.3048" layer="1"/>
 </signal>
 <signal name="CONTACTORPRECHARGE_CTRL">
-<contactref element="Q3" pad="4"/>
 <contactref element="R7" pad="2"/>
 <contactref element="U$3" pad="21-A7/RX5/BCLK1"/>
-<wire x1="35.345" y1="68.58" x2="34.76" y2="69.165" width="0.3048" layer="1"/>
-<wire x1="34.76" y1="69.165" x2="34.76" y2="72.035" width="0.3048" layer="1"/>
 <wire x1="25.82605" y1="68.58" x2="24.97125" y2="67.7252" width="0.3048" layer="1"/>
 <wire x1="19.7827" y1="67.7252" x2="14.605" y2="62.5475" width="0.3048" layer="1"/>
 <wire x1="24.97125" y1="67.7252" x2="19.7827" y2="67.7252" width="0.3048" layer="1"/>
 <wire x1="35.345" y1="68.58" x2="25.82605" y2="68.58" width="0.3048" layer="1"/>
+<contactref element="Q7" pad="4"/>
+<wire x1="35.345" y1="68.58" x2="35.345" y2="71.35" width="0.3048" layer="1"/>
+<wire x1="35.345" y1="71.35" x2="35.395" y2="71.4" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$12">
-<contactref element="Q3" pad="1"/>
-<contactref element="Q3" pad="2"/>
-<contactref element="Q3" pad="3"/>
 <contactref element="CONTACTOR_PRECHARGE" pad="2"/>
-<wire x1="34.76" y1="72.695" x2="34.76" y2="73.355" width="0.1524" layer="1"/>
-<wire x1="34.76" y1="73.355" x2="34.76" y2="74.015" width="1.3716" layer="1"/>
-<wire x1="34.76" y1="74.015" x2="34.76" y2="77.095" width="1.3716" layer="1"/>
-<wire x1="34.76" y1="77.095" x2="36.195" y2="78.53" width="1.3716" layer="1"/>
 <contactref element="R12" pad="1"/>
-<wire x1="34.76" y1="73.355" x2="33.2225" y2="73.355" width="1.3716" layer="1"/>
-<wire x1="33.2225" y1="73.355" x2="32.6" y2="73.9775" width="1.3716" layer="1"/>
+<contactref element="Q7" pad="5,6,7,8-2"/>
+<contactref element="Q7" pad="5,6,7,8-5"/>
+<contactref element="Q7" pad="5,6,7,8"/>
+<contactref element="Q7" pad="5,6,7,8-3"/>
+<contactref element="Q7" pad="5,6,7,8-4"/>
+<wire x1="38.735" y1="78.53" x2="38.735" y2="73.738" width="1.3716" layer="1"/>
+<wire x1="38.735" y1="73.738" x2="38.38" y2="73.383" width="1.3716" layer="1"/>
+<wire x1="38.38" y1="73.383" x2="37.387" y2="72.39" width="1.3716" layer="1"/>
+<wire x1="37.387" y1="72.39" x2="36.1948" y2="73.5822" width="0.3048" layer="1"/>
+<wire x1="36.1948" y1="73.5822" x2="36.1948" y2="73.70875" width="0.3048" layer="1"/>
+<wire x1="36.1948" y1="73.70875" x2="35.92605" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="35.92605" y1="73.9775" x2="32.6" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="38.38" y1="72.06" x2="38.05" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="38.05" y1="72.39" x2="37.387" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="38.38" y1="71.4" x2="38.38" y2="72.06" width="0.3048" layer="1"/>
+<wire x1="38.38" y1="72.72" x2="38.38" y2="73.383" width="0.3048" layer="1"/>
+<wire x1="38.38" y1="72.06" x2="38.38" y2="72.72" width="0.3048" layer="1"/>
+<wire x1="38.38" y1="73.38" x2="37.39" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="37.39" y1="72.39" x2="37.387" y2="72.39" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="RCOMLP" pad="1"/>
@@ -2753,31 +2901,40 @@ design rules under a new name.</description>
 <wire x1="91.9675" y1="28.575" x2="88.7975" y2="28.575" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$6">
-<contactref element="Q4" pad="1"/>
-<contactref element="Q4" pad="2"/>
-<contactref element="Q4" pad="3"/>
 <contactref element="COOLANT-1" pad="2"/>
-<wire x1="47.46" y1="72.695" x2="47.46" y2="73.355" width="0.1524" layer="1"/>
-<wire x1="47.46" y1="73.355" x2="47.46" y2="74.015" width="1.3716" layer="1"/>
-<wire x1="47.46" y1="74.015" x2="47.46" y2="77.095" width="1.3716" layer="1"/>
-<wire x1="47.46" y1="77.095" x2="48.895" y2="78.53" width="1.3716" layer="1"/>
 <contactref element="R11" pad="1"/>
-<wire x1="47.46" y1="73.355" x2="45.9225" y2="73.355" width="1.3716" layer="1"/>
-<wire x1="45.9225" y1="73.355" x2="45.3" y2="73.9775" width="1.3716" layer="1"/>
+<contactref element="Q8" pad="5,6,7,8-2"/>
+<contactref element="Q8" pad="5,6,7,8-5"/>
+<contactref element="Q8" pad="5,6,7,8"/>
+<contactref element="Q8" pad="5,6,7,8-3"/>
+<contactref element="Q8" pad="5,6,7,8-4"/>
+<wire x1="51.435" y1="78.53" x2="51.435" y2="73.738" width="1.3716" layer="1"/>
+<wire x1="51.435" y1="73.738" x2="51.0785" y2="73.3815" width="1.3716" layer="1"/>
+<wire x1="51.0785" y1="73.3815" x2="50.087" y2="72.39" width="1.3716" layer="1"/>
+<wire x1="50.087" y1="72.39" x2="48.8948" y2="73.5822" width="0.3048" layer="1"/>
+<wire x1="48.8948" y1="73.5822" x2="48.8948" y2="73.70875" width="0.3048" layer="1"/>
+<wire x1="48.8948" y1="73.70875" x2="48.62605" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="48.62605" y1="73.9775" x2="45.3" y2="73.9775" width="0.3048" layer="1"/>
+<wire x1="51.08" y1="72.06" x2="51.08" y2="72.72" width="0.3048" layer="1"/>
+<wire x1="51.08" y1="72.06" x2="50.75" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="50.75" y1="72.39" x2="50.087" y2="72.39" width="0.3048" layer="1"/>
+<wire x1="51.08" y1="71.4" x2="51.08" y2="72.06" width="0.3048" layer="1"/>
+<wire x1="51.08" y1="72.72" x2="51.08" y2="73.38" width="0.3048" layer="1"/>
+<wire x1="51.08" y1="73.38" x2="51.0785" y2="73.3815" width="0.3048" layer="1"/>
 </signal>
 <signal name="COOLANT_CTRL">
-<contactref element="Q4" pad="4"/>
 <contactref element="R1" pad="2"/>
 <contactref element="U$3" pad="20-A6/TX5/LRCLK1"/>
 <wire x1="38.52605" y1="68.58" x2="48.045" y2="68.58" width="0.3048" layer="1"/>
 <wire x1="37.67125" y1="67.7252" x2="38.52605" y2="68.58" width="0.3048" layer="1"/>
 <wire x1="30.48" y1="67.7252" x2="37.67125" y2="67.7252" width="0.3048" layer="1"/>
-<wire x1="48.045" y1="68.58" x2="47.46" y2="69.165" width="0.3048" layer="1"/>
-<wire x1="47.46" y1="69.165" x2="47.46" y2="72.035" width="0.3048" layer="1"/>
 <wire x1="30.48" y1="67.7252" x2="29.4298" y2="66.675" width="0.3048" layer="1"/>
 <wire x1="29.4298" y1="66.675" x2="20.6375" y2="66.675" width="0.3048" layer="1"/>
 <wire x1="20.6375" y1="66.675" x2="17.145" y2="63.1825" width="0.3048" layer="1"/>
 <wire x1="17.145" y1="63.1825" x2="17.145" y2="62.5475" width="0.3048" layer="1"/>
+<contactref element="Q8" pad="4"/>
+<wire x1="48.045" y1="68.58" x2="48.095" y2="68.63" width="0.3048" layer="1"/>
+<wire x1="48.095" y1="68.63" x2="48.095" y2="71.4" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="U$3" pad="30-CRX3"/>
@@ -2992,26 +3149,26 @@ design rules under a new name.</description>
 <signal name="N$3">
 <contactref element="R11" pad="2"/>
 <contactref element="LED1" pad="A"/>
-<wire x1="43.6" y1="73.9775" x2="43.6" y2="72.29" width="1.3716" layer="1"/>
-<wire x1="43.6" y1="72.29" x2="43.4975" y2="72.1875" width="1.3716" layer="1"/>
+<wire x1="43.6" y1="73.9775" x2="43.6" y2="72.29" width="0.3048" layer="1"/>
+<wire x1="43.6" y1="72.29" x2="43.4975" y2="72.1875" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="R12" pad="2"/>
 <contactref element="LED2" pad="A"/>
-<wire x1="30.9" y1="73.9775" x2="30.9" y2="72.29" width="1.3716" layer="1"/>
-<wire x1="30.9" y1="72.29" x2="30.7975" y2="72.1875" width="1.3716" layer="1"/>
+<wire x1="30.9" y1="73.9775" x2="30.7975" y2="73.875" width="0.3048" layer="1"/>
+<wire x1="30.7975" y1="73.875" x2="30.7975" y2="72.1875" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="R13" pad="2"/>
 <contactref element="LED3" pad="A"/>
-<wire x1="18.2" y1="72.29" x2="18.2" y2="73.9775" width="1.3716" layer="1"/>
-<wire x1="18.0975" y1="72.1875" x2="18.2" y2="72.29" width="1.3716" layer="1"/>
+<wire x1="18.2" y1="73.9775" x2="18.0975" y2="73.875" width="0.3048" layer="1"/>
+<wire x1="18.0975" y1="73.875" x2="18.0975" y2="72.1875" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$13">
 <contactref element="R14" pad="2"/>
 <contactref element="LED4" pad="A"/>
-<wire x1="5.5" y1="73.9775" x2="5.5" y2="72.29" width="1.3716" layer="1"/>
-<wire x1="5.5" y1="72.29" x2="5.3975" y2="72.1875" width="1.3716" layer="1"/>
+<wire x1="5.5" y1="73.9775" x2="5.3975" y2="73.875" width="0.3048" layer="1"/>
+<wire x1="5.3975" y1="73.875" x2="5.3975" y2="72.1875" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$14">
 <contactref element="U$3" pad="14-A0/TX3/SPDIF_OUT"/>
