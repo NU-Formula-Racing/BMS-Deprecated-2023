@@ -11832,6 +11832,11 @@ Created by Upverter.com</description>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="Q5" gate="G$0" pin="G"/>
 <wire x1="-134.62" y1="71.12" x2="-142.24" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="-127" y1="60.96" x2="-121.92" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-127" y1="60.96" x2="-127" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-127" y1="71.12" x2="-142.24" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-142.24" y="71.12"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="23-A9/CRX1/MCLK1"/>
@@ -11844,10 +11849,6 @@ Created by Upverter.com</description>
 <wire x1="-127" y1="73.66" x2="-127" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="CONTACTOR_N" gate="-2" pin="S"/>
 <wire x1="-127" y1="66.04" x2="-121.92" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="-127" y1="66.04" x2="-127" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-127" y1="60.96" x2="-121.92" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-127" y="66.04"/>
 <pinref part="Q5" gate="G$0" pin="D"/>
 <wire x1="-132.08" y1="78.74" x2="-132.08" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-132.08" y1="73.66" x2="-127" y2="73.66" width="0.1524" layer="91"/>
@@ -11859,10 +11860,6 @@ Created by Upverter.com</description>
 <pinref part="CONTACTOR_P" gate="-2" pin="S"/>
 <wire x1="-127" y1="48.26" x2="-127" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-127" y1="40.64" x2="-121.92" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="1"/>
-<wire x1="-127" y1="40.64" x2="-127" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-127" y1="35.56" x2="-121.92" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-127" y="40.64"/>
 <pinref part="Q6" gate="G$0" pin="D"/>
 <wire x1="-129.54" y1="48.26" x2="-129.54" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="-129.54" y1="53.34" x2="-132.08" y2="53.34" width="0.1524" layer="91"/>
@@ -11875,6 +11872,11 @@ Created by Upverter.com</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="Q6" gate="G$0" pin="G"/>
 <wire x1="-134.62" y1="45.72" x2="-142.24" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-127" y1="35.56" x2="-121.92" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-127" y1="35.56" x2="-127" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-127" y1="45.72" x2="-142.24" y2="45.72" width="0.1524" layer="91"/>
+<junction x="-142.24" y="45.72"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="22-A8/CTX1"/>
@@ -11889,6 +11891,11 @@ Created by Upverter.com</description>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="Q7" gate="G$0" pin="G"/>
 <wire x1="-134.62" y1="20.32" x2="-142.24" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="-127" y1="10.16" x2="-121.92" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-127" y1="10.16" x2="-127" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-127" y1="20.32" x2="-142.24" y2="20.32" width="0.1524" layer="91"/>
+<junction x="-142.24" y="20.32"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="21-A7/RX5/BCLK1"/>
@@ -11902,10 +11909,6 @@ Created by Upverter.com</description>
 <wire x1="-127" y1="22.86" x2="-127" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="CONTACTOR_PRECHARGE" gate="-2" pin="S"/>
 <wire x1="-127" y1="15.24" x2="-121.92" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="-127" y1="15.24" x2="-127" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-127" y1="10.16" x2="-121.92" y2="10.16" width="0.1524" layer="91"/>
-<junction x="-127" y="15.24"/>
 <pinref part="Q7" gate="G$0" pin="D"/>
 <wire x1="-129.54" y1="22.86" x2="-129.54" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-129.54" y1="27.94" x2="-132.08" y2="27.94" width="0.1524" layer="91"/>
@@ -11999,9 +12002,6 @@ Created by Upverter.com</description>
 <wire x1="-127" y1="-7.62" x2="-127" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="COOLANT-1" gate="-2" pin="S"/>
 <wire x1="-121.92" y1="-15.24" x2="-127" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-127" y1="-15.24" x2="-127" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-127" y1="-20.32" x2="-121.92" y2="-20.32" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
 <pinref part="Q8" gate="G$0" pin="D"/>
 <wire x1="-129.54" y1="-7.62" x2="-129.54" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-129.54" y1="-2.54" x2="-132.08" y2="-2.54" width="0.1524" layer="91"/>
@@ -12017,6 +12017,11 @@ Created by Upverter.com</description>
 <wire x1="-134.62" y1="-7.62" x2="-142.24" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-142.24" y1="-7.62" x2="-142.24" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="-134.62" y="-7.62"/>
+<wire x1="-127" y1="-20.32" x2="-121.92" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="-127" y1="-20.32" x2="-127" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-10.16" x2="-142.24" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-142.24" y="-10.16"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="20-A6/TX5/LRCLK1"/>
