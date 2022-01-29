@@ -13,3 +13,5 @@ uint8_t* getTxBuf();
 uint8_t* getRxBuf();
 int* getTxDataLen();
 int* getRxDataLen();
+void getVoltages(float* voltages);
+void getTemps(float* temps);

@@ -287,7 +287,7 @@
 #define DEBUG_COMM_STAT 0x780
 #define DEBUG_UART_RC 0x781
 #define DEBUG_UART_RR_TR 0x782
-#define T 0x783
+//#define T 0x783
 #define DEBUG_COMH_RC 0x784
 #define DEBUG_COMH_RR_TR 0x785
 #define DEBUG_COML_BIT 0x786

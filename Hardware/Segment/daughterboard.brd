@@ -173,6 +173,7 @@ January 2022</text>
 <hole x="195.58" y="46.99" drill="4.445"/>
 <dimension x1="200.64" y1="51.8" x2="6.35" y2="51.8" x3="103.495" y3="59.69" textsize="1.4224" layer="21"/>
 <dimension x1="6.35" y1="51.8" x2="6.35" y2="0" x3="1.27" y3="25.9" textsize="1.4224" layer="21"/>
+<dimension x1="9.2075" y1="46.99" x2="13.6525" y2="46.99" x3="11.43" y3="53.34" textsize="1.778" layer="49" dtype="diameter"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
