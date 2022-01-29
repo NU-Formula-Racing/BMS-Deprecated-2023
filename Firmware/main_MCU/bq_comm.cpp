@@ -31,3 +31,17 @@ int* getTxDataLen() {
 int* getRxDataLen() {
   return &rxDataLen;
 }
+
+void getVoltages(float* voltages) {
+  //read voltages from battery
+
+  //fill in num_series voltages to array
+  return;
+}
+
+void getTemps(float* temps) {
+  //read temps from battery
+
+  //fill in num_thermo temps to array
+  return;
+}
