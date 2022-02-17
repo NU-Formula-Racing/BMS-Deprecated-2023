@@ -1,24 +1,60 @@
 #include "bq_comm.h"
-#include "pin_defs.h"
+#include "teensy_pin_defs.h"
 //#include "Crc16.h"
+#define serialdebug 1
 
 bool carActive = false;
 bool isCharging = false;
+int faultPin = 0;
 int fault = 0; //error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
 #define num_series 140
 #define num_thermo 112
 #define num_segments 14 //logical segments (BQ79656-Q1 chips)
-float voltages[num_series]; //should be 0 because global? maybe should be initialized in setup
-float temps[num_thermo]; //16 per segment * 7 segments
-float current;
+double voltages[num_series]; //should be 0 because global? maybe should be initialized in setup
+double maxVoltage;
+double temps[num_thermo]; //16 per segment * 7 segments
+double maxTemp;
+double current;
 
 void faultInterrupt() {
-  
+  shutdownCar();
+  if (!digitalRead(nfault_pin)) {
+    faultPin = nfault_pin;
+  }
+  else {
+    bool foundFault = 0;
+    for (int i = 0; i < num_kill_pins; i++) {
+      if (!digitalRead(kill_pins[i])) {
+        faultPin = kill_pins[i];
+        break;
+      }
+    }
+    if (!foundFault) {
+      faultPin = -1;
+    }
+  }
 }
 
 void setup() {
   // put your setup code here, to run once:
+  #if serialdebug
+    Serial.begin(115200);
+    Serial.println("Starting...");
+  #endif
+  
+  //attach fault interrupts
+  pinMode(nfault_pin, INPUT);
+  attachInterrupt(digitalPinToInterrupt(nfault_pin), faultInterrupt, FALLING);
+
+  for (int i = 0; i < num_kill_pins; i++) {
+    pinMode(kill_pins[i], INPUT);
+    attachInterrupt(digitalPinToInterrupt(kill_pins[i]), faultInterrupt, FALLING);
+  }
+
+  //initialize SPI communication with the BQ chips
+  BQInitializeSPI();
+  
   /* CRC test code
   pinMode(BQ_FAULT_PIN, INPUT);
   attachInterrupt(digitalPinToInterrupt(BQ_FAULT_PIN), shutdownCar, LOW);
@@ -41,17 +77,24 @@ void setup() {
 }
 
 void loop() {
+  //check fault status
+  if (fault) {
+    #if serialdebug
+      Serial.println("Fault:" + fault);
+    #endif
+  }
+  
   //check current
-  //todo
   getCurrent(&current);
 
   //check voltages
-  //todo
   getVoltages(voltages);
+  maxVoltage = getMax(voltages, num_segments);
 
   //check temps
-  //todo
   getTemps(temps);
+  maxTemp = getMax(temps, num_thermo);
+  analogWrite(coolant_ctrl, map(maxTemp, 20, 50, 0, 255)); //Current pin is NOT pwm capable - rev board or use softpwm, also map ranges may be suboptimal
 
   //cell balancing if charging
   //todo
@@ -79,4 +122,12 @@ void startCar() {
   digitalWrite(contactorp_ctrl, HIGH); //turn on car
   digitalWrite(contactorprecharge_ctrl, LOW); //disable precharge when car is running
   carActive = true;
+}
+
+double getMax(double* arr, int arrSize) {
+  double currMax = arr[0];
+  for (int i = 1; i < arrSize; i++) {
+    currMax = max(currMax, arr[i]);
+  }
+  return currMax;
 }
