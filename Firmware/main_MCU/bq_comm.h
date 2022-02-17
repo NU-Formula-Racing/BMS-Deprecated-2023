@@ -1,17 +1,22 @@
 #include "bq79600_reg_defs.h"
 #include "bq79656_reg_defs.h"
+#include "bq_pin_defs.h"
 #include <stdbool.h>
 #include <Arduino.h>
+#include <SPI.h>
 
 
-#define BQ_FAULT_PIN 2
+void bqInitializeSPI();
 
 uint16_t calculateCRC();
 bool verifyCRC();
 
-uint8_t* getTxBuf();
-uint8_t* getRxBuf();
-int* getTxDataLen();
-int* getRxDataLen();
-void getVoltages(float* voltages);
-void getTemps(float* temps);
+uint8_t* bqGetTxBuf();
+uint8_t* bqGetRxBuf();
+int* bqGetTxDataLen();
+int* bqGetRxDataLen();
+void bqGetVoltages(float* voltages);
+void bqGetTemps(float* temps);
+void bqGetCurrent(float* current);
+void bqWakeChip();
+void bqCommClear();
