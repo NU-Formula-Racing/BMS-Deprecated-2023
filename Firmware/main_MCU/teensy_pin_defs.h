@@ -6,7 +6,7 @@
 #define miso_esp 41
 #define mosi_esp 26
 #define sck_esp 27
-#define coolant_ctrl 20
-#define contactorprecharge_ctrl 21
-#define contactorp_ctrl 22
-#define contactorn_ctrl 23
+#define coolant_ctrl 23
+#define contactorprecharge_ctrl 20
+#define contactorp_ctrl 21
+#define contactorn_ctrl 22
