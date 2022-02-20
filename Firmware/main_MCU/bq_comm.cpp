@@ -1,10 +1,8 @@
 #include "bq_comm.h"
 #include "Crc16.h"
 
-uint8_t txBuf[176];
-int txDataLen = 0;
-uint8_t rxBuf[176];
-int rxDataLen = 0;
+uint8_t bqBuf[176];
+int bqBufDataLen = 0;
 
 Crc16 crc;
 
@@ -73,8 +71,8 @@ void bqGetCurrent(double* current) {
 void bqWakeChip() {
   //Output a pulse of low MOSI for ~2.5ms to wake chip
   digitalWrite(cs_bq, LOW);
-  SPI.beginTransaction(SPISettings(4000000, LSBFIRST, SPI_MODE0));
-  int wakeBytes = ((4000000/8)*(2.5/1000));
+  SPI.beginTransaction(SPISettings(bq_spi_freq, MSBFIRST, SPI_MODE0));
+  int wakeBytes = ((bq_spi_freq/8)*(2.5/1000));
   byte wakeBuf[wakeBytes] = {0};
   SPI.transfer(wakeBuf, wakeBytes);
   SPI.endTransaction();
@@ -84,7 +82,7 @@ void bqWakeChip() {
 void bqCommClear() {
   //Output one byte of 0 to reset comm interface
   digitalWrite(cs_bq, LOW);
-  SPI.beginTransaction(SPISettings(4000000, LSBFIRST, SPI_MODE0));
+  SPI.beginTransaction(SPISettings(bq_spi_freq, MSBFIRST, SPI_MODE0));
   SPI.transfer(0x00);
   SPI.endTransaction();
   digitalWrite(cs_bq, HIGH);

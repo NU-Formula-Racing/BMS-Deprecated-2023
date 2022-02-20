@@ -53,7 +53,7 @@ void setup() {
   }
 
   //initialize SPI communication with the BQ chips
-  BQInitializeSPI();
+  bqInitializeSPI();
   
   /* CRC test code
   pinMode(BQ_FAULT_PIN, INPUT);
