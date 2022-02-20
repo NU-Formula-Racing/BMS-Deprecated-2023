@@ -5,6 +5,8 @@
 #include <Arduino.h>
 #include <SPI.h>
 
+#define bq_spi_freq 6000000;
+
 
 void bqInitializeSPI();
 
