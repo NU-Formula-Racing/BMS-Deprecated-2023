@@ -13,9 +13,29 @@ void loop() {
   uint8_t* bqResponse = bqReadReg(BQ_SINGLE_READ, 0, BRIDGE_COMM_TIMEOUT, 1);
   Serial.println("Response:");
   for (int i = 0; i < 7; i++) {
-    Serial.print(bqResponse[i], HEX);
+    Serial.print(((uint8_t[][176])bqResponse)[0][i], HEX);
     Serial.print(" ");
   }
   Serial.println();
   delay(1000);
+  
+  //Stack test
+  Serial.println("Stack test");
+  bqAutoAddressing(1);
+  /*byte byteArr[] = {0b00100000};
+  bqComm(BQ_SINGLE_WRITE, 1, 0, BRIDGE_CONTROL1, byteArr);
+  bqSetStackSize(1);*/
+  
+  bqReadReg(BQ_BROAD_READ, 0, 0x032F, 1);
+  for (int i = 0; i < 7; i++) {
+    Serial.print(((uint8_t[][176])bqResponse)[0][i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+  for (int i = 0; i < 7; i++) {
+    Serial.print(((uint8_t[][176])bqResponse)[1][i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+  delay(10000);
 }

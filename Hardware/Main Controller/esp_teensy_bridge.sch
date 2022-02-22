@@ -11081,6 +11081,9 @@ Created by Upverter.com</description>
 <part name="Q8" library="Vishay - SIS862DN-T1-GE3" deviceset="VISHAY_SIS862DN-T1-GE3" device="VISHAY_SIS862DN-T1-GE3_0_0"/>
 <part name="U1" library="MCP2562-E_SN" deviceset="MCP2562-E/SN" device=""/>
 <part name="CAN" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1μF"/>
+<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1μF"/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120"/>
 </parts>
 <sheets>
 <sheet>
@@ -11403,6 +11406,18 @@ Created by Upverter.com</description>
 <attribute name="NAME" x="124.46" y="79.502" size="1.524" layer="95" rot="R180"/>
 <attribute name="VALUE" x="127.762" y="77.343" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="C6" gate="G$1" x="180.34" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="179.959" y="92.964" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="185.039" y="92.964" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C7" gate="G$1" x="180.34" y="86.36" smashed="yes" rot="R90">
+<attribute name="NAME" x="179.959" y="87.884" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="185.039" y="87.884" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R8" gate="G$1" x="129.54" y="73.66" smashed="yes" rot="R90">
+<attribute name="NAME" x="128.0414" y="69.85" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="132.842" y="69.85" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11584,6 +11599,12 @@ Created by Upverter.com</description>
 <wire x1="170.18" y1="78.74" x2="175.26" y2="78.74" width="0.1524" layer="91"/>
 <label x="172.72" y="78.74" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="91.44" x2="185.42" y2="86.36" width="0.1524" layer="91"/>
+<label x="185.42" y="88.9" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -11653,8 +11674,10 @@ Created by Upverter.com</description>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD"/>
-<wire x1="170.18" y1="88.9" x2="175.26" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="88.9" x2="177.8" y2="88.9" width="0.1524" layer="91"/>
 <label x="172.72" y="88.9" size="1.778" layer="95"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="177.8" y1="88.9" x2="177.8" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -12312,8 +12335,9 @@ Created by Upverter.com</description>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VIO"/>
-<wire x1="170.18" y1="86.36" x2="175.26" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="86.36" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
 <label x="172.72" y="86.36" size="1.778" layer="95"/>
+<pinref part="C7" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="CRX" class="0">
@@ -12358,6 +12382,11 @@ Created by Upverter.com</description>
 <pinref part="CAN" gate="-1" pin="S"/>
 <wire x1="134.62" y1="81.28" x2="129.54" y2="81.28" width="0.1524" layer="91"/>
 <label x="129.54" y="81.28" size="1.778" layer="95"/>
+<wire x1="129.54" y1="81.28" x2="124.46" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="81.28" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
+<junction x="129.54" y="81.28"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="68.58" x2="129.54" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CANL" class="0">
@@ -12366,6 +12395,8 @@ Created by Upverter.com</description>
 <pinref part="CAN" gate="-2" pin="S"/>
 <wire x1="134.62" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
 <label x="129.54" y="78.74" size="1.778" layer="95"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<junction x="129.54" y="78.74"/>
 </segment>
 </net>
 </nets>

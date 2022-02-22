@@ -14,13 +14,23 @@
 #define BQ_BROAD_WRITE 0b01010000 //broadcast write
 #define BQ_BROAD_WRITE_REV 0b01100000 //broadcast write reverse
 
+#define num_series 140
+#define num_thermo 112
+#define num_segments 14 //logical segments (BQ79656-Q1 chips)
+
 
 void bqInitializeSPI();
-uint8_t* bqComm(byte req_type, byte data_size, byte dev_addr, uint16_t reg_addr, byte data);
+void bqComm(byte req_type, byte data_size, byte dev_addr, uint16_t reg_addr, byte* data);
 uint8_t* bqReadReg(byte req_type, byte dev_addr, uint16_t reg_addr, byte resp_size);
 
+void bqAutoAddressing(byte numDevices);
+
+void bqSetStackSize(int newSize);
+
+void bqStartBalancingSimple();
+
 //uint16_t calculateCRC();
-//bool verifyCRC();
+bool verifyCRC(uint8_t* buf);
 
 uint8_t* bqGetBuf();
 int* bqGetDataLen();
