@@ -8,9 +8,6 @@ bool isCharging = false;
 int faultPin = 0;
 int fault = 0; //error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
-#define num_series 140
-#define num_thermo 112
-#define num_segments 14 //logical segments (BQ79656-Q1 chips)
 double voltages[num_series]; //should be 0 because global? maybe should be initialized in setup
 double maxVoltage;
 double temps[num_thermo]; //16 per segment * 7 segments

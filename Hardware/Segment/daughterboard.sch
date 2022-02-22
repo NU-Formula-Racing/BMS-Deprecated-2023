@@ -12185,6 +12185,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="RX" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="2,54/1,0" device="" package3d_urn="urn:adsk.eagle:package:30828/1"/>
 <part name="GND" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="2,54/1,0" device="" package3d_urn="urn:adsk.eagle:package:30828/1"/>
 <part name="NFAULT" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B2,54" package3d_urn="urn:adsk.eagle:package:27948/1"/>
+<part name="RCS1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="5"/>
+<part name="RCS2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="5"/>
+<part name="CCS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 </parts>
 <sheets>
 <sheet>
@@ -13078,13 +13081,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="179.578" y="195.58" size="1.524" layer="95" rot="R270"/>
 <attribute name="VALUE" x="181.737" y="198.882" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="SR" gate="-1" x="195.58" y="86.36" smashed="yes">
-<attribute name="NAME" x="198.12" y="85.598" size="1.524" layer="95"/>
-<attribute name="VALUE" x="194.818" y="87.757" size="1.778" layer="96"/>
+<instance part="SR" gate="-1" x="208.28" y="86.36" smashed="yes">
+<attribute name="NAME" x="210.82" y="85.598" size="1.524" layer="95"/>
+<attribute name="VALUE" x="207.518" y="87.757" size="1.778" layer="96"/>
 </instance>
-<instance part="SR" gate="-2" x="195.58" y="81.28" smashed="yes">
-<attribute name="NAME" x="198.12" y="80.518" size="1.524" layer="95"/>
-<attribute name="VALUE" x="194.818" y="82.677" size="1.778" layer="96"/>
+<instance part="SR" gate="-2" x="208.28" y="78.74" smashed="yes">
+<attribute name="NAME" x="210.82" y="77.978" size="1.524" layer="95"/>
+<attribute name="VALUE" x="207.518" y="80.137" size="1.778" layer="96"/>
 </instance>
 <instance part="DISABLE_UART" gate="1" x="175.26" y="43.18" smashed="yes">
 <attribute name="NAME" x="172.72" y="45.72" size="1.778" layer="95"/>
@@ -13113,6 +13116,18 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="NFAULT" gate="G$1" x="193.04" y="68.58" smashed="yes" rot="R270">
 <attribute name="NAME" x="194.31" y="69.85" size="1.778" layer="95" rot="R270"/>
 <attribute name="TP_SIGNAL_NAME" x="191.77" y="67.31" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="RCS1" gate="G$1" x="200.66" y="86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="204.47" y="84.8614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="204.47" y="89.662" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="RCS2" gate="G$1" x="200.66" y="78.74" smashed="yes" rot="R180">
+<attribute name="NAME" x="204.47" y="77.2414" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="204.47" y="82.042" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CCS" gate="G$1" x="195.58" y="81.28" smashed="yes" rot="R180">
+<attribute name="NAME" x="194.056" y="80.899" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="194.056" y="85.979" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -15196,16 +15211,20 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="IC1" gate="G$1" pin="BBP(SRP)"/>
 <wire x1="190.5" y1="73.66" x2="190.5" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="SR" gate="-1" pin="S"/>
-<wire x1="190.5" y1="86.36" x2="193.04" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="CCS" gate="G$1" pin="2"/>
+<pinref part="RCS1" gate="G$1" pin="2"/>
+<wire x1="190.5" y1="86.36" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
+<junction x="195.58" y="86.36"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="SR" gate="-2" pin="S"/>
-<wire x1="193.04" y1="81.28" x2="193.04" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="BBN(SRN)"/>
-<wire x1="193.04" y1="71.12" x2="190.5" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="CCS" gate="G$1" pin="1"/>
+<pinref part="RCS2" gate="G$1" pin="2"/>
+<wire x1="190.5" y1="71.12" x2="195.58" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="71.12" x2="195.58" y2="78.74" width="0.1524" layer="91"/>
+<junction x="195.58" y="78.74"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -15229,6 +15248,18 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="IC1" gate="G$1" pin="NFAULT"/>
 <pinref part="NFAULT" gate="G$1" pin="TP"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="RCS2" gate="G$1" pin="1"/>
+<pinref part="SR" gate="-2" pin="S"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="SR" gate="-1" pin="S"/>
+<pinref part="RCS1" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

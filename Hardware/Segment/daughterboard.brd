@@ -152,12 +152,12 @@
 <circle x="125.603" y="29.083" radius="0.179603125" width="0.6096" layer="42"/>
 <circle x="126.492" y="28.321" radius="0.179603125" width="0.6096" layer="42"/>
 <circle x="127.381" y="27.559" radius="0.179603125" width="0.6096" layer="42"/>
-<text x="33.528" y="26.797" size="1.778" layer="21">BMS Daughterboard V1.1
+<text x="37.465" y="27.051" size="1.778" layer="21">BMS Daughterboard V1.1
 Joshua Feist
 January 2022</text>
 <text x="34.29" y="25.4" size="1.4224" layer="21" rot="R270">Voltage Sense L</text>
 <text x="48.26" y="17.907" size="1.4224" layer="21">Cell Balancing L</text>
-<text x="35.179" y="34.671" size="1.4224" layer="21">Thermistors L</text>
+<text x="37.465" y="34.29" size="1.4224" layer="21">Thermistors L</text>
 <text x="8.255" y="37.211" size="1.016" layer="21">Shunt Resistor
 (Current Sense)</text>
 <text x="153.035" y="17.272" size="1.4224" layer="21">Thermistors H</text>
@@ -2212,7 +2212,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="37.084" y="39.497" size="0.6096" layer="27" rot="R90"/>
 </element>
 <element name="TEMPR1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k" x="31.75" y="39.37" smashed="yes" rot="R90">
-<attribute name="NAME" x="30.734" y="35.433" size="0.8128" layer="25" rot="R90"/>
+<attribute name="NAME" x="29.591" y="36.703" size="0.8128" layer="25" rot="R90"/>
 <attribute name="POPULARITY" value="77" x="142.24" y="66.04" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="142.24" y="66.04" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="33.147" y="39.624" size="0.6096" layer="27" rot="R90"/>
@@ -2956,6 +2956,24 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="3" x="69.977" y="33.782" size="1.778" layer="27" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="69.977" y="33.782" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="68.707" y="32.385" size="0.0254" layer="27"/>
+</element>
+<element name="RCS1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="5" x="31.75" y="35.56" smashed="yes">
+<attribute name="NAME" x="30.353" y="36.449" size="0.8128" layer="25"/>
+<attribute name="POPULARITY" value="77" x="31.75" y="35.56" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="31.75" y="35.56" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="31.496" y="35.052" size="0.8128" layer="27"/>
+</element>
+<element name="RCS2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="5" x="31.75" y="33.02" smashed="yes">
+<attribute name="NAME" x="29.845" y="33.655" size="0.8128" layer="25"/>
+<attribute name="POPULARITY" value="77" x="31.75" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="31.75" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="31.115" y="31.115" size="0.8128" layer="27"/>
+</element>
+<element name="CCS" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf" x="35.56" y="33.02" smashed="yes" rot="R90">
+<attribute name="NAME" x="34.925" y="32.385" size="0.8128" layer="25" rot="R90"/>
+<attribute name="POPULARITY" value="73" x="35.56" y="33.02" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="35.56" y="33.02" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="37.465" y="32.385" size="0.8128" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>
@@ -4597,27 +4615,33 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$4">
 <contactref element="IC1" pad="64"/>
-<contactref element="SR" pad="1"/>
 <wire x1="71.18" y1="29.868" x2="70.462" y2="29.868" width="0.1524" layer="1"/>
 <wire x1="70.462" y1="29.868" x2="69.85" y2="30.48" width="0.1524" layer="1"/>
 <via x="69.85" y="30.48" extent="1-16" drill="0.35"/>
-<via x="33.02" y="30.48" extent="1-16" drill="0.35"/>
-<wire x1="20.32" y1="48.47" x2="22.4278" y2="46.3622" width="0.1524" layer="1"/>
-<wire x1="22.4278" y1="46.3622" x2="22.4278" y2="42.356275" width="0.1524" layer="1"/>
-<wire x1="33.02" y1="31.764075" x2="33.02" y2="30.48" width="0.1524" layer="1"/>
-<wire x1="22.4278" y1="42.356275" x2="33.02" y2="31.764075" width="0.1524" layer="1"/>
-<wire x1="33.02" y1="30.48" x2="69.85" y2="30.48" width="0.1524" layer="2"/>
+<via x="40.64" y="30.48" extent="1-16" drill="0.35"/>
+<wire x1="40.64" y1="30.48" x2="69.85" y2="30.48" width="0.1524" layer="2"/>
+<contactref element="CCS" pad="2"/>
+<contactref element="RCS1" pad="2"/>
+<wire x1="40.64" y1="30.48" x2="37.25" y2="33.87" width="0.1524" layer="1"/>
+<wire x1="37.25" y1="33.87" x2="35.56" y2="33.87" width="0.1524" layer="1"/>
+<wire x1="35.56" y1="33.87" x2="33.87" y2="35.56" width="0.1524" layer="1"/>
+<wire x1="33.87" y1="35.56" x2="32.6" y2="35.56" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$7">
-<contactref element="SR" pad="2"/>
 <contactref element="IC1" pad="63"/>
 <via x="71.12" y="31.75" extent="1-16" drill="0.35"/>
 <wire x1="71.68" y1="29.868" x2="71.5586" y2="29.9894" width="0.1524" layer="1"/>
 <wire x1="71.5586" y1="29.9894" x2="71.5586" y2="30.7001875" width="0.1524" layer="1"/>
 <wire x1="71.12" y1="31.1387875" x2="71.12" y2="31.75" width="0.1524" layer="1"/>
 <wire x1="71.5586" y1="30.7001875" x2="71.12" y2="31.1387875" width="0.1524" layer="1"/>
-<wire x1="20.32" y1="42.97" x2="31.54" y2="31.75" width="0.1524" layer="2"/>
-<wire x1="31.54" y1="31.75" x2="71.12" y2="31.75" width="0.1524" layer="2"/>
+<contactref element="CCS" pad="1"/>
+<contactref element="RCS2" pad="2"/>
+<wire x1="38.1" y1="31.75" x2="71.12" y2="31.75" width="0.1524" layer="2"/>
+<via x="38.1" y="31.75" extent="1-16" drill="0.35"/>
+<wire x1="38.1" y1="31.75" x2="35.98" y2="31.75" width="0.1524" layer="1"/>
+<wire x1="35.98" y1="31.75" x2="35.56" y2="32.17" width="0.1524" layer="1"/>
+<wire x1="35.56" y1="32.17" x2="34.71" y2="33.02" width="0.1524" layer="1"/>
+<wire x1="34.71" y1="33.02" x2="32.6" y2="33.02" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$14">
 <via x="94.742" y="17.272" extent="1-16" drill="0.35"/>
@@ -5711,6 +5735,22 @@ design rules under a new name.</description>
 <contactref element="NFAULT" pad="TP"/>
 <wire x1="69.977" y1="33.782" x2="72.18" y2="31.579" width="0.1524" layer="1"/>
 <wire x1="72.18" y1="31.579" x2="72.18" y2="29.868" width="0.1524" layer="1"/>
+</signal>
+<signal name="N$13">
+<contactref element="RCS2" pad="1"/>
+<contactref element="SR" pad="2"/>
+<wire x1="30.9" y1="33.02" x2="30.27" y2="33.02" width="0.1524" layer="1"/>
+<wire x1="30.27" y1="33.02" x2="20.32" y2="42.97" width="0.1524" layer="1"/>
+</signal>
+<signal name="N$16">
+<contactref element="SR" pad="1"/>
+<contactref element="RCS1" pad="1"/>
+<wire x1="20.32" y1="46.14" x2="20.32" y2="48.47" width="0.1524" layer="1"/>
+<wire x1="30.9" y1="35.56" x2="25.6222" y2="40.8378" width="0.1524" layer="1"/>
+<wire x1="25.6222" y1="40.8378" x2="23.946275" y2="40.8378" width="0.1524" layer="1"/>
+<wire x1="23.946275" y1="40.8378" x2="22.4278" y2="42.356275" width="0.1524" layer="1"/>
+<wire x1="22.4278" y1="42.356275" x2="22.4278" y2="44.0322" width="0.1524" layer="1"/>
+<wire x1="22.4278" y1="44.0322" x2="20.32" y2="46.14" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
