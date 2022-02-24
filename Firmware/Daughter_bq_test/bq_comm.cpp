@@ -23,9 +23,9 @@ void bqInitializeSPI() {
    */
 
   //initialize data ready and chip select pins
-  pinMode(spi_rdy_pin_bq, INPUT);
-  pinMode(cs_bq, OUTPUT);
-  digitalWrite(cs_bq, HIGH);
+  //pinMode(spi_rdy_pin_bq, INPUT);
+  //pinMode(cs_bq, OUTPUT);
+  //digitalWrite(cs_bq, HIGH);
 
   //send commands to start/configure stack
   //todo
@@ -83,7 +83,7 @@ void bqComm(byte req_type, byte data_size, byte dev_addr, uint16_t reg_addr, byt
   #endif
 
   unsigned long startTime = micros();
-  while (!digitalRead(spi_rdy_pin_bq)) {
+  /*while (!digitalRead(spi_rdy_pin_bq)) {
     #if serialdebug
       if (millis() % 10 == 0) {
         //Serial.print(".");
@@ -93,22 +93,25 @@ void bqComm(byte req_type, byte data_size, byte dev_addr, uint16_t reg_addr, byt
     /*if (micros() - startTime >= 250  && digitalRead(spi_rdy_pin_bq)) {
       bqCommClear();
     }*/
-  }
+  //}*/
   #if serialdebug
     Serial.println("\nSPI_rdy high!");
   #endif
 
-  SPI.beginTransaction(SPISettings(BQ_SPI_FREQ, MSBFIRST, SPI_MODE0));
+  //SPI.beginTransaction(SPISettings(BQ_SPI_FREQ, MSBFIRST, SPI_MODE0));
   #if serialdebug
     Serial.println("Sending frame:");
   #endif
   
-  digitalWrite(cs_bq, LOW);
+  //digitalWrite(cs_bq, LOW);
   delayMicroseconds(1);
-  SPI.transfer(bqBuf, (isStackOrBroad?6:7));
+  for (int i = 0; i < (isStackOrBroad?6:7); i++) {
+    Serial2.print(bqBuf[i]);
+  }
+  //SPI.transfer(bqBuf, (isStackOrBroad?6:7));
   delayMicroseconds(1);
-  digitalWrite(cs_bq, HIGH);
-  SPI.endTransaction();
+  //digitalWrite(cs_bq, HIGH);
+  //SPI.endTransaction();
 }
 
 void bqDummyReadReg(byte req_type, byte dev_addr, uint16_t reg_addr, byte resp_size) {
@@ -171,7 +174,7 @@ uint8_t* bqReadReg(byte req_type, byte dev_addr, uint16_t reg_addr, byte resp_si
     #endif
 
     unsigned long t_wait_read_max = ((stackSize-1)*6) + (resp_size*10) + 100;
-    while (!digitalRead(spi_rdy_pin_bq)) {
+    /*while (!digitalRead(spi_rdy_pin_bq)) {
       #if serialdebug
         //Serial.print(".");
       #endif
@@ -182,18 +185,28 @@ uint8_t* bqReadReg(byte req_type, byte dev_addr, uint16_t reg_addr, byte resp_si
         data[0] = resp_size;
         bqComm(req_type, 1, dev_addr, reg_addr, data);
       }*/
-    }
+    //}*/
     #if serialdebug
       Serial.println("Reading data");
     #endif
   
-    SPI.beginTransaction(SPISettings(BQ_SPI_FREQ, MSBFIRST, SPI_MODE0));
-    digitalWrite(cs_bq, LOW);
+    //SPI.beginTransaction(SPISettings(BQ_SPI_FREQ, MSBFIRST, SPI_MODE0));
+    //digitalWrite(cs_bq, LOW);
     delayMicroseconds(1);
-    SPI.transfer(bqRespBufs[i], bqBufDataLen);
+    while(!Serial2.available()) {
+      delay(1);
+    }
+    while(Serial2.available()) {
+      byte incomingByte = Serial2.read();
+      Serial.println(incomingByte, HEX);
+    }
+    //for (int j = 0; j < bqBufDataLen; j++) {
+    //  Serial2.print(bqRespBufs[i][j]);
+    //}
+    //SPI.transfer(bqRespBufs[i], bqBufDataLen);
     delayMicroseconds(1);
-    digitalWrite(cs_bq, HIGH);
-    SPI.endTransaction();
+    //digitalWrite(cs_bq, HIGH);
+    //SPI.endTransaction();
   
     #if serialdebug
       for (int j = 0; j < bqBufDataLen; j++) {
@@ -364,14 +377,17 @@ void bqGetCurrent(double* current) {
 
 void bqWakeChip() {
   //Output a pulse of low MOSI for ~2.5ms to wake chip
-  digitalWrite(cs_bq, LOW);
+  /*digitalWrite(cs_bq, LOW);
   SPI.beginTransaction(SPISettings(BQ_SPI_FREQ, MSBFIRST, SPI_MODE0));
   int wakeBytes = ((BQ_SPI_FREQ/8)*(2.5/1000));
   byte wakeBuf[wakeBytes] = {0};
   SPI.transfer(wakeBuf, wakeBytes);
   SPI.endTransaction();
   digitalWrite(cs_bq, HIGH);
-  delay(5);
+  delay(5);*/
+  digitalWrite(8, LOW);
+  delay(2);
+  digitalWrite(8, HIGH);
 }
 
 void bqCommClear() {
