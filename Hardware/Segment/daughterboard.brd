@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -72,7 +72,7 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYmIzODJk" projecturn="a.cGVyc29uYWw6dWUyYmIzODJkIzIwMjEwNTAxNDA4NDA5OTU2" f3durn="urn:adsk.wipprod:dm.lineage:KUb0E9VYR3-2wecNlMESeA" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="15230511-20a2-40cb-83f5-cf13ab4d5c8c" lastsyncedrevisionid="15230511-20a2-40cb-83f5-cf13ab4d5c8c" lastboardhashguid="42d6915e-be4c-94d1-d2e9-ec4e673c003c" lastpushedtime="2022-01-14T15:47:41Z" linktopcb3d="false"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYmIzODJk" projecturn="a.cGVyc29uYWw6dWUyYmIzODJkIzIwMjEwNTAxNDA4NDA5OTU2" f3durn="urn:adsk.wipprod:dm.lineage:KUb0E9VYR3-2wecNlMESeA" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="15230511-20a2-40cb-83f5-cf13ab4d5c8c" lastsyncedrevisionid="15230511-20a2-40cb-83f5-cf13ab4d5c8c" lastboardhashguid="42d6915e-be4c-94d1-d2e9-ec4e673c003c" lastpushedtime="2022-01-14T15:47:41Z" linktopcb3d="true"/>
 <plain>
 <wire x1="6.35" y1="0" x2="200.64" y2="0" width="0" layer="20"/>
 <wire x1="200.64" y1="0" x2="200.64" y2="51.8" width="0" layer="20"/>
@@ -165,12 +165,12 @@ January 2022</text>
 <text x="172.339" y="33.401" size="1.4224" layer="21" rot="R270">Voltage Sense H</text>
 <text x="95.25" y="5.08" size="1.4224" layer="21">COML</text>
 <text x="113.03" y="5.08" size="1.4224" layer="21">COMH</text>
-<hole x="11.43" y="46.72" drill="4.445"/>
+<hole x="11.43" y="46.99" drill="4.445"/>
 <hole x="195.58" y="5.08" drill="4.445"/>
 <hole x="106.68" y="5.08" drill="4.445"/>
-<hole x="106.68" y="46.72" drill="4.445"/>
+<hole x="106.68" y="46.99" drill="4.445"/>
 <hole x="11.43" y="5.08" drill="4.445"/>
-<hole x="195.58" y="46.72" drill="4.445"/>
+<hole x="195.58" y="46.99" drill="4.445"/>
 <dimension x1="200.64" y1="51.8" x2="6.35" y2="51.8" x3="103.495" y3="59.69" textsize="1.4224" layer="21"/>
 <dimension x1="6.35" y1="51.8" x2="6.35" y2="0" x3="1.27" y3="25.9" textsize="1.4224" layer="21"/>
 <dimension x1="9.2075" y1="46.99" x2="13.6525" y2="46.99" x3="11.43" y3="53.34" textsize="1.778" layer="49" dtype="diameter"/>
