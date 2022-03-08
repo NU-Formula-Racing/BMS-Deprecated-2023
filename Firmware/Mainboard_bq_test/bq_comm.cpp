@@ -32,8 +32,9 @@ void bqInitializeSPI() {
   bqWakeChip();
   byte byteArr[] = {CONTROL1_SEND_WAKE};
   bqComm(BQ_SINGLE_WRITE, 1, 0, BRIDGE_CONTROL1, byteArr);
-  byteArr[0] = 0x00;
-  bqComm(BQ_BROAD_WRITE, 1, 0, STACK_COMM_TIMEOUT_CONF, byteArr);
+  delay(11*15); //at least 10ms+600us per chip
+  //byteArr[0] = 0x00;
+  //bqComm(BQ_BROAD_WRITE, 1, 0, STACK_COMM_TIMEOUT_CONF, byteArr);
   //bqAutoAddressing(num_segments);
 
   /*//enable NFAULT and FCOMM, is enabled by default
@@ -109,6 +110,7 @@ void bqComm(byte req_type, byte data_size, byte dev_addr, uint16_t reg_addr, byt
   delayMicroseconds(1);
   digitalWrite(cs_bq, HIGH);
   SPI.endTransaction();
+  delay(11*15); //at least 10ms+600us per chip
 }
 
 void bqDummyReadReg(byte req_type, byte dev_addr, uint16_t reg_addr, byte resp_size) {
@@ -117,10 +119,13 @@ void bqDummyReadReg(byte req_type, byte dev_addr, uint16_t reg_addr, byte resp_s
   resp_size -= 1; //0 means 1 byte
   data[0] = resp_size;
   bqComm(req_type, 1, dev_addr, reg_addr, data);
+  bqBufDataLen = resp_size + 7;
   delay(10);
   if (digitalRead(spi_rdy_pin_bq)) {
-    data[0] = 0xFF;
-    SPI.transfer(data, 1);
+    for (int j = 0; j < bqBufDataLen; j++) {
+      bqRespBufs[0][j] = 0xFF;
+    }
+    SPI.transfer(bqRespBufs, bqBufDataLen);
   } else {
     Serial.println("Comm clear");
     bqCommClear();
@@ -360,6 +365,18 @@ void bqGetCurrent(double* current) {
   //read current from battery
 
   return;
+}
+
+//Convert a raw voltage measurement into a temperature
+double bqRawToTemp(int raw) {
+  double volts = raw * BQ_THERM_LSB;
+  return;
+}
+
+//Convert a voltage measurement into a current
+double bqVoltageToCurrent(int raw) {
+  double volts = raw * BQ_CURR_LSB;
+  return volts / SHUNT_RESISTANCE;
 }
 
 void bqWakeChip() {
