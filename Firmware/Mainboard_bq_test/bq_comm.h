@@ -14,9 +14,14 @@
 #define BQ_BROAD_WRITE 0b01010000 //broadcast write
 #define BQ_BROAD_WRITE_REV 0b01100000 //broadcast write reverse
 
+#define BQ_THERM_LSB 0.00015259 //Vlsb_gpio = 152.59uV/lsb
+#define BQ_CURR_LSB 0.0000000149 //14.9 nv
+
 #define num_series 140
 #define num_thermo 112
 #define num_segments 14 //logical segments (BQ79656-Q1 chips)
+
+#define SHUNT_RESISTANCE 0.0001 //100 uohm
 
 
 void bqInitializeSPI();

@@ -14,6 +14,10 @@ double temps[num_thermo]; //16 per segment * 7 segments
 double maxTemp;
 double current;
 
+#define OT_THRESH 60 //60C max temp
+#define UT_THRESH -40 //-40C min temp
+#define UT_THRESH_CHARGE 0 //0 min temp while charging
+
 void faultInterrupt() {
   shutdownCar();
   if (!digitalRead(nfault_pin)) {
@@ -121,10 +125,17 @@ void startCar() {
   carActive = true;
 }
 
-double getMax(double* arr, int arrSize) {
+void getMaxMinAvgTot(double* arr, int arrSize, double* res) {
   double currMax = arr[0];
+  double currMin = arr[0];
+  double currTot = arr[0];
   for (int i = 1; i < arrSize; i++) {
     currMax = max(currMax, arr[i]);
+    currMin = min(currMin, arr[i]);
+    currTot += arr[i];
   }
-  return currMax;
+  res[0] = currMax;
+  res[1] = currMin;
+  res[2] = currTot/arrSize;
+  res[3] = currTot;
 }
