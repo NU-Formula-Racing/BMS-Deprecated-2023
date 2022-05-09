@@ -42,7 +42,8 @@ void bqInitializeSPI() {
   bqComm(BQ_SINGLE_WRITE, 1, 0, BRIDGE_DEV_CONF1, byteArr);*/
 
   //enable FCOMM_EN of stack devices, unnecessary because enabled by default
-  
+
+  //Broadcast write sleep time to prevent sleeping
 }
 
 /*
