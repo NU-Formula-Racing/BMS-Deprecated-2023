@@ -12188,6 +12188,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="RCS1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
 <part name="RCS2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
 <part name="CCS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="CCB10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 </parts>
 <sheets>
 <sheet>
@@ -13129,6 +13131,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="194.056" y="80.899" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="194.056" y="85.979" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="CCB10" gate="G$1" x="147.32" y="88.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="146.939" y="90.424" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="152.019" y="90.424" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="CCB10-1" gate="G$1" x="137.16" y="337.82" smashed="yes" rot="R90">
+<attribute name="NAME" x="136.779" y="339.344" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="141.859" y="339.344" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13516,6 +13526,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="83.82" y1="116.84" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
 <junction x="83.82" y="119.38"/>
 <label x="132.08" y="88.9" size="1.778" layer="95"/>
+<pinref part="CCB10" gate="G$1" pin="1"/>
+<junction x="144.78" y="88.9"/>
 </segment>
 </net>
 <net name="VC0" class="0">
@@ -13588,6 +13600,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="177.8" y1="91.44" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 <junction x="177.8" y="91.44"/>
 <label x="154.94" y="83.82" size="1.778" layer="95"/>
+<pinref part="CCB10" gate="G$1" pin="2"/>
+<wire x1="152.4" y1="88.9" x2="152.4" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -14465,6 +14479,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="73.66" y1="365.76" x2="73.66" y2="368.3" width="0.1524" layer="91"/>
 <junction x="73.66" y="368.3"/>
 <label x="116.84" y="337.82" size="1.778" layer="95"/>
+<pinref part="CCB10-1" gate="G$1" pin="1"/>
+<junction x="134.62" y="337.82"/>
 </segment>
 </net>
 <net name="VC0-1" class="0">
@@ -14537,6 +14553,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="167.64" y1="340.36" x2="167.64" y2="342.9" width="0.1524" layer="91"/>
 <junction x="167.64" y="340.36"/>
 <label x="147.32" y="332.74" size="1.778" layer="95"/>
+<pinref part="CCB10-1" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="337.82" x2="142.24" y2="332.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$111" class="0">
