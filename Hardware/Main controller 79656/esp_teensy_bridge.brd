@@ -1995,6 +1995,65 @@ Created by Upverter.com</description>
 </package3d>
 </packages3d>
 </library>
+<library name="TB0108">
+<packages>
+<package name="TSSOP20" urn="urn:adsk.eagle:footprint:4239/1">
+<description>&lt;b&gt;Thin Shrink Small Outline Plastic 20&lt;/b&gt;&lt;p&gt;
+MAX3223-MAX3243.pdf</description>
+<wire x1="-3.1646" y1="-2.2828" x2="3.1646" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="3.1646" y1="2.2828" x2="3.1646" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="3.1646" y1="2.2828" x2="-3.1646" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-3.1646" y1="-2.2828" x2="-3.1646" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-2.936" y1="-2.0542" x2="2.936" y2="-2.0542" width="0.0508" layer="21"/>
+<wire x1="2.936" y1="2.0542" x2="2.936" y2="-2.0542" width="0.0508" layer="21"/>
+<wire x1="2.936" y1="2.0542" x2="-2.936" y2="2.0542" width="0.0508" layer="21"/>
+<wire x1="-2.936" y1="-2.0542" x2="-2.936" y2="2.0542" width="0.0508" layer="21"/>
+<circle x="-2.2756" y="-1.2192" radius="0.4572" width="0.1524" layer="21"/>
+<smd name="1" x="-2.925" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="2" x="-2.275" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="3" x="-1.625" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="4" x="-0.975" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="5" x="-0.325" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="6" x="0.325" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="7" x="0.975" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="8" x="1.625" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="9" x="2.275" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="10" x="2.925" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="11" x="2.925" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="12" x="2.275" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="13" x="1.625" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="14" x="0.975" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="15" x="0.325" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="16" x="-0.325" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="17" x="-0.975" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="18" x="-1.625" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="19" x="-2.275" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="20" x="-2.925" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<text x="-3.5456" y="-2.0828" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="4.5362" y="-2.0828" size="1.016" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-3.0266" y1="-3.121" x2="-2.8234" y2="-2.2828" layer="51"/>
+<rectangle x1="-2.3766" y1="-3.121" x2="-2.1734" y2="-2.2828" layer="51"/>
+<rectangle x1="-1.7266" y1="-3.121" x2="-1.5234" y2="-2.2828" layer="51"/>
+<rectangle x1="-1.0766" y1="-3.121" x2="-0.8734" y2="-2.2828" layer="51"/>
+<rectangle x1="-0.4266" y1="-3.121" x2="-0.2234" y2="-2.2828" layer="51"/>
+<rectangle x1="0.2234" y1="-3.121" x2="0.4266" y2="-2.2828" layer="51"/>
+<rectangle x1="0.8734" y1="-3.121" x2="1.0766" y2="-2.2828" layer="51"/>
+<rectangle x1="1.5234" y1="-3.121" x2="1.7266" y2="-2.2828" layer="51"/>
+<rectangle x1="2.1734" y1="-3.121" x2="2.3766" y2="-2.2828" layer="51"/>
+<rectangle x1="2.8234" y1="-3.121" x2="3.0266" y2="-2.2828" layer="51"/>
+<rectangle x1="2.8234" y1="2.2828" x2="3.0266" y2="3.121" layer="51"/>
+<rectangle x1="2.1734" y1="2.2828" x2="2.3766" y2="3.121" layer="51"/>
+<rectangle x1="1.5234" y1="2.2828" x2="1.7266" y2="3.121" layer="51"/>
+<rectangle x1="0.8734" y1="2.2828" x2="1.0766" y2="3.121" layer="51"/>
+<rectangle x1="0.2234" y1="2.2828" x2="0.4266" y2="3.121" layer="51"/>
+<rectangle x1="-0.4266" y1="2.2828" x2="-0.2234" y2="3.121" layer="51"/>
+<rectangle x1="-1.0766" y1="2.2828" x2="-0.8734" y2="3.121" layer="51"/>
+<rectangle x1="-1.7266" y1="2.2828" x2="-1.5234" y2="3.121" layer="51"/>
+<rectangle x1="-2.3766" y1="2.2828" x2="-2.1734" y2="3.121" layer="51"/>
+<rectangle x1="-3.0266" y1="2.2828" x2="-2.8234" y2="3.121" layer="51"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2996,6 +3055,10 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="-21.082" y="-142.748" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-21.717" y="-145.288" size="1.27" layer="27"/>
 </element>
+<element name="U$1" library="TB0108" package="TSSOP20" value="TXB0108PWSMD" x="34.798" y="-23.114" smashed="yes" rot="R270">
+<attribute name="NAME" x="32.7152" y="-19.5684" size="1.016" layer="25" ratio="10"/>
+<attribute name="VALUE" x="32.7152" y="-27.6502" size="1.016" layer="27" ratio="10"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -3094,6 +3157,8 @@ design rules under a new name.</description>
 <contactref element="RVC0-1" pad="1"/>
 <contactref element="RCB0-1" pad="1"/>
 <contactref element="R2" pad="1"/>
+<contactref element="U$1" pad="11"/>
+<wire x1="-22.032" y1="-129.794" x2="37.7158" y2="-26.039" width="0" layer="19" extent="1-1"/>
 <wire x1="-0.628" y1="-91.948" x2="-22.032" y2="-129.794" width="0" layer="19" extent="1-1"/>
 <wire x1="0.674" y1="-67.31" x2="-0.628" y2="-91.948" width="0" layer="19" extent="1-1"/>
 <wire x1="10.072" y1="-67.31" x2="0.674" y2="-67.31" width="0" layer="19" extent="1-1"/>
@@ -3957,6 +4022,8 @@ design rules under a new name.</description>
 <contactref element="U2" pad="1"/>
 <wire x1="45.72" y1="40.64" x2="46.43" y2="40.64" width="0.3048" layer="16"/>
 <wire x1="46.43" y1="40.64" x2="48.97" y2="38.1" width="0.3048" layer="16"/>
+<contactref element="U$1" pad="2"/>
+<wire x1="58.205" y1="21.805" x2="31.8802" y2="-20.839" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CRX">
 <contactref element="U$3" pad="30-CRX3"/>
@@ -4032,14 +4099,14 @@ design rules under a new name.</description>
 <wire x1="70.4088" y1="42.9006" x2="63.92" y2="36.4118" width="0.3048" layer="1"/>
 </signal>
 <signal name="TX_BQ">
-<contactref element="U$3" pad="34-RX8"/>
 <contactref element="IC2" pad="53"/>
-<wire x1="13.434" y1="-29.314" x2="57.785" y2="62.5475" width="0" layer="19" extent="1-1"/>
+<contactref element="U$1" pad="1"/>
+<wire x1="13.434" y1="-29.314" x2="31.8802" y2="-20.189" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RX_BQ">
-<contactref element="U$3" pad="35-TX8"/>
 <contactref element="IC2" pad="52"/>
-<wire x1="13.934" y1="-29.314" x2="55.245" y2="62.5475" width="0" layer="19" extent="1-1"/>
+<contactref element="U$1" pad="3"/>
+<wire x1="13.934" y1="-29.314" x2="31.8802" y2="-21.489" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VC1-1">
 <contactref element="IC2" pad="33"/>
@@ -4425,6 +4492,19 @@ design rules under a new name.</description>
 <contactref element="CCOMLP" pad="1"/>
 <contactref element="COML" pad="2"/>
 <wire x1="-3.048" y1="-98.088" x2="0.674" y2="-115.316" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="RX_SHFT">
+<contactref element="U$3" pad="34-RX8"/>
+<contactref element="U$1" pad="18"/>
+<wire x1="57.785" y1="62.5475" x2="37.7158" y2="-21.489" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="TX_SHFT">
+<contactref element="U$3" pad="35-TX8"/>
+<contactref element="U$1" pad="20"/>
+<wire x1="55.245" y1="62.5475" x2="37.7158" y2="-20.189" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="VCCB">
+<contactref element="U$1" pad="19"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

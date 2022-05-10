@@ -13672,6 +13672,131 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </deviceset>
 </devicesets>
 </library>
+<library name="TB0108">
+<packages>
+<package name="TSSOP20" urn="urn:adsk.eagle:footprint:4239/1">
+<description>&lt;b&gt;Thin Shrink Small Outline Plastic 20&lt;/b&gt;&lt;p&gt;
+MAX3223-MAX3243.pdf</description>
+<wire x1="-3.1646" y1="-2.2828" x2="3.1646" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="3.1646" y1="2.2828" x2="3.1646" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="3.1646" y1="2.2828" x2="-3.1646" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-3.1646" y1="-2.2828" x2="-3.1646" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-2.936" y1="-2.0542" x2="2.936" y2="-2.0542" width="0.0508" layer="21"/>
+<wire x1="2.936" y1="2.0542" x2="2.936" y2="-2.0542" width="0.0508" layer="21"/>
+<wire x1="2.936" y1="2.0542" x2="-2.936" y2="2.0542" width="0.0508" layer="21"/>
+<wire x1="-2.936" y1="-2.0542" x2="-2.936" y2="2.0542" width="0.0508" layer="21"/>
+<circle x="-2.2756" y="-1.2192" radius="0.4572" width="0.1524" layer="21"/>
+<smd name="1" x="-2.925" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="2" x="-2.275" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="3" x="-1.625" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="4" x="-0.975" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="5" x="-0.325" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="6" x="0.325" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="7" x="0.975" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="8" x="1.625" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="9" x="2.275" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="10" x="2.925" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="11" x="2.925" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="12" x="2.275" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="13" x="1.625" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="14" x="0.975" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="15" x="0.325" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="16" x="-0.325" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="17" x="-0.975" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="18" x="-1.625" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="19" x="-2.275" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<smd name="20" x="-2.925" y="2.9178" dx="0.3048" dy="0.9906" layer="1"/>
+<text x="-3.5456" y="-2.0828" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="4.5362" y="-2.0828" size="1.016" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-3.0266" y1="-3.121" x2="-2.8234" y2="-2.2828" layer="51"/>
+<rectangle x1="-2.3766" y1="-3.121" x2="-2.1734" y2="-2.2828" layer="51"/>
+<rectangle x1="-1.7266" y1="-3.121" x2="-1.5234" y2="-2.2828" layer="51"/>
+<rectangle x1="-1.0766" y1="-3.121" x2="-0.8734" y2="-2.2828" layer="51"/>
+<rectangle x1="-0.4266" y1="-3.121" x2="-0.2234" y2="-2.2828" layer="51"/>
+<rectangle x1="0.2234" y1="-3.121" x2="0.4266" y2="-2.2828" layer="51"/>
+<rectangle x1="0.8734" y1="-3.121" x2="1.0766" y2="-2.2828" layer="51"/>
+<rectangle x1="1.5234" y1="-3.121" x2="1.7266" y2="-2.2828" layer="51"/>
+<rectangle x1="2.1734" y1="-3.121" x2="2.3766" y2="-2.2828" layer="51"/>
+<rectangle x1="2.8234" y1="-3.121" x2="3.0266" y2="-2.2828" layer="51"/>
+<rectangle x1="2.8234" y1="2.2828" x2="3.0266" y2="3.121" layer="51"/>
+<rectangle x1="2.1734" y1="2.2828" x2="2.3766" y2="3.121" layer="51"/>
+<rectangle x1="1.5234" y1="2.2828" x2="1.7266" y2="3.121" layer="51"/>
+<rectangle x1="0.8734" y1="2.2828" x2="1.0766" y2="3.121" layer="51"/>
+<rectangle x1="0.2234" y1="2.2828" x2="0.4266" y2="3.121" layer="51"/>
+<rectangle x1="-0.4266" y1="2.2828" x2="-0.2234" y2="3.121" layer="51"/>
+<rectangle x1="-1.0766" y1="2.2828" x2="-0.8734" y2="3.121" layer="51"/>
+<rectangle x1="-1.7266" y1="2.2828" x2="-1.5234" y2="3.121" layer="51"/>
+<rectangle x1="-2.3766" y1="2.2828" x2="-2.1734" y2="3.121" layer="51"/>
+<rectangle x1="-3.0266" y1="2.2828" x2="-2.8234" y2="3.121" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TXB0108PW">
+<pin name="A1" x="5.08" y="-5.08" length="middle" rot="R90"/>
+<pin name="VCCA" x="10.16" y="-5.08" length="middle" direction="pwr" rot="R90"/>
+<pin name="A2" x="15.24" y="-5.08" length="middle" rot="R90"/>
+<pin name="A3" x="20.32" y="-5.08" length="middle" rot="R90"/>
+<pin name="A4" x="25.4" y="-5.08" length="middle" rot="R90"/>
+<pin name="A5" x="30.48" y="-5.08" length="middle" rot="R90"/>
+<pin name="A6" x="35.56" y="-5.08" length="middle" rot="R90"/>
+<pin name="A7" x="40.64" y="-5.08" length="middle" rot="R90"/>
+<pin name="A8" x="45.72" y="-5.08" length="middle" rot="R90"/>
+<pin name="OE" x="50.8" y="-5.08" length="middle" rot="R90"/>
+<pin name="B1" x="5.08" y="20.32" length="middle" rot="R270"/>
+<pin name="VCCB" x="10.16" y="20.32" length="middle" direction="pwr" rot="R270"/>
+<pin name="B2" x="15.24" y="20.32" length="middle" rot="R270"/>
+<pin name="B3" x="20.32" y="20.32" length="middle" rot="R270"/>
+<pin name="B4" x="25.4" y="20.32" length="middle" rot="R270"/>
+<pin name="B5" x="30.48" y="20.32" length="middle" rot="R270"/>
+<pin name="B6" x="35.56" y="20.32" length="middle" rot="R270"/>
+<pin name="B7" x="40.64" y="20.32" length="middle" rot="R270"/>
+<pin name="B8" x="45.72" y="20.32" length="middle" rot="R270"/>
+<pin name="GND" x="50.8" y="20.32" length="middle" rot="R270"/>
+<wire x1="0" y1="15.24" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="55.88" y2="0" width="0.254" layer="94"/>
+<wire x1="55.88" y1="0" x2="55.88" y2="15.24" width="0.254" layer="94"/>
+<wire x1="55.88" y1="15.24" x2="0" y2="15.24" width="0.254" layer="94"/>
+<text x="-2.54" y="0" size="1.27" layer="95" rot="R90">&gt;NAME</text>
+<text x="58.42" y="15.24" size="1.27" layer="96" rot="R270">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TXB0108PW">
+<gates>
+<gate name="G$1" symbol="TXB0108PW" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SMD" package="TSSOP20">
+<connects>
+<connect gate="G$1" pin="A1" pad="1"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="A3" pad="4"/>
+<connect gate="G$1" pin="A4" pad="5"/>
+<connect gate="G$1" pin="A5" pad="6"/>
+<connect gate="G$1" pin="A6" pad="7"/>
+<connect gate="G$1" pin="A7" pad="8"/>
+<connect gate="G$1" pin="A8" pad="9"/>
+<connect gate="G$1" pin="B1" pad="20"/>
+<connect gate="G$1" pin="B2" pad="18"/>
+<connect gate="G$1" pin="B3" pad="17"/>
+<connect gate="G$1" pin="B4" pad="16"/>
+<connect gate="G$1" pin="B5" pad="15"/>
+<connect gate="G$1" pin="B6" pad="14"/>
+<connect gate="G$1" pin="B7" pad="13"/>
+<connect gate="G$1" pin="B8" pad="12"/>
+<connect gate="G$1" pin="GND" pad="11"/>
+<connect gate="G$1" pin="OE" pad="10"/>
+<connect gate="G$1" pin="VCCA" pad="2"/>
+<connect gate="G$1" pin="VCCB" pad="19"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -13788,6 +13913,7 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="U$1" library="TB0108" deviceset="TXB0108PW" device="SMD"/>
 </parts>
 <sheets>
 <sheet>
@@ -14323,6 +14449,10 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <attribute name="NAME" x="-118.3386" y="-163.83" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-113.538" y="-163.83" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$1" gate="G$1" x="73.66" y="-63.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="73.66" y="-60.96" size="1.27" layer="95"/>
+<attribute name="VALUE" x="88.9" y="-121.92" size="1.27" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14582,6 +14712,11 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <wire x1="-114.3" y1="-190.5" x2="-114.3" y2="-193.04" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <junction x="-114.3" y="-193.04"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="93.98" y1="-114.3" x2="99.06" y2="-114.3" width="0.1524" layer="91"/>
+<label x="99.06" y="-114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX_ESP" class="0">
@@ -15093,6 +15228,11 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <label x="170.18" y="35.56" size="1.778" layer="95"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCCA"/>
+<wire x1="68.58" y1="-73.66" x2="63.5" y2="-73.66" width="0.1524" layer="91"/>
+<label x="55.88" y="-73.66" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="CRX" class="0">
 <segment>
@@ -15162,26 +15302,26 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </net>
 <net name="TX_BQ" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="34-RX8"/>
-<wire x1="96.52" y1="78.74" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
-<label x="99.06" y="78.74" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC2" gate="G$1" pin="TX"/>
 <wire x1="25.4" y1="-165.1" x2="30.48" y2="-165.1" width="0.1524" layer="91"/>
 <label x="27.94" y="-165.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A1"/>
+<wire x1="68.58" y1="-68.58" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
+<label x="55.88" y="-68.58" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RX_BQ" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="35/TX8"/>
-<wire x1="96.52" y1="76.2" x2="101.6" y2="76.2" width="0.1524" layer="91"/>
-<label x="99.06" y="76.2" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="RX"/>
 <wire x1="25.4" y1="-167.64" x2="30.48" y2="-167.64" width="0.1524" layer="91"/>
 <label x="27.94" y="-167.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A2"/>
+<wire x1="68.58" y1="-78.74" x2="63.5" y2="-78.74" width="0.1524" layer="91"/>
+<label x="55.88" y="-78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC1-1" class="0">
@@ -15868,6 +16008,30 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <net name="COMMN" class="0">
 <segment>
 <label x="-7.62" y="-231.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RX_SHFT" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="34-RX8"/>
+<wire x1="96.52" y1="78.74" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
+<label x="101.6" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="B2"/>
+<wire x1="93.98" y1="-78.74" x2="99.06" y2="-78.74" width="0.1524" layer="91"/>
+<label x="99.06" y="-78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TX_SHFT" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="35/TX8"/>
+<wire x1="96.52" y1="76.2" x2="101.6" y2="76.2" width="0.1524" layer="91"/>
+<label x="101.6" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="B1"/>
+<wire x1="93.98" y1="-68.58" x2="99.06" y2="-68.58" width="0.1524" layer="91"/>
+<label x="99.06" y="-68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
