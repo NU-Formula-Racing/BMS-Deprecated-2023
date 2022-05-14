@@ -13620,58 +13620,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 </deviceset>
 </devicesets>
 </library>
-<library name="wirepad" urn="urn:adsk.eagle:library:412">
-<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SMD2,54-5,08" urn="urn:adsk.eagle:footprint:30823/1" library_version="2">
-<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
-<smd name="1" x="0" y="0" dx="2.54" dy="5.08" layer="1"/>
-<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="-1.5" y="-2.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-</package>
-</packages>
-<packages3d>
-<package3d name="SMD2,54-5,08" urn="urn:adsk.eagle:package:30841/1" type="box" library_version="2">
-<description>SMD PAD</description>
-<packageinstances>
-<packageinstance name="SMD2,54-5,08"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="PAD" urn="urn:adsk.eagle:symbol:30808/1" library_version="2">
-<wire x1="-1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" width="0.254" layer="94"/>
-<text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
-<text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="P" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SMD5" urn="urn:adsk.eagle:component:30859/2" prefix="PAD" uservalue="yes" library_version="2">
-<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="PAD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SMD2,54-5,08">
-<connects>
-<connect gate="1" pin="P" pad="1"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:30841/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="21" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="TB0108">
 <packages>
 <package name="TSSOP20" urn="urn:adsk.eagle:footprint:4239/1">
@@ -13850,24 +13798,15 @@ MAX3223-MAX3243.pdf</description>
 <part name="U2" library="ESP32-DEVKITC-32D" deviceset="ESP32-DEVKITC-32D" device=""/>
 <part name="S2" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
 <part name="IC2" library="PBQ79656PAPTQ1" deviceset="PBQ79656PAPTQ1" device=""/>
-<part name="RCB1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1210" package3d_urn="urn:adsk.eagle:package:23554/2" value="10"/>
 <part name="RVC1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
 <part name="RVC2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1210" package3d_urn="urn:adsk.eagle:package:23554/2" value="10"/>
 <part name="CVC1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB1-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CVC2-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="RVC3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1210" package3d_urn="urn:adsk.eagle:package:23554/2" value="10"/>
 <part name="CVC3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB3-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="RCB4-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1210" package3d_urn="urn:adsk.eagle:package:23554/2" value="10"/>
 <part name="RVC4-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="RCB0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1210" package3d_urn="urn:adsk.eagle:package:23554/2" value="10"/>
 <part name="RVC0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
 <part name="CVC0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
-<part name="CCB0-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CBAT-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 nf"/>
 <part name="RBAT-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="30"/>
 <part name="CREFHP-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uf"/>
@@ -13898,7 +13837,6 @@ MAX3223-MAX3243.pdf</description>
 <part name="CCOMHNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="ESDCOMH" library="ESDAVLC6-2BLY" deviceset="ESDAVLC6-2BLY" device=""/>
 <part name="COMH" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
-<part name="GNDH" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD5" device="" package3d_urn="urn:adsk.eagle:package:30841/1"/>
 <part name="CCB10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="RCOML" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="CCOMLNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
@@ -14144,10 +14082,6 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="NAME" x="25.4" y="-179.07" size="1.778" layer="95" rot="R270" align="center-left"/>
 <attribute name="VALUE" x="22.86" y="-179.07" size="1.778" layer="96" rot="R270" align="center-left"/>
 </instance>
-<instance part="RCB1-1" gate="G$1" x="-88.9" y="-180.34" smashed="yes">
-<attribute name="NAME" x="-92.71" y="-178.8414" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-92.71" y="-183.642" size="1.778" layer="96"/>
-</instance>
 <instance part="RVC1-1" gate="G$1" x="-99.06" y="-182.88" smashed="yes">
 <attribute name="NAME" x="-102.87" y="-181.3814" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-102.87" y="-186.182" size="1.778" layer="96"/>
@@ -14156,21 +14090,9 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="NAME" x="-102.87" y="-171.2214" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-102.87" y="-176.022" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB2-1" gate="G$1" x="-88.9" y="-170.18" smashed="yes">
-<attribute name="NAME" x="-92.71" y="-168.6814" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-92.71" y="-173.482" size="1.778" layer="96"/>
-</instance>
 <instance part="CVC1-1" gate="G$1" x="-91.44" y="-177.8" smashed="yes">
 <attribute name="NAME" x="-89.916" y="-177.419" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-89.916" y="-182.499" size="1.778" layer="96"/>
-</instance>
-<instance part="CCB1-1" gate="G$1" x="-81.28" y="-172.72" smashed="yes">
-<attribute name="NAME" x="-79.756" y="-172.339" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-79.756" y="-177.419" size="1.778" layer="96"/>
-</instance>
-<instance part="CCB2-1" gate="G$1" x="-81.28" y="-165.1" smashed="yes">
-<attribute name="NAME" x="-79.756" y="-164.719" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-79.756" y="-169.799" size="1.778" layer="96"/>
 </instance>
 <instance part="CVC2-1" gate="G$1" x="-91.44" y="-167.64" smashed="yes">
 <attribute name="NAME" x="-89.916" y="-167.259" size="1.778" layer="95"/>
@@ -14180,29 +14102,13 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="NAME" x="-102.87" y="-163.6014" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-102.87" y="-168.402" size="1.778" layer="96"/>
 </instance>
-<instance part="RCB3-1" gate="G$1" x="-88.9" y="-162.56" smashed="yes">
-<attribute name="NAME" x="-92.71" y="-161.0614" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-92.71" y="-165.862" size="1.778" layer="96"/>
-</instance>
 <instance part="CVC3-1" gate="G$1" x="-91.44" y="-160.02" smashed="yes">
 <attribute name="NAME" x="-89.916" y="-159.639" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-89.916" y="-164.719" size="1.778" layer="96"/>
 </instance>
-<instance part="CCB3-1" gate="G$1" x="-81.28" y="-157.48" smashed="yes">
-<attribute name="NAME" x="-79.756" y="-157.099" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-79.756" y="-162.179" size="1.778" layer="96"/>
-</instance>
-<instance part="RCB4-1" gate="G$1" x="-88.9" y="-152.4" smashed="yes">
-<attribute name="NAME" x="-92.71" y="-150.9014" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-92.71" y="-155.702" size="1.778" layer="96"/>
-</instance>
 <instance part="RVC4-1" gate="G$1" x="-99.06" y="-154.94" smashed="yes">
 <attribute name="NAME" x="-102.87" y="-153.4414" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-102.87" y="-158.242" size="1.778" layer="96"/>
-</instance>
-<instance part="RCB0-1" gate="G$1" x="-88.9" y="-190.5" smashed="yes">
-<attribute name="NAME" x="-92.71" y="-189.0014" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-92.71" y="-193.802" size="1.778" layer="96"/>
 </instance>
 <instance part="RVC0-1" gate="G$1" x="-99.06" y="-193.04" smashed="yes">
 <attribute name="NAME" x="-102.87" y="-191.5414" size="1.778" layer="95"/>
@@ -14211,10 +14117,6 @@ MAX3223-MAX3243.pdf</description>
 <instance part="CVC0-1" gate="G$1" x="-91.44" y="-187.96" smashed="yes">
 <attribute name="NAME" x="-89.916" y="-187.579" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-89.916" y="-192.659" size="1.778" layer="96"/>
-</instance>
-<instance part="CCB0-1" gate="G$1" x="-81.28" y="-182.88" smashed="yes">
-<attribute name="NAME" x="-79.756" y="-182.499" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-79.756" y="-187.579" size="1.778" layer="96"/>
 </instance>
 <instance part="CBAT-1" gate="G$1" x="7.62" y="-119.38" smashed="yes" rot="R90">
 <attribute name="NAME" x="7.239" y="-117.856" size="1.778" layer="95" rot="R90"/>
@@ -14384,10 +14286,6 @@ MAX3223-MAX3243.pdf</description>
 <instance part="COMH" gate="-2" x="38.1" y="-261.62" smashed="yes" rot="R270">
 <attribute name="NAME" x="37.338" y="-264.16" size="1.524" layer="95" rot="R270"/>
 <attribute name="VALUE" x="39.497" y="-260.858" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="GNDH" gate="1" x="-10.16" y="-193.04" smashed="yes" rot="R180">
-<attribute name="NAME" x="-9.017" y="-194.8942" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-9.017" y="-189.738" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="CCB10-1" gate="G$1" x="-17.78" y="-121.92" smashed="yes" rot="R90">
 <attribute name="NAME" x="-18.161" y="-120.396" size="1.778" layer="95" rot="R90"/>
@@ -14639,17 +14537,13 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="CDVDD-1" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="-172.72" x2="35.56" y2="-175.26" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-175.26" x2="33.02" y2="-190.5" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="-190.5" x2="10.16" y2="-190.5" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-190.5" x2="7.62" y2="-190.5" width="0.1524" layer="91"/>
 <junction x="35.56" y="-175.26"/>
 <junction x="7.62" y="-190.5"/>
 <pinref part="IC2" gate="G$1" pin="AVSS?"/>
-<wire x1="10.16" y1="-190.5" x2="7.62" y2="-190.5" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="-134.62" x2="33.02" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="-134.62" x2="33.02" y2="-172.72" width="0.1524" layer="91"/>
 <junction x="33.02" y="-172.72"/>
-<wire x1="10.16" y1="-205.74" x2="10.16" y2="-190.5" width="0.1524" layer="91"/>
-<junction x="10.16" y="-190.5"/>
-<pinref part="GNDH" gate="1" pin="P"/>
 </segment>
 <segment>
 <wire x1="10.16" y1="-226.06" x2="5.08" y2="-226.06" width="0.1524" layer="91"/>
@@ -14707,8 +14601,6 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="RVC0-1" gate="G$1" pin="1"/>
 <wire x1="-114.3" y1="-193.04" x2="-104.14" y2="-193.04" width="0.1524" layer="91"/>
 <label x="-114.3" y="-193.04" size="1.778" layer="95"/>
-<wire x1="-93.98" y1="-190.5" x2="-114.3" y2="-190.5" width="0.1524" layer="91"/>
-<pinref part="RCB0-1" gate="G$1" pin="1"/>
 <wire x1="-114.3" y1="-190.5" x2="-114.3" y2="-193.04" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <junction x="-114.3" y="-193.04"/>
@@ -14770,6 +14662,11 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="U2" gate="G$1" pin="EXT_5V"/>
 <wire x1="33.02" y1="-38.1" x2="25.4" y2="-38.1" width="0.1524" layer="91"/>
 <label x="25.4" y="-38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCCB"/>
+<wire x1="93.98" y1="-73.66" x2="99.06" y2="-73.66" width="0.1524" layer="91"/>
+<label x="96.52" y="-73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -14836,12 +14733,14 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-116.84" y1="-154.94" x2="-104.14" y2="-154.94" width="0.1524" layer="91"/>
 <wire x1="-116.84" y1="-86.36" x2="-116.84" y2="-154.94" width="0.1524" layer="91"/>
 <junction x="-116.84" y="-154.94"/>
-<pinref part="RCB4-1" gate="G$1" pin="1"/>
-<wire x1="-119.38" y1="-149.86" x2="-93.98" y2="-149.86" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="-149.86" x2="-93.98" y2="-152.4" width="0.1524" layer="91"/>
 <label x="-121.92" y="-149.86" size="1.778" layer="95"/>
 <wire x1="-119.38" y1="-154.94" x2="-119.38" y2="-149.86" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="RNPN-1" gate="G$1" pin="2"/>
+<wire x1="-60.96" y1="-218.44" x2="-71.12" y2="-218.44" width="0.1524" layer="91"/>
+<label x="-71.12" y="-218.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COOLANT_CTRL" class="0">
@@ -15230,8 +15129,11 @@ MAX3223-MAX3243.pdf</description>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCCA"/>
-<wire x1="68.58" y1="-73.66" x2="63.5" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="-73.66" x2="60.96" y2="-73.66" width="0.1524" layer="91"/>
 <label x="55.88" y="-73.66" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="OE"/>
+<wire x1="68.58" y1="-114.3" x2="60.96" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-114.3" x2="60.96" y2="-73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CRX" class="0">
@@ -15307,9 +15209,9 @@ MAX3223-MAX3243.pdf</description>
 <label x="27.94" y="-165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="A1"/>
-<wire x1="68.58" y1="-68.58" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
-<label x="55.88" y="-68.58" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="B1"/>
+<wire x1="93.98" y1="-68.58" x2="99.06" y2="-68.58" width="0.1524" layer="91"/>
+<label x="99.06" y="-68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX_BQ" class="0">
@@ -15319,9 +15221,9 @@ MAX3223-MAX3243.pdf</description>
 <label x="27.94" y="-167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="A2"/>
-<wire x1="68.58" y1="-78.74" x2="63.5" y2="-78.74" width="0.1524" layer="91"/>
-<label x="55.88" y="-78.74" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="B2"/>
+<wire x1="93.98" y1="-78.74" x2="99.06" y2="-78.74" width="0.1524" layer="91"/>
+<label x="99.06" y="-78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC1-1" class="0">
@@ -15335,20 +15237,13 @@ MAX3223-MAX3243.pdf</description>
 <junction x="-91.44" y="-182.88"/>
 <pinref part="CVC0-1" gate="G$1" pin="1"/>
 <wire x1="-91.44" y1="-185.42" x2="-91.44" y2="-182.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="CB1-1" class="0">
-<segment>
 <pinref part="IC2" gate="G$1" pin="CB1"/>
 <wire x1="-38.1" y1="-172.72" x2="-38.1" y2="-180.34" width="0.1524" layer="91"/>
-<pinref part="RCB1-1" gate="G$1" pin="2"/>
-<wire x1="-38.1" y1="-180.34" x2="-81.28" y2="-180.34" width="0.1524" layer="91"/>
-<pinref part="CCB1-1" gate="G$1" pin="2"/>
-<wire x1="-81.28" y1="-180.34" x2="-83.82" y2="-180.34" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="-177.8" x2="-81.28" y2="-180.34" width="0.1524" layer="91"/>
-<junction x="-81.28" y="-180.34"/>
-<pinref part="CCB0-1" gate="G$1" pin="1"/>
 <label x="-43.18" y="-180.34" size="1.778" layer="95"/>
+<wire x1="-25.4" y1="-182.88" x2="-38.1" y2="-182.88" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-182.88" x2="-38.1" y2="-172.72" width="0.1524" layer="91"/>
+<junction x="-25.4" y="-182.88"/>
+<junction x="-38.1" y="-172.72"/>
 </segment>
 </net>
 <net name="VC2-1" class="0">
@@ -15364,74 +15259,40 @@ MAX3223-MAX3243.pdf</description>
 <junction x="-91.44" y="-172.72"/>
 <pinref part="CVC1-1" gate="G$1" pin="1"/>
 <wire x1="-91.44" y1="-175.26" x2="-91.44" y2="-172.72" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="CB2-1" class="0">
-<segment>
 <pinref part="IC2" gate="G$1" pin="CB2"/>
-<wire x1="-38.1" y1="-167.64" x2="-76.2" y2="-167.64" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-167.64" x2="-76.2" y2="-170.18" width="0.1524" layer="91"/>
-<pinref part="RCB2-1" gate="G$1" pin="2"/>
-<wire x1="-76.2" y1="-170.18" x2="-81.28" y2="-170.18" width="0.1524" layer="91"/>
-<pinref part="CCB1-1" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="-170.18" x2="-83.82" y2="-170.18" width="0.1524" layer="91"/>
-<junction x="-81.28" y="-170.18"/>
-<pinref part="CCB2-1" gate="G$1" pin="2"/>
 <label x="-45.72" y="-167.64" size="1.778" layer="95"/>
+<wire x1="-38.1" y1="-170.18" x2="-38.1" y2="-167.64" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-170.18"/>
 </segment>
 </net>
 <net name="N$72" class="0">
 <segment>
-<pinref part="RCB2-1" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="-170.18" x2="-114.3" y2="-170.18" width="0.1524" layer="91"/>
 <pinref part="RVC2-1" gate="G$1" pin="1"/>
 <wire x1="-114.3" y1="-170.18" x2="-119.38" y2="-170.18" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="-172.72" x2="-104.14" y2="-172.72" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="-170.18" x2="-119.38" y2="-172.72" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<junction x="-114.3" y="-170.18"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <junction x="-119.38" y="-172.72"/>
 </segment>
 </net>
 <net name="N$73" class="0">
 <segment>
-<pinref part="RCB1-1" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="-180.34" x2="-114.3" y2="-180.34" width="0.1524" layer="91"/>
 <pinref part="RVC1-1" gate="G$1" pin="1"/>
 <wire x1="-104.14" y1="-182.88" x2="-114.3" y2="-182.88" width="0.1524" layer="91"/>
 <wire x1="-114.3" y1="-180.34" x2="-114.3" y2="-182.88" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <junction x="-114.3" y="-182.88"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<junction x="-114.3" y="-180.34"/>
-</segment>
-</net>
-<net name="CB3-1" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="CB3"/>
-<wire x1="-38.1" y1="-162.56" x2="-81.28" y2="-162.56" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="-162.56" x2="-83.82" y2="-162.56" width="0.1524" layer="91"/>
-<pinref part="CCB2-1" gate="G$1" pin="1"/>
-<junction x="-81.28" y="-162.56"/>
-<pinref part="CCB3-1" gate="G$1" pin="2"/>
-<pinref part="RCB3-1" gate="G$1" pin="2"/>
-<label x="-45.72" y="-162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$75" class="0">
 <segment>
-<pinref part="RCB3-1" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="-162.56" x2="-104.14" y2="-162.56" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="-162.56" x2="-104.14" y2="-160.02" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="-160.02" x2="-119.38" y2="-160.02" width="0.1524" layer="91"/>
 <pinref part="RVC3-1" gate="G$1" pin="1"/>
 <wire x1="-104.14" y1="-165.1" x2="-116.84" y2="-165.1" width="0.1524" layer="91"/>
 <wire x1="-116.84" y1="-165.1" x2="-119.38" y2="-165.1" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="-160.02" x2="-119.38" y2="-162.56" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="-119.38" y1="-162.56" x2="-119.38" y2="-165.1" width="0.1524" layer="91"/>
-<junction x="-119.38" y="-162.56"/>
 <pinref part="R9" gate="G$1" pin="1"/>
 <junction x="-116.84" y="-165.1"/>
 </segment>
@@ -15446,6 +15307,10 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-91.44" y1="-165.1" x2="-93.98" y2="-165.1" width="0.1524" layer="91"/>
 <junction x="-91.44" y="-165.1"/>
 <pinref part="CVC3-1" gate="G$1" pin="2"/>
+<pinref part="IC2" gate="G$1" pin="CB3"/>
+<label x="-45.72" y="-162.56" size="1.778" layer="95"/>
+<wire x1="-38.1" y1="-165.1" x2="-38.1" y2="-162.56" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-165.1"/>
 </segment>
 </net>
 <net name="VC4-1" class="0">
@@ -15460,25 +15325,17 @@ MAX3223-MAX3243.pdf</description>
 <label x="-45.72" y="-160.02" size="1.778" layer="95"/>
 <pinref part="CVC3-1" gate="G$1" pin="1"/>
 <junction x="-91.44" y="-157.48"/>
-</segment>
-</net>
-<net name="CB4-1" class="0">
-<segment>
-<pinref part="RCB4-1" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="-152.4" x2="-81.28" y2="-152.4" width="0.1524" layer="91"/>
-<junction x="-81.28" y="-152.4"/>
-<pinref part="CCB3-1" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="-154.94" x2="-81.28" y2="-152.4" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="CB4"/>
 <wire x1="-38.1" y1="-157.48" x2="-73.66" y2="-157.48" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-157.48" x2="-73.66" y2="-152.4" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-152.4" x2="-76.2" y2="-152.4" width="0.1524" layer="91"/>
 <label x="-45.72" y="-157.48" size="1.778" layer="95"/>
 <pinref part="CCB10-1" gate="G$1" pin="1"/>
-<wire x1="-76.2" y1="-152.4" x2="-81.28" y2="-152.4" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="-121.92" x2="-76.2" y2="-121.92" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="-121.92" x2="-76.2" y2="-152.4" width="0.1524" layer="91"/>
-<junction x="-76.2" y="-152.4"/>
+<wire x1="-38.1" y1="-160.02" x2="-38.1" y2="-157.48" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-160.02"/>
+<junction x="-38.1" y="-157.48"/>
 </segment>
 </net>
 <net name="VC0-1" class="0">
@@ -15491,19 +15348,10 @@ MAX3223-MAX3243.pdf</description>
 <label x="-20.32" y="-185.42" size="1.778" layer="95"/>
 <pinref part="CVC0-1" gate="G$1" pin="2"/>
 <junction x="-91.44" y="-193.04"/>
-</segment>
-</net>
-<net name="CB0-1" class="0">
-<segment>
-<wire x1="-22.86" y1="-190.5" x2="-81.28" y2="-190.5" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="-190.5" x2="-83.82" y2="-190.5" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="-187.96" x2="-81.28" y2="-190.5" width="0.1524" layer="91"/>
-<junction x="-81.28" y="-190.5"/>
-<pinref part="RCB0-1" gate="G$1" pin="2"/>
-<pinref part="CCB0-1" gate="G$1" pin="2"/>
 <pinref part="IC2" gate="G$1" pin="CB0"/>
-<wire x1="-22.86" y1="-190.5" x2="-22.86" y2="-182.88" width="0.1524" layer="91"/>
 <label x="-22.86" y="-185.42" size="1.778" layer="95"/>
+<wire x1="-20.32" y1="-182.88" x2="-22.86" y2="-182.88" width="0.1524" layer="91"/>
+<junction x="-20.32" y="-182.88"/>
 </segment>
 </net>
 <net name="VC_CB_HIGH-1" class="0">
@@ -15780,13 +15628,6 @@ MAX3223-MAX3243.pdf</description>
 <junction x="63.5" y="-149.86"/>
 </segment>
 </net>
-<net name="N$125" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="COMLN"/>
-<wire x1="-5.08" y1="-182.88" x2="-5.08" y2="-198.12" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="-198.12" x2="-10.16" y2="-198.12" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$130" class="0">
 <segment>
 <pinref part="RNPN-1" gate="G$1" pin="1"/>
@@ -15797,13 +15638,6 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-48.26" y1="-210.82" x2="-53.34" y2="-210.82" width="0.1524" layer="91"/>
 <pinref part="CNPN1-1" gate="G$1" pin="2"/>
 <pinref part="T2" gate="G$1" pin="C"/>
-</segment>
-</net>
-<net name="BATC-1" class="0">
-<segment>
-<pinref part="RNPN-1" gate="G$1" pin="2"/>
-<wire x1="-60.96" y1="-218.44" x2="-71.12" y2="-218.44" width="0.1524" layer="91"/>
-<label x="-71.12" y="-218.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LDOIN-1" class="0">
@@ -15876,13 +15710,6 @@ MAX3223-MAX3243.pdf</description>
 <junction x="22.86" y="-218.44"/>
 </segment>
 </net>
-<net name="N$126" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="COMLP"/>
-<wire x1="-7.62" y1="-182.88" x2="-7.62" y2="-195.58" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="-195.58" x2="-12.7" y2="-195.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="COMHN" class="0">
 <segment>
 <pinref part="CCOMHN" gate="G$1" pin="1"/>
@@ -15950,6 +15777,9 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="CCOMLNG" gate="G$1" pin="2"/>
 <junction x="-10.16" y="-238.76"/>
 <pinref part="RCOMLN" gate="G$1" pin="2"/>
+<wire x1="-5.08" y1="-198.12" x2="-10.16" y2="-198.12" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="COMLN"/>
+<wire x1="-5.08" y1="-198.12" x2="-5.08" y2="-182.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$49" class="0">
@@ -15965,6 +15795,9 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="CCOMLPG" gate="G$1" pin="2"/>
 <wire x1="-30.48" y1="-238.76" x2="-30.48" y2="-241.3" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-238.76"/>
+<wire x1="-7.62" y1="-195.58" x2="-12.7" y2="-195.58" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="COMLP"/>
+<wire x1="-7.62" y1="-182.88" x2="-7.62" y2="-195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$67" class="0">
@@ -16017,9 +15850,9 @@ MAX3223-MAX3243.pdf</description>
 <label x="101.6" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="B2"/>
-<wire x1="93.98" y1="-78.74" x2="99.06" y2="-78.74" width="0.1524" layer="91"/>
-<label x="99.06" y="-78.74" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="A1"/>
+<wire x1="68.58" y1="-68.58" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
+<label x="55.88" y="-68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX_SHFT" class="0">
@@ -16029,9 +15862,9 @@ MAX3223-MAX3243.pdf</description>
 <label x="101.6" y="76.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="B1"/>
-<wire x1="93.98" y1="-68.58" x2="99.06" y2="-68.58" width="0.1524" layer="91"/>
-<label x="99.06" y="-68.58" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="A2"/>
+<wire x1="68.58" y1="-78.74" x2="63.5" y2="-78.74" width="0.1524" layer="91"/>
+<label x="55.88" y="-78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
