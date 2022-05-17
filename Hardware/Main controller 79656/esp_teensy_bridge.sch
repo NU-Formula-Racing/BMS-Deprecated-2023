@@ -13745,6 +13745,161 @@ MAX3223-MAX3243.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="v-reg" urn="urn:adsk.eagle:library:409">
+<description>&lt;b&gt;Voltage Regulators&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="78XXS" urn="urn:adsk.eagle:footprint:30278/1" library_version="5">
+<description>&lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;</description>
+<wire x1="4.826" y1="-4.318" x2="5.08" y2="-4.064" width="0.1524" layer="21"/>
+<wire x1="4.826" y1="-4.318" x2="-4.826" y2="-4.318" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-4.064" x2="-4.826" y2="-4.318" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-1.143" x2="5.08" y2="-4.064" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-4.064" x2="-5.08" y2="-1.143" width="0.1524" layer="21"/>
+<circle x="-4.6228" y="-3.7084" radius="0.254" width="0" layer="21"/>
+<pad name="IN" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="GND" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="OUT" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-0.635" y="-3.81" size="1.27" layer="51" ratio="10">-</text>
+<text x="-3.175" y="-3.81" size="1.27" layer="51" ratio="10">I</text>
+<text x="1.905" y="-3.81" size="1.27" layer="51" ratio="10">O</text>
+<rectangle x1="-5.334" y1="-1.27" x2="-3.429" y2="0" layer="21"/>
+<rectangle x1="-3.429" y1="-0.762" x2="-1.651" y2="0" layer="21"/>
+<rectangle x1="-1.651" y1="-1.27" x2="-0.889" y2="0" layer="21"/>
+<rectangle x1="-0.889" y1="-0.762" x2="0.889" y2="0" layer="21"/>
+<rectangle x1="0.889" y1="-1.27" x2="1.651" y2="0" layer="21"/>
+<rectangle x1="1.651" y1="-0.762" x2="3.429" y2="0" layer="21"/>
+<rectangle x1="3.429" y1="-1.27" x2="5.334" y2="0" layer="21"/>
+<rectangle x1="-3.429" y1="-1.27" x2="-1.651" y2="-0.762" layer="51"/>
+<rectangle x1="-0.889" y1="-1.27" x2="0.889" y2="-0.762" layer="51"/>
+<rectangle x1="1.651" y1="-1.27" x2="3.429" y2="-0.762" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="78XXS" urn="urn:adsk.eagle:package:30342/1" type="box" library_version="5">
+<description>VOLTAGE REGULATOR</description>
+<packageinstances>
+<packageinstance name="78XXS"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="78XX" urn="urn:adsk.eagle:symbol:30277/1" library_version="5">
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="-5.08" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-5.08" width="0.4064" layer="94"/>
+<text x="2.54" y="-7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.032" y="-4.318" size="1.524" layer="95">GND</text>
+<text x="-4.445" y="-0.635" size="1.524" layer="95">IN</text>
+<text x="0.635" y="-0.635" size="1.524" layer="95">OUT</text>
+<pin name="IN" x="-7.62" y="0" visible="off" length="short" direction="in"/>
+<pin name="GND" x="0" y="-7.62" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="OUT" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="78XXS" urn="urn:adsk.eagle:component:30381/2" prefix="IC" uservalue="yes" library_version="5">
+<description>&lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="78XX" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="78XXS">
+<connects>
+<connect gate="1" pin="GND" pad="GND"/>
+<connect gate="1" pin="IN" pad="IN"/>
+<connect gate="1" pin="OUT" pad="OUT"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:30342/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="18" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="inductor-neosid" urn="urn:adsk.eagle:library:241">
+<description>&lt;b&gt;Neosid Chokes and Transformers&lt;/b&gt;&lt;p&gt;
+
+Based on the following sources:
+&lt;ul&gt;
+&lt;li&gt;Electronic Component Book, Part 2 : Chokes, Fixed Value Inductors
+&lt;li&gt;Part 3 : Filters, Coil Assemblies, Thermoplastic Parts
+&lt;li&gt;Part 4 : SMD Filters, Coils, Fixed Value Inductors
+&lt;li&gt;www.neosid.de
+&lt;/ul&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SD8" urn="urn:adsk.eagle:footprint:14506/1" library_version="3">
+<description>NOMINAL &lt;b&gt;INDUCTANCE&lt;/b&gt;&lt;p&gt;
+grid 5 mm, 8 x 8 x 9.6 mm</description>
+<wire x1="-3.9" y1="-3.9" x2="3.9" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="3.9" y1="-3.9" x2="3.9" y2="3.9" width="0.2032" layer="21"/>
+<wire x1="3.9" y1="3.9" x2="-3.9" y2="3.9" width="0.2032" layer="21"/>
+<wire x1="-3.9" y1="3.9" x2="-3.9" y2="-3.9" width="0.2032" layer="21"/>
+<pad name="1" x="-2.5" y="0" drill="0.6" shape="long" rot="R90"/>
+<pad name="2" x="2.5" y="0" drill="0.6" shape="long" rot="R90"/>
+<text x="-4" y="4.25" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4" y="-5.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="SD8" urn="urn:adsk.eagle:package:14649/1" type="box" library_version="3">
+<description>NOMINAL INDUCTANCE
+grid 5 mm, 8 x 8 x 9.6 mm</description>
+<packageinstances>
+<packageinstance name="SD8"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="L" urn="urn:adsk.eagle:symbol:14504/1" library_version="3">
+<text x="-3.81" y="1.778" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.556" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-3.81" y1="-1.27" x2="3.81" y2="1.27" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SD8" urn="urn:adsk.eagle:component:14734/2" prefix="L" uservalue="yes" library_version="3">
+<description>&lt;b&gt;INDUCTOR&lt;/b&gt;&lt;p&gt;
+nominal inductance</description>
+<gates>
+<gate name="G$1" symbol="L" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SD8">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14649/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -13852,6 +14007,11 @@ MAX3223-MAX3243.pdf</description>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="U$1" library="TB0108" deviceset="TXB0108PW" device="SMD"/>
+<part name="R-78-1.0" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="78XXS" device="" package3d_urn="urn:adsk.eagle:package:30342/1"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2μF"/>
+<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10μF"/>
+<part name="L1" library="inductor-neosid" library_urn="urn:adsk.eagle:library:241" deviceset="SD8" device="" package3d_urn="urn:adsk.eagle:package:14649/1" value="5.6 uH"/>
+<part name="PWR_IN1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="5566-2" device="" package3d_urn="urn:adsk.eagle:package:8078583/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -14351,6 +14511,30 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="NAME" x="73.66" y="-60.96" size="1.27" layer="95"/>
 <attribute name="VALUE" x="88.9" y="-121.92" size="1.27" layer="96" rot="R180"/>
 </instance>
+<instance part="R-78-1.0" gate="1" x="-35.56" y="160.02" smashed="yes">
+<attribute name="NAME" x="-33.02" y="152.4" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-33.02" y="149.86" size="1.778" layer="96"/>
+</instance>
+<instance part="C1" gate="G$1" x="-48.26" y="154.94" smashed="yes">
+<attribute name="NAME" x="-46.736" y="155.321" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-46.736" y="150.241" size="1.778" layer="96"/>
+</instance>
+<instance part="C2" gate="G$1" x="-63.5" y="154.94" smashed="yes">
+<attribute name="NAME" x="-61.976" y="155.321" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-61.976" y="150.241" size="1.778" layer="96"/>
+</instance>
+<instance part="L1" gate="G$1" x="-55.88" y="160.02" smashed="yes">
+<attribute name="NAME" x="-59.69" y="161.798" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-59.69" y="156.464" size="1.778" layer="96"/>
+</instance>
+<instance part="PWR_IN1" gate="-1" x="-73.66" y="160.02" smashed="yes" rot="R180">
+<attribute name="NAME" x="-76.2" y="160.782" size="1.524" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-72.898" y="158.623" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="PWR_IN1" gate="-2" x="-35.56" y="142.24" smashed="yes" rot="R270">
+<attribute name="NAME" x="-36.322" y="139.7" size="1.524" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-34.163" y="143.002" size="1.778" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14610,6 +14794,21 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="93.98" y1="-114.3" x2="99.06" y2="-114.3" width="0.1524" layer="91"/>
 <label x="99.06" y="-114.3" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R-78-1.0" gate="1" pin="GND"/>
+<wire x1="-35.56" y1="152.4" x2="-35.56" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="147.32" x2="-48.26" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="147.32" x2="-63.5" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="149.86" x2="-48.26" y2="147.32" width="0.1524" layer="91"/>
+<junction x="-48.26" y="147.32"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="-63.5" y1="149.86" x2="-63.5" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="PWR_IN1" gate="-2" pin="S"/>
+<wire x1="-35.56" y1="147.32" x2="-35.56" y2="144.78" width="0.1524" layer="91"/>
+<junction x="-35.56" y="147.32"/>
+<label x="-33.02" y="144.78" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TX_ESP" class="0">
 <segment>
@@ -14667,6 +14866,11 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="U$1" gate="G$1" pin="VCCB"/>
 <wire x1="93.98" y1="-73.66" x2="99.06" y2="-73.66" width="0.1524" layer="91"/>
 <label x="96.52" y="-73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R-78-1.0" gate="1" pin="OUT"/>
+<wire x1="-27.94" y1="160.02" x2="-22.86" y2="160.02" width="0.1524" layer="91"/>
+<label x="-20.32" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -15865,6 +16069,28 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="U$1" gate="G$1" pin="A2"/>
 <wire x1="68.58" y1="-78.74" x2="63.5" y2="-78.74" width="0.1524" layer="91"/>
 <label x="55.88" y="-78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="R-78-1.0" gate="1" pin="IN"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="157.48" x2="-48.26" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="160.02" x2="-48.26" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="L1" gate="G$1" pin="2"/>
+<wire x1="-50.8" y1="160.02" x2="-48.26" y2="160.02" width="0.1524" layer="91"/>
+<junction x="-48.26" y="160.02"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="157.48" x2="-63.5" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="L1" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="160.02" x2="-60.96" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="PWR_IN1" gate="-1" pin="S"/>
+<wire x1="-63.5" y1="160.02" x2="-71.12" y2="160.02" width="0.1524" layer="91"/>
+<junction x="-63.5" y="160.02"/>
 </segment>
 </net>
 </nets>
