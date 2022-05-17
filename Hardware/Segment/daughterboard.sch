@@ -8246,6 +8246,21 @@ Source: AVX .. aphvc.pdf</description>
 <hole x="4.7" y="2.29" drill="3"/>
 <hole x="-4.7" y="2.29" drill="3"/>
 </package>
+<package name="22-23-2031" urn="urn:adsk.eagle:footprint:8078260/1" library_version="5">
+<description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 3 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232031_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="-3.81" y1="3.175" x2="3.81" y2="3.175" width="0.254" layer="21"/>
+<wire x1="3.81" y1="3.175" x2="3.81" y2="1.27" width="0.254" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="3.81" y1="-3.175" x2="-3.81" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="-3.175" x2="-3.81" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-3.81" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="5566-12" urn="urn:adsk.eagle:package:8078578/1" type="box" library_version="5">
@@ -8264,6 +8279,12 @@ Source: AVX .. aphvc.pdf</description>
 <description>&lt;b&gt;Mini-Fit Jr.™ Vertical Header, 4.20mm Pitch, Dual Row, 2 Circuits, without Snap-in Plastic Peg PCB Lock, Tin, Natural&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/039281023_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="5566-2"/>
+</packageinstances>
+</package3d>
+<package3d name="22-23-2031" urn="urn:adsk.eagle:package:8078634/1" type="box" library_version="5">
+<description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 3 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232031_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="22-23-2031"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -8408,6 +8429,35 @@ Source: http://www.molex.com</description>
 <attribute name="OC_FARNELL" value="1822072" constant="no"/>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 <attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="22-23-2031" urn="urn:adsk.eagle:component:8078937/3" prefix="X" library_version="5">
+<description>.100" (2.54mm) Center Header - 3 Pin</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="22-23-2031">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078634/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="22-23-2031" constant="no"/>
+<attribute name="OC_FARNELL" value="1462950" constant="no"/>
+<attribute name="OC_NEWARK" value="30C0862" constant="no"/>
+<attribute name="POPULARITY" value="35" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10847,33 +10897,12 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
 <text x="-1.5" y="-2.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 </package>
-<package name="2,54/1,0" urn="urn:adsk.eagle:footprint:30810/1" library_version="2">
-<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="1.27" x2="0.762" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="1.27" x2="-0.762" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-1.27" x2="-0.762" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="-1.27" x2="1.27" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-1.27" x2="1.27" y2="-0.762" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="1.016" width="0.1524" layer="51"/>
-<pad name="1" x="0" y="0" drill="1.016" diameter="2.54" shape="octagon"/>
-<text x="-1.27" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="0" y="1" size="0.0254" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 <packages3d>
 <package3d name="SMD2,54-5,08" urn="urn:adsk.eagle:package:30841/1" type="box" library_version="2">
 <description>SMD PAD</description>
 <packageinstances>
 <packageinstance name="SMD2,54-5,08"/>
-</packageinstances>
-</package3d>
-<package3d name="2,54/1,0" urn="urn:adsk.eagle:package:30828/1" type="box" library_version="2">
-<description>THROUGH-HOLE PAD</description>
-<packageinstances>
-<packageinstance name="2,54/1,0"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -10903,27 +10932,6 @@ Source: &lt;a href="http://www.st.com/resource/en/datasheet/esdavlc6-2bly.pdf"&g
 <technologies>
 <technology name="">
 <attribute name="POPULARITY" value="21" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="2,54/1,0" urn="urn:adsk.eagle:component:30846/2" prefix="PAD" uservalue="yes" library_version="2">
-<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
-<gates>
-<gate name="P" symbol="PAD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="2,54/1,0">
-<connects>
-<connect gate="P" pin="P" pad="1"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:30828/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="1" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -12181,15 +12189,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="DISABLE_UART" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1" value="Disable UART"/>
 <part name="GNDL" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD5" device="" package3d_urn="urn:adsk.eagle:package:30841/1"/>
 <part name="GNDH" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="SMD5" device="" package3d_urn="urn:adsk.eagle:package:30841/1"/>
-<part name="TX" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="2,54/1,0" device="" package3d_urn="urn:adsk.eagle:package:30828/1"/>
-<part name="RX" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="2,54/1,0" device="" package3d_urn="urn:adsk.eagle:package:30828/1"/>
-<part name="GND" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="2,54/1,0" device="" package3d_urn="urn:adsk.eagle:package:30828/1"/>
 <part name="NFAULT" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B2,54" package3d_urn="urn:adsk.eagle:package:27948/1"/>
 <part name="RCS1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
 <part name="RCS2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10"/>
 <part name="CCS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CCB10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CCB10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
+<part name="UART" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" package3d_urn="urn:adsk.eagle:package:8078634/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -13103,18 +13109,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="145.923" y="264.8458" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="145.923" y="270.002" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="TX" gate="P" x="195.58" y="45.72" smashed="yes" rot="R180">
-<attribute name="NAME" x="196.723" y="43.8658" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="196.723" y="49.022" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="RX" gate="P" x="195.58" y="43.18" smashed="yes" rot="R180">
-<attribute name="NAME" x="196.723" y="41.3258" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="196.723" y="46.482" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND" gate="P" x="195.58" y="17.78" smashed="yes" rot="R90">
-<attribute name="NAME" x="193.7258" y="16.637" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="198.882" y="16.637" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="NFAULT" gate="G$1" x="193.04" y="68.58" smashed="yes" rot="R270">
 <attribute name="NAME" x="194.31" y="69.85" size="1.778" layer="95" rot="R270"/>
 <attribute name="TP_SIGNAL_NAME" x="191.77" y="67.31" size="1.778" layer="97" rot="R270"/>
@@ -13138,6 +13132,16 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="CCB10-1" gate="G$1" x="137.16" y="337.82" smashed="yes" rot="R90">
 <attribute name="NAME" x="136.779" y="339.344" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="141.859" y="339.344" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="UART" gate="-1" x="195.58" y="45.72" smashed="yes">
+<attribute name="NAME" x="198.12" y="44.958" size="1.524" layer="95"/>
+<attribute name="VALUE" x="194.818" y="47.117" size="1.778" layer="96"/>
+</instance>
+<instance part="UART" gate="-2" x="195.58" y="43.18" smashed="yes">
+<attribute name="NAME" x="198.12" y="42.418" size="1.524" layer="95"/>
+</instance>
+<instance part="UART" gate="-3" x="200.66" y="25.4" smashed="yes">
+<attribute name="NAME" x="203.2" y="24.638" size="1.524" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -13645,12 +13649,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="190.5" y1="38.1" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="CDVDD" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="38.1" x2="198.12" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="35.56" x2="198.12" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="20.32" x2="195.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="35.56" x2="198.12" y2="25.4" width="0.1524" layer="91"/>
 <junction x="198.12" y="35.56"/>
 <junction x="172.72" y="20.32"/>
 <pinref part="IC1" gate="G$1" pin="AVSS?"/>
-<wire x1="195.58" y1="20.32" x2="175.26" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="25.4" x2="198.12" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="20.32" x2="175.26" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="20.32" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="76.2" x2="198.12" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="76.2" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
@@ -13666,8 +13670,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="175.26" y="20.32"/>
 <pinref part="GNDL" gate="1" pin="P"/>
 <junction x="149.86" y="17.78"/>
-<pinref part="GND" gate="P" pin="P"/>
-<junction x="195.58" y="20.32"/>
+<pinref part="UART" gate="-3" pin="S"/>
+<junction x="198.12" y="25.4"/>
 </segment>
 <segment>
 <wire x1="124.46" y1="-30.48" x2="119.38" y2="-30.48" width="0.1524" layer="91"/>
@@ -15095,15 +15099,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="IC1" gate="G$1" pin="RX"/>
 <wire x1="180.34" y1="43.18" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="43.18" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="RX" gate="P" pin="P"/>
 <junction x="190.5" y="43.18"/>
+<pinref part="UART" gate="-2" pin="S"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="TX"/>
 <wire x1="193.04" y1="45.72" x2="190.5" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="TX" gate="P" pin="P"/>
+<pinref part="UART" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$10" class="0">
