@@ -36,7 +36,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //read temp
-  float temp = readTemp();
+  float temp = getTemp();
   digitalWrite(LEDPIN, HIGH);
   Serial.print("Temp: ");
   Serial.print(temp);
