@@ -1,0 +1,3 @@
+[submodule "Firmware/PlatformIO/mainboard_bq_test_uart/lib/bq79656"]
+	path = Firmware/PlatformIO/mainboard_bq_test_uart/lib/bq79656
+	url = https://github.com/NU-Formula-Racing/bq79656.git
