@@ -28,7 +28,7 @@ void loop()
      }
      Serial.println();
      delay(1000);*/
-    byte byteArr[] = {0b0010010};
+    std::vector<byte> byteArr{0b0010010};
     // bq.Comm(BQ79656::request_type::SINGLE_WRITE, 1, 0, BRIDGE_COMM_TIMEOUT, byteArr);
 
     // Stack test
@@ -71,7 +71,7 @@ void loop()
 
     int seriesPerSegment = num_series / num_segments;
     // set up balancing time control registers to 300s (0x04)
-    byte balTimes[seriesPerSegment] = {0x04};
+    std::vector<byte> balTimes(seriesPerSegment, 0x04);
     bq.Comm(BQ79656::RequestType::STACK_WRITE,
             seriesPerSegment,
             0,
@@ -80,7 +80,7 @@ void loop()
             balTimes);
 
     // start balancing with AUTO_BAL to automatically cycle between even/odd
-    byte startBal[] = {0b00000011};
+    std::vector<byte> startBal{0b00000011};
     bq.Comm(BQ79656::RequestType::STACK_WRITE, 1, 0, BQ79656::RegisterAddress::BAL_CTRL2, startBal);
     delay(50000);
 
