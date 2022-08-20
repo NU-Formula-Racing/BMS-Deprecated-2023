@@ -24,6 +24,16 @@ float maxTemp;
 #define UT_THRESH -40      //-40C min temp
 #define UT_THRESH_CHARGE 0 // 0 min temp while charging
 
+void shutdownCar()
+{
+  // kill the car
+  digitalWrite(contactorn_ctrl, LOW);
+  digitalWrite(contactorp_ctrl, LOW);
+  digitalWrite(contactorprecharge_ctrl, LOW);
+  carActive = false;
+  return;
+}
+
 void faultInterrupt()
 {
   shutdownCar();
@@ -109,16 +119,6 @@ void loop()
 
   // log to SD, send to ESP, send to CAN
   // todo
-}
-
-void shutdownCar()
-{
-  // kill the car
-  digitalWrite(contactorn_ctrl, LOW);
-  digitalWrite(contactorp_ctrl, LOW);
-  digitalWrite(contactorprecharge_ctrl, LOW);
-  carActive = false;
-  return;
 }
 
 void startCar()
