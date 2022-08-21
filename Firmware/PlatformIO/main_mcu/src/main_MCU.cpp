@@ -2,6 +2,9 @@
 #include "bq_comm.h"
 #include "teensy_pin_defs.h"
 //#include "Crc16.h"
+
+#include <algorithm>
+
 #define serialdebug 1
 
 bool carActive = false;
@@ -9,38 +12,44 @@ bool isCharging = false;
 int faultPin = 0;
 int fault = 0; // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
-double voltages[num_series]; // should be 0 because global? maybe should be initialized in setup
-double maxVoltage;
-double temps[num_thermo]; // 16 per segment * 7 segments
-double maxTemp;
-double current;
+BQ79656 bq(Serial8, 35);
+
+std::vector<float> voltages(num_series);
+std::vector<float> temps(num_thermo);
+std::vector<float> current(1);
+float maxVoltage;
+float maxTemp;
 
 #define OT_THRESH 60       // 60C max temp
 #define UT_THRESH -40      //-40C min temp
 #define UT_THRESH_CHARGE 0 // 0 min temp while charging
 
+void shutdownCar()
+{
+  // kill the car
+  digitalWrite(contactorn_ctrl, LOW);
+  digitalWrite(contactorp_ctrl, LOW);
+  digitalWrite(contactorprecharge_ctrl, LOW);
+  carActive = false;
+  return;
+}
+
 void faultInterrupt()
 {
   shutdownCar();
-  if (!digitalRead(nfault_pin))
+
+  bool foundFault = 0;
+  for (int i = 0; i < num_kill_pins; i++)
   {
-    faultPin = nfault_pin;
+    if (!digitalRead(kill_pins[i]))
+    {
+      faultPin = kill_pins[i];
+      break;
+    }
   }
-  else
+  if (!foundFault)
   {
-    bool foundFault = 0;
-    for (int i = 0; i < num_kill_pins; i++)
-    {
-      if (!digitalRead(kill_pins[i]))
-      {
-        faultPin = kill_pins[i];
-        break;
-      }
-    }
-    if (!foundFault)
-    {
-      faultPin = -1;
-    }
+    faultPin = -1;
   }
 }
 
@@ -53,17 +62,14 @@ void setup()
 #endif
 
   // attach fault interrupts
-  pinMode(nfault_pin, INPUT);
-  attachInterrupt(digitalPinToInterrupt(nfault_pin), faultInterrupt, FALLING);
-
   for (int i = 0; i < num_kill_pins; i++)
   {
     pinMode(kill_pins[i], INPUT);
     attachInterrupt(digitalPinToInterrupt(kill_pins[i]), faultInterrupt, FALLING);
   }
 
-  // initialize SPI communication with the BQ chips
-  bqInitializeSPI();
+  // initialize the BQ chip driver
+  bq.Initialize();
 
   /* CRC test code
   pinMode(BQ_FAULT_PIN, INPUT);
@@ -97,15 +103,15 @@ void loop()
   }
 
   // check current
-  getCurrent(&current);
+  bq.GetCurrent(current);
 
   // check voltages
-  getVoltages(voltages);
-  maxVoltage = getMax(voltages, num_segments);
+  bq.GetVoltages(voltages);
+  maxVoltage = *std::max_element(voltages.begin(), voltages.end());
 
   // check temps
-  getTemps(temps);
-  maxTemp = getMax(temps, num_thermo);
+  bq.GetTemps(temps);
+  maxTemp = *std::max_element(temps.begin(), temps.end());
   analogWrite(coolant_ctrl, map(maxTemp, 20, 50, 0, 255)); // Current pin is NOT pwm capable - rev board or use softpwm, also map ranges may be suboptimal
 
   // cell balancing if charging
@@ -113,16 +119,6 @@ void loop()
 
   // log to SD, send to ESP, send to CAN
   // todo
-}
-
-void shutdownCar()
-{
-  // kill the car
-  digitalWrite(contactorn_ctrl, LOW);
-  digitalWrite(contactorp_ctrl, LOW);
-  digitalWrite(contactorprecharge_ctrl, LOW);
-  carActive = false;
-  return;
 }
 
 void startCar()
