@@ -68,7 +68,7 @@ void setup()
     attachInterrupt(digitalPinToInterrupt(kill_pins[i]), faultInterrupt, FALLING);
   }
 
-  // initialize SPI communication with the BQ chips
+  // initialize the BQ chip driver
   bq.Initialize();
 
   /* CRC test code
