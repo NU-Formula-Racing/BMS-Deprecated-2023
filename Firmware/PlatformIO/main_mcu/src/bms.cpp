@@ -2,7 +2,6 @@
 
 #include <algorithm>
 
-bool BMS::carActive{false};
 int BMS::faultPin{-1};
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
@@ -66,15 +65,17 @@ void BMS::ChangeState(BMSState new_state)
     switch (new_state)
     {
         case BMSState::kShutdown:
-            // open contactors
+            shutdownCar();
             current_state_ = BMSState::kShutdown;
             break;
         case BMSState::kPrecharge:
-            // close negative and precharge contactors
+            digitalWrite(contactorn_ctrl, HIGH);
+            digitalWrite(contactorprecharge_ctrl, HIGH);  // precharge, but don't turn on car yet
             current_state_ = BMSState::kPrecharge;
             break;
         case BMSState::kActive:
-            // close main contactor, open precharge contactor
+            digitalWrite(contactorp_ctrl, HIGH);         // turn on car
+            digitalWrite(contactorprecharge_ctrl, LOW);  // disable precharge when car is running
             current_state_ = BMSState::kActive;
             break;
         case BMSState::kCharging:

@@ -34,6 +34,7 @@ public:
         kCharging = 3,
         kFault = 4
     };
+
     BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */, int num_cells_series, int num_thermistors)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
@@ -71,8 +72,6 @@ private:
 
     float maxVoltage;
     float maxTemp;
-    static bool carActive;
-    bool isCharging = false;
     static int faultPin;
     BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
@@ -93,7 +92,6 @@ private:
         digitalWrite(contactorn_ctrl, LOW);
         digitalWrite(contactorp_ctrl, LOW);
         digitalWrite(contactorprecharge_ctrl, LOW);
-        carActive = false;
         return;
     }
 
@@ -114,19 +112,6 @@ private:
         {
             faultPin = -1;
         }
-    }
-
-    static void startCar()
-    {
-        // precharge, then start the car
-        digitalWrite(contactorn_ctrl, HIGH);
-        digitalWrite(contactorprecharge_ctrl, HIGH);  // precharge, but don't turn on car yet
-        // monitor current going from battery, wait until below threshold to confirm precharge finished
-        // todo
-        delay(1000);                                 // overkill (I hope)
-        digitalWrite(contactorp_ctrl, HIGH);         // turn on car
-        digitalWrite(contactorprecharge_ctrl, LOW);  // disable precharge when car is running
-        carActive = true;
     }
 
     void getMaxMinAvgTot(double* arr, int arrSize, double* res)
