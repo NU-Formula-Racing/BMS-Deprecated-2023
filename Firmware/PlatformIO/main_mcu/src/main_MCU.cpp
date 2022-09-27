@@ -25,10 +25,10 @@ void setup()
 
 void loop()
 {
-    if (std::chrono::milliseconds(millis()) >= next_tick_time)
+    while (std::chrono::milliseconds(millis()) < next_tick_time)
     {
-        bms.Tick(kTickPeriod);
-        next_tick_time =
-            std::chrono::milliseconds(millis()) + kTickPeriod - (std::chrono::milliseconds(millis()) - next_tick_time);
     }
+    bms.Tick(kTickPeriod);
+    next_tick_time =
+        std::chrono::milliseconds(millis()) + kTickPeriod - (std::chrono::milliseconds(millis()) - next_tick_time);
 }
