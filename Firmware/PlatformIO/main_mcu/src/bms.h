@@ -18,13 +18,8 @@ class BMS
 public:
     enum class BMSFault
     {
-        kNone = 0,
-        kUndervoltage = 1,
-        kOvervoltage = 2,
-        kUnderTemperature = 3,
-        kOverTemperature = 4,
-        kOverCurrent = 5,
-        kExternalKill = 6
+        kNotFaulted = 0,
+        kFaulted = 1,
     };
 
     enum class BMSState
@@ -66,15 +61,29 @@ private:
 
     const int kNumCellsSeries;
     const int kNumThermistors;
+    
+    const float kUndertemperatureThreshold = -40;      //-40C min temp
+    const float kOvertemperatureThreshold = 60;        // 60C max temp
+    const float kUndertemperatureThresholdCharge = 0;  // 0 min temp while charging
 
     std::vector<float> voltages;
     std::vector<float> temperatures;
     std::vector<float> current;
 
-    float maxVoltage;
-    float maxTemp;
+    float max_voltage_;
+    float min_voltage_;
+    float max_temp_;
+    float min_temp_;
+
+    bool undervoltage_fault_{false};
+    bool overvoltage_fault_{false};
+    bool undertemperature_fault_{false};
+    bool overtemperature_fault_{false};
+    bool overcurrent_fault_{false};
+    bool external_kill_fault_{false};
+
     static int faultPin;
-    BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
+    BMSFault fault{BMSFault::kNotFaulted};
 
     BMSState current_state_{BMSState::kShutdown};
 
@@ -83,9 +92,7 @@ private:
 
     void ProcessCooling();
 
-#define OT_THRESH 60        // 60C max temp
-#define UT_THRESH -40       //-40C min temp
-#define UT_THRESH_CHARGE 0  // 0 min temp while charging
+    void CheckFaults();
 
     static void shutdownCar()
     {
