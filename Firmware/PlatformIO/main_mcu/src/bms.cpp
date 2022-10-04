@@ -4,10 +4,33 @@
 
 int BMS::faultPin{-1};
 
+void BMS::CheckFaults()
+{
+    const float kMaxVoltage = 0;
+    const float kMinVoltage = 0;
+    const float kMaxCurrent = 0;
+    const float kMaxTemp = 0;
+    const float kMinTemp = 0;
+
+    overvoltage_fault_ = (max_voltage_ >= kMaxVoltage);
+    undervoltage_fault_ = (min_voltage_ <= kMinVoltage);
+    overcurrent_fault_ = (current[0] >= kMaxCurrent);
+    overtemperature_fault_ = (max_temp_ >= kMaxTemp);
+    undertemperature_fault_ = (min_temp_ <= kMinTemp);
+
+    fault = static_cast<BMSFault>(
+        overvoltage_fault_ ||
+        undervoltage_fault_ ||
+        overcurrent_fault_ ||
+        overtemperature_fault_ ||
+        undertemperature_fault_
+    );
+}
+
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
     // check fault status
-    if (fault != BMSFault::kNone && current_state_ != BMSState::kFault)
+    if (fault != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
 #if serialdebug
         Serial.println("Fault:" + fault);
@@ -23,10 +46,11 @@ void BMS::ProcessCooling()
 {
     // check temperatures
     bq_.GetTemps(temperatures);
-    maxTemp = *std::max_element(temperatures.begin(), temperatures.end());
+    max_temp_ = *std::max_element(temperatures.begin(), temperatures.end());
+    min_temp_ = *std::min_element(temperatures.begin(), temperatures.end());
     analogWrite(
         coolant_ctrl,
-        clamp<uint8_t>(map(maxTemp, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
+        clamp<uint8_t>(map(max_temp_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
                                                                 // use softpwm, also map ranges may be suboptimal
 }
 
@@ -47,10 +71,15 @@ void BMS::ProcessState()
 
             // check voltages
             bq_.GetVoltages(voltages);
-            maxVoltage = *std::max_element(voltages.begin(), voltages.end());
+            max_voltage_ = *std::max_element(voltages.begin(), voltages.end());
+            min_voltage_ = *std::min_element(voltages.begin(), voltages.end());
             // send CAN messages with SOE (state of energy)
+
+            // check faults
+            CheckFaults();
             break;
         case BMSState::kCharging:
+            ProcessCooling();
             // cell balancing if charging
             // todo
             break;
