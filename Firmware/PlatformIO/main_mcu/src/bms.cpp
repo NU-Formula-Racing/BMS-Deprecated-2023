@@ -6,11 +6,11 @@ int BMS::fault_pin_{-1};
 
 void BMS::CheckFaults()
 {
-    const float kMaxVoltage = 0;
-    const float kMinVoltage = 0;
-    const float kMaxCurrent = 0;
-    const float kMaxTemp = 0;
-    const float kMinTemp = 0;
+    const float kMaxVoltage{4.2f};
+    const float kMinVoltage{2.5f};
+    const float kMaxCurrent{180.0f};
+    const float kMaxTemp{60.0f};
+    const float kMinTemp{-40.0f};
 
     overvoltage_fault_ = (max_voltage_ >= kMaxVoltage);
     undervoltage_fault_ = (min_voltage_ <= kMinVoltage);
