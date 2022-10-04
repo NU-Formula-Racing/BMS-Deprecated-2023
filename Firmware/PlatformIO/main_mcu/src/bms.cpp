@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-int BMS::faultPin{-1};
+int BMS::fault_pin_{-1};
 
 void BMS::CheckFaults()
 {
@@ -14,23 +14,18 @@ void BMS::CheckFaults()
 
     overvoltage_fault_ = (max_voltage_ >= kMaxVoltage);
     undervoltage_fault_ = (min_voltage_ <= kMinVoltage);
-    overcurrent_fault_ = (current[0] >= kMaxCurrent);
+    overcurrent_fault_ = (current_[0] >= kMaxCurrent);
     overtemperature_fault_ = (max_temp_ >= kMaxTemp);
     undertemperature_fault_ = (min_temp_ <= kMinTemp);
 
-    fault = static_cast<BMSFault>(
-        overvoltage_fault_ ||
-        undervoltage_fault_ ||
-        overcurrent_fault_ ||
-        overtemperature_fault_ ||
-        undertemperature_fault_
-    );
+    fault_ = static_cast<BMSFault>(overvoltage_fault_ || undervoltage_fault_ || overcurrent_fault_
+                                   || overtemperature_fault_ || undertemperature_fault_);
 }
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
     // check fault status
-    if (fault != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
+    if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
 #if serialdebug
         Serial.println("Fault:" + fault);
@@ -45,13 +40,13 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 void BMS::ProcessCooling()
 {
     // check temperatures
-    bq_.GetTemps(temperatures);
-    max_temp_ = *std::max_element(temperatures.begin(), temperatures.end());
-    min_temp_ = *std::min_element(temperatures.begin(), temperatures.end());
+    bq_.GetTemps(temperatures_);
+    max_temp_ = *std::max_element(temperatures_.begin(), temperatures_.end());
+    min_temp_ = *std::min_element(temperatures_.begin(), temperatures_.end());
     analogWrite(
         coolant_ctrl,
         clamp<uint8_t>(map(max_temp_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
-                                                                // use softpwm, also map ranges may be suboptimal
+                                                                  // use softpwm, also map ranges may be suboptimal
 }
 
 void BMS::ProcessState()
@@ -67,12 +62,12 @@ void BMS::ProcessState()
         case BMSState::kActive:
             ProcessCooling();
             // check current
-            bq_.GetCurrent(current);
+            bq_.GetCurrent(current_);
 
             // check voltages
-            bq_.GetVoltages(voltages);
-            max_voltage_ = *std::max_element(voltages.begin(), voltages.end());
-            min_voltage_ = *std::min_element(voltages.begin(), voltages.end());
+            bq_.GetVoltages(voltages_);
+            max_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
+            min_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
             // send CAN messages with SOE (state of energy)
 
             // check faults

@@ -35,9 +35,9 @@ public:
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
-          voltages{std::vector<float>(kNumCellsSeries)},
-          temperatures{std::vector<float>(kNumThermistors)},
-          current{std::vector<float>(1)}
+          voltages_{std::vector<float>(kNumCellsSeries)},
+          temperatures_{std::vector<float>(kNumThermistors)},
+          current_{std::vector<float>(1)}
     {
     }
 
@@ -61,14 +61,14 @@ private:
 
     const int kNumCellsSeries;
     const int kNumThermistors;
-    
+
     const float kUndertemperatureThreshold = -40;      //-40C min temp
     const float kOvertemperatureThreshold = 60;        // 60C max temp
     const float kUndertemperatureThresholdCharge = 0;  // 0 min temp while charging
 
-    std::vector<float> voltages;
-    std::vector<float> temperatures;
-    std::vector<float> current;
+    std::vector<float> voltages_;
+    std::vector<float> temperatures_;
+    std::vector<float> current_;
 
     float max_voltage_;
     float min_voltage_;
@@ -82,8 +82,8 @@ private:
     bool overcurrent_fault_{false};
     bool external_kill_fault_{false};
 
-    static int faultPin;
-    BMSFault fault{BMSFault::kNotFaulted};
+    static int fault_pin_;
+    BMSFault fault_{BMSFault::kNotFaulted};
 
     BMSState current_state_{BMSState::kShutdown};
 
@@ -112,13 +112,13 @@ private:
         {
             if (!digitalRead(kill_pins[i]))
             {
-                faultPin = kill_pins[i];
+                fault_pin_ = kill_pins[i];
                 break;
             }
         }
         if (!foundFault)
         {
-            faultPin = -1;
+            fault_pin_ = -1;
         }
     }
 
