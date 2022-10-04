@@ -16,7 +16,7 @@ T clamp(const T& n, const T& lower, const T& upper)
 class BMS
 {
 public:
-    enum class BMSFault
+    enum class BMSFault : bool
     {
         kNotFaulted = 0,
         kFaulted = 1,
