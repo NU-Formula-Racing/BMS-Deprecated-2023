@@ -84,6 +84,7 @@ void BMS::ChangeState(BMSState new_state)
             break;
         case BMSState::kFault:
             // open contactors
+            shutdownCar();
             current_state_ = BMSState::kFault;
             break;
     }

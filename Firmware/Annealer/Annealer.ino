@@ -28,8 +28,8 @@ void setup() {
   pinMode(temp_pin, INPUT);
   pinMode(15, OUTPUT);
   digitalWrite(15, LOW); //generate gnd for thermistor
-  pinMode(40, OUTPUT);
-  digitalWrite(40, HIGH); //generate vcc for thermistor resistor divider
+  pinMode(9, OUTPUT);
+  digitalWrite(9, HIGH); //generate vcc for thermistor resistor divider
   startAnneal();
 }
 
@@ -57,6 +57,7 @@ void loop() {
   Serial.println(toPrint);
   delay(100);
   digitalWrite(LEDPIN, LOW);
+  delay(100);
   if (millis() >= end_millis) {
     digitalWrite(contactorn_ctrl, LOW);
     while(1) {
