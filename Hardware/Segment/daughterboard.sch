@@ -12013,6 +12013,79 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="APHB1608SGEC">
+<description>&lt;Standard LEDs - SMD Grn/Red 15/15mcd 568/625nm Water Clr&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="APHB1608SGEC">
+<description>&lt;b&gt;APHB1608SGEC-2&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="0.6" y="-0.35" dx="0.5" dy="0.4" layer="1"/>
+<smd name="2" x="-0.6" y="-0.35" dx="0.5" dy="0.4" layer="1"/>
+<smd name="3" x="0.6" y="0.35" dx="0.5" dy="0.4" layer="1"/>
+<smd name="4" x="-0.6" y="0.35" dx="0.5" dy="0.4" layer="1"/>
+<text x="0.225" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0.225" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.2" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.2" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.2" layer="51"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.2" layer="51"/>
+<wire x1="-1.85" y1="1.55" x2="2.3" y2="1.55" width="0.1" layer="51"/>
+<wire x1="2.3" y1="1.55" x2="2.3" y2="-1.55" width="0.1" layer="51"/>
+<wire x1="2.3" y1="-1.55" x2="-1.85" y2="-1.55" width="0.1" layer="51"/>
+<wire x1="-1.85" y1="-1.55" x2="-1.85" y2="1.55" width="0.1" layer="51"/>
+<wire x1="1.2" y1="-0.4" x2="1.2" y2="-0.4" width="0.1" layer="21"/>
+<wire x1="1.2" y1="-0.4" x2="1.3" y2="-0.4" width="0.1" layer="21" curve="180"/>
+<wire x1="1.3" y1="-0.4" x2="1.3" y2="-0.4" width="0.1" layer="21"/>
+<wire x1="1.3" y1="-0.4" x2="1.2" y2="-0.4" width="0.1" layer="21" curve="180"/>
+<wire x1="0.1" y1="0.4" x2="-0.1" y2="0.4" width="0.1" layer="21"/>
+<wire x1="-0.1" y1="-0.4" x2="0.1" y2="-0.4" width="0.1" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="APHB1608SGEC">
+<wire x1="5.08" y1="2.54" x2="30.48" y2="2.54" width="0.254" layer="94"/>
+<wire x1="30.48" y1="-5.08" x2="30.48" y2="2.54" width="0.254" layer="94"/>
+<wire x1="30.48" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="31.75" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="31.75" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="A_GREEN" x="35.56" y="-2.54" length="middle" rot="R180"/>
+<pin name="K_GREEN" x="0" y="-2.54" length="middle"/>
+<pin name="A_RED" x="35.56" y="0" length="middle" rot="R180"/>
+<pin name="K_RED" x="0" y="0" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="APHB1608SGEC" prefix="LED">
+<description>&lt;b&gt;Standard LEDs - SMD Grn/Red 15/15mcd 568/625nm Water Clr&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/APHB1608SGEC.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="APHB1608SGEC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="APHB1608SGEC">
+<connects>
+<connect gate="G$1" pin="A_GREEN" pad="1"/>
+<connect gate="G$1" pin="A_RED" pad="3"/>
+<connect gate="G$1" pin="K_GREEN" pad="2"/>
+<connect gate="G$1" pin="K_RED" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Standard LEDs - SMD Grn/Red 15/15mcd 568/625nm Water Clr" constant="no"/>
+<attribute name="HEIGHT" value="0.65mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Kingbright" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="APHB1608SGEC" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="604-APHB1608SGEC" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Kingbright/APHB1608SGEC?qs=WZYOKEqGBpLhrRIHB2dNew%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12022,6 +12095,30 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
+<groups>
+<schematic_group name="BIDIRECTIONAL_LED"/>
+<schematic_group name="BIDIRECTIONAL_LED1"/>
+<schematic_group name="BIDIRECTIONAL_LED2"/>
+<schematic_group name="BIDIRECTIONAL_LED3"/>
+<schematic_group name="BIDIRECTIONAL_LED4"/>
+<schematic_group name="BIDIRECTIONAL_LED5"/>
+<schematic_group name="BIDIRECTIONAL_LED6"/>
+<schematic_group name="BIDIRECTIONAL_LED7"/>
+<schematic_group name="BIDIRECTIONAL_LED8"/>
+<schematic_group name="BIDIRECTIONAL_LED9"/>
+<schematic_group name="BIDIRECTIONAL_LED10"/>
+<schematic_group name="BIDIRECTIONAL_LED11"/>
+<schematic_group name="BIDIRECTIONAL_LED12"/>
+<schematic_group name="BIDIRECTIONAL_LED13"/>
+<schematic_group name="BIDIRECTIONAL_LED14"/>
+<schematic_group name="BIDIRECTIONAL_LED15"/>
+<schematic_group name="BIDIRECTIONAL_LED16"/>
+<schematic_group name="BIDIRECTIONAL_LED17"/>
+<schematic_group name="BIDIRECTIONAL_LED18"/>
+<schematic_group name="BIDIRECTIONAL_LED19"/>
+<schematic_group name="BIDIRECTIONAL_LED20"/>
+<schematic_group name="BIDIRECTIONAL_LED21"/>
+</groups>
 <parts>
 <part name="IC1" library="PBQ79656PAPTQ1" deviceset="PBQ79656PAPTQ1" device=""/>
 <part name="RCB1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1210" package3d_urn="urn:adsk.eagle:package:23554/2" value="10"/>
@@ -12196,6 +12293,50 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="CCB10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="CCB10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
 <part name="UART" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" package3d_urn="urn:adsk.eagle:package:8078634/1"/>
+<part name="LED1" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED2" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED3" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED4" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED5" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED6" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED7" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED8" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED9" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED10" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED11" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED12" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED13" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED14" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED15" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED16" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED17" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED18" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED19" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED20" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED21" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
+<part name="LED22" library="APHB1608SGEC" deviceset="APHB1608SGEC" device=""/>
+<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="150"/>
 </parts>
 <sheets>
 <sheet>
@@ -13143,6 +13284,182 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="UART" gate="-3" x="200.66" y="25.4" smashed="yes">
 <attribute name="NAME" x="203.2" y="24.638" size="1.524" layer="95"/>
 </instance>
+<instance part="LED1" gate="G$1" x="-38.1" y="-10.16" smashed="yes" grouprefs="BIDIRECTIONAL_LED">
+<attribute name="NAME" x="-6.35" y="-2.54" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-5.08" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R1" gate="G$1" x="5.08" y="-10.16" smashed="yes" grouprefs="BIDIRECTIONAL_LED">
+<attribute name="NAME" x="1.27" y="-8.6614" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-13.462" size="1.778" layer="96"/>
+</instance>
+<instance part="LED2" gate="G$1" x="-38.1" y="-38.1" smashed="yes" grouprefs="BIDIRECTIONAL_LED1">
+<attribute name="NAME" x="-6.35" y="-30.48" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-33.02" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R2" gate="G$1" x="5.08" y="-38.1" smashed="yes" grouprefs="BIDIRECTIONAL_LED1">
+<attribute name="NAME" x="1.27" y="-36.6014" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-41.402" size="1.778" layer="96"/>
+</instance>
+<instance part="LED3" gate="G$1" x="-38.1" y="-66.04" smashed="yes" grouprefs="BIDIRECTIONAL_LED2">
+<attribute name="NAME" x="-6.35" y="-58.42" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-60.96" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R3" gate="G$1" x="5.08" y="-66.04" smashed="yes" grouprefs="BIDIRECTIONAL_LED2">
+<attribute name="NAME" x="1.27" y="-64.5414" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-69.342" size="1.778" layer="96"/>
+</instance>
+<instance part="LED4" gate="G$1" x="-38.1" y="-93.98" smashed="yes" grouprefs="BIDIRECTIONAL_LED3">
+<attribute name="NAME" x="-6.35" y="-86.36" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-88.9" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R4" gate="G$1" x="5.08" y="-93.98" smashed="yes" grouprefs="BIDIRECTIONAL_LED3">
+<attribute name="NAME" x="1.27" y="-92.4814" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-97.282" size="1.778" layer="96"/>
+</instance>
+<instance part="LED5" gate="G$1" x="-38.1" y="-121.92" smashed="yes" grouprefs="BIDIRECTIONAL_LED4">
+<attribute name="NAME" x="-6.35" y="-114.3" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-116.84" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R5" gate="G$1" x="5.08" y="-121.92" smashed="yes" grouprefs="BIDIRECTIONAL_LED4">
+<attribute name="NAME" x="1.27" y="-120.4214" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-125.222" size="1.778" layer="96"/>
+</instance>
+<instance part="LED6" gate="G$1" x="-38.1" y="-149.86" smashed="yes" grouprefs="BIDIRECTIONAL_LED5">
+<attribute name="NAME" x="-6.35" y="-142.24" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-144.78" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R6" gate="G$1" x="5.08" y="-149.86" smashed="yes" grouprefs="BIDIRECTIONAL_LED5">
+<attribute name="NAME" x="1.27" y="-148.3614" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-153.162" size="1.778" layer="96"/>
+</instance>
+<instance part="LED7" gate="G$1" x="-38.1" y="-177.8" smashed="yes" grouprefs="BIDIRECTIONAL_LED6">
+<attribute name="NAME" x="-6.35" y="-170.18" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-172.72" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R7" gate="G$1" x="5.08" y="-177.8" smashed="yes" grouprefs="BIDIRECTIONAL_LED6">
+<attribute name="NAME" x="1.27" y="-176.3014" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-181.102" size="1.778" layer="96"/>
+</instance>
+<instance part="LED8" gate="G$1" x="-38.1" y="-203.2" smashed="yes" grouprefs="BIDIRECTIONAL_LED7">
+<attribute name="NAME" x="-6.35" y="-195.58" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-198.12" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R8" gate="G$1" x="5.08" y="-203.2" smashed="yes" grouprefs="BIDIRECTIONAL_LED7">
+<attribute name="NAME" x="1.27" y="-201.7014" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-206.502" size="1.778" layer="96"/>
+</instance>
+<instance part="LED9" gate="G$1" x="-38.1" y="-231.14" smashed="yes" grouprefs="BIDIRECTIONAL_LED8">
+<attribute name="NAME" x="-6.35" y="-223.52" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-226.06" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R9" gate="G$1" x="5.08" y="-231.14" smashed="yes" grouprefs="BIDIRECTIONAL_LED8">
+<attribute name="NAME" x="1.27" y="-229.6414" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-234.442" size="1.778" layer="96"/>
+</instance>
+<instance part="LED10" gate="G$1" x="-38.1" y="-259.08" smashed="yes" grouprefs="BIDIRECTIONAL_LED9">
+<attribute name="NAME" x="-6.35" y="-251.46" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-254" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R10" gate="G$1" x="5.08" y="-259.08" smashed="yes" grouprefs="BIDIRECTIONAL_LED9">
+<attribute name="NAME" x="1.27" y="-257.5814" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-262.382" size="1.778" layer="96"/>
+</instance>
+<instance part="LED11" gate="G$1" x="-38.1" y="-287.02" smashed="yes" grouprefs="BIDIRECTIONAL_LED10">
+<attribute name="NAME" x="-6.35" y="-279.4" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-6.35" y="-281.94" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R11" gate="G$1" x="5.08" y="-287.02" smashed="yes" grouprefs="BIDIRECTIONAL_LED10">
+<attribute name="NAME" x="1.27" y="-285.5214" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.27" y="-290.322" size="1.778" layer="96"/>
+</instance>
+<instance part="LED12" gate="G$1" x="-157.48" y="485.14" smashed="yes" grouprefs="BIDIRECTIONAL_LED11">
+<attribute name="NAME" x="-125.73" y="492.76" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="490.22" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R12" gate="G$1" x="-114.3" y="485.14" smashed="yes" grouprefs="BIDIRECTIONAL_LED11">
+<attribute name="NAME" x="-118.11" y="486.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="481.838" size="1.778" layer="96"/>
+</instance>
+<instance part="LED13" gate="G$1" x="-157.48" y="457.2" smashed="yes" grouprefs="BIDIRECTIONAL_LED12">
+<attribute name="NAME" x="-125.73" y="464.82" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="462.28" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R13" gate="G$1" x="-114.3" y="457.2" smashed="yes" grouprefs="BIDIRECTIONAL_LED12">
+<attribute name="NAME" x="-118.11" y="458.6986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="453.898" size="1.778" layer="96"/>
+</instance>
+<instance part="LED14" gate="G$1" x="-157.48" y="429.26" smashed="yes" grouprefs="BIDIRECTIONAL_LED13">
+<attribute name="NAME" x="-125.73" y="436.88" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="434.34" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R14" gate="G$1" x="-114.3" y="429.26" smashed="yes" grouprefs="BIDIRECTIONAL_LED13">
+<attribute name="NAME" x="-118.11" y="430.7586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="425.958" size="1.778" layer="96"/>
+</instance>
+<instance part="LED15" gate="G$1" x="-157.48" y="401.32" smashed="yes" grouprefs="BIDIRECTIONAL_LED14">
+<attribute name="NAME" x="-125.73" y="408.94" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="406.4" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R15" gate="G$1" x="-114.3" y="401.32" smashed="yes" grouprefs="BIDIRECTIONAL_LED14">
+<attribute name="NAME" x="-118.11" y="402.8186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="398.018" size="1.778" layer="96"/>
+</instance>
+<instance part="LED16" gate="G$1" x="-157.48" y="373.38" smashed="yes" grouprefs="BIDIRECTIONAL_LED15">
+<attribute name="NAME" x="-125.73" y="381" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="378.46" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R16" gate="G$1" x="-114.3" y="373.38" smashed="yes" grouprefs="BIDIRECTIONAL_LED15">
+<attribute name="NAME" x="-118.11" y="374.8786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="370.078" size="1.778" layer="96"/>
+</instance>
+<instance part="LED17" gate="G$1" x="-157.48" y="345.44" smashed="yes" grouprefs="BIDIRECTIONAL_LED16">
+<attribute name="NAME" x="-125.73" y="353.06" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="350.52" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R17" gate="G$1" x="-114.3" y="345.44" smashed="yes" grouprefs="BIDIRECTIONAL_LED16">
+<attribute name="NAME" x="-118.11" y="346.9386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="342.138" size="1.778" layer="96"/>
+</instance>
+<instance part="LED18" gate="G$1" x="-157.48" y="317.5" smashed="yes" grouprefs="BIDIRECTIONAL_LED17">
+<attribute name="NAME" x="-125.73" y="325.12" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="322.58" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R18" gate="G$1" x="-114.3" y="317.5" smashed="yes" grouprefs="BIDIRECTIONAL_LED17">
+<attribute name="NAME" x="-118.11" y="318.9986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="314.198" size="1.778" layer="96"/>
+</instance>
+<instance part="LED19" gate="G$1" x="-157.48" y="292.1" smashed="yes" grouprefs="BIDIRECTIONAL_LED18">
+<attribute name="NAME" x="-125.73" y="299.72" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="297.18" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R19" gate="G$1" x="-114.3" y="292.1" smashed="yes" grouprefs="BIDIRECTIONAL_LED18">
+<attribute name="NAME" x="-118.11" y="293.5986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="288.798" size="1.778" layer="96"/>
+</instance>
+<instance part="LED20" gate="G$1" x="-157.48" y="264.16" smashed="yes" grouprefs="BIDIRECTIONAL_LED19">
+<attribute name="NAME" x="-125.73" y="271.78" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="269.24" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R20" gate="G$1" x="-114.3" y="264.16" smashed="yes" grouprefs="BIDIRECTIONAL_LED19">
+<attribute name="NAME" x="-118.11" y="265.6586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="260.858" size="1.778" layer="96"/>
+</instance>
+<instance part="LED21" gate="G$1" x="-157.48" y="236.22" smashed="yes" grouprefs="BIDIRECTIONAL_LED20">
+<attribute name="NAME" x="-125.73" y="243.84" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="241.3" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R21" gate="G$1" x="-114.3" y="236.22" smashed="yes" grouprefs="BIDIRECTIONAL_LED20">
+<attribute name="NAME" x="-118.11" y="237.7186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="232.918" size="1.778" layer="96"/>
+</instance>
+<instance part="LED22" gate="G$1" x="-157.48" y="208.28" smashed="yes" grouprefs="BIDIRECTIONAL_LED21">
+<attribute name="NAME" x="-125.73" y="215.9" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-125.73" y="213.36" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="R22" gate="G$1" x="-114.3" y="208.28" smashed="yes" grouprefs="BIDIRECTIONAL_LED21">
+<attribute name="NAME" x="-118.11" y="209.7786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-118.11" y="204.978" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13173,6 +13490,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CCB0" gate="G$1" pin="1"/>
 <label x="127" y="33.02" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-38.1" x2="17.78" y2="-38.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<label x="10.16" y="-38.1" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VC2" class="0">
 <segment>
@@ -13202,19 +13524,46 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CCB2" gate="G$1" pin="2"/>
 <label x="119.38" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-66.04" x2="17.78" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<label x="12.7" y="-66.04" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$6" class="0">
+<net name="CB2-IN" class="0">
 <segment>
 <pinref part="RCB2" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-3" pin="S"/>
+<label x="48.26" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED3" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-68.58" x2="-20.32" y2="-68.58" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<wire x1="-20.32" y1="-68.58" x2="-20.32" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<pinref part="LED3" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-66.04" x2="-38.1" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<wire x1="-38.1" y1="-66.04" x2="-43.18" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<junction x="-38.1" y="-66.04" grouprefs="BIDIRECTIONAL_LED2"/>
+<label x="-45.72" y="-66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="CB1-IN" class="0">
 <segment>
 <pinref part="RCB1" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="30.48" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-2" pin="S"/>
+<label x="53.34" y="30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-40.64" x2="-20.32" y2="-40.64" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<wire x1="-20.32" y1="-40.64" x2="-20.32" y2="-38.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<pinref part="LED2" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-38.1" x2="-38.1" y2="-38.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<wire x1="-38.1" y1="-38.1" x2="-43.18" y2="-38.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<junction x="-38.1" y="-38.1" grouprefs="BIDIRECTIONAL_LED1"/>
+<label x="-45.72" y="-38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB3" class="0">
@@ -13228,14 +13577,30 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="RCB3" gate="G$1" pin="2"/>
 <label x="119.38" y="48.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-93.98" x2="17.78" y2="-93.98" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<label x="12.7" y="-93.98" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$8" class="0">
+<net name="CB3-IN" class="0">
 <segment>
 <pinref part="RCB3" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="48.26" x2="60.96" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="48.26" x2="60.96" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="50.8" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-4" pin="S"/>
+<label x="48.26" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED4" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-96.52" x2="-20.32" y2="-96.52" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<wire x1="-20.32" y1="-96.52" x2="-20.32" y2="-93.98" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<pinref part="LED4" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-93.98" x2="-38.1" y2="-93.98" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<wire x1="-38.1" y1="-93.98" x2="-43.18" y2="-93.98" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<junction x="-38.1" y="-93.98" grouprefs="BIDIRECTIONAL_LED3"/>
+<label x="-45.72" y="-93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC3" class="0">
@@ -13265,12 +13630,23 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CVC4" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="CB4-IN" class="0">
 <segment>
 <pinref part="RCB4" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="60.96" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-5" pin="S"/>
+<label x="50.8" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED5" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-124.46" x2="-20.32" y2="-124.46" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<wire x1="-20.32" y1="-124.46" x2="-20.32" y2="-121.92" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<pinref part="LED5" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-121.92" x2="-38.1" y2="-121.92" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<wire x1="-38.1" y1="-121.92" x2="-43.18" y2="-121.92" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<junction x="-38.1" y="-121.92" grouprefs="BIDIRECTIONAL_LED4"/>
+<label x="-45.72" y="-121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB4" class="0">
@@ -13286,6 +13662,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="91.44" y1="53.34" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="58.42" x2="83.82" y2="58.42" width="0.1524" layer="91"/>
 <label x="119.38" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-121.92" x2="17.78" y2="-121.92" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<label x="12.7" y="-121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC5" class="0">
@@ -13304,11 +13685,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="73.66" y1="60.96" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="CB5-IN" class="0">
 <segment>
 <pinref part="RCB5" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="68.58" x2="71.12" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-6" pin="S"/>
+<label x="50.8" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED6" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-152.4" x2="-20.32" y2="-152.4" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<wire x1="-20.32" y1="-152.4" x2="-20.32" y2="-149.86" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<pinref part="LED6" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-149.86" x2="-38.1" y2="-149.86" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<wire x1="-38.1" y1="-149.86" x2="-43.18" y2="-149.86" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<junction x="-38.1" y="-149.86" grouprefs="BIDIRECTIONAL_LED5"/>
+<label x="-45.72" y="-149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB5" class="0">
@@ -13324,6 +13716,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="83.82" y="68.58"/>
 <pinref part="CCB5" gate="G$1" pin="2"/>
 <label x="119.38" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-149.86" x2="17.78" y2="-149.86" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<label x="12.7" y="-149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC6" class="0">
@@ -13342,11 +13739,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="73.66" y1="71.12" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$27" class="0">
+<net name="CB6-IN" class="0">
 <segment>
 <pinref part="RCB6" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="78.74" x2="45.72" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-7" pin="S"/>
+<label x="50.8" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED7" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-180.34" x2="-20.32" y2="-180.34" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<wire x1="-20.32" y1="-180.34" x2="-20.32" y2="-177.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<pinref part="LED7" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-177.8" x2="-38.1" y2="-177.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<wire x1="-38.1" y1="-177.8" x2="-43.18" y2="-177.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<junction x="-38.1" y="-177.8" grouprefs="BIDIRECTIONAL_LED6"/>
+<label x="-45.72" y="-177.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB6" class="0">
@@ -13362,6 +13770,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="83.82" y="78.74"/>
 <pinref part="CCB6" gate="G$1" pin="2"/>
 <label x="119.38" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-177.8" x2="17.78" y2="-177.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<label x="12.7" y="-177.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC7" class="0">
@@ -13380,11 +13793,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="73.66" y1="81.28" x2="73.66" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$31" class="0">
+<net name="CB7-IN" class="0">
 <segment>
 <pinref part="RCB7" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="88.9" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-8" pin="S"/>
+<label x="50.8" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED8" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-205.74" x2="-20.32" y2="-205.74" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<wire x1="-20.32" y1="-205.74" x2="-20.32" y2="-203.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<pinref part="LED8" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-203.2" x2="-38.1" y2="-203.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<wire x1="-38.1" y1="-203.2" x2="-43.18" y2="-203.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<junction x="-38.1" y="-203.2" grouprefs="BIDIRECTIONAL_LED7"/>
+<label x="-45.72" y="-203.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB7" class="0">
@@ -13402,6 +13826,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="83.82" y="88.9"/>
 <pinref part="CCB7" gate="G$1" pin="2"/>
 <label x="119.38" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-203.2" x2="17.78" y2="-203.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<label x="12.7" y="-203.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC8" class="0">
@@ -13422,11 +13851,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="73.66" y1="91.44" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="CB8-IN" class="0">
 <segment>
 <pinref part="RCB8" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="99.06" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-9" pin="S"/>
+<label x="50.8" y="99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED9" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-233.68" x2="-20.32" y2="-233.68" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<wire x1="-20.32" y1="-233.68" x2="-20.32" y2="-231.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<pinref part="LED9" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-231.14" x2="-38.1" y2="-231.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<wire x1="-38.1" y1="-231.14" x2="-43.18" y2="-231.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<junction x="-38.1" y="-231.14" grouprefs="BIDIRECTIONAL_LED8"/>
+<label x="-45.72" y="-231.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB8" class="0">
@@ -13446,6 +13886,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="83.82" y="99.06"/>
 <pinref part="CCB8" gate="G$1" pin="2"/>
 <label x="119.38" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-231.14" x2="17.78" y2="-231.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<label x="12.7" y="-231.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC9" class="0">
@@ -13468,11 +13913,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="73.66" y1="104.14" x2="73.66" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="CB9-IN" class="0">
 <segment>
 <pinref part="RCB9" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="109.22" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-10" pin="S"/>
+<label x="50.8" y="109.22" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED10" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-261.62" x2="-20.32" y2="-261.62" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<wire x1="-20.32" y1="-261.62" x2="-20.32" y2="-259.08" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<pinref part="LED10" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-259.08" x2="-38.1" y2="-259.08" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<wire x1="-38.1" y1="-259.08" x2="-43.18" y2="-259.08" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<junction x="-38.1" y="-259.08" grouprefs="BIDIRECTIONAL_LED9"/>
+<label x="-45.72" y="-259.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB9" class="0">
@@ -13492,6 +13948,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="83.82" y="109.22"/>
 <pinref part="CCB9" gate="G$1" pin="2"/>
 <label x="132.08" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-259.08" x2="17.78" y2="-259.08" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<label x="12.7" y="-259.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC10" class="0">
@@ -13533,6 +13994,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CCB10" gate="G$1" pin="1"/>
 <junction x="144.78" y="88.9"/>
 </segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-287.02" x2="17.78" y2="-287.02" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<label x="12.7" y="-287.02" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VC0" class="0">
 <segment>
@@ -13557,6 +14023,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="IC1" gate="G$1" pin="CB0"/>
 <wire x1="142.24" y1="20.32" x2="142.24" y2="27.94" width="0.1524" layer="91"/>
 <label x="142.24" y="25.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-10.16" x2="17.78" y2="-10.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<label x="12.7" y="-10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC_CB_HIGH" class="0">
@@ -14126,6 +14597,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CCB0-1" gate="G$1" pin="1"/>
 <label x="111.76" y="279.4" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="457.2" x2="-101.6" y2="457.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<label x="-109.22" y="457.2" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VC2-1" class="0">
 <segment>
@@ -14155,19 +14631,46 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CCB2-1" gate="G$1" pin="2"/>
 <label x="109.22" y="292.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="429.26" x2="-101.6" y2="429.26" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<label x="-106.68" y="429.26" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$72" class="0">
+<net name="CB2-IN-1" class="0">
 <segment>
 <pinref part="RCB2-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="289.56" x2="35.56" y2="289.56" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-3" pin="S"/>
+<label x="38.1" y="289.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED14" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="426.72" x2="-139.7" y2="426.72" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<wire x1="-139.7" y1="426.72" x2="-139.7" y2="429.26" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<pinref part="LED14" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="429.26" x2="-157.48" y2="429.26" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<wire x1="-157.48" y1="429.26" x2="-162.56" y2="429.26" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<junction x="-157.48" y="429.26" grouprefs="BIDIRECTIONAL_LED13"/>
+<label x="-165.1" y="429.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$73" class="0">
+<net name="CB1-IN-1" class="0">
 <segment>
 <pinref part="RCB1-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="279.4" x2="40.64" y2="279.4" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-2" pin="S"/>
+<label x="40.64" y="279.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED13" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="454.66" x2="-139.7" y2="454.66" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<wire x1="-139.7" y1="454.66" x2="-139.7" y2="457.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<pinref part="LED13" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="457.2" x2="-157.48" y2="457.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<wire x1="-157.48" y1="457.2" x2="-162.56" y2="457.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<junction x="-157.48" y="457.2" grouprefs="BIDIRECTIONAL_LED12"/>
+<label x="-165.1" y="457.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB3-1" class="0">
@@ -14181,14 +14684,30 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="RCB3-1" gate="G$1" pin="2"/>
 <label x="109.22" y="297.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="401.32" x2="-101.6" y2="401.32" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<label x="-106.68" y="401.32" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$75" class="0">
+<net name="CB3-IN-1" class="0">
 <segment>
 <pinref part="RCB3-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="297.18" x2="50.8" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="297.18" x2="50.8" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="299.72" x2="35.56" y2="299.72" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-4" pin="S"/>
+<label x="38.1" y="299.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED15" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="398.78" x2="-139.7" y2="398.78" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<wire x1="-139.7" y1="398.78" x2="-139.7" y2="401.32" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<pinref part="LED15" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="401.32" x2="-157.48" y2="401.32" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<wire x1="-157.48" y1="401.32" x2="-162.56" y2="401.32" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<junction x="-157.48" y="401.32" grouprefs="BIDIRECTIONAL_LED14"/>
+<label x="-165.1" y="401.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC3-1" class="0">
@@ -14218,12 +14737,23 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CVC4-1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$78" class="0">
+<net name="CB4-IN-1" class="0">
 <segment>
 <pinref part="RCB4-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="309.88" x2="60.96" y2="309.88" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="309.88" x2="60.96" y2="307.34" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-5" pin="S"/>
+<label x="38.1" y="309.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED16" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="370.84" x2="-139.7" y2="370.84" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<wire x1="-139.7" y1="370.84" x2="-139.7" y2="373.38" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<pinref part="LED16" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="373.38" x2="-157.48" y2="373.38" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<wire x1="-157.48" y1="373.38" x2="-162.56" y2="373.38" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<junction x="-157.48" y="373.38" grouprefs="BIDIRECTIONAL_LED15"/>
+<label x="-165.1" y="373.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB4-1" class="0">
@@ -14239,6 +14769,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="81.28" y1="302.26" x2="81.28" y2="307.34" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="307.34" x2="73.66" y2="307.34" width="0.1524" layer="91"/>
 <label x="109.22" y="302.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="373.38" x2="-101.6" y2="373.38" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<label x="-106.68" y="373.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC5-1" class="0">
@@ -14257,11 +14792,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="63.5" y1="309.88" x2="63.5" y2="312.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$81" class="0">
+<net name="CB5-IN-1" class="0">
 <segment>
 <pinref part="RCB5-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="317.5" x2="60.96" y2="317.5" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-6" pin="S"/>
+<label x="38.1" y="317.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED17" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="342.9" x2="-139.7" y2="342.9" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<wire x1="-139.7" y1="342.9" x2="-139.7" y2="345.44" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<pinref part="LED17" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="345.44" x2="-157.48" y2="345.44" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<wire x1="-157.48" y1="345.44" x2="-162.56" y2="345.44" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<junction x="-157.48" y="345.44" grouprefs="BIDIRECTIONAL_LED16"/>
+<label x="-165.1" y="345.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB5-1" class="0">
@@ -14277,6 +14823,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="73.66" y="317.5"/>
 <pinref part="CCB5-1" gate="G$1" pin="2"/>
 <label x="109.22" y="307.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="345.44" x2="-101.6" y2="345.44" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<label x="-106.68" y="345.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC6-1" class="0">
@@ -14295,11 +14846,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="63.5" y1="320.04" x2="63.5" y2="322.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$84" class="0">
+<net name="CB6-IN-1" class="0">
 <segment>
 <pinref part="RCB6-1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="327.66" x2="35.56" y2="327.66" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-7" pin="S"/>
+<label x="38.1" y="327.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED18" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="314.96" x2="-139.7" y2="314.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<wire x1="-139.7" y1="314.96" x2="-139.7" y2="317.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<pinref part="LED18" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="317.5" x2="-157.48" y2="317.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<wire x1="-157.48" y1="317.5" x2="-162.56" y2="317.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<junction x="-157.48" y="317.5" grouprefs="BIDIRECTIONAL_LED17"/>
+<label x="-165.1" y="317.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB6-1" class="0">
@@ -14315,6 +14877,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="73.66" y="327.66"/>
 <pinref part="CCB6-1" gate="G$1" pin="2"/>
 <label x="109.22" y="312.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="317.5" x2="-101.6" y2="317.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<label x="-106.68" y="317.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC7-1" class="0">
@@ -14333,11 +14900,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="63.5" y1="330.2" x2="63.5" y2="332.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$87" class="0">
+<net name="CB7-IN-1" class="0">
 <segment>
 <pinref part="RCB7-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="337.82" x2="60.96" y2="337.82" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-8" pin="S"/>
+<label x="38.1" y="337.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED19" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="289.56" x2="-139.7" y2="289.56" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<wire x1="-139.7" y1="289.56" x2="-139.7" y2="292.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<pinref part="LED19" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="292.1" x2="-157.48" y2="292.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<wire x1="-157.48" y1="292.1" x2="-162.56" y2="292.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<junction x="-157.48" y="292.1" grouprefs="BIDIRECTIONAL_LED18"/>
+<label x="-165.1" y="292.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB7-1" class="0">
@@ -14355,6 +14933,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="73.66" y="337.82"/>
 <pinref part="CCB7-1" gate="G$1" pin="2"/>
 <label x="109.22" y="317.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="292.1" x2="-101.6" y2="292.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<label x="-106.68" y="292.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC8-1" class="0">
@@ -14375,11 +14958,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="63.5" y1="342.9" x2="63.5" y2="340.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$90" class="0">
+<net name="CB8-IN-1" class="0">
 <segment>
 <pinref part="RCB8-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="347.98" x2="60.96" y2="347.98" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-9" pin="S"/>
+<label x="38.1" y="347.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED20" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="261.62" x2="-139.7" y2="261.62" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<wire x1="-139.7" y1="261.62" x2="-139.7" y2="264.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<pinref part="LED20" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="264.16" x2="-157.48" y2="264.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<wire x1="-157.48" y1="264.16" x2="-162.56" y2="264.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<junction x="-157.48" y="264.16" grouprefs="BIDIRECTIONAL_LED19"/>
+<label x="-165.1" y="264.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB8-1" class="0">
@@ -14399,6 +14993,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="73.66" y="347.98"/>
 <pinref part="CCB8-1" gate="G$1" pin="2"/>
 <label x="109.22" y="322.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="264.16" x2="-101.6" y2="264.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<label x="-106.68" y="264.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC9-1" class="0">
@@ -14421,11 +15020,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="63.5" y1="353.06" x2="63.5" y2="350.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$93" class="0">
+<net name="CB9-IN-1" class="0">
 <segment>
 <pinref part="RCB9-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="358.14" x2="60.96" y2="358.14" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-10" pin="S"/>
+<label x="38.1" y="358.14" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED21" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="233.68" x2="-139.7" y2="233.68" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<wire x1="-139.7" y1="233.68" x2="-139.7" y2="236.22" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<pinref part="LED21" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="236.22" x2="-157.48" y2="236.22" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<wire x1="-157.48" y1="236.22" x2="-162.56" y2="236.22" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<junction x="-157.48" y="236.22" grouprefs="BIDIRECTIONAL_LED20"/>
+<label x="-165.1" y="236.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CB9-1" class="0">
@@ -14445,6 +15055,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="73.66" y="358.14"/>
 <pinref part="CCB9-1" gate="G$1" pin="2"/>
 <label x="116.84" y="332.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="236.22" x2="-101.6" y2="236.22" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<label x="-106.68" y="236.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC10-1" class="0">
@@ -14486,6 +15101,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="CCB10-1" gate="G$1" pin="1"/>
 <junction x="134.62" y="337.82"/>
 </segment>
+<segment>
+<pinref part="R22" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="208.28" x2="-101.6" y2="208.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<label x="-106.68" y="208.28" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VC0-1" class="0">
 <segment>
@@ -14510,6 +15130,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="IC2" gate="G$1" pin="CB0"/>
 <wire x1="132.08" y1="269.24" x2="132.08" y2="276.86" width="0.1524" layer="91"/>
 <label x="132.08" y="274.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="-109.22" y1="485.14" x2="-101.6" y2="485.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<label x="-106.68" y="485.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VC_CB_HIGH-1" class="0">
@@ -15128,158 +15753,484 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="RCS1" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="CB10-IN" class="0">
 <segment>
 <pinref part="RCB10" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="119.38" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="CBL" gate="-11" pin="S"/>
+<label x="50.8" y="119.38" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED11" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-289.56" x2="-20.32" y2="-289.56" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<wire x1="-20.32" y1="-289.56" x2="-20.32" y2="-287.02" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<pinref part="LED11" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-287.02" x2="-38.1" y2="-287.02" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<wire x1="-38.1" y1="-287.02" x2="-43.18" y2="-287.02" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<junction x="-38.1" y="-287.02" grouprefs="BIDIRECTIONAL_LED10"/>
+<label x="-45.72" y="-287.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$32" class="0">
+<net name="CB0-IN" class="0">
 <segment>
 <wire x1="71.12" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="RCB0" gate="G$1" pin="1"/>
 <pinref part="CBL" gate="-1" pin="S"/>
+<label x="53.34" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED1" gate="G$1" pin="A_GREEN"/>
+<wire x1="-2.54" y1="-12.7" x2="-20.32" y2="-12.7" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<wire x1="-20.32" y1="-12.7" x2="-20.32" y2="-10.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<pinref part="LED1" gate="G$1" pin="K_RED"/>
+<wire x1="-20.32" y1="-10.16" x2="-38.1" y2="-10.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<wire x1="-38.1" y1="-10.16" x2="-43.18" y2="-10.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<junction x="-38.1" y="-10.16" grouprefs="BIDIRECTIONAL_LED"/>
+<label x="-45.72" y="-10.16" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="CB10-IN-1" class="0">
 <segment>
 <pinref part="RCB10-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="368.3" x2="60.96" y2="368.3" width="0.1524" layer="91"/>
 <pinref part="CBH" gate="-11" pin="S"/>
+<label x="40.64" y="368.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED22" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="205.74" x2="-139.7" y2="205.74" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<wire x1="-139.7" y1="205.74" x2="-139.7" y2="208.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<pinref part="LED22" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="208.28" x2="-157.48" y2="208.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<wire x1="-157.48" y1="208.28" x2="-162.56" y2="208.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<junction x="-157.48" y="208.28" grouprefs="BIDIRECTIONAL_LED21"/>
+<label x="-165.1" y="208.28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$96" class="0">
+<net name="CB0-IN-1" class="0">
 <segment>
 <wire x1="60.96" y1="269.24" x2="40.64" y2="269.24" width="0.1524" layer="91"/>
 <pinref part="RCB0-1" gate="G$1" pin="1"/>
 <pinref part="CBH" gate="-1" pin="S"/>
+<label x="43.18" y="269.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED12" gate="G$1" pin="A_GREEN"/>
+<wire x1="-121.92" y1="482.6" x2="-139.7" y2="482.6" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<wire x1="-139.7" y1="482.6" x2="-139.7" y2="485.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<pinref part="LED12" gate="G$1" pin="K_RED"/>
+<wire x1="-139.7" y1="485.14" x2="-157.48" y2="485.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<wire x1="-157.48" y1="485.14" x2="-162.56" y2="485.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<junction x="-157.48" y="485.14" grouprefs="BIDIRECTIONAL_LED11"/>
+<label x="-165.1" y="485.14" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="VC1-IN" class="0">
 <segment>
 <pinref part="VCL" gate="-2" pin="S"/>
 <pinref part="RVC1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="27.94" x2="60.96" y2="27.94" width="0.1524" layer="91"/>
+<label x="53.34" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="VC2-IN" class="0">
 <segment>
 <pinref part="VCL" gate="-3" pin="S"/>
 <pinref part="RVC2" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="38.1" x2="60.96" y2="38.1" width="0.1524" layer="91"/>
+<label x="48.26" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="VC3-IN" class="0">
 <segment>
 <pinref part="VCL" gate="-4" pin="S"/>
 <pinref part="RVC3" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="45.72" x2="60.96" y2="45.72" width="0.1524" layer="91"/>
+<label x="48.26" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$23" class="0">
+<net name="VC4-IN" class="0">
 <segment>
 <pinref part="VCL" gate="-5" pin="S"/>
 <pinref part="RVC4" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="55.88" x2="60.96" y2="55.88" width="0.1524" layer="91"/>
+<label x="50.8" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$24" class="0">
+<net name="VC9-IN" class="0">
 <segment>
 <pinref part="RVC9" gate="G$1" pin="1"/>
 <pinref part="VCL" gate="-10" pin="S"/>
 <wire x1="60.96" y1="106.68" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
+<label x="50.8" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$25" class="0">
+<net name="VC8-IN" class="0">
 <segment>
 <pinref part="VCL" gate="-9" pin="S"/>
 <pinref part="RVC8" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="96.52" x2="60.96" y2="96.52" width="0.1524" layer="91"/>
+<label x="50.8" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$26" class="0">
+<net name="VC7-IN" class="0">
 <segment>
 <pinref part="RVC7" gate="G$1" pin="1"/>
 <pinref part="VCL" gate="-8" pin="S"/>
 <wire x1="60.96" y1="86.36" x2="45.72" y2="86.36" width="0.1524" layer="91"/>
+<label x="50.8" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="VC6-IN" class="0">
 <segment>
 <pinref part="VCL" gate="-7" pin="S"/>
 <pinref part="RVC6" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="76.2" x2="60.96" y2="76.2" width="0.1524" layer="91"/>
+<label x="50.8" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$30" class="0">
+<net name="VC5-IN" class="0">
 <segment>
 <pinref part="RVC5" gate="G$1" pin="1"/>
 <pinref part="VCL" gate="-6" pin="S"/>
 <wire x1="60.96" y1="66.04" x2="45.72" y2="66.04" width="0.1524" layer="91"/>
+<label x="50.8" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$34" class="0">
+<net name="VC9-IN-1" class="0">
 <segment>
 <pinref part="RVC9-1" gate="G$1" pin="1"/>
 <pinref part="VCH" gate="-10" pin="S"/>
 <wire x1="50.8" y1="355.6" x2="35.56" y2="355.6" width="0.1524" layer="91"/>
+<label x="38.1" y="355.6" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$35" class="0">
+<net name="VC8-IN-1" class="0">
 <segment>
 <pinref part="VCH" gate="-9" pin="S"/>
 <pinref part="RVC8-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="345.44" x2="50.8" y2="345.44" width="0.1524" layer="91"/>
+<label x="38.1" y="345.44" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$36" class="0">
+<net name="VC7-IN-1" class="0">
 <segment>
 <pinref part="RVC7-1" gate="G$1" pin="1"/>
 <pinref part="VCH" gate="-8" pin="S"/>
 <wire x1="50.8" y1="335.28" x2="35.56" y2="335.28" width="0.1524" layer="91"/>
+<label x="38.1" y="335.28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$37" class="0">
+<net name="VC6-IN-1" class="0">
 <segment>
 <pinref part="VCH" gate="-7" pin="S"/>
 <pinref part="RVC6-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="325.12" x2="50.8" y2="325.12" width="0.1524" layer="91"/>
+<label x="38.1" y="325.12" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$38" class="0">
+<net name="VC5-IN-1" class="0">
 <segment>
 <pinref part="RVC5-1" gate="G$1" pin="1"/>
 <pinref part="VCH" gate="-6" pin="S"/>
 <wire x1="50.8" y1="314.96" x2="35.56" y2="314.96" width="0.1524" layer="91"/>
+<label x="38.1" y="314.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$39" class="0">
+<net name="VC4-IN-1" class="0">
 <segment>
 <pinref part="VCH" gate="-5" pin="S"/>
 <pinref part="RVC4-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="304.8" x2="50.8" y2="304.8" width="0.1524" layer="91"/>
+<label x="38.1" y="304.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$40" class="0">
+<net name="VC3-IN-1" class="0">
 <segment>
 <pinref part="RVC3-1" gate="G$1" pin="1"/>
 <pinref part="VCH" gate="-4" pin="S"/>
 <wire x1="50.8" y1="294.64" x2="35.56" y2="294.64" width="0.1524" layer="91"/>
+<label x="38.1" y="294.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$41" class="0">
+<net name="VC2-IN-1" class="0">
 <segment>
 <pinref part="VCH" gate="-3" pin="S"/>
 <pinref part="RVC2-1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="287.02" x2="50.8" y2="287.02" width="0.1524" layer="91"/>
+<label x="38.1" y="287.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$42" class="0">
+<net name="VC1-IN-1" class="0">
 <segment>
 <pinref part="RVC1-1" gate="G$1" pin="1"/>
 <pinref part="VCH" gate="-2" pin="S"/>
 <wire x1="50.8" y1="276.86" x2="40.64" y2="276.86" width="0.1524" layer="91"/>
+<label x="40.64" y="276.86" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$43" class="0">
+<segment>
+<pinref part="LED1" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-12.7" x2="-38.1" y2="-17.78" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<wire x1="-38.1" y1="-17.78" x2="0" y2="-17.78" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<pinref part="LED1" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-17.78" x2="0" y2="-10.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<wire x1="0" y1="-10.16" x2="-2.54" y2="-10.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<junction x="0" y="-10.16" grouprefs="BIDIRECTIONAL_LED"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="LED2" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-40.64" x2="-38.1" y2="-45.72" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<wire x1="-38.1" y1="-45.72" x2="0" y2="-45.72" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<pinref part="LED2" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-45.72" x2="0" y2="-38.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<wire x1="0" y1="-38.1" x2="-2.54" y2="-38.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<junction x="0" y="-38.1" grouprefs="BIDIRECTIONAL_LED1"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="LED3" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-68.58" x2="-38.1" y2="-73.66" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<wire x1="-38.1" y1="-73.66" x2="0" y2="-73.66" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<pinref part="LED3" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-73.66" x2="0" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<wire x1="0" y1="-66.04" x2="-2.54" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED2"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<junction x="0" y="-66.04" grouprefs="BIDIRECTIONAL_LED2"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="LED4" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-96.52" x2="-38.1" y2="-101.6" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<wire x1="-38.1" y1="-101.6" x2="0" y2="-101.6" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<pinref part="LED4" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-101.6" x2="0" y2="-93.98" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<wire x1="0" y1="-93.98" x2="-2.54" y2="-93.98" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED3"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<junction x="0" y="-93.98" grouprefs="BIDIRECTIONAL_LED3"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="LED5" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-124.46" x2="-38.1" y2="-129.54" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<wire x1="-38.1" y1="-129.54" x2="0" y2="-129.54" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<pinref part="LED5" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-129.54" x2="0" y2="-121.92" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<wire x1="0" y1="-121.92" x2="-2.54" y2="-121.92" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED4"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<junction x="0" y="-121.92" grouprefs="BIDIRECTIONAL_LED4"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="LED6" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-152.4" x2="-38.1" y2="-157.48" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<wire x1="-38.1" y1="-157.48" x2="0" y2="-157.48" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<pinref part="LED6" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-157.48" x2="0" y2="-149.86" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<wire x1="0" y1="-149.86" x2="-2.54" y2="-149.86" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED5"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<junction x="0" y="-149.86" grouprefs="BIDIRECTIONAL_LED5"/>
+</segment>
+</net>
+<net name="N$27" class="0">
+<segment>
+<pinref part="LED7" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-180.34" x2="-38.1" y2="-185.42" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<wire x1="-38.1" y1="-185.42" x2="0" y2="-185.42" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<pinref part="LED7" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-185.42" x2="0" y2="-177.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<wire x1="0" y1="-177.8" x2="-2.54" y2="-177.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED6"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<junction x="0" y="-177.8" grouprefs="BIDIRECTIONAL_LED6"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="LED8" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-205.74" x2="-38.1" y2="-210.82" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<wire x1="-38.1" y1="-210.82" x2="0" y2="-210.82" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<pinref part="LED8" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-210.82" x2="0" y2="-203.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<wire x1="0" y1="-203.2" x2="-2.54" y2="-203.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED7"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<junction x="0" y="-203.2" grouprefs="BIDIRECTIONAL_LED7"/>
+</segment>
+</net>
+<net name="N$35" class="0">
+<segment>
+<pinref part="LED9" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-233.68" x2="-38.1" y2="-238.76" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<wire x1="-38.1" y1="-238.76" x2="0" y2="-238.76" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<pinref part="LED9" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-238.76" x2="0" y2="-231.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<wire x1="0" y1="-231.14" x2="-2.54" y2="-231.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED8"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<junction x="0" y="-231.14" grouprefs="BIDIRECTIONAL_LED8"/>
+</segment>
+</net>
+<net name="N$38" class="0">
+<segment>
+<pinref part="LED10" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-261.62" x2="-38.1" y2="-266.7" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<wire x1="-38.1" y1="-266.7" x2="0" y2="-266.7" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<pinref part="LED10" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-266.7" x2="0" y2="-259.08" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<wire x1="0" y1="-259.08" x2="-2.54" y2="-259.08" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED9"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<junction x="0" y="-259.08" grouprefs="BIDIRECTIONAL_LED9"/>
+</segment>
+</net>
+<net name="N$41" class="0">
+<segment>
+<pinref part="LED11" gate="G$1" pin="K_GREEN"/>
+<wire x1="-38.1" y1="-289.56" x2="-38.1" y2="-294.64" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<wire x1="-38.1" y1="-294.64" x2="0" y2="-294.64" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<pinref part="LED11" gate="G$1" pin="A_RED"/>
+<wire x1="0" y1="-294.64" x2="0" y2="-287.02" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<wire x1="0" y1="-287.02" x2="-2.54" y2="-287.02" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED10"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<junction x="0" y="-287.02" grouprefs="BIDIRECTIONAL_LED10"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="LED12" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="482.6" x2="-157.48" y2="477.52" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<wire x1="-157.48" y1="477.52" x2="-119.38" y2="477.52" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<pinref part="LED12" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="477.52" x2="-119.38" y2="485.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<wire x1="-119.38" y1="485.14" x2="-121.92" y2="485.14" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED11"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<junction x="-119.38" y="485.14" grouprefs="BIDIRECTIONAL_LED11"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="LED13" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="454.66" x2="-157.48" y2="449.58" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<wire x1="-157.48" y1="449.58" x2="-119.38" y2="449.58" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<pinref part="LED13" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="449.58" x2="-119.38" y2="457.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<wire x1="-119.38" y1="457.2" x2="-121.92" y2="457.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED12"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<junction x="-119.38" y="457.2" grouprefs="BIDIRECTIONAL_LED12"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="LED14" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="426.72" x2="-157.48" y2="421.64" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<wire x1="-157.48" y1="421.64" x2="-119.38" y2="421.64" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<pinref part="LED14" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="421.64" x2="-119.38" y2="429.26" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<wire x1="-119.38" y1="429.26" x2="-121.92" y2="429.26" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED13"/>
+<pinref part="R14" gate="G$1" pin="1"/>
+<junction x="-119.38" y="429.26" grouprefs="BIDIRECTIONAL_LED13"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="LED15" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="398.78" x2="-157.48" y2="393.7" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<wire x1="-157.48" y1="393.7" x2="-119.38" y2="393.7" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<pinref part="LED15" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="393.7" x2="-119.38" y2="401.32" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<wire x1="-119.38" y1="401.32" x2="-121.92" y2="401.32" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED14"/>
+<pinref part="R15" gate="G$1" pin="1"/>
+<junction x="-119.38" y="401.32" grouprefs="BIDIRECTIONAL_LED14"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="LED16" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="370.84" x2="-157.48" y2="365.76" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<wire x1="-157.48" y1="365.76" x2="-119.38" y2="365.76" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<pinref part="LED16" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="365.76" x2="-119.38" y2="373.38" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<wire x1="-119.38" y1="373.38" x2="-121.92" y2="373.38" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED15"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<junction x="-119.38" y="373.38" grouprefs="BIDIRECTIONAL_LED15"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="LED17" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="342.9" x2="-157.48" y2="337.82" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<wire x1="-157.48" y1="337.82" x2="-119.38" y2="337.82" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<pinref part="LED17" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="337.82" x2="-119.38" y2="345.44" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<wire x1="-119.38" y1="345.44" x2="-121.92" y2="345.44" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED16"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<junction x="-119.38" y="345.44" grouprefs="BIDIRECTIONAL_LED16"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="LED18" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="314.96" x2="-157.48" y2="309.88" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<wire x1="-157.48" y1="309.88" x2="-119.38" y2="309.88" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<pinref part="LED18" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="309.88" x2="-119.38" y2="317.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<wire x1="-119.38" y1="317.5" x2="-121.92" y2="317.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED17"/>
+<pinref part="R18" gate="G$1" pin="1"/>
+<junction x="-119.38" y="317.5" grouprefs="BIDIRECTIONAL_LED17"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="LED19" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="289.56" x2="-157.48" y2="284.48" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<wire x1="-157.48" y1="284.48" x2="-119.38" y2="284.48" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<pinref part="LED19" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="284.48" x2="-119.38" y2="292.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<wire x1="-119.38" y1="292.1" x2="-121.92" y2="292.1" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED18"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<junction x="-119.38" y="292.1" grouprefs="BIDIRECTIONAL_LED18"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="LED20" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="261.62" x2="-157.48" y2="256.54" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<wire x1="-157.48" y1="256.54" x2="-119.38" y2="256.54" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<pinref part="LED20" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="256.54" x2="-119.38" y2="264.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<wire x1="-119.38" y1="264.16" x2="-121.92" y2="264.16" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED19"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<junction x="-119.38" y="264.16" grouprefs="BIDIRECTIONAL_LED19"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="LED21" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="233.68" x2="-157.48" y2="228.6" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<wire x1="-157.48" y1="228.6" x2="-119.38" y2="228.6" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<pinref part="LED21" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="228.6" x2="-119.38" y2="236.22" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<wire x1="-119.38" y1="236.22" x2="-121.92" y2="236.22" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED20"/>
+<pinref part="R21" gate="G$1" pin="1"/>
+<junction x="-119.38" y="236.22" grouprefs="BIDIRECTIONAL_LED20"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="LED22" gate="G$1" pin="K_GREEN"/>
+<wire x1="-157.48" y1="205.74" x2="-157.48" y2="200.66" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<wire x1="-157.48" y1="200.66" x2="-119.38" y2="200.66" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<pinref part="LED22" gate="G$1" pin="A_RED"/>
+<wire x1="-119.38" y1="200.66" x2="-119.38" y2="208.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<wire x1="-119.38" y1="208.28" x2="-121.92" y2="208.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL_LED21"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<junction x="-119.38" y="208.28" grouprefs="BIDIRECTIONAL_LED21"/>
 </segment>
 </net>
 </nets>
@@ -15353,6 +16304,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.5" severity="warning">
+Since Version 9.5, EAGLE supports persistent groups with
+schematics, and board files. Those persistent groups
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
