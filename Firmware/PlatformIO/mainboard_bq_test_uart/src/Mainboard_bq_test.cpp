@@ -5,9 +5,13 @@
 
 #include "bq_comm.h"
 #include "teensy_pin_defs.h"
+#include "thermistor.h"
 
-BQ79656 bq(Serial2, 8);
+NXFT15XH103FA2B050 bq_thermistor{};
+BQ79656 bq(Serial2, 8, bq_thermistor);
 std::vector<float> voltages(20, 0);
+std::vector<float> temperatures(16, 0);
+std::vector<float> current(1, 0);
 
 void setup()
 {
@@ -23,6 +27,7 @@ void setup()
     // delay(5);
     bq.SetStackSize(2);
     bq.Initialize();
+    bq.SetProtectors(4.20f, 2.50f, 60.0f, -40.0f);
     delay(1000);
 }
 
@@ -54,8 +59,25 @@ void loop()
         Serial.print(voltages[i]);
     }
     Serial.println("\nDone");
+    delay(1000);
+    Serial.println("Test read current" /*and temperatures*/);
     while (1)
-        ;
+    {
+        Serial.print("Current: ");
+        bq.GetCurrent(current);
+        Serial.print(current[0]);
+        Serial.println("A");
+        delay(500);
+        Serial.println("Temperatures: ");
+        Serial.print(temperatures[0]);
+        Serial.print("C");
+        for (size_t i = 1; i < temperatures.size(); i++)
+        {
+            Serial.print(", ");
+            Serial.print(temperatures[i]);
+            Serial.print("C");
+        }
+    }
     /* byteArr[0] = 0x00;
     bq.Comm(BQ79656::RequestType::BROAD_WRITE, 1, 0, BQ79656::RegisterAddress::OTP_ECC_TEST, byteArr);
     byteArr[0] = 0x01;
