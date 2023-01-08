@@ -68,6 +68,7 @@ void loop()
         Serial.print(current[0]);
         Serial.println("A");
         delay(500);
+        bq.GetTemps(temperatures);
         Serial.println("Temperatures: ");
         Serial.print(temperatures[0]);
         Serial.print("C");
