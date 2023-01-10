@@ -160,10 +160,10 @@
 <wire x1="99.675" y1="0" x2="99.802" y2="88.1255" width="0" layer="20"/>
 <wire x1="99.802" y1="88.1255" x2="0" y2="88.1255" width="0" layer="20"/>
 <wire x1="0" y1="88.1255" x2="0" y2="0" width="0" layer="20"/>
-<hole x="4.445" y="4.445" drill="3.59918125"/>
-<hole x="95.25" y="4.445" drill="3.59918125"/>
-<hole x="95.25" y="83.82" drill="3.59918125"/>
-<hole x="4.445" y="83.5025" drill="3.59918125"/>
+<hole x="4.445" y="4.445" drill="4.5212"/>
+<hole x="95.25" y="4.445" drill="4.5212"/>
+<hole x="95.25" y="83.82" drill="4.5212"/>
+<hole x="4.445" y="83.5025" drill="4.5212"/>
 <text x="9.8425" y="43.4975" size="1.9304" layer="21">BMS Main Board V3</text>
 <text x="9.8425" y="40.9575" size="0.8128" layer="21">Joshua Feist, Lance Go, Luc Ah-Hot, Isaac Kim
 Jan 2023</text>
