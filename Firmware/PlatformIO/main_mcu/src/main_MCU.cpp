@@ -1,5 +1,5 @@
 #include <Arduino.h>
-
+#include <SD.h>
 #include <chrono>
 
 #include "bms.h"
@@ -18,6 +18,9 @@ void setup()
 #if serialdebug
     Serial.begin(115200);
     Serial.println("Starting...");
+    
+    SD.begin(BUILTIN_SDCARD);
+
 #endif
 
     bms.Initialize();

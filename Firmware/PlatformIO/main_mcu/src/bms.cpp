@@ -1,11 +1,14 @@
 #include "bms.h"
+#include <SD.h>
+#include <sdlogger.h>
 
-#include <algorithm>
+
 
 int BMS::faultPin{-1};
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
+    SdLogger obj;
     // check fault status
     if (fault != BMSFault::kNone && current_state_ != BMSState::kFault)
     {
@@ -16,8 +19,13 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
     }
 
     // log to SD, send to ESP, send to CAN
-    // todo
-}
+
+    obj.fileOpen();
+
+    //figure out how to fix convert void to sdt::vector
+    //how to write time there
+    obj.fileWrite(millis(), voltages, temperatures, current);
+ }
 
 void BMS::ProcessCooling()
 {
@@ -62,10 +70,12 @@ void BMS::ProcessState()
 
 void BMS::ChangeState(BMSState new_state)
 {
+    SdLogger obj;
     switch (new_state)
     {
         case BMSState::kShutdown:
             shutdownCar();
+            obj.fileClose();
             current_state_ = BMSState::kShutdown;
             break;
         case BMSState::kPrecharge:
