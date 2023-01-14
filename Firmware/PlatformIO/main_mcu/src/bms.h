@@ -76,7 +76,7 @@ private:
     float maxVoltage;
     float minVoltage;
     float maxTemp;
-    float minDischargeCurrent;
+    float maxDischargeCurrent;
     float maxRegenCurrent;
     static int faultPin;
     BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill

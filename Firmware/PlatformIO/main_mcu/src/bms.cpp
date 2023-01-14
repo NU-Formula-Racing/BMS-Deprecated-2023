@@ -42,7 +42,7 @@ void BMS::GetStateOfEnergy()
 
     // Limit at V_open + I * (R_internal / numCellsParallel) = V_boundary
     //  => I = (numCellsParallel / R_internal) * (V_boundary - V_open)
-    minDischargeCurrent = std::min(
+    maxDischargeCurrent = std::min(
         invResistancePerCell * (kCellUndervoltage - minOpenCircuitVoltage),
         kDischargeCurrent
     );
