@@ -60,6 +60,8 @@ public:
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
+    
+    void GetStateOfEnergy();
 
 private:
     BQ79656 bq_;
@@ -72,7 +74,10 @@ private:
     std::vector<float> current;
 
     float maxVoltage;
+    float minVoltage;
     float maxTemp;
+    float minDischargeCurrent;
+    float maxRegenCurrent;
     static int faultPin;
     BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
