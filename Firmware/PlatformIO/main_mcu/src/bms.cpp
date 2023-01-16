@@ -2,12 +2,12 @@
 
 #include <algorithm>
 
-int BMS::faultPin{-1};
+int BMS::fault_pin_{-1};
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
     // check fault status
-    if (fault != BMSFault::kNone && current_state_ != BMSState::kFault)
+    if (fault_ != BMSFault::kNone && current_state_ != BMSState::kFault)
     {
 #if serialdebug
         Serial.println("Fault:" + fault);
@@ -22,12 +22,12 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 void BMS::ProcessCooling()
 {
     // check temperatures
-    bq_.GetTemps(temperatures);
-    maxTemp = *std::max_element(temperatures.begin(), temperatures.end());
-    analogWrite(
-        coolant_ctrl,
-        clamp<uint8_t>(map(maxTemp, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
-                                                                // use softpwm, also map ranges may be suboptimal
+    bq_.GetTemps(temperatures_);
+    max_temperature_ = *std::max_element(temperatures_.begin(), temperatures_.end());
+    analogWrite(coolant_ctrl,
+                clamp<uint8_t>(
+                    map(max_temperature_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
+                                                                      // use softpwm, also map ranges may be suboptimal
 }
 
 void BMS::ProcessState()
@@ -43,11 +43,11 @@ void BMS::ProcessState()
         case BMSState::kActive:
             ProcessCooling();
             // check current
-            bq_.GetCurrent(current);
+            bq_.GetCurrent(current_);
 
             // check voltages
-            bq_.GetVoltages(voltages);
-            maxVoltage = *std::max_element(voltages.begin(), voltages.end());
+            bq_.GetVoltages(voltages_);
+            max_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
             // send CAN messages with SOE (state of energy)
             break;
         case BMSState::kCharging:
@@ -65,7 +65,7 @@ void BMS::ChangeState(BMSState new_state)
     switch (new_state)
     {
         case BMSState::kShutdown:
-            shutdownCar();
+            ShutdownCar();
             current_state_ = BMSState::kShutdown;
             break;
         case BMSState::kPrecharge:
@@ -84,7 +84,7 @@ void BMS::ChangeState(BMSState new_state)
             break;
         case BMSState::kFault:
             // open contactors
-            shutdownCar();
+            ShutdownCar();
             current_state_ = BMSState::kFault;
             break;
     }

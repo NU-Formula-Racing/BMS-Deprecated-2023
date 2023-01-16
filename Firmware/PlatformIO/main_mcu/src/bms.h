@@ -40,9 +40,9 @@ public:
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
-          voltages{std::vector<float>(kNumCellsSeries)},
-          temperatures{std::vector<float>(kNumThermistors)},
-          current{std::vector<float>(1)}
+          voltages_{std::vector<float>(kNumCellsSeries)},
+          temperatures_{std::vector<float>(kNumThermistors)},
+          current_{std::vector<float>(1)}
     {
     }
 
@@ -52,7 +52,7 @@ public:
         for (int i = 0; i < num_kill_pins; i++)
         {
             pinMode(kill_pins[i], INPUT);
-            attachInterrupt(digitalPinToInterrupt(kill_pins[i]), faultInterrupt, FALLING);
+            attachInterrupt(digitalPinToInterrupt(kill_pins[i]), FaultInterrupt, FALLING);
         }
 
         // initialize the BQ chip driver
@@ -67,14 +67,14 @@ private:
     const int kNumCellsSeries;
     const int kNumThermistors;
 
-    std::vector<float> voltages;
-    std::vector<float> temperatures;
-    std::vector<float> current;
+    std::vector<float> voltages_;
+    std::vector<float> temperatures_;
+    std::vector<float> current_;
 
-    float maxVoltage;
-    float maxTemp;
-    static int faultPin;
-    BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
+    float max_voltage_;
+    float max_temperature_;
+    static int fault_pin_;
+    BMSFault fault_{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
     BMSState current_state_{BMSState::kShutdown};
 
@@ -87,7 +87,7 @@ private:
 #define UT_THRESH -40       //-40C min temp
 #define UT_THRESH_CHARGE 0  // 0 min temp while charging
 
-    static void shutdownCar()
+    static void ShutdownCar()
     {
         // kill the car
         digitalWrite(contactorn_ctrl, LOW);
@@ -96,26 +96,28 @@ private:
         return;
     }
 
-    static void faultInterrupt()
+    static void FaultInterrupt()
     {
-        shutdownCar();
+        ShutdownCar();
 
         bool foundFault = 0;
         for (int i = 0; i < num_kill_pins; i++)
         {
             if (!digitalRead(kill_pins[i]))
             {
-                faultPin = kill_pins[i];
+                fault_pin_ = kill_pins[i];
                 break;
             }
         }
         if (!foundFault)
         {
-            faultPin = -1;
+            fault_pin_ = -1;
         }
     }
 
-    void getMaxMinAvgTot(double* arr, int arrSize, double* res)
+    void GetMaxMinAvgTot(double* arr,
+                         int arrSize,
+                         double* res)  // may be unused/deleted or replaced with a different function/implementation
     {
         double currMax = arr[0];
         double currMin = arr[0];
