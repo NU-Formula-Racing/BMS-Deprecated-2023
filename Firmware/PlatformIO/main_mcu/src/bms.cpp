@@ -31,14 +31,25 @@ void BMS::CalculateSOE()
 
     // Limit at V_open + I * (R_internal / numCellsParallel) = V_boundary
     //  => I = (numCellsParallel / R_internal) * (V_boundary - V_open)
-    maxDischargeCurrent = std::min(
-        (minOpenCircuitVoltage - kCellUndervoltage) / internalResistancePerSeriesElement,
+    float maxDischargeVoltage = minOpenCircuitVoltage - kCellUndervoltage;
+    float maxRegenVoltage = kCellOvervoltage - maxOpenCircuitVoltage;
+    float uncappedDischargeCurrent = maxDischargeVoltage / internalResistancePerSeriesElement;
+    float uncappedRegenCurrent = maxRegenVoltage / internalResistancePerSeriesElement;
+
+    // I = P / V
+    float powerCappedDischargeCurrent = kMaxPowerOutput / maxDischargeVoltage;
+    float powerCappedRegenCurrent = kMaxPowerOutput / maxRegenVoltage;
+
+    maxDischargeCurrent = std::min({
+        uncappedDischargeCurrent,
+        powerCappedDischargeCurrent,
         kDischargeCurrent
-    );
-    maxRegenCurrent = std::min(
-        (kCellOvervoltage - maxOpenCircuitVoltage) / internalResistancePerSeriesElement,
+    });
+    maxRegenCurrent = std::min({
+        uncappedRegenCurrent,
+        powerCappedRegenCurrent,
         kRegenCurrent
-    );
+    });
 }
 
 void BMS::ProcessCooling()

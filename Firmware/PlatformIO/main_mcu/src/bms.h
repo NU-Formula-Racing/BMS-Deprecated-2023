@@ -10,6 +10,7 @@
 // Consts for SoE calculation
 const float kDischargeCurrent = 45;
 const float kRegenCurrent = 45;
+const float kMaxPowerOutput = 80000;
 const float kCellUndervoltage = 2.5;
 const float kCellOvervoltage = 4.2;
 const float kInternalResistance = 0.016;
