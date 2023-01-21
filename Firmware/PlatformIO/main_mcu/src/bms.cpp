@@ -30,9 +30,6 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 // Find maximum discharge and regen current
 void BMS::GetStateOfEnergy()
 {
-    // Update min voltage (max already set(?))
-    minVoltage = *std::min_element(voltages.begin(), voltages.end());
-
     float currentPerCell = current[0] / kNumCellsParallel;
     float invResistancePerCell = kNumCellsParallel / kInternalResistance;
 
@@ -81,6 +78,7 @@ void BMS::ProcessState()
             // check voltages
             bq_.GetVoltages(voltages);
             maxVoltage = *std::max_element(voltages.begin(), voltages.end());
+            minVoltage = *std::min_element(voltages.begin(), voltages.end());
             // send CAN messages with SOE (state of energy)
             break;
         case BMSState::kCharging:
