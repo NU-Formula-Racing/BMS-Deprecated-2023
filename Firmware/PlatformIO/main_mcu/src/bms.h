@@ -7,6 +7,14 @@
 #include "bq_comm.h"
 #include "teensy_pin_defs.h"
 
+// Consts for SoE calculation
+const float kDischargeCurrent = 45;
+const float kRegenCurrent = 45;
+const float kCellUndervoltage = 2.5;
+const float kCellOvervoltage = 4.2;
+const float kInternalResistance = 0.016;
+const int kNumCellsParallel = 4;
+
 template <typename T>
 T clamp(const T& n, const T& lower, const T& upper)
 {
@@ -61,7 +69,7 @@ public:
 
     void Tick(std::chrono::milliseconds elapsed_time);
     
-    void GetStateOfEnergy();
+    void CalculateSOE();
 
 private:
     BQ79656 bq_;

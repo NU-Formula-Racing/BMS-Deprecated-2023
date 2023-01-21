@@ -2,14 +2,6 @@
 
 #include <algorithm>
 
-// Consts for SoE calculation
-const float kDischargeCurrent = 45;
-const float kRegenCurrent = 4.2;
-const float kCellUndervoltage = 2.5;
-const float kCellOvervoltage = 4.2;
-const float kInternalResistance = 0.016;
-const int kNumCellsParallel = 4; // Is this already defined somewhere else?
-
 int BMS::faultPin{-1};
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
@@ -28,23 +20,23 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 }
 
 // Find maximum discharge and regen current
-void BMS::GetStateOfEnergy()
+void BMS::CalculateSOE()
 {
     float currentPerCell = current[0] / kNumCellsParallel;
-    float invResistancePerCell = kNumCellsParallel / kInternalResistance;
+    float internalResistancePerSeriesElement = kInternalResistance / kNumCellsParallel;
 
-    // Find highest and lowest open cell voltage
+    // Find highest and lowest open circuit voltage
     float minOpenCircuitVoltage = minVoltage + (currentPerCell * kInternalResistance);
     float maxOpenCircuitVoltage = maxVoltage + (currentPerCell * kInternalResistance);
 
     // Limit at V_open + I * (R_internal / numCellsParallel) = V_boundary
     //  => I = (numCellsParallel / R_internal) * (V_boundary - V_open)
     maxDischargeCurrent = std::min(
-        invResistancePerCell * (kCellUndervoltage - minOpenCircuitVoltage),
+        (minOpenCircuitVoltage - kCellUndervoltage) / internalResistancePerSeriesElement,
         kDischargeCurrent
     );
     maxRegenCurrent = std::min(
-        invResistancePerCell * (kCellOvervoltage - maxOpenCircuitVoltage),
+        (kCellOvervoltage - maxOpenCircuitVoltage) / internalResistancePerSeriesElement,
         kRegenCurrent
     );
 }
