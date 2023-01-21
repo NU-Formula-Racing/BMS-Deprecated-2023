@@ -5,7 +5,7 @@
 // Consts for SoE calculation
 const float kDischargeCurrent = 45;
 const float kRegenCurrent = 4.2;
-const float kCellUndervoltage = 2.5;
+const float kCellUndervoltage = 3.23;
 const float kCellOvervoltage = 4.2;
 const float kInternalResistance = 0.016;
 const int kNumCellsParallel = 4; // Is this already defined somewhere else?
