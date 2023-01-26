@@ -1,5 +1,6 @@
 #include "bms.h"
 
+#include <numeric>
 #include <algorithm>
 
 int BMS::faultPin{-1};
@@ -37,19 +38,18 @@ void BMS::CalculateSOE()
     float uncappedRegenCurrent = maxRegenVoltage / internalResistancePerSeriesElement;
 
     // I = P / V
-    float powerCappedDischargeCurrent = kMaxPowerOutput / maxDischargeVoltage;
-    float powerCappedRegenCurrent = kMaxPowerOutput / maxRegenVoltage;
+    float packVoltage = std::accumulate(voltages.begin(), voltages.end(), 0);
+    float powerCappedCurrent = kMaxPowerOutput / packVoltage;
 
     maxDischargeCurrent = std::min({
         uncappedDischargeCurrent,
-        powerCappedDischargeCurrent,
+        powerCappedCurrent,
         kDischargeCurrent
     });
-    maxRegenCurrent = std::min({
+    maxRegenCurrent = std::min(
         uncappedRegenCurrent,
-        powerCappedRegenCurrent,
         kRegenCurrent
-    });
+    );
 }
 
 void BMS::ProcessCooling()
