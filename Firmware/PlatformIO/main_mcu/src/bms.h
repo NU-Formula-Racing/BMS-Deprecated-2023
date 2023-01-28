@@ -1,5 +1,6 @@
 #pragma once
 #include <Arduino.h>
+#include <Watchdog_t4.h>
 
 #include <algorithm>
 #include <chrono>
@@ -24,7 +25,8 @@ public:
         kUnderTemperature = 3,
         kOverTemperature = 4,
         kOverCurrent = 5,
-        kExternalKill = 6
+        kWatchdogTimer = 6,
+        kExternalKill = 7
     };
 
     enum class BMSState
@@ -57,12 +59,26 @@ public:
 
         // initialize the BQ chip driver
         bq_.Initialize();
+
+        // initialize the watchdog timer to shutdown if the dog isn't fed for 1 second, reset if the dog isn't fed for 2
+        // seconds
+        WDT_timings_t config;
+        config.trigger = 1; /* in seconds, 0->128 */
+        config.timeout = 2; /* in seconds, 0->128 */
+        config.callback = [this]()
+        {
+            this->fault = BMSFault::kWatchdogTimer;
+            this->ChangeState(BMSState::kFault);
+        };
+        watchdog_timer_.begin(config);
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
 
 private:
     BQ79656 bq_;
+
+    WDT_T4<WDT1> watchdog_timer_;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
@@ -74,7 +90,7 @@ private:
     float maxVoltage;
     float maxTemp;
     static int faultPin;
-    BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
+    BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=watchdog, 7=external kill
 
     BMSState current_state_{BMSState::kShutdown};
 

@@ -6,6 +6,7 @@ int BMS::faultPin{-1};
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
+    watchdog_timer_.feed();  // so we don't reboot
     // check fault status
     if (fault != BMSFault::kNone && current_state_ != BMSState::kFault)
     {
