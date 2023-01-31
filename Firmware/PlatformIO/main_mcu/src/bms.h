@@ -7,6 +7,15 @@
 #include "bq_comm.h"
 #include "teensy_pin_defs.h"
 
+// Consts for SoE calculation
+const float kDischargeCurrent = 45;
+const float kRegenCurrent = 45;
+const float kMaxPowerOutput = 80000;
+const float kCellUndervoltage = 2.5;
+const float kCellOvervoltage = 4.2;
+const float kInternalResistance = 0.016;
+const int kNumCellsParallel = 4;
+
 template <typename T>
 T clamp(const T& n, const T& lower, const T& upper)
 {
@@ -60,6 +69,8 @@ public:
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
+    
+    void CalculateSOE();
 
 private:
     BQ79656 bq_;
@@ -71,10 +82,13 @@ private:
     std::vector<float> temperatures_;
     std::vector<float> current_;
 
-    float max_voltage_;
-    float max_temperature_;
-    static int fault_pin_;
-    BMSFault fault_{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
+    float maxVoltage;
+    float minVoltage;
+    float maxTemp;
+    float maxDischargeCurrent;
+    float maxRegenCurrent;
+    static int faultPin;
+    BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
     BMSState current_state_{BMSState::kShutdown};
 

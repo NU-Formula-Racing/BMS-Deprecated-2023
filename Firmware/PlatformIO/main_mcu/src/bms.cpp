@@ -1,5 +1,6 @@
 #include "bms.h"
 
+#include <numeric>
 #include <algorithm>
 
 int BMS::fault_pin_{-1};
@@ -17,6 +18,38 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 
     // log to SD, send to ESP, send to CAN
     // todo
+}
+
+// Find maximum discharge and regen current
+void BMS::CalculateSOE()
+{
+    float currentPerCell = current[0] / kNumCellsParallel;
+    float internalResistancePerSeriesElement = kInternalResistance / kNumCellsParallel;
+
+    // Find highest and lowest open circuit voltage
+    float minOpenCircuitVoltage = minVoltage + (currentPerCell * kInternalResistance);
+    float maxOpenCircuitVoltage = maxVoltage + (currentPerCell * kInternalResistance);
+
+    // Limit at V_open + I * (R_internal / numCellsParallel) = V_boundary
+    //  => I = (numCellsParallel / R_internal) * (V_boundary - V_open)
+    float maxDischargeVoltage = minOpenCircuitVoltage - kCellUndervoltage;
+    float maxRegenVoltage = kCellOvervoltage - maxOpenCircuitVoltage;
+    float uncappedDischargeCurrent = maxDischargeVoltage / internalResistancePerSeriesElement;
+    float uncappedRegenCurrent = maxRegenVoltage / internalResistancePerSeriesElement;
+
+    // I = P / V
+    float packVoltage = std::accumulate(voltages.begin(), voltages.end(), 0);
+    float powerCappedCurrent = kMaxPowerOutput / packVoltage;
+
+    maxDischargeCurrent = std::min({
+        uncappedDischargeCurrent,
+        powerCappedCurrent,
+        kDischargeCurrent
+    });
+    maxRegenCurrent = std::min(
+        uncappedRegenCurrent,
+        kRegenCurrent
+    );
 }
 
 void BMS::ProcessCooling()
@@ -47,7 +80,9 @@ void BMS::ProcessState()
 
             // check voltages
             bq_.GetVoltages(voltages_);
-            max_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
+            maxVoltage = *std::max_element(voltages_.begin(), voltages_.end());
+            minVoltage = *std::min_element(voltages_.begin(), voltages_.end());
+
             // send CAN messages with SOE (state of energy)
             break;
         case BMSState::kCharging:
