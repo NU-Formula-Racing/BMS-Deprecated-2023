@@ -1,7 +1,7 @@
 #include "bms.h"
 
-#include <numeric>
 #include <algorithm>
+#include <numeric>
 
 int BMS::faultPin{-1};
 
@@ -41,15 +41,8 @@ void BMS::CalculateSOE()
     float packVoltage = std::accumulate(voltages.begin(), voltages.end(), 0);
     float powerCappedCurrent = kMaxPowerOutput / packVoltage;
 
-    maxDischargeCurrent = std::min({
-        uncappedDischargeCurrent,
-        powerCappedCurrent,
-        kDischargeCurrent
-    });
-    maxRegenCurrent = std::min(
-        uncappedRegenCurrent,
-        kRegenCurrent
-    );
+    maxDischargeCurrent = std::min({uncappedDischargeCurrent, powerCappedCurrent, kDischargeCurrent});
+    maxRegenCurrent = std::min(uncappedRegenCurrent, kRegenCurrent);
 }
 
 void BMS::ProcessCooling()
@@ -57,6 +50,7 @@ void BMS::ProcessCooling()
     // check temperatures
     bq_.GetTemps(temperatures);
     maxTemp = *std::max_element(temperatures.begin(), temperatures.end());
+    minTemp = *std::min_element(temperatures.begin(), temperatures.end());
     analogWrite(
         coolant_ctrl,
         clamp<uint8_t>(map(maxTemp, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
@@ -75,6 +69,15 @@ void BMS::ProcessState()
             break;
         case BMSState::kActive:
             ProcessCooling();
+            if (maxTemp > OT_THRESH)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
+
+            else if (minTemp < UT_THRESH)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
             // check current
             bq_.GetCurrent(current);
 
@@ -82,10 +85,47 @@ void BMS::ProcessState()
             bq_.GetVoltages(voltages);
             maxVoltage = *std::max_element(voltages.begin(), voltages.end());
             minVoltage = *std::min_element(voltages.begin(), voltages.end());
+
+            if (maxVoltage > kCellOvervoltage)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
+            if (minVoltage < kCellUndervoltage)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
             // send CAN messages with SOE (state of energy)
             break;
         case BMSState::kCharging:
             // cell balancing if charging
+            bq_.StartBalancingSimple();
+            ProcessCooling();
+            if (maxTemp > OT_THRESH)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
+
+            if (minTemp < UT_THRESH_CHARGE)
+            {
+                ChangeState(BMSState::kCharging);
+            }
+            // check current
+            bq_.GetCurrent(current);
+
+            // check voltages
+            bq_.GetVoltages(voltages);
+            maxVoltage = *std::max_element(voltages.begin(), voltages.end());
+            minVoltage = *std::min_element(voltages.begin(), voltages.end());
+
+            if (maxVoltage > kCellOvervoltage)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
+
+            if (minVoltage < kCellUndervoltage)
+            {
+                ChangeState(BMSState::kCharging);
+            }
             // todo
             break;
         case BMSState::kFault:

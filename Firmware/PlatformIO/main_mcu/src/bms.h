@@ -69,7 +69,7 @@ public:
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
-    
+
     void CalculateSOE();
 
 private:
@@ -85,6 +85,7 @@ private:
     float maxVoltage;
     float minVoltage;
     float maxTemp;
+    float minTemp;
     float maxDischargeCurrent;
     float maxRegenCurrent;
     static int faultPin;
