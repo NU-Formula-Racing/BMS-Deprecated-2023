@@ -3,12 +3,12 @@
 #include <algorithm>
 #include <numeric>
 
-int BMS::faultPin{-1};
+int BMS::fault_pin_{-1};
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
     // check fault status
-    if (fault != BMSFault::kNone && current_state_ != BMSState::kFault)
+    if (fault_ != BMSFault::kNone && current_state_ != BMSState::kFault)
     {
 #if serialdebug
         Serial.println("Fault:" + fault);
@@ -23,38 +23,39 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 // Find maximum discharge and regen current
 void BMS::CalculateSOE()
 {
-    float currentPerCell = current[0] / kNumCellsParallel;
-    float internalResistancePerSeriesElement = kInternalResistance / kNumCellsParallel;
+    float current_per_cell = current_[0] / kNumCellsParallel;
+    float internal_resistance_per_series_element = kInternalResistance / kNumCellsParallel;
 
     // Find highest and lowest open circuit voltage
-    float minOpenCircuitVoltage = minVoltage + (currentPerCell * kInternalResistance);
-    float maxOpenCircuitVoltage = maxVoltage + (currentPerCell * kInternalResistance);
+    float min_open_circuit_voltage = min_cell_voltage_ + (current_per_cell * kInternalResistance);
+    float max_open_circuit_voltage = max_cell_voltage_ + (current_per_cell * kInternalResistance);
 
     // Limit at V_open + I * (R_internal / numCellsParallel) = V_boundary
     //  => I = (numCellsParallel / R_internal) * (V_boundary - V_open)
-    float maxDischargeVoltage = minOpenCircuitVoltage - kCellUndervoltage;
-    float maxRegenVoltage = kCellOvervoltage - maxOpenCircuitVoltage;
-    float uncappedDischargeCurrent = maxDischargeVoltage / internalResistancePerSeriesElement;
-    float uncappedRegenCurrent = maxRegenVoltage / internalResistancePerSeriesElement;
+    float max_discharge_voltage_delta = min_open_circuit_voltage - kCellUndervoltage;
+    float max_regen_voltage_delta = kCellOvervoltage - max_open_circuit_voltage;
+    float uncapped_discharge_current = max_discharge_voltage_delta / internal_resistance_per_series_element;
+    float uncapped_regen_current = max_regen_voltage_delta / internal_resistance_per_series_element;
 
     // I = P / V
-    float packVoltage = std::accumulate(voltages.begin(), voltages.end(), 0);
-    float powerCappedCurrent = kMaxPowerOutput / packVoltage;
+    float pack_voltage = std::accumulate(voltages_.begin(), voltages_.end(), 0);
+    float power_capped_current = kMaxPowerOutput / pack_voltage;
 
-    maxDischargeCurrent = std::min({uncappedDischargeCurrent, powerCappedCurrent, kDischargeCurrent});
-    maxRegenCurrent = std::min(uncappedRegenCurrent, kRegenCurrent);
+    max_allowed_discharge_current_ = std::min({uncapped_discharge_current, power_capped_current, kDischargeCurrent});
+    max_allowed_regen_current_ = std::min(uncapped_regen_current, kRegenCurrent);
 }
 
 void BMS::ProcessCooling()
 {
     // check temperatures
-    bq_.GetTemps(temperatures);
-    maxTemp = *std::max_element(temperatures.begin(), temperatures.end());
-    minTemp = *std::min_element(temperatures.begin(), temperatures.end());
+    bq_.GetTemps(temperatures_);
+    max_cell_temperature_ = *std::max_element(temperatures_.begin(), temperatures_.end());
+    min_cell_temperature_ = *std::min_element(temperatures_.begin(), temperatures_.end());
     analogWrite(
         coolant_ctrl,
-        clamp<uint8_t>(map(maxTemp, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
-                                                                // use softpwm, also map ranges may be suboptimal
+        clamp<uint8_t>(
+            map(max_cell_temperature_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
+                                                                   // use softpwm, also map ranges may be suboptimal
 }
 
 void BMS::ProcessState()
@@ -69,60 +70,60 @@ void BMS::ProcessState()
             break;
         case BMSState::kActive:
             ProcessCooling();
-            if (maxTemp > OT_THRESH)
+            if (max_cell_temperature_ > OT_THRESH)
             {
                 ChangeState(BMSState::kShutdown);
             }
 
-            else if (minTemp < UT_THRESH)
+            else if (min_cell_temperature_ < UT_THRESH)
             {
                 ChangeState(BMSState::kShutdown);
             }
             // check current
-            bq_.GetCurrent(current);
+            bq_.GetCurrent(current_);
 
             // check voltages
-            bq_.GetVoltages(voltages);
-            maxVoltage = *std::max_element(voltages.begin(), voltages.end());
-            minVoltage = *std::min_element(voltages.begin(), voltages.end());
+            bq_.GetVoltages(voltages_);
+            max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
+            min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
+            if (max_cell_voltage_ > kCellOvervoltage)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
+            if (min_cell_voltage_ < kCellUndervoltage)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
 
-            if (maxVoltage > kCellOvervoltage)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
-            if (minVoltage < kCellUndervoltage)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
             // send CAN messages with SOE (state of energy)
             break;
         case BMSState::kCharging:
             // cell balancing if charging
             bq_.StartBalancingSimple();
             ProcessCooling();
-            if (maxTemp > OT_THRESH)
+            if (max_cell_temperature_ > OT_THRESH)
             {
                 ChangeState(BMSState::kShutdown);
             }
 
-            if (minTemp < UT_THRESH_CHARGE)
+            if (min_cell_temperature_ < UT_THRESH_CHARGE)
             {
                 ChangeState(BMSState::kCharging);
             }
             // check current
-            bq_.GetCurrent(current);
+            bq_.GetCurrent(current_);
 
             // check voltages
-            bq_.GetVoltages(voltages);
-            maxVoltage = *std::max_element(voltages.begin(), voltages.end());
-            minVoltage = *std::min_element(voltages.begin(), voltages.end());
+            bq_.GetVoltages(voltages_);
+            max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
+            min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
 
-            if (maxVoltage > kCellOvervoltage)
+            if (max_cell_voltage_ > kCellOvervoltage)
             {
                 ChangeState(BMSState::kShutdown);
             }
 
-            if (minVoltage < kCellUndervoltage)
+            if (min_cell_voltage_ < kCellUndervoltage)
             {
                 ChangeState(BMSState::kCharging);
             }
@@ -139,7 +140,7 @@ void BMS::ChangeState(BMSState new_state)
     switch (new_state)
     {
         case BMSState::kShutdown:
-            shutdownCar();
+            ShutdownCar();
             current_state_ = BMSState::kShutdown;
             break;
         case BMSState::kPrecharge:
@@ -158,7 +159,7 @@ void BMS::ChangeState(BMSState new_state)
             break;
         case BMSState::kFault:
             // open contactors
-            shutdownCar();
+            ShutdownCar();
             current_state_ = BMSState::kFault;
             break;
     }
