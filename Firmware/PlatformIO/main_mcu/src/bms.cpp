@@ -1,7 +1,7 @@
 #include "bms.h"
 
-#include <numeric>
 #include <algorithm>
+#include <numeric>
 
 int BMS::fault_pin_{-1};
 
@@ -23,43 +23,36 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 // Find maximum discharge and regen current
 void BMS::CalculateSOE()
 {
-    float currentPerCell = current[0] / kNumCellsParallel;
-    float internalResistancePerSeriesElement = kInternalResistance / kNumCellsParallel;
+    float current_per_cell = current_[0] / kNumCellsParallel;
+    float internal_resistance_per_series_element = kInternalResistance / kNumCellsParallel;
 
     // Find highest and lowest open circuit voltage
-    float minOpenCircuitVoltage = minVoltage + (currentPerCell * kInternalResistance);
-    float maxOpenCircuitVoltage = maxVoltage + (currentPerCell * kInternalResistance);
+    float min_open_circuit_voltage = min_cell_voltage_ + (current_per_cell * kInternalResistance);
+    float max_open_circuit_voltage = max_cell_voltage_ + (current_per_cell * kInternalResistance);
 
     // Limit at V_open + I * (R_internal / numCellsParallel) = V_boundary
     //  => I = (numCellsParallel / R_internal) * (V_boundary - V_open)
-    float maxDischargeVoltage = minOpenCircuitVoltage - kCellUndervoltage;
-    float maxRegenVoltage = kCellOvervoltage - maxOpenCircuitVoltage;
-    float uncappedDischargeCurrent = maxDischargeVoltage / internalResistancePerSeriesElement;
-    float uncappedRegenCurrent = maxRegenVoltage / internalResistancePerSeriesElement;
+    float max_discharge_voltage_delta = min_open_circuit_voltage - kCellUndervoltage;
+    float max_regen_voltage_delta = kCellOvervoltage - max_open_circuit_voltage;
+    float uncapped_discharge_current = max_discharge_voltage_delta / internal_resistance_per_series_element;
+    float uncapped_regen_current = max_regen_voltage_delta / internal_resistance_per_series_element;
 
     // I = P / V
-    float packVoltage = std::accumulate(voltages.begin(), voltages.end(), 0);
-    float powerCappedCurrent = kMaxPowerOutput / packVoltage;
+    float pack_voltage = std::accumulate(voltages_.begin(), voltages_.end(), 0);
+    float power_capped_current = kMaxPowerOutput / pack_voltage;
 
-    maxDischargeCurrent = std::min({
-        uncappedDischargeCurrent,
-        powerCappedCurrent,
-        kDischargeCurrent
-    });
-    maxRegenCurrent = std::min(
-        uncappedRegenCurrent,
-        kRegenCurrent
-    );
+    max_allowed_discharge_current_ = std::min({uncapped_discharge_current, power_capped_current, kDischargeCurrent});
+    max_allowed_regen_current_ = std::min(uncapped_regen_current, kRegenCurrent);
 }
 
 void BMS::ProcessCooling()
 {
     // check temperatures
     bq_.GetTemps(temperatures_);
-    max_temperature_ = *std::max_element(temperatures_.begin(), temperatures_.end());
+    max_cell_temperature_ = *std::max_element(temperatures_.begin(), temperatures_.end());
     analogWrite(coolant_ctrl,
                 clamp<uint8_t>(
-                    map(max_temperature_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
+                    map(max_cell_temperature_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
                                                                       // use softpwm, also map ranges may be suboptimal
 }
 
@@ -80,8 +73,8 @@ void BMS::ProcessState()
 
             // check voltages
             bq_.GetVoltages(voltages_);
-            maxVoltage = *std::max_element(voltages_.begin(), voltages_.end());
-            minVoltage = *std::min_element(voltages_.begin(), voltages_.end());
+            max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
+            min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
 
             // send CAN messages with SOE (state of energy)
             break;

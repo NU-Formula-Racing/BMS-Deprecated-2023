@@ -69,7 +69,7 @@ public:
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
-    
+
     void CalculateSOE();
 
 private:
@@ -82,13 +82,13 @@ private:
     std::vector<float> temperatures_;
     std::vector<float> current_;
 
-    float maxVoltage;
-    float minVoltage;
-    float maxTemp;
-    float maxDischargeCurrent;
-    float maxRegenCurrent;
-    static int faultPin;
-    BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
+    float max_cell_voltage_;
+    float min_cell_voltage_;
+    float max_cell_temperature_;
+    float max_allowed_discharge_current_;
+    float max_allowed_regen_current_;
+    static int fault_pin_;
+    BMSFault fault_{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
     BMSState current_state_{BMSState::kShutdown};
 
