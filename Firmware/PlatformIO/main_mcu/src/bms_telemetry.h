@@ -6,7 +6,9 @@
 const uint16_t kSignalsPerMessage = 7;
 const uint16_t kNumVoltageMessages = 20;
 const uint16_t kNumTemperatureMessages = 16;
-const int kTransmitPeriod = 10;
+const int kHPTransmitPeriod = 10;
+const int kVBTransmitPeriod = 10;
+const int kLPTransmitPeriod = 100;
 
 class BMSTelemetry
 {
@@ -32,13 +34,14 @@ private:
 
   VirtualTimerGroup timer_group_;
 
-  std::array<ICANSignal *, kSignalsPerMessage * kNumVoltageMessages> voltage_signals_;
-  std::array<ICANSignal *, kSignalsPerMessage * kNumTemperatureMessages> temperature_signals_;
+  std::array<ITypedCANSignal<float>*, kNumVoltageMessages * kSignalsPerMessage> voltage_signals_;
+  std::array<ITypedCANSignal<float>*, kNumTemperatureMessages * kSignalsPerMessage> temperature_signals_;
 
   std::array<CANTXMessage<kSignalsPerMessage> *, kNumVoltageMessages> voltage_messages_;
   std::array<CANTXMessage<kSignalsPerMessage> *, kNumTemperatureMessages> temperature_messages_;
   // single current message
   
+  void TickVBCAN();
   void CreateVerboseMessages();
 };
 

@@ -5,6 +5,8 @@
 #include <chrono>
 
 #include "bq_comm.h"
+#include "bms_telemetry.h"
+#include "teensy_can.h"
 #include "teensy_pin_defs.h"
 
 template <typename T>
@@ -57,11 +59,19 @@ public:
 
         // initialize the BQ chip driver
         bq_.Initialize();
+
+        telemetry.InitializeCAN();
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
 
 private:
+    TeensyCAN<1> test_bus1{};
+    TeensyCAN<2> test_bus2{};
+    TeensyCAN<3> test_bus3{};
+    VirtualTimerGroup timer_group{};
+    BMSTelemetry telemetry{test_bus1, test_bus2, test_bus3, timer_group};
+
     BQ79656 bq_;
 
     const int kNumCellsSeries;
