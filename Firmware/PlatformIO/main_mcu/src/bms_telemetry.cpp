@@ -1,19 +1,4 @@
-// #include <stdio.h>
-
 #include "bms_telemetry.h"
-
-void BMSTelemetry::TickVBCAN()
-{
-  for (int i = 0; i < kNumVoltageMessages * kSignalsPerMessage; i++) {
-    *(voltage_signals_[i]) = i % 5;
-  }
-
-  for (int i = 0; i < kNumTemperatureMessages * kSignalsPerMessage; i++) {
-    *(temperature_signals_[i]) = i % 5;
-  }
-
-  vb_can_bus_.Tick();
-}
 
 void BMSTelemetry::InitializeCAN()
 {
@@ -23,7 +8,23 @@ void BMSTelemetry::InitializeCAN()
 
   CreateVerboseMessages();
 
+  // Add verbose CAN to timer group
   timer_group_.AddTimer(kVBTransmitPeriod, [this]() { this->TickVBCAN(); });
+}
+
+void BMSTelemetry::TickVBCAN()
+{
+  // Sets voltage messages to arbitrary values
+  for (int i = 0; i < kNumVoltageMessages * kSignalsPerMessage; i++) {
+    *(voltage_signals_[i]) = voltages_[i];
+  }
+
+  // Sets temperature messages to arbitrary values
+  for (int i = 0; i < kNumTemperatureMessages * kSignalsPerMessage; i++) {
+    *(temperature_signals_[i]) = temperatures_[i];
+  }
+
+  vb_can_bus_.Tick();
 }
 
 void BMSTelemetry::CreateVerboseMessages()

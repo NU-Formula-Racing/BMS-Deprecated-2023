@@ -17,12 +17,16 @@ public:
     ICAN &hp_can_bus,
     ICAN &vb_can_bus,
     ICAN &lp_can_bus,
-    VirtualTimerGroup &timer_group
+    VirtualTimerGroup &timer_group,
+    std::vector<float> &voltages,
+    std::vector<float> &temperatures
   )
     : hp_can_bus_{hp_can_bus},
       vb_can_bus_{vb_can_bus},
       lp_can_bus_{lp_can_bus},
-      timer_group_{timer_group}
+      timer_group_{timer_group},
+      voltages_{voltages},
+      temperatures_{temperatures}
   {
   }
 
@@ -32,7 +36,10 @@ private:
   ICAN &vb_can_bus_;
   ICAN &lp_can_bus_;
 
-  VirtualTimerGroup timer_group_;
+  VirtualTimerGroup &timer_group_;
+
+  std::vector<float> &voltages_;
+  std::vector<float> &temperatures_;
 
   std::array<ITypedCANSignal<float>*, kNumVoltageMessages * kSignalsPerMessage> voltage_signals_;
   std::array<ITypedCANSignal<float>*, kNumTemperatureMessages * kSignalsPerMessage> temperature_signals_;

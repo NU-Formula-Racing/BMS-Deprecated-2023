@@ -9,6 +9,10 @@
 #include "teensy_can.h"
 #include "teensy_pin_defs.h"
 
+const int kHPBusNumber = 1;
+const int kVBBusNumber = 2;
+const int kLPBusNumber = 3;
+
 template <typename T>
 T clamp(const T& n, const T& lower, const T& upper)
 {
@@ -60,18 +64,13 @@ public:
         // initialize the BQ chip driver
         bq_.Initialize();
 
+        // initialize BMS telemetry
         telemetry.InitializeCAN();
     }
 
     void Tick(std::chrono::milliseconds elapsed_time);
 
 private:
-    TeensyCAN<1> test_bus1{};
-    TeensyCAN<2> test_bus2{};
-    TeensyCAN<3> test_bus3{};
-    VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{test_bus1, test_bus2, test_bus3, timer_group};
-
     BQ79656 bq_;
 
     const int kNumCellsSeries;
@@ -87,6 +86,13 @@ private:
     BMSFault fault{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
 
     BMSState current_state_{BMSState::kShutdown};
+    
+    TeensyCAN<kHPBusNumber> hp_bus_{};
+    TeensyCAN<kVBBusNumber> vb_bus_{};
+    TeensyCAN<kLPBusNumber> lp_bus_{};
+
+    VirtualTimerGroup timer_group{};
+    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group, voltages, temperatures};
 
     void ProcessState();
     void ChangeState(BMSState new_state);
