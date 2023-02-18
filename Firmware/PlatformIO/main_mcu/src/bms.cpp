@@ -24,7 +24,28 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
 #if serialdebug
-        Serial.println("Fault:" + fault);
+        Serial.println("Faults:");
+        if (overvoltage_fault_)
+        {
+            Serial.println("  Overvoltage");
+        }
+        else if (undervoltage_fault_)
+        {
+            Serial.println("  Undervoltage");
+        }
+        if (overtemperature_fault_)
+        {
+            Serial.println("  Overtemperature");
+        }
+        else if (undertemperature_fault_)
+        {
+            Serial.println("  Undertemperature");
+        }
+        if (overcurrent_fault_)
+        {
+            Serial.println("  Overcurrent");
+        }
+        Serial.println("");
 #endif
         ChangeState(BMSState::kFault);
     }
