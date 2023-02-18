@@ -4,10 +4,12 @@
 
 #include "bms.h"
 #include "bq_comm.h"
+#include "thermistor.h"
 
 #define serialdebug 1
 
-BMS bms{BQ79656{Serial8, 35}, 140, 112};
+NXFT15XH103FA2B050 thermistor{};
+BMS bms{BQ79656{Serial8, 35, thermistor}, 140, 112};
 
 const std::chrono::milliseconds kTickPeriod{std::chrono::milliseconds{10}};
 static std::chrono::milliseconds next_tick_time{millis()};

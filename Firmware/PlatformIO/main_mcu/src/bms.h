@@ -47,7 +47,7 @@ public:
         for (int i = 0; i < num_kill_pins; i++)
         {
             pinMode(kill_pins[i], INPUT);
-            attachInterrupt(digitalPinToInterrupt(kill_pins[i]), faultInterrupt, FALLING);
+            attachInterrupt(digitalPinToInterrupt(kill_pins[i]), FaultInterrupt, FALLING);
         }
 
         // initialize the BQ chip driver
@@ -56,24 +56,36 @@ public:
 
     void Tick(std::chrono::milliseconds elapsed_time);
 
+    void CalculateSOE();
+
 private:
     BQ79656 bq_;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
 
-    const float kUndertemperatureThreshold = -40;      //-40C min temp
-    const float kOvertemperatureThreshold = 60;        // 60C max temp
-    const float kUndertemperatureThresholdCharge = 0;  // 0 min temp while charging
+    // Consts for SoE calculation + Fault Detection
+    const int kNumCellsParallel{4};
+    const float kDischargeCurrent{45.0f};
+    const float kRegenCurrent{45.0f};
+    const float kMaxPowerOutput{80000.0f};
+    const float kCellUndervoltage{2.5f};
+    const float kCellOvervoltage{4.2f};
+    const float kInternalResistance{0.016f};
+    const float kOvercurrent{180.0f};
+    const float kOvertemp{60.0f};
+    const float kUndertemp{-40.0f};
 
     std::vector<float> voltages_;
     std::vector<float> temperatures_;
     std::vector<float> current_;
 
-    float max_voltage_;
-    float min_voltage_;
-    float max_temp_;
-    float min_temp_;
+    float max_cell_voltage_;
+    float min_cell_voltage_;
+    float max_cell_temperature_;
+    float min_cell_temperature_;
+    float max_allowed_discharge_current_;
+    float max_allowed_regen_current_;
 
     bool undervoltage_fault_{false};
     bool overvoltage_fault_{false};
@@ -94,7 +106,7 @@ private:
 
     void CheckFaults();
 
-    static void shutdownCar()
+    static void ShutdownCar()
     {
         // kill the car
         digitalWrite(contactorn_ctrl, LOW);
@@ -103,9 +115,9 @@ private:
         return;
     }
 
-    static void faultInterrupt()
+    static void FaultInterrupt()
     {
-        shutdownCar();
+        ShutdownCar();
 
         bool foundFault = 0;
         for (int i = 0; i < num_kill_pins; i++)
@@ -122,7 +134,9 @@ private:
         }
     }
 
-    void getMaxMinAvgTot(double* arr, int arrSize, double* res)
+    void GetMaxMinAvgTot(double* arr,
+                         int arrSize,
+                         double* res)  // may be unused/deleted or replaced with a different function/implementation
     {
         double currMax = arr[0];
         double currMin = arr[0];
