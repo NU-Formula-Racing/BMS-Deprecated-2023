@@ -5,13 +5,46 @@
 
 int BMS::fault_pin_{-1};
 
+void BMS::CheckFaults()
+{
+    overvoltage_fault_ = (max_cell_voltage_ >= kCellOvervoltage);
+    undervoltage_fault_ = (min_cell_voltage_ <= kCellUndervoltage);
+    overcurrent_fault_ = (current_[0] >= kOvercurrent);
+    overtemperature_fault_ = (max_cell_temperature_ >= kOvertemp);
+    undertemperature_fault_ = (min_cell_temperature_ <= kUndertemp);
+
+    fault_ = static_cast<BMSFault>(overvoltage_fault_ || undervoltage_fault_ || overcurrent_fault_
+                                   || overtemperature_fault_ || undertemperature_fault_);
+}
+
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
     // check fault status
-    if (fault_ != BMSFault::kNone && current_state_ != BMSState::kFault)
+    if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
 #if serialdebug
-        Serial.println("Fault:" + fault);
+        Serial.println("Faults:");
+        if (overvoltage_fault_)
+        {
+            Serial.println("  Overvoltage");
+        }
+        else if (undervoltage_fault_)
+        {
+            Serial.println("  Undervoltage");
+        }
+        if (overtemperature_fault_)
+        {
+            Serial.println("  Overtemperature");
+        }
+        else if (undertemperature_fault_)
+        {
+            Serial.println("  Undertemperature");
+        }
+        if (overcurrent_fault_)
+        {
+            Serial.println("  Overcurrent");
+        }
+        Serial.println("");
 #endif
         ChangeState(BMSState::kFault);
     }
@@ -62,7 +95,7 @@ void BMS::UpdateValues()
 {
     ProcessCooling();
     bq_.GetCurrent(current_);
-            // check voltages
+    // check voltages
     bq_.GetVoltages(voltages_);
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
@@ -100,8 +133,12 @@ void BMS::ProcessState()
             }
 
             // send CAN messages with SOE (state of energy)
+
+            // check faults
+            CheckFaults();
             break;
         case BMSState::kCharging:
+            ProcessCooling();
             // cell balancing if charging
             bq_.ProcessBalancing(voltages_);
             UpdateValues();
@@ -114,7 +151,7 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kCharging);
             }
-            
+
             if (max_cell_voltage_ > kCellOvervoltage)
             {
                 ChangeState(BMSState::kShutdown);
