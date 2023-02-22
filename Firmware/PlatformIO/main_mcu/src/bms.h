@@ -7,15 +7,6 @@
 #include "bq_comm.h"
 #include "teensy_pin_defs.h"
 
-// Consts for SoE calculation
-const float kDischargeCurrent = 45;
-const float kRegenCurrent = 45;
-const float kMaxPowerOutput = 80000;
-const float kCellUndervoltage = 2.5;
-const float kCellOvervoltage = 4.2;
-const float kInternalResistance = 0.016;
-const int kNumCellsParallel = 4;
-
 template <typename T>
 T clamp(const T& n, const T& lower, const T& upper)
 {
@@ -25,15 +16,10 @@ T clamp(const T& n, const T& lower, const T& upper)
 class BMS
 {
 public:
-    enum class BMSFault
+    enum class BMSFault : bool
     {
-        kNone = 0,
-        kUndervoltage = 1,
-        kOvervoltage = 2,
-        kUnderTemperature = 3,
-        kOverTemperature = 4,
-        kOverCurrent = 5,
-        kExternalKill = 6
+        kNotFaulted = 0,
+        kFaulted = 1,
     };
 
     enum class BMSState
@@ -78,6 +64,18 @@ private:
     const int kNumCellsSeries;
     const int kNumThermistors;
 
+    // Consts for SoE calculation + Fault Detection
+    const int kNumCellsParallel{4};
+    const float kDischargeCurrent{45.0f};
+    const float kRegenCurrent{45.0f};
+    const float kMaxPowerOutput{80000.0f};
+    const float kCellUndervoltage{2.5f};
+    const float kCellOvervoltage{4.2f};
+    const float kInternalResistance{0.016f};
+    const float kOvercurrent{180.0f};
+    const float kOvertemp{60.0f};
+    const float kUndertemp{-40.0f};
+
     std::vector<float> voltages_;
     std::vector<float> temperatures_;
     std::vector<float> current_;
@@ -85,10 +83,19 @@ private:
     float max_cell_voltage_;
     float min_cell_voltage_;
     float max_cell_temperature_;
+    float min_cell_temperature_;
     float max_allowed_discharge_current_;
     float max_allowed_regen_current_;
+
+    bool undervoltage_fault_{false};
+    bool overvoltage_fault_{false};
+    bool undertemperature_fault_{false};
+    bool overtemperature_fault_{false};
+    bool overcurrent_fault_{false};
+    bool external_kill_fault_{false};
+
     static int fault_pin_;
-    BMSFault fault_{BMSFault::kNone};  // error codes: 0=none, 1=UV, 2=OV, 3=UT, 4=OT, 5=OC, 6=external kill
+    BMSFault fault_{BMSFault::kNotFaulted};
 
     BMSState current_state_{BMSState::kShutdown};
 
@@ -97,9 +104,7 @@ private:
 
     void ProcessCooling();
 
-#define OT_THRESH 60        // 60C max temp
-#define UT_THRESH -40       //-40C min temp
-#define UT_THRESH_CHARGE 0  // 0 min temp while charging
+    void CheckFaults();
 
     static void ShutdownCar()
     {
