@@ -3,7 +3,13 @@
 #include <algorithm>
 #include <numeric>
 
+#include "GWP-Charger.h"
+#include "teensy_can.h"
+
 int BMS::fault_pin_{-1};
+
+TeensyCAN<1> can_bus{};
+GWPCharger charger(can_bus);
 
 void BMS::CheckFaults()
 {
@@ -113,24 +119,6 @@ void BMS::ProcessState()
             break;
         case BMSState::kActive:
             UpdateValues();
-            if (max_cell_temperature_ > OT_THRESH)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
-
-            else if (min_cell_temperature_ < UT_THRESH)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
-            // check current
-            if (max_cell_voltage_ > kCellOvervoltage)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
-            if (min_cell_voltage_ < kCellUndervoltage)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
 
             // send CAN messages with SOE (state of energy)
 
@@ -142,29 +130,12 @@ void BMS::ProcessState()
             // cell balancing if charging
             bq_.ProcessBalancing(voltages_);
             UpdateValues();
-            if (max_cell_temperature_ > OT_THRESH)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
-
-            if (min_cell_temperature_ < UT_THRESH_CHARGE)
-            {
-                ChangeState(BMSState::kCharging);
-            }
-
-            if (max_cell_voltage_ > kCellOvervoltage)
-            {
-                ChangeState(BMSState::kShutdown);
-            }
-
-            if (min_cell_voltage_ < kCellUndervoltage)
-            {
-                ChangeState(BMSState::kCharging);
-            }
+            CheckFaults();
             // todo
             break;
         case BMSState::kFault:
             // check for clear faults command
+            CheckFaults();
             break;
     }
 }
@@ -189,8 +160,11 @@ void BMS::ChangeState(BMSState new_state)
             break;
         case BMSState::kCharging:
             // enable charger?
-            current_state_ = BMSState::kCharging;
-            break;
+            {
+                charger.Enable();
+                current_state_ = BMSState::kCharging;
+                break;
+            }
         case BMSState::kFault:
             // open contactors
             ShutdownCar();
