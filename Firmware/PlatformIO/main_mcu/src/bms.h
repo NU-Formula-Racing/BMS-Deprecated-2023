@@ -95,6 +95,8 @@ private:
 
     void ProcessState();
     void ChangeState(BMSState new_state);
+    
+    void UpdateValues();
 
     void ProcessCooling();
 

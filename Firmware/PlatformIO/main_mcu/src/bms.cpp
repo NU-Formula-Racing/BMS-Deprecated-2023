@@ -58,6 +58,16 @@ void BMS::ProcessCooling()
                                                                    // use softpwm, also map ranges may be suboptimal
 }
 
+void BMS::UpdateValues()
+{
+    ProcessCooling();
+    bq_.GetCurrent(current_);
+            // check voltages
+    bq_.GetVoltages(voltages_);
+    max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
+    min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
+}
+
 void BMS::ProcessState()
 {
     switch (current_state_)
@@ -69,7 +79,7 @@ void BMS::ProcessState()
             // check precharge voltage, go to fault if timeout
             break;
         case BMSState::kActive:
-            ProcessCooling();
+            UpdateValues();
             if (max_cell_temperature_ > OT_THRESH)
             {
                 ChangeState(BMSState::kShutdown);
@@ -80,12 +90,6 @@ void BMS::ProcessState()
                 ChangeState(BMSState::kShutdown);
             }
             // check current
-            bq_.GetCurrent(current_);
-
-            // check voltages
-            bq_.GetVoltages(voltages_);
-            max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
-            min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
             if (max_cell_voltage_ > kCellOvervoltage)
             {
                 ChangeState(BMSState::kShutdown);
@@ -99,8 +103,8 @@ void BMS::ProcessState()
             break;
         case BMSState::kCharging:
             // cell balancing if charging
-            bq_.StartBalancingSimple();
-            ProcessCooling();
+            bq_.ProcessBalancing(voltages_);
+            UpdateValues();
             if (max_cell_temperature_ > OT_THRESH)
             {
                 ChangeState(BMSState::kShutdown);
@@ -110,14 +114,7 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kCharging);
             }
-            // check current
-            bq_.GetCurrent(current_);
-
-            // check voltages
-            bq_.GetVoltages(voltages_);
-            max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
-            min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
-
+            
             if (max_cell_voltage_ > kCellOvervoltage)
             {
                 ChangeState(BMSState::kShutdown);
