@@ -6,10 +6,18 @@ void BMSTelemetry::InitializeCAN()
   vb_can_bus_.Initialize(ICAN::BaudRate::kBaud1M);
   lp_can_bus_.Initialize(ICAN::BaudRate::kBaud1M);
 
-  CreateVerboseMessages();
+  CreateVBMessages();
 
   // Add verbose CAN to timer group
   timer_group_.AddTimer(kVBTransmitPeriod, [this]() { this->TickVBCAN(); });
+}
+
+void BMSTelemetry::TickHPCAN()
+{
+  *max_discharge_signal_ = max_discharge_current_;
+  *max_regen_signal_ = max_regen_current_;
+
+  hp_can_bus_.Tick();
 }
 
 void BMSTelemetry::TickVBCAN()
@@ -24,10 +32,19 @@ void BMSTelemetry::TickVBCAN()
     *(temperature_signals_[i]) = temperatures_[i];
   }
 
+  *(current_signal_[0]) = current_[0];
+
   vb_can_bus_.Tick();
 }
 
-void BMSTelemetry::CreateVerboseMessages()
+void BMSTelemetry::CreateHPMessages()
+{
+  max_discharge_signal_ = new MakeUnsignedCANSignal(float,  0, 12, 0.1, 0);
+  max_regen_signal_ = new MakeUnsignedCANSignal(float, 12, 12, 0.1, 0);
+  SOE_message_ = new CANTXMessage<2>{hp_can_bus_, 576, 2, kHPTransmitPeriod};
+}
+
+void BMSTelemetry::CreateVBMessages()
 {
   for (int i = 0; i < kNumVoltageMessages; i++) {
     voltage_signals_[i * kSignalsPerMessage + 0] = new MakeUnsignedCANSignal(float,  0, 8, 0.012, 2);
@@ -66,4 +83,7 @@ void BMSTelemetry::CreateVerboseMessages()
       *(temperature_signals_[i * kSignalsPerMessage + 5]),
       *(temperature_signals_[i * kSignalsPerMessage + 6])};
   }
+  
+  current_signal_[0] = new MakeUnsignedCANSignal(float, 48, 16, 0.01, 0);
+  current_message_[0] = new CANTXMessage<1>{vb_can_bus_, 576, 1, kVBTransmitPeriod, *(current_signal_[0])};
 }

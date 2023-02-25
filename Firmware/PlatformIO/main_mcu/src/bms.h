@@ -107,7 +107,9 @@ private:
     TeensyCAN<kLPBusNumber> lp_bus_{};
 
     VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group, voltages_, temperatures_};
+    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group,
+        voltages_, temperatures_, current_,
+        max_allowed_discharge_current_, max_allowed_regen_current_};
 
     void ProcessState();
     void ChangeState(BMSState new_state);
