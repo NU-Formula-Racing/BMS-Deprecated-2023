@@ -4,8 +4,9 @@
 #include <algorithm>
 #include <chrono>
 
-#include "bq_comm.h"
+#include "bms_interface.h"
 #include "bms_telemetry.h"
+#include "bq_comm.h"
 #include "teensy_can.h"
 #include "teensy_pin_defs.h"
 
@@ -15,24 +16,9 @@ T clamp(const T& n, const T& lower, const T& upper)
     return std::max(lower, std::min(n, upper));
 }
 
-class BMS
+class BMS : IBMS
 {
 public:
-    enum class BMSFault : bool
-    {
-        kNotFaulted = 0,
-        kFaulted = 1,
-    };
-
-    enum class BMSState
-    {
-        kShutdown = 0,
-        kPrecharge = 1,
-        kActive = 2,
-        kCharging = 3,
-        kFault = 4
-    };
-
     BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */, int num_cells_series, int num_thermistors)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
@@ -80,7 +66,7 @@ private:
     const float kOvercurrent{180.0f};
     const float kOvertemp{60.0f};
     const float kUndertemp{-40.0f};
-    
+
     // CAN Bus Numbers
     static const int kHPBusNumber{1};
     static const int kVBBusNumber{2};
@@ -109,34 +95,33 @@ private:
     BMSFault fault_{BMSFault::kNotFaulted};
 
     BMSState current_state_{BMSState::kShutdown};
-    
+
     TeensyCAN<kHPBusNumber> hp_bus_{};
     TeensyCAN<kVBBusNumber> vb_bus_{};
     TeensyCAN<kLPBusNumber> lp_bus_{};
 
     VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{
-        hp_bus_,
-        vb_bus_,
-        lp_bus_,
-        timer_group,
-        voltages_,
-        temperatures_, 
-        max_allowed_discharge_current_,
-        max_allowed_regen_current_,
-        pack_voltage_,
-        current_,
-        undervoltage_fault_,
-        overvoltage_fault_,
-        undertemperature_fault_,
-        overtemperature_fault_,
-        overcurrent_fault_,
-        external_kill_fault_,
-        max_cell_temperature_,
-        min_cell_temperature_,
-        max_cell_voltage_,
-        min_cell_voltage_
-    };
+    BMSTelemetry telemetry{hp_bus_,
+                           vb_bus_,
+                           lp_bus_,
+                           timer_group,
+                           voltages_,
+                           temperatures_,
+                           max_allowed_discharge_current_,
+                           max_allowed_regen_current_,
+                           pack_voltage_,
+                           current_,
+                           undervoltage_fault_,
+                           overvoltage_fault_,
+                           undertemperature_fault_,
+                           overtemperature_fault_,
+                           overcurrent_fault_,
+                           external_kill_fault_,
+                           current_state_,
+                           max_cell_temperature_,
+                           min_cell_temperature_,
+                           max_cell_voltage_,
+                           min_cell_voltage_};
 
     void ProcessState();
     void ChangeState(BMSState new_state);
