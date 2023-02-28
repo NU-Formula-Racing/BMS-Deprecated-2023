@@ -101,7 +101,6 @@ void BMS::UpdateValues()
 {
     ProcessCooling();
     bq_.GetCurrent(current_);
-    // check voltages
     bq_.GetVoltages(voltages_);
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
@@ -109,33 +108,44 @@ void BMS::UpdateValues()
 
 void BMS::ProcessState()
 {
+    UpdateValues();
+    // check faults
+    CheckFaults();
     switch (current_state_)
     {
         case BMSState::kShutdown:
             // check for command to go to active
+            if (command_signal_ == Command::kPrechargeAndCloseContactors)
+            {
+                ChangeState(BMSState::kPrecharge);
+            }
             break;
         case BMSState::kPrecharge:
-            // check precharge voltage, go to fault if timeout
+            // do a time-based precharge
+            const uint32_t kPrechargeTime{2000};
+            if (millis() >= state_entry_time_ + kPrechargeTime)
+            {
+                ChangeState(BMSState::kActive);
+            }
+
             break;
         case BMSState::kActive:
-            UpdateValues();
 
             // send CAN messages with SOE (state of energy)
 
-            // check faults
-            CheckFaults();
             break;
         case BMSState::kCharging:
-            ProcessCooling();
             // cell balancing if charging
             bq_.ProcessBalancing(voltages_);
             UpdateValues();
-            CheckFaults();
             // todo
             break;
         case BMSState::kFault:
             // check for clear faults command
-            CheckFaults();
+            if (command_signal_ == Command::kClearFaults)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
             break;
     }
 }

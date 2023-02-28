@@ -5,6 +5,7 @@
 #include <chrono>
 
 #include "bq_comm.h"
+#include "can_interface.h"
 #include "teensy_pin_defs.h"
 
 template <typename T>
@@ -31,14 +32,33 @@ public:
         kFault = 4
     };
 
-    BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */, int num_cells_series, int num_thermistors)
+    enum class Command : uint8_t
+    {
+        kNoAction = 0,
+        kPrechargeAndCloseContactors = 1,
+        kShutdown = 2,
+        kClearFaults = 3
+    };
+
+    BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */,
+        int num_cells_series,
+        int num_thermistors,
+        ICAN& hp_can,
+        ICAN& lp_can,
+        ICAN& vb_can)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
+          hp_can_{hp_can},
+          lp_can_{lp_can},
+          vb_can_{vb_can},
           voltages_{std::vector<float>(kNumCellsSeries)},
           temperatures_{std::vector<float>(kNumThermistors)},
           current_{std::vector<float>(1)}
     {
+        command_signal_ = Command::kNoAction;
+        hp_can_.RegisterRXMessage(command_message_hp_);
+        vb_can_.RegisterRXMessage(command_message_vb_);
     }
 
     void Initialize()
@@ -60,6 +80,9 @@ public:
 
 private:
     BQ79656 bq_;
+    ICAN& hp_can_;
+    ICAN& lp_can_;
+    ICAN& vb_can_;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
@@ -75,6 +98,10 @@ private:
     const float kOvercurrent{180.0f};
     const float kOvertemp{60.0f};
     const float kUndertemp{-40.0f};
+
+    MakeUnsignedCANSignal(Command, 0, 8, 1, 0) command_signal_{};
+    CANRXMessage<1> command_message_hp_{hp_can_, 0x242, command_signal_};
+    CANRXMessage<1> command_message_vb_{vb_can_, 0x242, command_signal_};
 
     std::vector<float> voltages_;
     std::vector<float> temperatures_;
@@ -98,10 +125,11 @@ private:
     BMSFault fault_{BMSFault::kNotFaulted};
 
     BMSState current_state_{BMSState::kShutdown};
+    uint32_t state_entry_time_{0};
 
     void ProcessState();
     void ChangeState(BMSState new_state);
-    
+
     void UpdateValues();
 
     void ProcessCooling();
