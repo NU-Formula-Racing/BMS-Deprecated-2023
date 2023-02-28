@@ -23,7 +23,7 @@ void BMS::CheckFaults()
                                    || overtemperature_fault_ || undertemperature_fault_);
 }
 
-void BMS::Tick(std::chrono::milliseconds elapsed_time)
+void BMS::Tick()
 {
     // check fault status
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)

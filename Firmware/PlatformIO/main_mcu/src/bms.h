@@ -2,7 +2,6 @@
 #include <Arduino.h>
 
 #include <algorithm>
-#include <chrono>
 
 #include "bq_comm.h"
 #include "can_interface.h"
@@ -74,7 +73,7 @@ public:
         bq_.Initialize();
     }
 
-    void Tick(std::chrono::milliseconds elapsed_time);
+    void Tick();
 
     void CalculateSOE();
 
