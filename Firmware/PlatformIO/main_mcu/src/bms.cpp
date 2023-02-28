@@ -72,8 +72,8 @@ void BMS::CalculateSOE()
     float uncapped_regen_current = max_regen_voltage_delta / internal_resistance_per_series_element;
 
     // I = P / V
-    float pack_voltage = std::accumulate(voltages_.begin(), voltages_.end(), 0);
-    float power_capped_current = kMaxPowerOutput / pack_voltage;
+    pack_voltage_ = std::accumulate(voltages_.begin(), voltages_.end(), 0);
+    float power_capped_current = kMaxPowerOutput / pack_voltage_;
 
     max_allowed_discharge_current_ = std::min({uncapped_discharge_current, power_capped_current, kDischargeCurrent});
     max_allowed_regen_current_ = std::min(uncapped_regen_current, kRegenCurrent);

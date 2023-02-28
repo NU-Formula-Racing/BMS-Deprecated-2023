@@ -5,6 +5,7 @@
 #include "bms.h"
 #include "bq_comm.h"
 #include "thermistor.h"
+#include "bms_telemetry.h"
 
 #define serialdebug 1
 

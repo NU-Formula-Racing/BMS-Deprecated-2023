@@ -70,16 +70,16 @@ private:
     const int kNumThermistors;
 
     // Consts for SoE calculation + Fault Detection
-    static const int kNumCellsParallel{4};
-    static const float kDischargeCurrent{45.0f};
-    static const float kRegenCurrent{45.0f};
-    static const float kMaxPowerOutput{80000.0f};
-    static const float kCellUndervoltage{2.5f};
-    static const float kCellOvervoltage{4.2f};
-    static const float kInternalResistance{0.016f};
-    static const float kOvercurrent{180.0f};
-    static const float kOvertemp{60.0f};
-    static const float kUndertemp{-40.0f};
+    const int kNumCellsParallel{4};
+    const float kDischargeCurrent{45.0f};
+    const float kRegenCurrent{45.0f};
+    const float kMaxPowerOutput{80000.0f};
+    const float kCellUndervoltage{2.5f};
+    const float kCellOvervoltage{4.2f};
+    const float kInternalResistance{0.016f};
+    const float kOvercurrent{180.0f};
+    const float kOvertemp{60.0f};
+    const float kUndertemp{-40.0f};
     
     // CAN Bus Numbers
     static const int kHPBusNumber{1};
@@ -92,6 +92,7 @@ private:
 
     float max_cell_voltage_;
     float min_cell_voltage_;
+    float pack_voltage_;
     float max_cell_temperature_;
     float min_cell_temperature_;
     float max_allowed_discharge_current_;
@@ -114,9 +115,28 @@ private:
     TeensyCAN<kLPBusNumber> lp_bus_{};
 
     VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group,
-        voltages_, temperatures_, current_,
-        max_allowed_discharge_current_, max_allowed_regen_current_};
+    BMSTelemetry telemetry{
+        hp_bus_,
+        vb_bus_,
+        lp_bus_,
+        timer_group,
+        voltages_,
+        temperatures_, 
+        max_allowed_discharge_current_,
+        max_allowed_regen_current_,
+        pack_voltage_,
+        current_,
+        undervoltage_fault_,
+        overvoltage_fault_,
+        undertemperature_fault_,
+        overtemperature_fault_,
+        overcurrent_fault_,
+        external_kill_fault_,
+        max_cell_temperature_,
+        min_cell_temperature_,
+        max_cell_voltage_,
+        min_cell_voltage_
+    };
 
     void ProcessState();
     void ChangeState(BMSState new_state);
