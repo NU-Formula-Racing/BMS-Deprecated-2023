@@ -141,6 +141,3 @@ private:
     void TickVBCAN();
     void TickLPCAN();
 };
-
-// std array for messages
-//

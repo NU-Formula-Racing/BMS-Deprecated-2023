@@ -30,6 +30,7 @@ public:
     virtual float GetAverageCellTemperature() = 0;
     virtual float GetMaxCellVoltage() = 0;
     virtual float GetMinCellVoltage() = 0;
+    virtual float GetSOC() = 0;
 
     virtual float GetMaxDischargeCurrent() = 0;
     virtual float GetMaxRegenCurrent() = 0;

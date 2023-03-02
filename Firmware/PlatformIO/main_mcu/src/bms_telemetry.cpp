@@ -87,7 +87,7 @@ void BMSTelemetry::UpdateSOESignals()
 
 void BMSTelemetry::UpdateFaultSignals()
 {
-    // *fault_summary_signal_ = (current_state_ == BMS::BMSState::kFault);
+    fault_summary_signal_ = bms_.GetFaultSummary();
     undervoltage_signal_ = bms_.GetUnderVoltageFault();
     overvoltage_signal_ = bms_.GetOverVoltageFault();
     undertemperature_signal_ = bms_.GetUnderTemperatureFault();
@@ -103,7 +103,7 @@ void BMSTelemetry::UpdateStatusSignals()
     min_cell_temperature_signal_ = bms_.GetMinCellTemperature();
     max_cell_voltage_signal_ = bms_.GetMaxCellVoltage();
     min_cell_voltage_signal_ = bms_.GetMinCellVoltage();
-    // soc_signal_;
+    soc_signal_ = bms_.GetSOC();
 };
 
 void BMSTelemetry::TickHPCAN()

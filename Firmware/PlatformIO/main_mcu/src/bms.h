@@ -59,6 +59,7 @@ public:
     float GetMinCellTemperature() { return min_cell_temperature_; }
     float GetMaxCellVoltage() { return max_cell_voltage_; }
     float GetMinCellVoltage() { return min_cell_voltage_; }
+    float GetSOC() { return 0; }
 
     float GetMaxDischargeCurrent() { return max_allowed_discharge_current_; }
     float GetMaxRegenCurrent() { return max_allowed_regen_current_; }
