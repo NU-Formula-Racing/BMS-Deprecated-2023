@@ -8,22 +8,20 @@
 
 int BMS::fault_pin_{-1};
 
-TeensyCAN<1> can_bus{};
-GWPCharger charger(can_bus);
-
 void BMS::CheckFaults()
 {
-    overvoltage_fault_ = (max_cell_voltage_ >= kCellOvervoltage);
-    undervoltage_fault_ = (min_cell_voltage_ <= kCellUndervoltage);
-    overcurrent_fault_ = (current_[0] >= kOvercurrent);
-    overtemperature_fault_ = (max_cell_temperature_ >= kOvertemp);
-    undertemperature_fault_ = (min_cell_temperature_ <= kUndertemp);
+    overvoltage_fault_ = static_cast<BMSFault>(max_cell_voltage_ >= kCellOvervoltage);
+    undervoltage_fault_ = static_cast<BMSFault>(min_cell_voltage_ <= kCellUndervoltage);
+    overcurrent_fault_ = static_cast<BMSFault>(current_[0] >= kOvercurrent);
+    overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
+    undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
 
-    fault_ = static_cast<BMSFault>(overvoltage_fault_ || undervoltage_fault_ || overcurrent_fault_
-                                   || overtemperature_fault_ || undertemperature_fault_);
+    fault_ = static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
+                                   || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
+                                   || static_cast<bool>(undertemperature_fault_));
 }
 
-void BMS::Tick()
+void BMS::Tick(std::chrono::milliseconds elapsed_time)
 {
     // check fault status
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
@@ -77,8 +75,8 @@ void BMS::CalculateSOE()
     float uncapped_regen_current = max_regen_voltage_delta / internal_resistance_per_series_element;
 
     // I = P / V
-    float pack_voltage = std::accumulate(voltages_.begin(), voltages_.end(), 0);
-    float power_capped_current = kMaxPowerOutput / pack_voltage;
+    pack_voltage_ = std::accumulate(voltages_.begin(), voltages_.end(), 0);
+    float power_capped_current = kMaxPowerOutput / pack_voltage_;
 
     max_allowed_discharge_current_ = std::min({uncapped_discharge_current, power_capped_current, kDischargeCurrent});
     max_allowed_regen_current_ = std::min(uncapped_regen_current, kRegenCurrent);
@@ -90,6 +88,7 @@ void BMS::ProcessCooling()
     bq_.GetTemps(temperatures_);
     max_cell_temperature_ = *std::max_element(temperatures_.begin(), temperatures_.end());
     min_cell_temperature_ = *std::min_element(temperatures_.begin(), temperatures_.end());
+    average_cell_temperature_ = std::accumulate(temperatures_.begin(), temperatures_.end(), 0) / temperatures_.size();
     analogWrite(
         coolant_ctrl,
         clamp<uint8_t>(
@@ -135,6 +134,7 @@ void BMS::ProcessState()
 
             break;
         case BMSState::kCharging:
+            ProcessCooling();
             // cell balancing if charging
             bq_.ProcessBalancing(voltages_);
             UpdateValues();

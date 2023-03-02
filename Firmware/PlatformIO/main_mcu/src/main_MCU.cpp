@@ -4,6 +4,7 @@
 
 #include "bms.cpp"
 #include "bms.h"
+#include "bms_telemetry.h"
 #include "bq_comm.h"
 #include "teensy_can.h"
 #include "thermistor.h"

@@ -15,9 +15,22 @@ std::vector<float> current(1, 0);
 
 void setup()
 {
+    pinMode(contactorprecharge_ctrl, OUTPUT);
+    pinMode(contactorp_ctrl, OUTPUT);
+    pinMode(contactorn_ctrl, OUTPUT);
+    pinMode(coolant_ctrl, OUTPUT);
+    digitalWrite(contactorprecharge_ctrl, LOW);
+    digitalWrite(contactorp_ctrl, LOW);
+    digitalWrite(contactorn_ctrl, LOW);
+    digitalWrite(coolant_ctrl, LOW);
     Serial.begin(9600);
     delay(5000);
     Serial.println("Starting");
+    digitalWrite(contactorprecharge_ctrl, HIGH);
+    digitalWrite(contactorp_ctrl, HIGH);
+    digitalWrite(contactorn_ctrl, HIGH);
+    digitalWrite(coolant_ctrl, HIGH);
+
     /* Serial2.begin(1000000, SERIAL_8N1_HALF_DUPLEX);
     while (1)
     {
@@ -68,6 +81,9 @@ void loop()
         Serial.print(current[0]);
         Serial.println("A");
         delay(500);
+        // bq.ProcessBalancing(voltages);
+        bq.ProcessBalancingSimple(millis());
+        delay(10);
         /* bq.GetTemps(temperatures);
         Serial.println("Temperatures: ");
         Serial.print(temperatures[0]);
