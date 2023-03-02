@@ -49,30 +49,6 @@ public:
 
     void CalculateSOE();
 
-    const std::vector<float>& GetVoltages() { return voltages_; }
-    const std::vector<float>& GetTemperatures() { return temperatures_; }
-    const std::vector<float>& GetCurrent() { return current_; }
-
-    BMSState GetState() { return current_state_; }
-    float GetMaxCellTemperature() { return max_cell_temperature_; }
-    float GetAverageCellTemperature() { return average_cell_temperature_; }
-    float GetMinCellTemperature() { return min_cell_temperature_; }
-    float GetMaxCellVoltage() { return max_cell_voltage_; }
-    float GetMinCellVoltage() { return min_cell_voltage_; }
-    float GetSOC() { return 0; }
-
-    float GetMaxDischargeCurrent() { return max_allowed_discharge_current_; }
-    float GetMaxRegenCurrent() { return max_allowed_regen_current_; }
-    float GetPackVoltage() { return pack_voltage_; }
-
-    BMSFault GetFaultSummary() { return static_cast<BMSFault>(current_state_ == BMSState::kFault); }
-    BMSFault GetUnderVoltageFault() { return undervoltage_fault_; }
-    BMSFault GetOverVoltageFault() { return overvoltage_fault_; }
-    BMSFault GetUnderTemperatureFault() { return undertemperature_fault_; }
-    BMSFault GetOverTemperatureFault() { return overtemperature_fault_; }
-    BMSFault GetOverCurrentFault() { return overcurrent_fault_; }
-    BMSFault GetExternalKillFault() { return external_kill_fault_; }
-
 private:
     BQ79656 bq_;
 
@@ -105,16 +81,15 @@ private:
     float pack_voltage_;
     float max_cell_temperature_;
     float min_cell_temperature_;
-    float average_cell_temperature_;
     float max_allowed_discharge_current_;
     float max_allowed_regen_current_;
 
-    BMSFault undervoltage_fault_{BMSFault::kNotFaulted};
-    BMSFault overvoltage_fault_{BMSFault::kNotFaulted};
-    BMSFault undertemperature_fault_{BMSFault::kNotFaulted};
-    BMSFault overtemperature_fault_{BMSFault::kNotFaulted};
-    BMSFault overcurrent_fault_{BMSFault::kNotFaulted};
-    BMSFault external_kill_fault_{BMSFault::kNotFaulted};
+    bool undervoltage_fault_{false};
+    bool overvoltage_fault_{false};
+    bool undertemperature_fault_{false};
+    bool overtemperature_fault_{false};
+    bool overcurrent_fault_{false};
+    bool external_kill_fault_{false};
 
     static int fault_pin_;
     BMSFault fault_{BMSFault::kNotFaulted};
@@ -126,7 +101,27 @@ private:
     TeensyCAN<kLPBusNumber> lp_bus_{};
 
     VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group, *this};
+    BMSTelemetry telemetry{hp_bus_,
+                           vb_bus_,
+                           lp_bus_,
+                           timer_group,
+                           voltages_,
+                           temperatures_,
+                           max_allowed_discharge_current_,
+                           max_allowed_regen_current_,
+                           pack_voltage_,
+                           current_,
+                           undervoltage_fault_,
+                           overvoltage_fault_,
+                           undertemperature_fault_,
+                           overtemperature_fault_,
+                           overcurrent_fault_,
+                           external_kill_fault_,
+                           current_state_,
+                           max_cell_temperature_,
+                           min_cell_temperature_,
+                           max_cell_voltage_,
+                           min_cell_voltage_};
 
     void ProcessState();
     void ChangeState(BMSState new_state);

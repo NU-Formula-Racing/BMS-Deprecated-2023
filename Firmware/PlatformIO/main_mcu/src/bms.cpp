@@ -7,15 +7,15 @@ int BMS::fault_pin_{-1};
 
 void BMS::CheckFaults()
 {
-    overvoltage_fault_ = static_cast<BMSFault>(max_cell_voltage_ >= kCellOvervoltage);
-    undervoltage_fault_ = static_cast<BMSFault>(min_cell_voltage_ <= kCellUndervoltage);
-    overcurrent_fault_ = static_cast<BMSFault>(current_[0] >= kOvercurrent);
-    overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
-    undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
 
-    fault_ = static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
-                                   || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
-                                   || static_cast<bool>(undertemperature_fault_));
+    overvoltage_fault_ = (max_cell_voltage_ >= kCellOvervoltage);
+    undervoltage_fault_ = (min_cell_voltage_ <= kCellUndervoltage);
+    overcurrent_fault_ = (current_[0] >= kOvercurrent);
+    overtemperature_fault_ = (max_cell_temperature_ >= kOvertemp);
+    undertemperature_fault_ = (min_cell_temperature_ <= kUndertemp);
+
+    fault_ = static_cast<BMSFault>(overvoltage_fault_ || undervoltage_fault_ || overcurrent_fault_
+                                   || overtemperature_fault_ || undertemperature_fault_);
 }
 
 void BMS::Tick(std::chrono::milliseconds elapsed_time)
@@ -85,12 +85,10 @@ void BMS::ProcessCooling()
     bq_.GetTemps(temperatures_);
     max_cell_temperature_ = *std::max_element(temperatures_.begin(), temperatures_.end());
     min_cell_temperature_ = *std::min_element(temperatures_.begin(), temperatures_.end());
-    average_cell_temperature_ = std::accumulate(temperatures_.begin(), temperatures_.end(), 0) / temperatures_.size();
-    analogWrite(
-        coolant_ctrl,
-        clamp<uint8_t>(
-            map(max_cell_temperature_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
-                                                                   // use softpwm, also map ranges may be suboptimal
+    analogWrite(coolant_ctrl,
+                clamp<uint8_t>(
+                    map(max_cell_temperature_, 20, 50, 0, 255), 0, 255));  // Current pin is NOT pwm capable - rev board or
+                                                                      // use softpwm, also map ranges may be suboptimal
 }
 
 void BMS::ProcessState()
