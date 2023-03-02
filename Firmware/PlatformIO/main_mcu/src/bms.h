@@ -16,7 +16,7 @@ T clamp(const T& n, const T& lower, const T& upper)
     return std::max(lower, std::min(n, upper));
 }
 
-class BMS : IBMS
+class BMS : public IBMS
 {
 public:
     BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */, int num_cells_series, int num_thermistors)
