@@ -49,6 +49,7 @@ private:
                                     576,
                                     5,
                                     kSOEMessageTransmitPeriod,
+                                    timer_group_,
                                     max_discharge_signal_,
                                     max_regen_signal_,
                                     battery_voltage_signal_,
@@ -58,6 +59,7 @@ private:
                                     576,
                                     5,
                                     kSOEMessageTransmitPeriod,
+                                    timer_group_,
                                     max_discharge_signal_,
                                     max_regen_signal_,
                                     battery_voltage_signal_,
@@ -76,6 +78,7 @@ private:
                                       592,
                                       7,
                                       kFaultMessageTransmitPeriod,
+                                      timer_group_,
                                       fault_summary_signal_,
                                       undervoltage_signal_,
                                       overvoltage_signal_,
@@ -87,6 +90,7 @@ private:
                                       592,
                                       7,
                                       kFaultMessageTransmitPeriod,
+                                      timer_group_,
                                       fault_summary_signal_,
                                       undervoltage_signal_,
                                       overvoltage_signal_,
@@ -96,7 +100,7 @@ private:
                                       external_kill_signal_};
 
     static const uint32_t kStatusMessageTransmitPeriod{100};
-    MakeUnsignedCANSignal(IBMS::BMSState, 48, 8, 1, 0) state_signal_;
+    MakeUnsignedCANSignal(IBMS::BMSState, 0, 8, 1, 0) state_signal_;
     MakeUnsignedCANSignal(float, 8, 8, 1, -40) max_cell_temperature_signal_;
     MakeUnsignedCANSignal(float, 16, 8, 1, -40) min_cell_temperature_signal_;
     MakeUnsignedCANSignal(float, 24, 8, 0.012, 2) max_cell_voltage_signal_;
@@ -106,6 +110,7 @@ private:
                                        577,
                                        6,
                                        kStatusMessageTransmitPeriod,
+                                       timer_group_,
                                        state_signal_,
                                        max_cell_temperature_signal_,
                                        min_cell_temperature_signal_,
@@ -116,6 +121,7 @@ private:
                                        577,
                                        6,
                                        kStatusMessageTransmitPeriod,
+                                       timer_group_,
                                        state_signal_,
                                        max_cell_temperature_signal_,
                                        min_cell_temperature_signal_,

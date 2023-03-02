@@ -3,8 +3,8 @@
 #include <algorithm>
 #include <numeric>
 
-#include "GWP-Charger.h"
-#include "teensy_can.h"
+#include "I-Charger.h"
+#include "can_interface.h"
 
 int BMS::fault_pin_{-1};
 
@@ -21,7 +21,7 @@ void BMS::CheckFaults()
                                    || static_cast<bool>(undertemperature_fault_));
 }
 
-void BMS::Tick(std::chrono::milliseconds elapsed_time)
+void BMS::Tick()
 {
     // check fault status
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
@@ -52,6 +52,8 @@ void BMS::Tick(std::chrono::milliseconds elapsed_time)
 #endif
         ChangeState(BMSState::kFault);
     }
+
+    ProcessState();
 
     // log to SD, send to ESP, send to CAN
     // todo
@@ -103,6 +105,12 @@ void BMS::UpdateValues()
     bq_.GetVoltages(voltages_);
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
+#if serialdebug
+    Serial.print("Current: ");
+    Serial.print(current_[0]);
+    Serial.print("\tMax voltage: ");
+    Serial.println(max_cell_voltage_);
+#endif
 }
 
 void BMS::ProcessState()
@@ -121,7 +129,6 @@ void BMS::ProcessState()
             break;
         case BMSState::kPrecharge:
             // do a time-based precharge
-            const uint32_t kPrechargeTime{2000};
             if (millis() >= state_entry_time_ + kPrechargeTime)
             {
                 ChangeState(BMSState::kActive);
@@ -152,6 +159,13 @@ void BMS::ProcessState()
 
 void BMS::ChangeState(BMSState new_state)
 {
+#if serialdebug
+    Serial.print("Changing state: ");
+    Serial.println(new_state == BMSState::kShutdown    ? "Shutdown"
+                   : new_state == BMSState::kPrecharge ? "Precharge"
+                   : new_state == BMSState::kFault     ? "Fault"
+                                                       : "Other");
+#endif
     switch (new_state)
     {
         case BMSState::kShutdown:
@@ -171,7 +185,7 @@ void BMS::ChangeState(BMSState new_state)
         case BMSState::kCharging:
             // enable charger?
             {
-                charger.Enable();
+                charger_.Enable();
                 current_state_ = BMSState::kCharging;
                 break;
             }

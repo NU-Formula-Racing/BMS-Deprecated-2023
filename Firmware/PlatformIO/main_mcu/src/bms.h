@@ -3,6 +3,9 @@
 
 #include <algorithm>
 
+// #define BQTEST // TODO: temporary
+
+#include "I-Charger.h"
 #include "bms_interface.h"
 #include "bms_telemetry.h"
 #include "bq_comm.h"
@@ -18,21 +21,6 @@ T clamp(const T& n, const T& lower, const T& upper)
 class BMS : public IBMS
 {
 public:
-    enum class BMSFault : bool
-    {
-        kNotFaulted = 0,
-        kFaulted = 1,
-    };
-
-    enum class BMSState
-    {
-        kShutdown = 0,
-        kPrecharge = 1,
-        kActive = 2,
-        kCharging = 3,
-        kFault = 4
-    };
-
     enum class Command : uint8_t
     {
         kNoAction = 0,
@@ -44,12 +32,16 @@ public:
     BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */,
         int num_cells_series,
         int num_thermistors,
+        ICharger& charger,
+        VirtualTimerGroup& timer_group,
         ICAN& hp_can,
         ICAN& lp_can,
         ICAN& vb_can)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
+          charger_{charger},
+          timer_group_{timer_group},
           hp_can_{hp_can},
           lp_can_{lp_can},
           vb_can_{vb_can},
@@ -72,6 +64,7 @@ public:
         }
 
         // initialize the BQ chip driver
+        // bq_.SetStackSize(2);  // TODO: temporary
         bq_.Initialize();
 
         // initialize BMS telemetry
@@ -82,38 +75,42 @@ public:
 
     void CalculateSOE();
 
-    const std::vector<float>& GetVoltages() { return voltages_; }
-    const std::vector<float>& GetTemperatures() { return temperatures_; }
-    const std::vector<float>& GetCurrent() { return current_; }
+    const std::vector<float>& GetVoltages() override { return voltages_; }
+    const std::vector<float>& GetTemperatures() override { return temperatures_; }
+    const std::vector<float>& GetCurrent() override { return current_; }
 
-    BMSState GetState() { return current_state_; }
-    float GetMaxCellTemperature() { return max_cell_temperature_; }
-    float GetAverageCellTemperature() { return average_cell_temperature_; }
-    float GetMinCellTemperature() { return min_cell_temperature_; }
-    float GetMaxCellVoltage() { return max_cell_voltage_; }
-    float GetMinCellVoltage() { return min_cell_voltage_; }
-    float GetSOC() { return 0; }
+    BMSState GetState() override { return current_state_; }
+    float GetMaxCellTemperature() override { return max_cell_temperature_; }
+    float GetAverageCellTemperature() override { return average_cell_temperature_; }
+    float GetMinCellTemperature() override { return min_cell_temperature_; }
+    float GetMaxCellVoltage() override { return max_cell_voltage_; }
+    float GetMinCellVoltage() override { return min_cell_voltage_; }
+    float GetSOC() override { return 0; }
 
-    float GetMaxDischargeCurrent() { return max_allowed_discharge_current_; }
-    float GetMaxRegenCurrent() { return max_allowed_regen_current_; }
-    float GetPackVoltage() { return pack_voltage_; }
+    float GetMaxDischargeCurrent() override { return max_allowed_discharge_current_; }
+    float GetMaxRegenCurrent() override { return max_allowed_regen_current_; }
+    float GetPackVoltage() override { return pack_voltage_; }
 
-    BMSFault GetFaultSummary() { return static_cast<BMSFault>(current_state_ == BMSState::kFault); }
-    BMSFault GetUnderVoltageFault() { return undervoltage_fault_; }
-    BMSFault GetOverVoltageFault() { return overvoltage_fault_; }
-    BMSFault GetUnderTemperatureFault() { return undertemperature_fault_; }
-    BMSFault GetOverTemperatureFault() { return overtemperature_fault_; }
-    BMSFault GetOverCurrentFault() { return overcurrent_fault_; }
-    BMSFault GetExternalKillFault() { return external_kill_fault_; }
+    BMSFault GetFaultSummary() override { return static_cast<BMSFault>(current_state_ == BMSState::kFault); }
+    BMSFault GetUnderVoltageFault() override { return undervoltage_fault_; }
+    BMSFault GetOverVoltageFault() override { return overvoltage_fault_; }
+    BMSFault GetUnderTemperatureFault() override { return undertemperature_fault_; }
+    BMSFault GetOverTemperatureFault() override { return overtemperature_fault_; }
+    BMSFault GetOverCurrentFault() override { return overcurrent_fault_; }
+    BMSFault GetExternalKillFault() override { return external_kill_fault_; }
 
 private:
     BQ79656 bq_;
-    ICAN& hp_can_;
-    ICAN& lp_can_;
-    ICAN& vb_can_;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
+
+    ICharger& charger_;
+    VirtualTimerGroup& timer_group_;
+
+    ICAN& hp_can_;
+    ICAN& lp_can_;
+    ICAN& vb_can_;
 
     // Consts for SoE calculation + Fault Detection
     const int kNumCellsParallel{4};
@@ -126,6 +123,7 @@ private:
     const float kOvercurrent{180.0f};
     const float kOvertemp{60.0f};
     const float kUndertemp{-40.0f};
+    const uint32_t kPrechargeTime{2000};
 
     MakeUnsignedCANSignal(Command, 0, 8, 1, 0) command_signal_{};
     CANRXMessage<1> command_message_hp_{hp_can_, 0x242, command_signal_};
@@ -156,12 +154,7 @@ private:
 
     BMSState current_state_{BMSState::kShutdown};
 
-    TeensyCAN<kHPBusNumber> hp_bus_{};
-    TeensyCAN<kVBBusNumber> vb_bus_{};
-    TeensyCAN<kLPBusNumber> lp_bus_{};
-
-    VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group, *this};
+    BMSTelemetry telemetry{hp_can_, vb_can_, lp_can_, timer_group_, *this};
     uint32_t state_entry_time_{0};
 
     void ProcessState();
