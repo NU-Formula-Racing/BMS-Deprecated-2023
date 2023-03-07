@@ -3,9 +3,8 @@
 
 #include <algorithm>
 
-// #define BQTEST // TODO: temporary
-
 #include "I-Charger.h"
+#include "Watchdog_t4.h"
 #include "bms_interface.h"
 #include "bms_telemetry.h"
 #include "bq_comm.h"
@@ -50,18 +49,24 @@ public:
           current_{std::vector<float>(1)}
     {
         command_signal_ = Command::kNoAction;
-        hp_can_.RegisterRXMessage(command_message_hp_);
-        vb_can_.RegisterRXMessage(command_message_vb_);
     }
 
     void Initialize()
     {
         // attach fault interrupts
-        for (int i = 0; i < num_kill_pins; i++)
+        /* for (int i = 0; i < num_kill_pins; i++)
         {
-            pinMode(kill_pins[i], INPUT);
-            attachInterrupt(digitalPinToInterrupt(kill_pins[i]), FaultInterrupt, FALLING);
-        }
+            // TODO: fix kill pins activating on contactor
+            //  pinMode(kill_pins[i], INPUT);
+            //  attachInterrupt(digitalPinToInterrupt(kill_pins[i]), FaultInterrupt, FALLING);
+        } */
+
+        pinMode(charger_sense, INPUT_PULLDOWN);
+
+        pinMode(coolant_ctrl, OUTPUT);
+        pinMode(contactorprecharge_ctrl, OUTPUT);
+        pinMode(contactorp_ctrl, OUTPUT);
+        pinMode(contactorn_ctrl, OUTPUT);
 
         // initialize the BQ chip driver
         // bq_.SetStackSize(2);  // TODO: temporary
@@ -69,6 +74,16 @@ public:
 
         // initialize BMS telemetry
         telemetry.InitializeCAN();
+        hp_can_.RegisterRXMessage(command_message_hp_);
+        vb_can_.RegisterRXMessage(command_message_vb_);
+
+        // initialize the watchdog timer to shutdown if the dog isn't fed for 1 second, reset if the dog isn't fed for 2
+        // seconds
+        WDT_timings_t config;
+        config.trigger = 1; /* in seconds, 0->128 */
+        config.timeout = 2; /* in seconds, 0->128 */
+        config.callback = [this]() { this->ChangeState(BMSState::kFault); };
+        watchdog_timer_.begin(config);
     }
 
     void Tick();
@@ -101,6 +116,8 @@ public:
 
 private:
     BQ79656 bq_;
+
+    WDT_T4<WDT1> watchdog_timer_;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
@@ -175,7 +192,7 @@ private:
         return;
     }
 
-    static void FaultInterrupt()
+    /* static void FaultInterrupt()
     {
         ShutdownCar();
 
@@ -192,7 +209,7 @@ private:
         {
             fault_pin_ = -1;
         }
-    }
+    } */
 
     void GetMaxMinAvgTot(double* arr,
                          int arrSize,

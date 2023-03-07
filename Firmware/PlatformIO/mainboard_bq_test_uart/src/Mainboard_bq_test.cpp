@@ -38,7 +38,7 @@ void setup()
         delay(100);
     } */
     // delay(5);
-    bq.SetStackSize(1);
+    bq.SetStackSize(2);
     bq.Initialize();
     bq.SetProtectors(4.20f, 2.50f, 60.0f, -40.0f);
     delay(1000);

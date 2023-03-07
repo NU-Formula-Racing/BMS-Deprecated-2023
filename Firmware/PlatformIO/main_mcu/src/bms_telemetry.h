@@ -47,7 +47,7 @@ private:
     MakeSignedCANSignal(float, 48, 16, 0.01, 0) battery_current_signal_;
     CANTXMessage<5> hp_soe_message_{hp_can_bus_,
                                     576,
-                                    5,
+                                    8,
                                     kSOEMessageTransmitPeriod,
                                     timer_group_,
                                     max_discharge_signal_,
@@ -55,9 +55,9 @@ private:
                                     battery_voltage_signal_,
                                     battery_temperature_signal_,
                                     battery_current_signal_};
-    CANTXMessage<5> vb_soe_message_{hp_can_bus_,
+    CANTXMessage<5> vb_soe_message_{vb_can_bus_,
                                     576,
-                                    5,
+                                    8,
                                     kSOEMessageTransmitPeriod,
                                     timer_group_,
                                     max_discharge_signal_,
@@ -76,7 +76,7 @@ private:
     MakeUnsignedCANSignal(IBMS::BMSFault, 6, 1, 1, 0) external_kill_signal_;
     CANTXMessage<7> vb_fault_message_{vb_can_bus_,
                                       592,
-                                      7,
+                                      1,
                                       kFaultMessageTransmitPeriod,
                                       timer_group_,
                                       fault_summary_signal_,
@@ -88,7 +88,7 @@ private:
                                       external_kill_signal_};
     CANTXMessage<7> lp_fault_message_{lp_can_bus_,
                                       592,
-                                      7,
+                                      1,
                                       kFaultMessageTransmitPeriod,
                                       timer_group_,
                                       fault_summary_signal_,

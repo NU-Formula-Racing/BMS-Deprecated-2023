@@ -2,8 +2,6 @@
 
 #include <chrono>
 
-#define BQTEST
-
 #include "GWP-Charger.h"
 #include "bms.h"
 #include "bms_telemetry.h"
@@ -23,7 +21,7 @@ GWPCharger charger{vb_can};
 VirtualTimerGroup timer_group{};
 
 NXFT15XH103FA2B050 thermistor{};
-BMS bms{BQ79656{Serial8, 35, thermistor}, 20, 16, charger, timer_group, hp_can, lp_can, vb_can};
+BMS bms{BQ79656{Serial8, 35, thermistor, 20, 16, 2}, 20, 16, charger, timer_group, hp_can, lp_can, vb_can};
 
 void setup()
 {

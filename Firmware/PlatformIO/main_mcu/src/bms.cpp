@@ -23,33 +23,35 @@ void BMS::CheckFaults()
 
 void BMS::Tick()
 {
+    watchdog_timer_.feed();  // so we don't reboot
     // check fault status
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
-#if serialdebug
-        Serial.println("Faults:");
-        if (overvoltage_fault_)
-        {
-            Serial.println("  Overvoltage");
-        }
-        else if (undervoltage_fault_)
-        {
-            Serial.println("  Undervoltage");
-        }
-        if (overtemperature_fault_)
-        {
-            Serial.println("  Overtemperature");
-        }
-        else if (undertemperature_fault_)
-        {
-            Serial.println("  Undertemperature");
-        }
-        if (overcurrent_fault_)
-        {
-            Serial.println("  Overcurrent");
-        }
-        Serial.println("");
-#endif
+        /* #if serialdebug
+                Serial.println("Faults:");
+                if (overvoltage_fault_)
+                {
+                    Serial.println("  Overvoltage");
+                }
+                else if (undervoltage_fault_)
+                {
+                    Serial.println("  Undervoltage");
+                }
+                if (overtemperature_fault_)
+                {
+                    Serial.println("  Overtemperature");
+                }
+                else if (undertemperature_fault_)
+                {
+                    Serial.println("  Undertemperature");
+                }
+                if (overcurrent_fault_)
+                {
+                    Serial.println("  Overcurrent");
+                }
+                Serial.println("");
+        #endif */
+
         ChangeState(BMSState::kFault);
     }
 
@@ -122,7 +124,7 @@ void BMS::ProcessState()
     {
         case BMSState::kShutdown:
             // check for command to go to active
-            if (command_signal_ == Command::kPrechargeAndCloseContactors)
+            if (command_signal_ == Command::kPrechargeAndCloseContactors || digitalRead(charger_sense))
             {
                 ChangeState(BMSState::kPrecharge);
             }
@@ -131,20 +133,47 @@ void BMS::ProcessState()
             // do a time-based precharge
             if (millis() >= state_entry_time_ + kPrechargeTime)
             {
-                ChangeState(BMSState::kActive);
+                if (digitalRead(charger_sense))
+                {
+                    ChangeState(BMSState::kCharging);
+                }
+                else if (command_signal_ == Command::kPrechargeAndCloseContactors)
+                {
+                    ChangeState(BMSState::kActive);
+                }
+                else
+                {
+                    ChangeState(BMSState::kShutdown);
+                }
             }
 
             break;
         case BMSState::kActive:
-
-            // send CAN messages with SOE (state of energy)
-
+            if (command_signal_ == Command::kShutdown)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
             break;
         case BMSState::kCharging:
-            ProcessCooling();
+            static constexpr float kMaxChargeVoltage{4.19f};
+
+            if (!digitalRead(charger_sense))
+            {
+                ChangeState(BMSState::kShutdown);
+                break;
+            }
             // cell balancing if charging
-            bq_.ProcessBalancing(voltages_);
-            UpdateValues();
+            bq_.ProcessBalancing(voltages_, kMaxChargeVoltage);
+            // pause charging if danger of overvoltage
+            if (max_cell_voltage_ > kMaxChargeVoltage)
+            {
+                // pause charging, for now just disconnect positive, will actually set current to 0
+                digitalWrite(contactorp_ctrl, LOW);
+            }
+            else
+            {
+                digitalWrite(contactorp_ctrl, LOW);
+            }
             // todo
             break;
         case BMSState::kFault:
@@ -166,6 +195,7 @@ void BMS::ChangeState(BMSState new_state)
                    : new_state == BMSState::kFault     ? "Fault"
                                                        : "Other");
 #endif
+    state_entry_time_ = millis();
     switch (new_state)
     {
         case BMSState::kShutdown:
@@ -174,6 +204,7 @@ void BMS::ChangeState(BMSState new_state)
             break;
         case BMSState::kPrecharge:
             digitalWrite(contactorn_ctrl, HIGH);
+            delay(1);
             digitalWrite(contactorprecharge_ctrl, HIGH);  // precharge, but don't turn on car yet
             current_state_ = BMSState::kPrecharge;
             break;

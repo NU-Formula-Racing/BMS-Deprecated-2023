@@ -116,12 +116,12 @@ void BMSTelemetry::TickVBCAN()
 {
     for (int i = 0; i < kNumVoltageMessages * kSignalsPerMessage; i++)
     {
-        *(voltage_signals_[i]) = bms_.GetVoltages()[i];
+        *(voltage_signals_[i]) = i < bms_.GetVoltages().size() ? bms_.GetVoltages()[i] : 0;
     }
 
     for (int i = 0; i < kNumTemperatureMessages * kSignalsPerMessage; i++)
     {
-        *(temperature_signals_[i]) = bms_.GetTemperatures()[i];
+        *(temperature_signals_[i]) = i < bms_.GetTemperatures().size() ? bms_.GetTemperatures()[i] : 0;
     }
 
     UpdateSOESignals();
