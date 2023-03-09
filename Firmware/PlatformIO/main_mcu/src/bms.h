@@ -2,12 +2,13 @@
 #include <Arduino.h>
 
 #include <algorithm>
-#include <chrono>
 
+#include "I-Charger.h"
+#include "Watchdog_t4.h"
 #include "bms_interface.h"
 #include "bms_telemetry.h"
 #include "bq_comm.h"
-#include "teensy_can.h"
+#include "can_interface.h"
 #include "teensy_pin_defs.h"
 
 template <typename T>
@@ -19,65 +20,114 @@ T clamp(const T& n, const T& lower, const T& upper)
 class BMS : public IBMS
 {
 public:
-    BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */, int num_cells_series, int num_thermistors)
+    enum class Command : uint8_t
+    {
+        kNoAction = 0,
+        kPrechargeAndCloseContactors = 1,
+        kShutdown = 2,
+        kClearFaults = 3
+    };
+
+    BMS(BQ79656 bq /*  = BQ79656{Serial8, 35} */,
+        int num_cells_series,
+        int num_thermistors,
+        ICharger& charger,
+        VirtualTimerGroup& timer_group,
+        ICAN& hp_can,
+        ICAN& lp_can,
+        ICAN& vb_can)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
+          charger_{charger},
+          timer_group_{timer_group},
+          hp_can_{hp_can},
+          lp_can_{lp_can},
+          vb_can_{vb_can},
           voltages_{std::vector<float>(kNumCellsSeries)},
           temperatures_{std::vector<float>(kNumThermistors)},
           current_{std::vector<float>(1)}
     {
+        command_signal_ = Command::kNoAction;
     }
 
     void Initialize()
     {
         // attach fault interrupts
-        for (int i = 0; i < num_kill_pins; i++)
+        /* for (int i = 0; i < num_kill_pins; i++)
         {
-            pinMode(kill_pins[i], INPUT);
-            attachInterrupt(digitalPinToInterrupt(kill_pins[i]), FaultInterrupt, FALLING);
-        }
+            // TODO: fix kill pins activating on contactor
+            //  pinMode(kill_pins[i], INPUT);
+            //  attachInterrupt(digitalPinToInterrupt(kill_pins[i]), FaultInterrupt, FALLING);
+        } */
+
+        pinMode(charger_sense, INPUT_PULLDOWN);
+
+        pinMode(coolant_ctrl, OUTPUT);
+        pinMode(contactorprecharge_ctrl, OUTPUT);
+        pinMode(contactorp_ctrl, OUTPUT);
+        pinMode(contactorn_ctrl, OUTPUT);
 
         // initialize the BQ chip driver
+        // bq_.SetStackSize(2);  // TODO: temporary
         bq_.Initialize();
 
         // initialize BMS telemetry
         telemetry.InitializeCAN();
+        hp_can_.RegisterRXMessage(command_message_hp_);
+        vb_can_.RegisterRXMessage(command_message_vb_);
+
+        // initialize the watchdog timer to shutdown if the dog isn't fed for 1 second, reset if the dog isn't fed for 2
+        // seconds
+        WDT_timings_t config;
+        config.trigger = 1; /* in seconds, 0->128 */
+        config.timeout = 2; /* in seconds, 0->128 */
+        config.callback = [this]() { this->ChangeState(BMSState::kFault); };
+        watchdog_timer_.begin(config);
     }
 
-    void Tick(std::chrono::milliseconds elapsed_time);
+    void Tick();
 
     void CalculateSOE();
 
-    const std::vector<float>& GetVoltages() { return voltages_; }
-    const std::vector<float>& GetTemperatures() { return temperatures_; }
-    const std::vector<float>& GetCurrent() { return current_; }
+    const std::vector<float>& GetVoltages() override { return voltages_; }
+    const std::vector<float>& GetTemperatures() override { return temperatures_; }
+    const std::vector<float>& GetCurrent() override { return current_; }
 
-    BMSState GetState() { return current_state_; }
-    float GetMaxCellTemperature() { return max_cell_temperature_; }
-    float GetAverageCellTemperature() { return average_cell_temperature_; }
-    float GetMinCellTemperature() { return min_cell_temperature_; }
-    float GetMaxCellVoltage() { return max_cell_voltage_; }
-    float GetMinCellVoltage() { return min_cell_voltage_; }
-    float GetSOC() { return 0; }
+    BMSState GetState() override { return current_state_; }
+    float GetMaxCellTemperature() override { return max_cell_temperature_; }
+    float GetAverageCellTemperature() override { return average_cell_temperature_; }
+    float GetMinCellTemperature() override { return min_cell_temperature_; }
+    float GetMaxCellVoltage() override { return max_cell_voltage_; }
+    float GetMinCellVoltage() override { return min_cell_voltage_; }
+    float GetSOC() override { return 0; }
 
-    float GetMaxDischargeCurrent() { return max_allowed_discharge_current_; }
-    float GetMaxRegenCurrent() { return max_allowed_regen_current_; }
-    float GetPackVoltage() { return pack_voltage_; }
+    float GetMaxDischargeCurrent() override { return max_allowed_discharge_current_; }
+    float GetMaxRegenCurrent() override { return max_allowed_regen_current_; }
+    float GetPackVoltage() override { return pack_voltage_; }
 
-    BMSFault GetFaultSummary() { return static_cast<BMSFault>(current_state_ == BMSState::kFault); }
-    BMSFault GetUnderVoltageFault() { return undervoltage_fault_; }
-    BMSFault GetOverVoltageFault() { return overvoltage_fault_; }
-    BMSFault GetUnderTemperatureFault() { return undertemperature_fault_; }
-    BMSFault GetOverTemperatureFault() { return overtemperature_fault_; }
-    BMSFault GetOverCurrentFault() { return overcurrent_fault_; }
-    BMSFault GetExternalKillFault() { return external_kill_fault_; }
+    BMSFault GetFaultSummary() override { return static_cast<BMSFault>(current_state_ == BMSState::kFault); }
+    BMSFault GetUnderVoltageFault() override { return undervoltage_fault_; }
+    BMSFault GetOverVoltageFault() override { return overvoltage_fault_; }
+    BMSFault GetUnderTemperatureFault() override { return undertemperature_fault_; }
+    BMSFault GetOverTemperatureFault() override { return overtemperature_fault_; }
+    BMSFault GetOverCurrentFault() override { return overcurrent_fault_; }
+    BMSFault GetExternalKillFault() override { return external_kill_fault_; }
 
 private:
     BQ79656 bq_;
 
+    WDT_T4<WDT1> watchdog_timer_;
+
     const int kNumCellsSeries;
     const int kNumThermistors;
+
+    ICharger& charger_;
+    VirtualTimerGroup& timer_group_;
+
+    ICAN& hp_can_;
+    ICAN& lp_can_;
+    ICAN& vb_can_;
 
     // Consts for SoE calculation + Fault Detection
     const int kNumCellsParallel{4};
@@ -90,11 +140,11 @@ private:
     const float kOvercurrent{180.0f};
     const float kOvertemp{60.0f};
     const float kUndertemp{-40.0f};
+    const uint32_t kPrechargeTime{2000};
 
-    // CAN Bus Numbers
-    static const int kHPBusNumber{1};
-    static const int kVBBusNumber{2};
-    static const int kLPBusNumber{3};
+    MakeUnsignedCANSignal(Command, 0, 8, 1, 0) command_signal_{};
+    CANRXMessage<1> command_message_hp_{hp_can_, 0x242, command_signal_};
+    CANRXMessage<1> command_message_vb_{vb_can_, 0x242, command_signal_};
 
     std::vector<float> voltages_;
     std::vector<float> temperatures_;
@@ -121,15 +171,13 @@ private:
 
     BMSState current_state_{BMSState::kShutdown};
 
-    TeensyCAN<kHPBusNumber> hp_bus_{};
-    TeensyCAN<kVBBusNumber> vb_bus_{};
-    TeensyCAN<kLPBusNumber> lp_bus_{};
-
-    VirtualTimerGroup timer_group{};
-    BMSTelemetry telemetry{hp_bus_, vb_bus_, lp_bus_, timer_group, *this};
+    BMSTelemetry telemetry{hp_can_, vb_can_, lp_can_, timer_group_, *this};
+    uint32_t state_entry_time_{0};
 
     void ProcessState();
     void ChangeState(BMSState new_state);
+
+    void UpdateValues();
 
     void ProcessCooling();
 
@@ -144,7 +192,7 @@ private:
         return;
     }
 
-    static void FaultInterrupt()
+    /* static void FaultInterrupt()
     {
         ShutdownCar();
 
@@ -161,7 +209,7 @@ private:
         {
             fault_pin_ = -1;
         }
-    }
+    } */
 
     void GetMaxMinAvgTot(double* arr,
                          int arrSize,

@@ -2,10 +2,6 @@
 
 void BMSTelemetry::InitializeCAN()
 {
-    hp_can_bus_.Initialize(ICAN::BaudRate::kBaud1M);
-    vb_can_bus_.Initialize(ICAN::BaudRate::kBaud1M);
-    lp_can_bus_.Initialize(ICAN::BaudRate::kBaud1M);
-
     InitializeVoltageAndTemperatureMessages();
 
     const uint32_t kTickPeriod{10};
@@ -38,6 +34,7 @@ void BMSTelemetry::AttachVoltageMessages(ICAN &bus,
                                                    512 + i,
                                                    7,
                                                    transmit_period,
+                                                   timer_group_,
                                                    *(voltage_signals_[i * kSignalsPerMessage + 0]),
                                                    *(voltage_signals_[i * kSignalsPerMessage + 1]),
                                                    *(voltage_signals_[i * kSignalsPerMessage + 2]),
@@ -66,6 +63,7 @@ void BMSTelemetry::AttachTemperatureMessages(ICAN &bus,
                                                    544 + i,
                                                    7,
                                                    transmit_period,
+                                                   timer_group_,
                                                    *(temperature_signals_[i * kSignalsPerMessage + 0]),
                                                    *(temperature_signals_[i * kSignalsPerMessage + 1]),
                                                    *(temperature_signals_[i * kSignalsPerMessage + 2]),
@@ -118,12 +116,12 @@ void BMSTelemetry::TickVBCAN()
 {
     for (int i = 0; i < kNumVoltageMessages * kSignalsPerMessage; i++)
     {
-        *(voltage_signals_[i]) = bms_.GetVoltages()[i];
+        *(voltage_signals_[i]) = i < bms_.GetVoltages().size() ? bms_.GetVoltages()[i] : 0;
     }
 
     for (int i = 0; i < kNumTemperatureMessages * kSignalsPerMessage; i++)
     {
-        *(temperature_signals_[i]) = bms_.GetTemperatures()[i];
+        *(temperature_signals_[i]) = i < bms_.GetTemperatures().size() ? bms_.GetTemperatures()[i] : 0;
     }
 
     UpdateSOESignals();
