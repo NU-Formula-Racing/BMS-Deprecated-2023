@@ -227,3 +227,4 @@ void BMS::ChangeState(BMSState new_state)
             break;
     }
 }
+
