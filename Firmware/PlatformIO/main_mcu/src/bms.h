@@ -77,6 +77,9 @@ public:
         hp_can_.RegisterRXMessage(command_message_hp_);
         vb_can_.RegisterRXMessage(command_message_vb_);
 
+        command_signal_ = Command::kNoAction;
+        command_signal_vb_ = Command::kNoAction;
+
         // initialize the watchdog timer to shutdown if the dog isn't fed for 1 second, reset if the dog isn't fed for 2
         // seconds
         WDT_timings_t config;
@@ -143,8 +146,21 @@ private:
     const uint32_t kPrechargeTime{2000};
 
     MakeUnsignedCANSignal(Command, 0, 8, 1, 0) command_signal_{};
-    CANRXMessage<1> command_message_hp_{hp_can_, 0x242, command_signal_};
-    CANRXMessage<1> command_message_vb_{vb_can_, 0x242, command_signal_};
+    MakeUnsignedCANSignal(Command, 0, 8, 1, 0) command_signal_vb_{};
+    CANRXMessage<1> command_message_hp_{hp_can_, 0x242, [this]() { this->UpdateCommandSignal(); }, command_signal_};
+    CANRXMessage<1> command_message_vb_{vb_can_, 0x242, [this]() { this->UpdateCommandSignal(); }, command_signal_vb_};
+
+    void UpdateCommandSignal()
+    {
+        if (command_signal_ == Command::kNoAction)
+        {
+            command_signal_ = command_signal_vb_;
+        }
+        else if (command_signal_vb_ == Command::kShutdown)
+        {
+            command_signal_ = Command::kShutdown;
+        }
+    }
 
     std::vector<float> voltages_;
     std::vector<float> temperatures_;
