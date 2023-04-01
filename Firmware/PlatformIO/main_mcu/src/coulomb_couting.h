@@ -17,7 +17,7 @@ public:
         previous_time_ = current_time_;
     }
 
-    int countCoulombs(float current, uint32_t current_time_)
+    int CountCoulombs(float current, uint32_t current_time_)
     {
         remaining_ -= current * (current_time_ - previous_time_) / 1000;
         previous_time_ = current_time_;

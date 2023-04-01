@@ -106,7 +106,7 @@ public:
     {
         if (BMSState::kActive == current_state_)
         {
-            coulomb_count_.getSOC();
+            return coulomb_count_.getSOC() * 100;
         }
         else
             return cell.VoltageToSOC(min_cell_voltage_);

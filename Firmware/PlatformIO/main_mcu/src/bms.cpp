@@ -153,6 +153,7 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kShutdown);
             }
+            coulomb_count_.CountCoulombs(current_[0], millis());
             break;
         case BMSState::kCharging:
             static constexpr float kMaxChargeVoltage{4.19f};
@@ -211,7 +212,7 @@ void BMS::ChangeState(BMSState new_state)
         case BMSState::kActive:
             digitalWrite(contactorp_ctrl, HIGH);         // turn on car
             digitalWrite(contactorprecharge_ctrl, LOW);  // disable precharge when car is running
-            coulomb_count_.Initialize(0.5);
+            coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), state_entry_time_);
             current_state_ = BMSState::kActive;
             break;
         case BMSState::kCharging:
