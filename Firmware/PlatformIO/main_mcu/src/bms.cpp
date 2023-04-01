@@ -211,6 +211,7 @@ void BMS::ChangeState(BMSState new_state)
         case BMSState::kActive:
             digitalWrite(contactorp_ctrl, HIGH);         // turn on car
             digitalWrite(contactorprecharge_ctrl, LOW);  // disable precharge when car is running
+            coulomb_count_.Initialize(0.5);
             current_state_ = BMSState::kActive;
             break;
         case BMSState::kCharging:
@@ -227,4 +228,3 @@ void BMS::ChangeState(BMSState new_state)
             break;
     }
 }
-

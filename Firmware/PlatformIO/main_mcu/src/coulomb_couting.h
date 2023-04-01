@@ -4,28 +4,30 @@
 class CoulombCounting
 {
 private:
-    float StateOfCharge;
-    float full_capacity;
-    int remaining;
+    float state_of_charge_;
+    float full_capacity_ = 4.2 * 4;
+    int remaining_;
+    uint32_t previous_time_;
 
 public:
-    void Initialize(float SOC)
+    void Initialize(float SOC, uint32_t current_time_)
     {
-        StateOfCharge = SOC;
-        remaining = SOC * full_capacity * 60;
+        state_of_charge_ = SOC;
+        remaining_ = SOC * full_capacity_ * 60;
+        previous_time_ = current_time_;
     }
 
-    int countCoulombs(float current, uint32_t time)
+    int countCoulombs(float current, uint32_t current_time_)
     {
-        remaining -= current * time / 1000;
-        return remaining;
+        remaining_ -= current * (current_time_ - previous_time_) / 1000;
+        previous_time_ = current_time_;
+
+        return remaining_;
     }
 
     float getSOC()
     {
-        StateOfCharge = remaining * 1000 / (60 * full_capacity);
-        return StateOfCharge;
+        state_of_charge_ = remaining_ * 1000 / (60 * full_capacity_);
+        return state_of_charge_;
     }
-
-    CoulombCounting(float full_charge_capacity) { full_capacity = full_charge_capacity; }
 };
