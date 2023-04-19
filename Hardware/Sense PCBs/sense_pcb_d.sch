@@ -80,8 +80,8 @@
 <smd name="P$2" x="0" y="8.35" dx="2.8" dy="2" layer="16"/>
 <smd name="P$3" x="0" y="0" dx="2.8" dy="2" layer="1"/>
 <smd name="P$4" x="0" y="8.35" dx="2.8" dy="2" layer="1"/>
-<pad name="P$5" x="0" y="0" drill="0.6" shape="square"/>
-<pad name="P$6" x="0" y="8.35" drill="0.6" shape="square"/>
+<pad name="P$5" x="0" y="0.508" drill="0.3048" shape="square"/>
+<pad name="P$6" x="0" y="7.842" drill="0.3048" shape="square"/>
 </package>
 <package name="BB_CONTACT">
 <smd name="P$1" x="0" y="0" dx="5" dy="4" layer="1"/>
@@ -204,9 +204,6 @@
 <wire x1="2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <text x="4.064" y="-0.508" size="1.27" layer="94">FUSE</text>
 </symbol>
-<symbol name="BB_CONTACT">
-<pin name="P$1" x="0" y="0" length="middle"/>
-</symbol>
 <symbol name="PIN">
 <pin name="P$1" x="0" y="0" length="middle"/>
 </symbol>
@@ -301,7 +298,7 @@
 </deviceset>
 <deviceset name="BB_CONTACT">
 <gates>
-<gate name="G$1" symbol="BB_CONTACT" x="0" y="0"/>
+<gate name="G$1" symbol="PIN" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="BB_CONTACT">
@@ -475,7 +472,6 @@
 <pinref part="U$23" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="5"/>
 <junction x="20.32" y="83.82"/>
-<pinref part="J1" gate="A" pin="5"/>
 </segment>
 </net>
 <net name="THERM2" class="0">
@@ -484,7 +480,6 @@
 <pinref part="U$25" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="4"/>
 <junction x="22.86" y="83.82"/>
-<pinref part="J1" gate="A" pin="4"/>
 </segment>
 </net>
 <net name="THERM3" class="0">
@@ -493,7 +488,6 @@
 <pinref part="U$27" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="3"/>
 <junction x="25.4" y="83.82"/>
-<pinref part="J1" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="THERM4" class="0">
@@ -502,7 +496,6 @@
 <pinref part="U$29" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="2"/>
 <junction x="27.94" y="83.82"/>
-<pinref part="J1" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="THERM5" class="0">
@@ -510,7 +503,6 @@
 <pinref part="U$30" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="1"/>
 <junction x="30.48" y="83.82"/>
-<pinref part="J1" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="THERMGND" class="0">

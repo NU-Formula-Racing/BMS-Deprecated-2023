@@ -80,8 +80,8 @@
 <smd name="P$2" x="0" y="8.35" dx="2.8" dy="2" layer="16"/>
 <smd name="P$3" x="0" y="0" dx="2.8" dy="2" layer="1"/>
 <smd name="P$4" x="0" y="8.35" dx="2.8" dy="2" layer="1"/>
-<pad name="P$5" x="0" y="0" drill="0.6" shape="square"/>
-<pad name="P$6" x="0" y="8.35" drill="0.6" shape="square"/>
+<pad name="P$5" x="0" y="0.508" drill="0.3048" shape="square"/>
+<pad name="P$6" x="0" y="7.842" drill="0.3048" shape="square"/>
 </package>
 <package name="BB_CONTACT">
 <smd name="P$1" x="0" y="0" dx="5" dy="4" layer="1"/>
@@ -204,9 +204,6 @@
 <wire x1="2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <text x="4.064" y="-0.508" size="1.27" layer="94">FUSE</text>
 </symbol>
-<symbol name="BB_CONTACT">
-<pin name="P$1" x="0" y="0" length="middle"/>
-</symbol>
 <symbol name="PIN">
 <pin name="P$1" x="0" y="0" length="middle"/>
 </symbol>
@@ -301,7 +298,7 @@
 </deviceset>
 <deviceset name="BB_CONTACT">
 <gates>
-<gate name="G$1" symbol="BB_CONTACT" x="0" y="0"/>
+<gate name="G$1" symbol="PIN" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="BB_CONTACT">
@@ -476,7 +473,6 @@
 <label x="17.78" y="83.82" size="1.778" layer="95" rot="R270"/>
 <pinref part="J1" gate="A" pin="12"/>
 <junction x="20.32" y="83.82"/>
-<pinref part="J1" gate="A" pin="12"/>
 </segment>
 </net>
 <net name="THERM2" class="0">
@@ -486,7 +482,6 @@
 <label x="20.32" y="83.82" size="1.778" layer="95" rot="R270"/>
 <pinref part="J1" gate="A" pin="13"/>
 <junction x="22.86" y="83.82"/>
-<pinref part="J1" gate="A" pin="13"/>
 </segment>
 </net>
 <net name="THERM3" class="0">
@@ -496,7 +491,6 @@
 <label x="22.86" y="83.82" size="1.778" layer="95" rot="R270"/>
 <pinref part="J1" gate="A" pin="14"/>
 <junction x="25.4" y="83.82"/>
-<pinref part="J1" gate="A" pin="14"/>
 </segment>
 </net>
 <net name="THERM4" class="0">
@@ -506,7 +500,6 @@
 <label x="25.4" y="83.82" size="1.778" layer="95" rot="R270"/>
 <pinref part="J1" gate="A" pin="15"/>
 <junction x="27.94" y="83.82"/>
-<pinref part="J1" gate="A" pin="15"/>
 </segment>
 </net>
 <net name="THERM5" class="0">
@@ -515,7 +508,6 @@
 <label x="30.48" y="83.82" size="1.778" layer="95" rot="R270"/>
 <pinref part="J1" gate="A" pin="16"/>
 <junction x="30.48" y="83.82"/>
-<pinref part="J1" gate="A" pin="16"/>
 </segment>
 </net>
 <net name="THERMGND" class="0">

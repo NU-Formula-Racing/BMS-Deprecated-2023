@@ -80,8 +80,8 @@
 <smd name="P$2" x="0" y="8.35" dx="2.8" dy="2" layer="16"/>
 <smd name="P$3" x="0" y="0" dx="2.8" dy="2" layer="1"/>
 <smd name="P$4" x="0" y="8.35" dx="2.8" dy="2" layer="1"/>
-<pad name="P$5" x="0" y="0" drill="0.6" shape="square"/>
-<pad name="P$6" x="0" y="8.35" drill="0.6" shape="square"/>
+<pad name="P$5" x="0" y="0.508" drill="0.3048" shape="square"/>
+<pad name="P$6" x="0" y="7.842" drill="0.3048" shape="square"/>
 </package>
 <package name="CON18_2X9_UF_DF11_HIR">
 <pad name="1" x="0" y="0" drill="0.762" diameter="1.27"/>
@@ -286,9 +286,6 @@
 <wire x1="12.7" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
 <text x="4.1656" y="5.3086" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
 </symbol>
-<symbol name="BB_CONTACT">
-<pin name="P$1" x="0" y="0" length="middle"/>
-</symbol>
 <symbol name="PIN">
 <pin name="P$1" x="0" y="0" length="middle"/>
 </symbol>
@@ -348,7 +345,7 @@
 </deviceset>
 <deviceset name="BB_CONTACT">
 <gates>
-<gate name="G$1" symbol="BB_CONTACT" x="0" y="0"/>
+<gate name="G$1" symbol="PIN" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="BB_CONTACT">
@@ -399,7 +396,6 @@
 <part name="U$8" library="sense_pcb_components" deviceset="BB_CONTACT" device=""/>
 <part name="U$9" library="sense_pcb_components" deviceset="BB_CONTACT" device=""/>
 <part name="U$10" library="sense_pcb_components" deviceset="BB_CONTACT" device=""/>
-<part name="U$11" library="sense_pcb_components" deviceset="FUSE" device=""/>
 <part name="U$12" library="sense_pcb_components" deviceset="THERM_PIN" device=""/>
 <part name="U$13" library="sense_pcb_components" deviceset="THERM_PIN" device=""/>
 <part name="U$14" library="sense_pcb_components" deviceset="THERM_PIN" device=""/>
@@ -420,6 +416,7 @@
 <part name="U$29" library="sense_pcb_components" deviceset="THERM_PIN" device=""/>
 <part name="U$30" library="sense_pcb_components" deviceset="THERM_PIN" device=""/>
 <part name="U$31" library="sense_pcb_components" deviceset="THERM_PIN" device=""/>
+<part name="U$11" library="sense_pcb_components" deviceset="BB_CONTACT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -439,7 +436,6 @@
 <instance part="U$8" gate="G$1" x="20.32" y="10.16" smashed="yes" rot="R270"/>
 <instance part="U$9" gate="G$1" x="27.94" y="10.16" smashed="yes" rot="R270"/>
 <instance part="U$10" gate="G$1" x="35.56" y="10.16" smashed="yes" rot="R270"/>
-<instance part="U$11" gate="G$1" x="-5.08" y="7.62" smashed="yes" rot="R90"/>
 <instance part="U$12" gate="G$1" x="22.86" y="83.82" smashed="yes" rot="R270"/>
 <instance part="U$13" gate="G$1" x="22.86" y="83.82" smashed="yes" rot="R270"/>
 <instance part="U$14" gate="G$1" x="22.86" y="83.82" smashed="yes" rot="R270"/>
@@ -460,6 +456,7 @@
 <instance part="U$29" gate="G$1" x="33.02" y="83.82" smashed="yes" rot="R270"/>
 <instance part="U$30" gate="G$1" x="35.56" y="83.82" smashed="yes" rot="R270"/>
 <instance part="U$31" gate="G$1" x="35.56" y="83.82" smashed="yes" rot="R270"/>
+<instance part="U$11" gate="G$1" x="-5.08" y="17.78" smashed="yes" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -530,7 +527,6 @@
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$11" gate="G$1" pin="P$1"/>
 <wire x1="-5.08" y1="17.78" x2="-5.08" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="43.18" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
@@ -540,6 +536,7 @@
 <junction x="17.78" y="78.74"/>
 <pinref part="J1" gate="A" pin="7"/>
 <wire x1="20.32" y1="78.74" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U$11" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="THERMGND" class="0">
