@@ -494,7 +494,6 @@
 <pinref part="U$22" gate="G$1" pin="P$1"/>
 <pinref part="U$23" gate="G$1" pin="P$1"/>
 <junction x="25.4" y="83.82"/>
-<pinref part="U$23" gate="G$1" pin="P$1"/>
 <label x="22.86" y="83.82" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
@@ -504,7 +503,6 @@
 <pinref part="U$24" gate="G$1" pin="P$1"/>
 <pinref part="U$25" gate="G$1" pin="P$1"/>
 <junction x="27.94" y="83.82"/>
-<pinref part="U$25" gate="G$1" pin="P$1"/>
 <label x="25.4" y="83.82" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
@@ -514,7 +512,6 @@
 <pinref part="U$26" gate="G$1" pin="P$1"/>
 <pinref part="U$27" gate="G$1" pin="P$1"/>
 <junction x="30.48" y="83.82"/>
-<pinref part="U$27" gate="G$1" pin="P$1"/>
 <label x="27.94" y="83.82" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
@@ -524,7 +521,6 @@
 <pinref part="U$28" gate="G$1" pin="P$1"/>
 <pinref part="U$29" gate="G$1" pin="P$1"/>
 <junction x="33.02" y="83.82"/>
-<pinref part="U$29" gate="G$1" pin="P$1"/>
 <label x="30.48" y="83.82" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
@@ -534,7 +530,6 @@
 <pinref part="U$30" gate="G$1" pin="P$1"/>
 <pinref part="U$31" gate="G$1" pin="P$1"/>
 <junction x="35.56" y="83.82"/>
-<pinref part="U$31" gate="G$1" pin="P$1"/>
 <label x="35.56" y="83.82" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
@@ -558,7 +553,6 @@
 <pinref part="U$12" gate="G$1" pin="P$1"/>
 <pinref part="U$13" gate="G$1" pin="P$1"/>
 <junction x="22.86" y="83.82"/>
-<pinref part="U$13" gate="G$1" pin="P$1"/>
 <pinref part="U$14" gate="G$1" pin="P$1"/>
 <pinref part="U$15" gate="G$1" pin="P$1"/>
 <pinref part="U$16" gate="G$1" pin="P$1"/>

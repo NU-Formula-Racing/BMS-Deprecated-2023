@@ -109,6 +109,16 @@
 <wire x1="5" y1="51.95" x2="5" y2="80.5" width="0.001" layer="20"/>
 <wire x1="5" y1="80.5" x2="7.8" y2="83.3" width="0.001" layer="20"/>
 <wire x1="7.8" y1="83.3" x2="5" y2="83.3" width="0.001" layer="20"/>
+<text x="0.8382" y="194.4878" size="0.508" layer="21" font="vector" rot="R90">THERM1</text>
+<text x="1.397" y="163.6268" size="0.508" layer="21" font="vector" rot="R90">THERM1</text>
+<text x="1.0922" y="147.4724" size="0.508" layer="21" font="vector" rot="R90">THERM2</text>
+<text x="0.9144" y="128.7272" size="0.508" layer="21" font="vector" rot="R90">THERM2</text>
+<text x="0.8128" y="104.1146" size="0.508" layer="21" font="vector" rot="R90">THERM3</text>
+<text x="1.016" y="85.4202" size="0.508" layer="21" font="vector" rot="R90">THERM3</text>
+<text x="0.8382" y="61.722" size="0.508" layer="21" font="vector" rot="R90">THERM4</text>
+<text x="1.1684" y="47.6504" size="0.508" layer="21" font="vector" rot="R90">THERM4</text>
+<text x="1.397" y="26.3144" size="0.508" layer="21" font="vector" rot="R90">THERM5</text>
+<text x="1.524" y="8.4328" size="0.508" layer="21" rot="R90">THERM5</text>
 </plain>
 <libraries>
 <library name="sense_pcb_components">
@@ -451,7 +461,7 @@ design rules under a new name.</description>
 <element name="U$20" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.9558" y="24.9428" smashed="yes"/>
 <element name="U$21" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.905" y="5.1054" smashed="yes"/>
 <element name="U$22" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.397" y="190.9572" smashed="yes"/>
-<element name="U$23" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.2954" y="168.5036" smashed="yes"/>
+<element name="U$23" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.397" y="168.5036" smashed="yes"/>
 <element name="U$24" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.1684" y="126.3904" smashed="yes"/>
 <element name="U$25" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.2192" y="144.7546" smashed="yes"/>
 <element name="U$26" library="sense_pcb_components" package="THERM_PIN" value="THERM_PIN" x="1.143" y="102.3112" smashed="yes"/>
@@ -513,18 +523,16 @@ design rules under a new name.</description>
 <contactref element="U$22" pad="P$1"/>
 <contactref element="U$23" pad="P$1"/>
 <contactref element="J1" pad="5"/>
-<contactref element="J1" pad="5"/>
 <wire x1="2.0828" y1="243.332" x2="2.0828" y2="233.0586" width="0.127" layer="1"/>
 <wire x1="2.0828" y1="233.0586" x2="1.3208" y2="232.2966" width="0.127" layer="1"/>
 <wire x1="1.3208" y1="232.2966" x2="1.3208" y2="191.0334" width="0.127" layer="1"/>
 <wire x1="1.3208" y1="191.0334" x2="1.397" y2="190.9572" width="0.127" layer="1"/>
-<wire x1="1.397" y1="190.9572" x2="1.371771875" y2="168.579971875" width="0.127" layer="1"/>
-<wire x1="1.371771875" y1="168.579971875" x2="1.2954" y2="168.5036" width="0.127" layer="1"/>
+<wire x1="1.397" y1="190.9572" x2="1.371715625" y2="168.528996875" width="0.127" layer="1"/>
+<wire x1="1.371715625" y1="168.528996875" x2="1.397" y2="168.5036" width="0.127" layer="1"/>
 </signal>
 <signal name="THERM2">
 <contactref element="U$24" pad="P$1"/>
 <contactref element="U$25" pad="P$1"/>
-<contactref element="J1" pad="4"/>
 <contactref element="J1" pad="4"/>
 <wire x1="0.1016" y1="245.3386" x2="0.1016" y2="244.4994375" width="0.127" layer="1"/>
 <wire x1="0.9271" y1="241.6429" x2="1.27" y2="241.3" width="0.127" layer="1"/>
@@ -541,7 +549,6 @@ design rules under a new name.</description>
 <contactref element="U$26" pad="P$1"/>
 <contactref element="U$27" pad="P$1"/>
 <contactref element="J1" pad="3"/>
-<contactref element="J1" pad="3"/>
 <wire x1="0.88660625" y1="232.58083125" x2="0.8128" y2="232.507025" width="0.127" layer="1"/>
 <wire x1="1.143" y1="125.37169375" x2="1.143" y2="102.3112" width="0.127" layer="1"/>
 <wire x1="0.8128" y1="125.70189375" x2="1.143" y2="125.37169375" width="0.127" layer="1"/>
@@ -556,7 +563,6 @@ design rules under a new name.</description>
 <signal name="THERM4">
 <contactref element="U$28" pad="P$1"/>
 <contactref element="U$29" pad="P$1"/>
-<contactref element="J1" pad="2"/>
 <contactref element="J1" pad="2"/>
 <wire x1="-0.00468125" y1="241.299659375" x2="-0.00556875" y2="241.311809375" width="0.127" layer="1"/>
 <wire x1="-1.905" y1="245.3386" x2="-1.905" y2="244.4994375" width="0.127" layer="1"/>
@@ -576,7 +582,6 @@ design rules under a new name.</description>
 <signal name="THERM5">
 <contactref element="U$30" pad="P$1"/>
 <contactref element="U$31" pad="P$1"/>
-<contactref element="J1" pad="1"/>
 <contactref element="J1" pad="1"/>
 <wire x1="-0.252003125" y1="241.199034375" x2="-0.2503375" y2="241.176221875" width="0.127" layer="1"/>
 <wire x1="-0.2503375" y1="241.176221875" x2="-0.1682125" y2="241.105278125" width="0.127" layer="1"/>

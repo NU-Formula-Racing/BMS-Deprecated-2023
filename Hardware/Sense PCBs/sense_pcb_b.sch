@@ -494,7 +494,6 @@
 <pinref part="U$23" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="5"/>
 <junction x="25.4" y="83.82"/>
-<pinref part="J1" gate="A" pin="5"/>
 </segment>
 </net>
 <net name="THERM2" class="0">
@@ -503,7 +502,6 @@
 <pinref part="U$25" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="4"/>
 <junction x="27.94" y="83.82"/>
-<pinref part="J1" gate="A" pin="4"/>
 </segment>
 </net>
 <net name="THERM3" class="0">
@@ -512,7 +510,6 @@
 <pinref part="U$27" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="3"/>
 <junction x="30.48" y="83.82"/>
-<pinref part="J1" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="THERM4" class="0">
@@ -521,7 +518,6 @@
 <pinref part="U$29" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="2"/>
 <junction x="33.02" y="83.82"/>
-<pinref part="J1" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="THERM5" class="0">
@@ -530,7 +526,6 @@
 <pinref part="U$31" gate="G$1" pin="P$1"/>
 <pinref part="J1" gate="A" pin="1"/>
 <junction x="35.56" y="83.82"/>
-<pinref part="J1" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
