@@ -85,15 +85,8 @@ public:
         config.callback = [this]() { this->ChangeState(BMSState::kFault); };
         watchdog_timer_.begin(config);
 
-        timer_group_.AddTimer(15000,
-                              [open_wire_check]()
-                              {
-                                  open_wire_check = bq_.RunOpenWireCheck();
-                                  if (open_wire_check == true)
-                                  {
-                                      undervoltage_fault_ = true;
-                                  }
-                              });
+        timer_group_.AddTimer(
+            15000, [this]() { this->open_wire_fault_ = static_cast<BMSFault>(this->bq_.RunOpenWireCheck()); });
     }
 
     void Tick();
@@ -123,13 +116,12 @@ public:
     BMSFault GetOverTemperatureFault() override { return overtemperature_fault_; }
     BMSFault GetOverCurrentFault() override { return overcurrent_fault_; }
     BMSFault GetExternalKillFault() override { return external_kill_fault_; }
+    BMSFault GetOpenWireFault() override { return open_wire_fault_; }
 
 private:
     BQ79656 bq_;
 
     WDT_T4<WDT1> watchdog_timer_;
-
-    boolean open_wire_check;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
@@ -177,6 +169,7 @@ private:
     BMSFault overtemperature_fault_{BMSFault::kNotFaulted};
     BMSFault overcurrent_fault_{BMSFault::kNotFaulted};
     BMSFault external_kill_fault_{BMSFault::kNotFaulted};
+    BMSFault open_wire_fault_{BMSFault::kNotFaulted};
 
     static int fault_pin_;
     BMSFault fault_{BMSFault::kNotFaulted};

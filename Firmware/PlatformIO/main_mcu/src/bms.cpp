@@ -16,9 +16,10 @@ void BMS::CheckFaults()
     overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
     undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
 
-    fault_ = static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
-                                   || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
-                                   || static_cast<bool>(undertemperature_fault_));
+    fault_ =
+        static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
+                              || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
+                              || static_cast<bool>(undertemperature_fault_) || static_cast<bool>(open_wire_fault_));
 }
 
 void BMS::Tick()

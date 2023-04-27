@@ -43,4 +43,5 @@ public:
     virtual BMSFault GetOverTemperatureFault() = 0;
     virtual BMSFault GetOverCurrentFault() = 0;
     virtual BMSFault GetExternalKillFault() = 0;
+    virtual BMSFault GetOpenWireFault() = 0;
 };
