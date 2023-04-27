@@ -84,6 +84,16 @@ public:
         config.timeout = 2; /* in seconds, 0->128 */
         config.callback = [this]() { this->ChangeState(BMSState::kFault); };
         watchdog_timer_.begin(config);
+
+        timer_group_.AddTimer(15000,
+                              [open_wire_check]()
+                              {
+                                  open_wire_check = bq_.RunOpenWireCheck();
+                                  if (open_wire_check == true)
+                                  {
+                                      undervoltage_fault_ = true;
+                                  }
+                              });
     }
 
     void Tick();
@@ -118,6 +128,8 @@ private:
     BQ79656 bq_;
 
     WDT_T4<WDT1> watchdog_timer_;
+
+    boolean open_wire_check;
 
     const int kNumCellsSeries;
     const int kNumThermistors;
