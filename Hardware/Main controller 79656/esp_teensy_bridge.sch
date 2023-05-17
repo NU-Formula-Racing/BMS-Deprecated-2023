@@ -14314,8 +14314,8 @@ MAX3223-MAX3243.pdf</description>
 <part name="CCOMHPG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="RCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
 <part name="RCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-035X075" package3d_urn="urn:adsk.eagle:package:23677/1" value="2.2nf"/>
-<part name="CCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-035X075" package3d_urn="urn:adsk.eagle:package:23677/1" value="2.2nf"/>
+<part name="CCOMHP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="075-032X103" package3d_urn="urn:adsk.eagle:package:23646/1" value="2.2nf"/>
+<part name="CCOMHN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="075-032X103" package3d_urn="urn:adsk.eagle:package:23646/1" value="2.2nf"/>
 <part name="CCOMHNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="ESDCOMH" library="ESDAVLC6-2BLY" deviceset="ESDAVLC6-2BLY" device=""/>
 <part name="CCB10-1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uf"/>
@@ -14323,8 +14323,8 @@ MAX3223-MAX3243.pdf</description>
 <part name="CCOMLNG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="RCOMLN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
 <part name="RCOMLP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="49"/>
-<part name="CCOMLN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-035X075" package3d_urn="urn:adsk.eagle:package:23677/1" value="2.2nf"/>
-<part name="CCOMLP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-035X075" package3d_urn="urn:adsk.eagle:package:23677/1" value="2.2nf"/>
+<part name="CCOMLN" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="075-032X103" package3d_urn="urn:adsk.eagle:package:23646/1" value="2.2nf"/>
+<part name="CCOMLP" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="075-032X103" package3d_urn="urn:adsk.eagle:package:23646/1" value="2.2nf"/>
 <part name="CCOMLPG" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="220pf"/>
 <part name="ESDCOML" library="ESDAVLC6-2BLY" deviceset="ESDAVLC6-2BLY" device=""/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
@@ -14357,6 +14357,11 @@ MAX3223-MAX3243.pdf</description>
 <part name="J3" library="TE_Sureseal" deviceset="TE_AMP_SURESEAL_26" device=""/>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="6k"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
+<part name="CFET1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uf"/>
+<part name="CFET2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uf"/>
+<part name="CFET3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uf"/>
+<part name="CFET4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uf"/>
+<part name="R26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -14727,6 +14732,26 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="NAME" x="212.09" y="98.0186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="212.09" y="93.218" size="1.778" layer="96"/>
 </instance>
+<instance part="CFET1" gate="G$1" x="-121.92" y="-25.4" smashed="yes" rot="R270">
+<attribute name="NAME" x="-121.539" y="-26.924" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-126.619" y="-26.924" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="CFET2" gate="G$1" x="-127" y="5.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="-127.381" y="6.604" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-122.301" y="6.604" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="CFET3" gate="G$1" x="-127" y="30.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="-127.381" y="32.004" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-122.301" y="32.004" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="CFET4" gate="G$1" x="-127" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="-127.381" y="57.404" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-122.301" y="57.404" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R26" gate="G$1" x="238.76" y="81.28" smashed="yes">
+<attribute name="NAME" x="234.95" y="82.7786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="234.95" y="77.978" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14755,6 +14780,8 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-165.1" y1="58.42" x2="-165.1" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="58.42" x2="-165.1" y2="58.42" width="0.1524" layer="91"/>
 <junction x="-165.1" y="58.42"/>
+<pinref part="CFET4" gate="G$1" pin="1"/>
+<junction x="-129.54" y="55.88"/>
 </segment>
 <segment>
 <wire x1="-175.26" y1="48.26" x2="-170.18" y2="33.02" width="0.1524" layer="91"/>
@@ -14779,6 +14806,8 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-165.1" y1="33.02" x2="-165.1" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="33.02" x2="-165.1" y2="33.02" width="0.1524" layer="91"/>
 <junction x="-165.1" y="33.02"/>
+<pinref part="CFET3" gate="G$1" pin="1"/>
+<junction x="-129.54" y="30.48"/>
 </segment>
 <segment>
 <wire x1="-175.26" y1="22.86" x2="-170.18" y2="7.62" width="0.1524" layer="91"/>
@@ -14803,6 +14832,8 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-165.1" y1="7.62" x2="-165.1" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="7.62" x2="-165.1" y2="7.62" width="0.1524" layer="91"/>
 <junction x="-165.1" y="7.62"/>
+<pinref part="CFET2" gate="G$1" pin="1"/>
+<junction x="-129.54" y="5.08"/>
 </segment>
 <segment>
 <label x="-142.24" y="-5.08" size="1.778" layer="95"/>
@@ -14825,6 +14856,8 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-162.56" y1="-25.4" x2="-162.56" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="-162.56" y="-20.32"/>
 <label x="-162.56" y="-25.4" size="1.778" layer="95"/>
+<pinref part="CFET1" gate="G$1" pin="2"/>
+<junction x="-127" y="-25.4"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="GND1"/>
@@ -15123,24 +15156,44 @@ MAX3223-MAX3243.pdf</description>
 <label x="-124.46" y="-10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-104.14" y1="60.96" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="60.96" x2="-101.6" y2="60.96" width="0.1524" layer="91"/>
 <label x="-99.06" y="60.96" size="1.778" layer="95"/>
 <pinref part="LED4" gate="G$1" pin="A"/>
+<pinref part="CFET4" gate="G$1" pin="2"/>
+<wire x1="-101.6" y1="60.96" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="55.88" x2="-101.6" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="55.88" x2="-101.6" y2="60.96" width="0.1524" layer="91"/>
+<junction x="-101.6" y="60.96"/>
 </segment>
 <segment>
-<wire x1="-104.14" y1="35.56" x2="-99.06" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="35.56" x2="-101.6" y2="35.56" width="0.1524" layer="91"/>
 <label x="-99.06" y="35.56" size="1.778" layer="95"/>
 <pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="CFET3" gate="G$1" pin="2"/>
+<wire x1="-101.6" y1="35.56" x2="-99.06" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="30.48" x2="-101.6" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="30.48" x2="-101.6" y2="35.56" width="0.1524" layer="91"/>
+<junction x="-101.6" y="35.56"/>
 </segment>
 <segment>
-<wire x1="-104.14" y1="10.16" x2="-99.06" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="10.16" x2="-101.6" y2="10.16" width="0.1524" layer="91"/>
 <label x="-99.06" y="10.16" size="1.778" layer="95"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="CFET2" gate="G$1" pin="2"/>
+<wire x1="-101.6" y1="10.16" x2="-99.06" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="5.08" x2="-101.6" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="5.08" x2="-101.6" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-101.6" y="10.16"/>
 </segment>
 <segment>
-<wire x1="-104.14" y1="-20.32" x2="-99.06" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="-20.32" x2="-101.6" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-99.06" y="-20.32" size="1.778" layer="95"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="CFET1" gate="G$1" pin="1"/>
+<wire x1="-101.6" y1="-20.32" x2="-99.06" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="-25.4" x2="-101.6" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="-25.4" x2="-101.6" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="-101.6" y="-20.32"/>
 </segment>
 <segment>
 <pinref part="RBAT-1" gate="G$1" pin="2"/>
@@ -16332,6 +16385,11 @@ MAX3223-MAX3243.pdf</description>
 <label x="226.06" y="96.52" size="1.778" layer="95"/>
 <pinref part="R24" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="R26" gate="G$1" pin="1"/>
+<wire x1="233.68" y1="81.28" x2="223.52" y2="81.28" width="0.1524" layer="91"/>
+<label x="213.36" y="81.28" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SHUTDOWN_SIGNAL" class="0">
 <segment>
@@ -16344,6 +16402,12 @@ MAX3223-MAX3243.pdf</description>
 <pinref part="U$3" gate="G$1" pin="38-A14/CS/IN1"/>
 <wire x1="40.64" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
 <label x="17.78" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R26" gate="G$1" pin="2"/>
+<pinref part="J3" gate="A" pin="14"/>
 </segment>
 </net>
 </nets>
