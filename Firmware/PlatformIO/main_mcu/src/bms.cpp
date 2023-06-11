@@ -83,6 +83,7 @@ void BMS::CalculateSOE()
     float power_capped_current = kMaxPowerOutput / pack_voltage_;
 
     max_allowed_discharge_current_ = std::min({uncapped_discharge_current, power_capped_current, kDischargeCurrent});
+    // Serial.println(max_allowed_discharge_current_);
     max_allowed_regen_current_ = std::min(uncapped_regen_current, kRegenCurrent);
 }
 
@@ -107,6 +108,7 @@ void BMS::UpdateValues()
     bq_.GetVoltages(voltages_);
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
+    CalculateSOE();
 #if serialdebug
     Serial.print("Current: ");
     Serial.print(current_[0]);
