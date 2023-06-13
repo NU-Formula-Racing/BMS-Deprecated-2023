@@ -25,6 +25,7 @@ void BMS::Tick()
 {
     watchdog_timer_.feed();  // so we don't reboot
     // check fault status
+    ProcessState();
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
         /* #if serialdebug
@@ -54,8 +55,6 @@ void BMS::Tick()
 
         ChangeState(BMSState::kFault);
     }
-
-    ProcessState();
 
     // log to SD, send to ESP, send to CAN
     // todo
@@ -133,9 +132,13 @@ void BMS::ProcessState()
             break;
         case BMSState::kPrecharge:
             // do a time-based precharge
+            if (command_signal_ == Command::kShutdown)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
             if (millis() >= state_entry_time_ + kPrechargeTime)
             {
-                if (digitalRead(charger_sense))
+                if (charger_.IsConnected())
                 {
                     ChangeState(BMSState::kCharging);
                 }
@@ -155,12 +158,17 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kShutdown);
             }
+            else if (charger_.IsConnected())
+            {
+                ChangeState(BMSState::kCharging);
+            }
             break;
         case BMSState::kCharging:
             static constexpr float kMaxChargeVoltage{4.19f};
 
-            if (!digitalRead(charger_sense))
+            if (!charger_.IsConnected() || command_signal_ == Command::kShutdown)
             {
+                charger_.Disable();
                 ChangeState(BMSState::kShutdown);
                 break;
             }
@@ -169,12 +177,12 @@ void BMS::ProcessState()
             // pause charging if danger of overvoltage
             if (max_cell_voltage_ > kMaxChargeVoltage)
             {
-                // pause charging, for now just disconnect positive, will actually set current to 0
-                digitalWrite(contactorp_ctrl, LOW);
+                charger_.SetVoltageCurrent(kMaxChargeVoltage * kNumCellsSeries, 0);
+                // pause charging, set current to 0
             }
             else
             {
-                digitalWrite(contactorp_ctrl, LOW);
+                charger_.SetVoltageCurrent(kMaxChargeVoltage * kNumCellsSeries, max_allowed_regen_current_);
             }
             // todo
             break;

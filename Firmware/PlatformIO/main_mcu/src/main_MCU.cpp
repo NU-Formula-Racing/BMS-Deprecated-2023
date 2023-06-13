@@ -20,7 +20,7 @@ GWPCharger charger{vb_can};
 
 VirtualTimerGroup timer_group{};
 
-const uint8_t kNumSegmentsConfig = 5;
+const uint8_t kNumSegmentsConfig = 6;
 
 NXFT15XH103FA2B050 thermistor{};
 BMS bms{BQ79656{Serial8, 35, thermistor, 20 * kNumSegmentsConfig, 16 * kNumSegmentsConfig, 2 * kNumSegmentsConfig},
@@ -42,9 +42,11 @@ void setup()
 #endif
     // put your setup code here, to run once:
     bms.Initialize();
+    Serial.println("BMS Inited");
     hp_can.Initialize(ICAN::BaudRate::kBaud1M);
     lp_can.Initialize(ICAN::BaudRate::kBaud1M);
     vb_can.Initialize(ICAN::BaudRate::kBaud1M);
+    Serial.println("CAN inited");
     timer_group.AddTimer(100, []() { bms.Tick(); });
     // delay(1000);
 }
