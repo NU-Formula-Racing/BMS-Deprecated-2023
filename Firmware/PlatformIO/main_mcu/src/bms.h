@@ -10,7 +10,7 @@
 #include "bq_comm.h"
 #include "can_interface.h"
 #include "cellinfo.h"
-#include "coulomb_couting.h"
+#include "coulomb_counting.h"
 #include "teensy_pin_defs.h"
 
 template <typename T>
@@ -104,12 +104,12 @@ public:
     float GetMinCellVoltage() override { return min_cell_voltage_; }
     float GetSOC() override
     {
-        if (BMSState::kActive == current_state_)
+        /* if (BMSState::kActive == current_state_)
         {
             return coulomb_count_.getSOC() * 100;
         }
-        else
-            return cell.VoltageToSOC(min_cell_voltage_);
+        else */
+        return cell.VoltageToSOC(min_cell_voltage_);
     }
 
     float GetMaxDischargeCurrent() override { return max_allowed_discharge_current_; }

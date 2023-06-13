@@ -108,6 +108,14 @@ void BMS::UpdateValues()
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
     CalculateSOE();
+    if (!coulomb_count_.Initialized())
+    {
+        coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), millis());
+    }
+    else
+    {
+        coulomb_count_.CountCoulombs(current_[0], millis());
+    }
 #if serialdebug
     Serial.print("Current: ");
     Serial.print(current_[0]);
@@ -162,7 +170,6 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kCharging);
             }
-            coulomb_count_.CountCoulombs(current_[0], millis());
             break;
         case BMSState::kCharging:
             static constexpr float kMaxChargeVoltage{4.19f};
@@ -222,7 +229,6 @@ void BMS::ChangeState(BMSState new_state)
         case BMSState::kActive:
             digitalWrite(contactorp_ctrl, HIGH);         // turn on car
             digitalWrite(contactorprecharge_ctrl, LOW);  // disable precharge when car is running
-            coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), state_entry_time_);
             current_state_ = BMSState::kActive;
             break;
         case BMSState::kCharging:

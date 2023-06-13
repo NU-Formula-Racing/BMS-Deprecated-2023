@@ -8,6 +8,7 @@ private:
     float full_capacity_ = 4.2 * 4;
     int remaining_;
     uint32_t previous_time_;
+    bool initialized_ = false;
 
 public:
     void Initialize(float SOC, uint32_t current_time_)
@@ -15,7 +16,10 @@ public:
         state_of_charge_ = SOC;
         remaining_ = SOC * full_capacity_ * 60;
         previous_time_ = current_time_;
+        initialized_ = true;
     }
+
+    bool Initialized() { return initialized_; }
 
     int CountCoulombs(float current, uint32_t current_time_)
     {
