@@ -130,11 +130,11 @@ private:
                                        soc_signal_};
 
     void AttachVoltageMessages(ICAN &bus,
-                               std::array<CANTXMessage<7> *, kNumVoltageMessages> message_ptr_array,
+                               std::array<CANTXMessage<7> *, kNumVoltageMessages> &message_ptr_array,
                                uint32_t transmit_period);
 
     void AttachTemperatureMessages(ICAN &bus,
-                                   std::array<CANTXMessage<7> *, kNumTemperatureMessages> message_ptr_array,
+                                   std::array<CANTXMessage<7> *, kNumTemperatureMessages> &message_ptr_array,
                                    uint32_t transmit_period);
 
     void UpdateSOESignals();

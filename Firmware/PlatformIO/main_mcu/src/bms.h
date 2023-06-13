@@ -131,8 +131,8 @@ private:
 
     // Consts for SoE calculation + Fault Detection
     const int kNumCellsParallel{4};
-    const float kDischargeCurrent{45.0f};
-    const float kRegenCurrent{45.0f};
+    const float kDischargeCurrent{45.0f * kNumCellsParallel};
+    const float kRegenCurrent{45.0f * kNumCellsParallel};
     const float kMaxPowerOutput{80000.0f};
     const float kCellUndervoltage{2.5f};
     const float kCellOvervoltage{4.2f};

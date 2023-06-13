@@ -20,8 +20,17 @@ GWPCharger charger{vb_can};
 
 VirtualTimerGroup timer_group{};
 
+const uint8_t kNumSegmentsConfig = 5;
+
 NXFT15XH103FA2B050 thermistor{};
-BMS bms{BQ79656{Serial8, 35, thermistor, 20, 16, 2}, 20, 16, charger, timer_group, hp_can, lp_can, vb_can};
+BMS bms{BQ79656{Serial8, 35, thermistor, 20 * kNumSegmentsConfig, 16 * kNumSegmentsConfig, 2 * kNumSegmentsConfig},
+        20 * kNumSegmentsConfig,
+        16 * kNumSegmentsConfig,
+        charger,
+        timer_group,
+        hp_can,
+        lp_can,
+        vb_can};
 
 void setup()
 {
