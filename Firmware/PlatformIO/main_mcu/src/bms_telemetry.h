@@ -46,7 +46,7 @@ private:
     MakeUnsignedCANSignal(float, 40, 8, 1, -40) battery_temperature_signal_;
     MakeSignedCANSignal(float, 48, 16, 0.01, 0) battery_current_signal_;
     CANTXMessage<5> hp_soe_message_{hp_can_bus_,
-                                    576,
+                                    0x240,
                                     8,
                                     kSOEMessageTransmitPeriod,
                                     timer_group_,
@@ -56,7 +56,7 @@ private:
                                     battery_temperature_signal_,
                                     battery_current_signal_};
     CANTXMessage<5> vb_soe_message_{vb_can_bus_,
-                                    576,
+                                    0x240,
                                     8,
                                     kSOEMessageTransmitPeriod,
                                     timer_group_,
@@ -75,7 +75,7 @@ private:
     MakeUnsignedCANSignal(IBMS::BMSFault, 5, 1, 1, 0) overcurrent_signal_;
     MakeUnsignedCANSignal(IBMS::BMSFault, 6, 1, 1, 0) external_kill_signal_;
     CANTXMessage<7> vb_fault_message_{vb_can_bus_,
-                                      592,
+                                      0x250,
                                       1,
                                       kFaultMessageTransmitPeriod,
                                       timer_group_,
@@ -87,7 +87,7 @@ private:
                                       overcurrent_signal_,
                                       external_kill_signal_};
     CANTXMessage<7> lp_fault_message_{lp_can_bus_,
-                                      592,
+                                      0x250,
                                       1,
                                       kFaultMessageTransmitPeriod,
                                       timer_group_,
@@ -107,7 +107,7 @@ private:
     MakeUnsignedCANSignal(float, 32, 8, 0.012, 2) min_cell_voltage_signal_;
     MakeUnsignedCANSignal(float, 40, 8, 0.5, 0) soc_signal_;
     CANTXMessage<6> hp_status_message_{hp_can_bus_,
-                                       577,
+                                       0x241,
                                        6,
                                        kStatusMessageTransmitPeriod,
                                        timer_group_,
@@ -118,7 +118,7 @@ private:
                                        min_cell_voltage_signal_,
                                        soc_signal_};
     CANTXMessage<6> vb_status_message_{vb_can_bus_,
-                                       577,
+                                       0x241,
                                        6,
                                        kStatusMessageTransmitPeriod,
                                        timer_group_,
