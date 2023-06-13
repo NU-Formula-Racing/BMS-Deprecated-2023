@@ -31,7 +31,7 @@ void BMSTelemetry::AttachVoltageMessages(ICAN &bus,
         voltage_signals_[i * kSignalsPerMessage + 6] = new MakeUnsignedCANSignal(float, 48, 8, 0.012, 2);
 
         message_ptr_array[i] = new CANTXMessage<7>{bus,
-                                                   512 + i,
+                                                   0x200 + i,
                                                    7,
                                                    transmit_period,
                                                    timer_group_,
@@ -60,7 +60,7 @@ void BMSTelemetry::AttachTemperatureMessages(ICAN &bus,
         temperature_signals_[i * kSignalsPerMessage + 6] = new MakeUnsignedCANSignal(float, 48, 8, 1, -40);
 
         message_ptr_array[i] = new CANTXMessage<7>{bus,
-                                                   544 + i,
+                                                   0x220 + i,
                                                    7,
                                                    transmit_period,
                                                    timer_group_,
