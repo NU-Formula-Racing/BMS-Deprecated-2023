@@ -9,6 +9,8 @@
 #include "bms_telemetry.h"
 #include "bq_comm.h"
 #include "can_interface.h"
+#include "cellinfo.h"
+#include "coulomb_counting.h"
 #include "teensy_pin_defs.h"
 
 template <typename T>
@@ -16,6 +18,49 @@ T clamp(const T& n, const T& lower, const T& upper)
 {
     return std::max(lower, std::min(n, upper));
 }
+
+class ShutdownInput
+{
+public:
+    ShutdownInput(uint8_t pin, float resistor_ratio, float min_lv_voltage, float min_charger_voltage)
+        : pin_{pin},
+          resistor_ratio_{resistor_ratio},
+          min_lv_voltage_{min_lv_voltage},
+          min_charger_voltage_{min_charger_voltage}
+    {
+        pinMode(pin_, INPUT);
+    }
+
+    enum class InputState
+    {
+        kShutdown,
+        kCharging,
+        kActive,
+    };
+
+    InputState GetStatus()
+    {
+        float voltage = analogRead(pin_) * 3.3 / 4095 * resistor_ratio_;
+        if (voltage > min_lv_voltage_)
+        {
+            return InputState::kActive;
+        }
+        else if (voltage > min_charger_voltage_)
+        {
+            return InputState::kCharging;
+        }
+        else
+        {
+            return InputState::kShutdown;
+        }
+    }
+
+private:
+    uint8_t pin_;
+    float resistor_ratio_;
+    float min_lv_voltage_;
+    float min_charger_voltage_;
+};
 
 class BMS : public IBMS
 {
@@ -35,7 +80,8 @@ public:
         VirtualTimerGroup& timer_group,
         ICAN& hp_can,
         ICAN& lp_can,
-        ICAN& vb_can)
+        ICAN& vb_can,
+        ShutdownInput& shutdown_input)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
@@ -44,6 +90,7 @@ public:
           hp_can_{hp_can},
           lp_can_{lp_can},
           vb_can_{vb_can},
+          shutdown_input_{shutdown_input},
           voltages_{std::vector<float>(kNumCellsSeries)},
           temperatures_{std::vector<float>(kNumThermistors)},
           current_{std::vector<float>(1)}
@@ -103,7 +150,15 @@ public:
     float GetMinCellTemperature() override { return min_cell_temperature_; }
     float GetMaxCellVoltage() override { return max_cell_voltage_; }
     float GetMinCellVoltage() override { return min_cell_voltage_; }
-    float GetSOC() override { return 0; }
+    float GetSOC() override
+    {
+        /* if (BMSState::kActive == current_state_)
+        {
+            return coulomb_count_.getSOC() * 100;
+        }
+        else */
+        return cell.VoltageToSOC(min_cell_voltage_);
+    }
 
     float GetMaxDischargeCurrent() override { return max_allowed_discharge_current_; }
     float GetMaxRegenCurrent() override { return max_allowed_regen_current_; }
@@ -119,6 +174,10 @@ public:
     BMSFault GetOpenWireFault() override { return open_wire_fault_; }
 
 private:
+    INR21700P42A cell;
+
+    CoulombCounting coulomb_count_;
+
     BQ79656 bq_;
 
     WDT_T4<WDT1> watchdog_timer_;
@@ -132,6 +191,8 @@ private:
     ICAN& hp_can_;
     ICAN& lp_can_;
     ICAN& vb_can_;
+
+    ShutdownInput& shutdown_input_;
 
     // Consts for SoE calculation + Fault Detection
     const int kNumCellsParallel{4};
@@ -162,6 +223,7 @@ private:
     float average_cell_temperature_;
     float max_allowed_discharge_current_;
     float max_allowed_regen_current_;
+    float state_of_charge_;
 
     BMSFault undervoltage_fault_{BMSFault::kNotFaulted};
     BMSFault overvoltage_fault_{BMSFault::kNotFaulted};

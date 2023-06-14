@@ -15,18 +15,19 @@ void BMS::CheckFaults()
     overcurrent_fault_ = static_cast<BMSFault>(current_[0] >= kOvercurrent);
     overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
     undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
+    external_kill_fault_ = static_cast<BMSFault>(shutdown_input_.GetStatus() == ShutdownInput::InputState::kShutdown
+                                                 && current_state_ != BMSState::kShutdown);
 
-    fault_ =
-        static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
-                              || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
-                              || static_cast<bool>(undertemperature_fault_) || static_cast<bool>(open_wire_fault_));
+    fault_ = static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
+                                   || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
+                                   || static_cast<bool>(undertemperature_fault_) || static_cast<bool>(open_wire_fault_)
+                                   || static_cast<bool>(external_kill_fault_));
 }
 
 void BMS::Tick()
 {
     watchdog_timer_.feed();  // so we don't reboot
     // check fault status
-    ProcessState();
     if (fault_ != BMSFault::kNotFaulted && current_state_ != BMSState::kFault)
     {
         /* #if serialdebug
@@ -56,6 +57,8 @@ void BMS::Tick()
 
         ChangeState(BMSState::kFault);
     }
+
+    ProcessState();
 
     // log to SD, send to ESP, send to CAN
     // todo
@@ -109,6 +112,14 @@ void BMS::UpdateValues()
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
     CalculateSOE();
+    if (!coulomb_count_.Initialized())
+    {
+        coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), millis());
+    }
+    else
+    {
+        coulomb_count_.CountCoulombs(current_[0], millis());
+    }
 #if serialdebug
     Serial.print("Current: ");
     Serial.print(current_[0]);
@@ -126,7 +137,7 @@ void BMS::ProcessState()
     {
         case BMSState::kShutdown:
             // check for command to go to active
-            if (command_signal_ == Command::kPrechargeAndCloseContactors || digitalRead(charger_sense))
+            if (command_signal_ == Command::kPrechargeAndCloseContactors)
             {
                 ChangeState(BMSState::kPrecharge);
             }
@@ -191,6 +202,7 @@ void BMS::ProcessState()
             // check for clear faults command
             if (command_signal_ == Command::kClearFaults)
             {
+                external_kill_fault_ = BMSFault::kNotFaulted;
                 ChangeState(BMSState::kShutdown);
             }
             break;
