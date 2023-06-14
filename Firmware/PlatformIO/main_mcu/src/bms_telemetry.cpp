@@ -101,7 +101,7 @@ void BMSTelemetry::UpdateStatusSignals()
     min_cell_temperature_signal_ = bms_.GetMinCellTemperature();
     max_cell_voltage_signal_ = bms_.GetMaxCellVoltage();
     min_cell_voltage_signal_ = bms_.GetMinCellVoltage();
-    soc_signal_ = bms_.GetSOC();
+    soc_signal_ = bms_.GetSOC() * 100;
 };
 
 void BMSTelemetry::TickHPCAN()

@@ -112,6 +112,14 @@ void BMS::UpdateValues()
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
     CalculateSOE();
+    if (!coulomb_count_.Initialized())
+    {
+        coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), millis());
+    }
+    else
+    {
+        coulomb_count_.CountCoulombs(current_[0], millis());
+    }
 #if serialdebug
     Serial.print("Current: ");
     Serial.print(current_[0]);

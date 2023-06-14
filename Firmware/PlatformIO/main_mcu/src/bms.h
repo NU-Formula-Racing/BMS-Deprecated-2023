@@ -9,6 +9,8 @@
 #include "bms_telemetry.h"
 #include "bq_comm.h"
 #include "can_interface.h"
+#include "cellinfo.h"
+#include "coulomb_counting.h"
 #include "teensy_pin_defs.h"
 
 template <typename T>
@@ -145,7 +147,15 @@ public:
     float GetMinCellTemperature() override { return min_cell_temperature_; }
     float GetMaxCellVoltage() override { return max_cell_voltage_; }
     float GetMinCellVoltage() override { return min_cell_voltage_; }
-    float GetSOC() override { return 0; }
+    float GetSOC() override
+    {
+        /* if (BMSState::kActive == current_state_)
+        {
+            return coulomb_count_.getSOC() * 100;
+        }
+        else */
+        return cell.VoltageToSOC(min_cell_voltage_);
+    }
 
     float GetMaxDischargeCurrent() override { return max_allowed_discharge_current_; }
     float GetMaxRegenCurrent() override { return max_allowed_regen_current_; }
@@ -160,6 +170,10 @@ public:
     BMSFault GetExternalKillFault() override { return external_kill_fault_; }
 
 private:
+    INR21700P42A cell;
+
+    CoulombCounting coulomb_count_;
+
     BQ79656 bq_;
 
     WDT_T4<WDT1> watchdog_timer_;
@@ -205,6 +219,7 @@ private:
     float average_cell_temperature_;
     float max_allowed_discharge_current_;
     float max_allowed_regen_current_;
+    float state_of_charge_;
 
     BMSFault undervoltage_fault_{BMSFault::kNotFaulted};
     BMSFault overvoltage_fault_{BMSFault::kNotFaulted};
