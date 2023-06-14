@@ -129,7 +129,11 @@ public:
         WDT_timings_t config;
         config.trigger = 1; /* in seconds, 0->128 */
         config.timeout = 2; /* in seconds, 0->128 */
-        config.callback = [this]() { this->ChangeState(BMSState::kFault); };
+        config.callback = [this]()
+        {
+            Serial.println("wdt");
+            this->ChangeState(BMSState::kFault);
+        };
         watchdog_timer_.begin(config);
 
         timer_group_.AddTimer(
