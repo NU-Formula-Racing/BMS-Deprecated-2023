@@ -15,7 +15,7 @@ void BMS::CheckFaults()
     overcurrent_fault_ = static_cast<BMSFault>(current_[0] >= kOvercurrent);
     overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
     undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
-    external_kill_fault_ = static_cast<BMSFault>(shutdown_input_.GetStatus() != ShutdownInput::InputState::kShutdown
+    external_kill_fault_ = static_cast<BMSFault>(shutdown_input_.GetStatus() == ShutdownInput::InputState::kShutdown
                                                  && current_state_ != BMSState::kShutdown);
 
     fault_ =
@@ -129,7 +129,7 @@ void BMS::ProcessState()
     {
         case BMSState::kShutdown:
             // check for command to go to active
-            if (command_signal_ == Command::kPrechargeAndCloseContactors || digitalRead(charger_sense))
+            if (command_signal_ == Command::kPrechargeAndCloseContactors)
             {
                 ChangeState(BMSState::kPrecharge);
             }
@@ -194,6 +194,7 @@ void BMS::ProcessState()
             // check for clear faults command
             if (command_signal_ == Command::kClearFaults)
             {
+                external_kill_fault_ = BMSFault::kNotFaulted;
                 ChangeState(BMSState::kShutdown);
             }
             break;
