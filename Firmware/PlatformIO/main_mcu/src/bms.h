@@ -40,7 +40,7 @@ public:
 
     InputState GetStatus()
     {
-        float voltage = analogRead(pin_) * 3.3 / 4095 * resistor_ratio_;
+        float voltage = analogRead(pin_) * 3.3 / 1023 / resistor_ratio_;
         if (voltage > min_lv_voltage_)
         {
             return InputState::kActive;
@@ -129,11 +129,7 @@ public:
         WDT_timings_t config;
         config.trigger = 1; /* in seconds, 0->128 */
         config.timeout = 2; /* in seconds, 0->128 */
-        config.callback = [this]()
-        {
-            Serial.println("wdt");
-            this->ChangeState(BMSState::kFault);
-        };
+        config.callback = [this]() { this->ChangeState(BMSState::kFault); };
         watchdog_timer_.begin(config);
 
         timer_group_.AddTimer(
