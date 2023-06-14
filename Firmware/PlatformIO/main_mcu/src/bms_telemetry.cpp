@@ -12,12 +12,12 @@ void BMSTelemetry::InitializeCAN()
 
 void BMSTelemetry::InitializeVoltageAndTemperatureMessages()
 {
-    AttachVoltageMessages(vb_can_bus_, voltage_messages_, kVoltageMessageTransmitPeriod);
     AttachTemperatureMessages(vb_can_bus_, temperature_messages_, kTemperatureMessageTransmitPeriod);
+    AttachVoltageMessages(vb_can_bus_, voltage_messages_, kVoltageMessageTransmitPeriod);
 }
 
 void BMSTelemetry::AttachVoltageMessages(ICAN &bus,
-                                         std::array<CANTXMessage<7> *, kNumVoltageMessages> message_ptr_array,
+                                         std::array<CANTXMessage<7> *, kNumVoltageMessages> &message_ptr_array,
                                          uint32_t transmit_period)
 {
     for (uint16_t i = 0; i < kNumVoltageMessages; i++)
@@ -46,7 +46,7 @@ void BMSTelemetry::AttachVoltageMessages(ICAN &bus,
 }
 
 void BMSTelemetry::AttachTemperatureMessages(ICAN &bus,
-                                             std::array<CANTXMessage<7> *, kNumTemperatureMessages> message_ptr_array,
+                                             std::array<CANTXMessage<7> *, kNumTemperatureMessages> &message_ptr_array,
                                              uint32_t transmit_period)
 {
     for (uint16_t i = 0; i < kNumTemperatureMessages; i++)
@@ -92,6 +92,7 @@ void BMSTelemetry::UpdateFaultSignals()
     overtemperature_signal_ = bms_.GetOverTemperatureFault();
     overcurrent_signal_ = bms_.GetOverCurrentFault();
     external_kill_signal_ = bms_.GetExternalKillFault();
+    open_wire_signal_ = bms_.GetOpenWireFault();
 };
 
 void BMSTelemetry::UpdateStatusSignals()
@@ -101,7 +102,7 @@ void BMSTelemetry::UpdateStatusSignals()
     min_cell_temperature_signal_ = bms_.GetMinCellTemperature();
     max_cell_voltage_signal_ = bms_.GetMaxCellVoltage();
     min_cell_voltage_signal_ = bms_.GetMinCellVoltage();
-    soc_signal_ = bms_.GetSOC();
+    soc_signal_ = bms_.GetSOC() * 100;
 };
 
 void BMSTelemetry::TickHPCAN()
@@ -114,12 +115,12 @@ void BMSTelemetry::TickHPCAN()
 
 void BMSTelemetry::TickVBCAN()
 {
-    for (int i = 0; i < kNumVoltageMessages * kSignalsPerMessage; i++)
+    for (uint8_t i = 0; i < kNumVoltageMessages * kSignalsPerMessage; i++)
     {
         *(voltage_signals_[i]) = i < bms_.GetVoltages().size() ? bms_.GetVoltages()[i] : 0;
     }
 
-    for (int i = 0; i < kNumTemperatureMessages * kSignalsPerMessage; i++)
+    for (uint8_t i = 0; i < kNumTemperatureMessages * kSignalsPerMessage; i++)
     {
         *(temperature_signals_[i]) = i < bms_.GetTemperatures().size() ? bms_.GetTemperatures()[i] : 0;
     }

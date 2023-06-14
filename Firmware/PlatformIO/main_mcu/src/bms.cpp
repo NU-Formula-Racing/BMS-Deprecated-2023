@@ -15,10 +15,13 @@ void BMS::CheckFaults()
     overcurrent_fault_ = static_cast<BMSFault>(current_[0] >= kOvercurrent);
     overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
     undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
+    external_kill_fault_ = static_cast<BMSFault>(shutdown_input_.GetStatus() == ShutdownInput::InputState::kShutdown);
 
-    fault_ = static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
-                                   || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
-                                   || static_cast<bool>(undertemperature_fault_));
+    fault_ =
+        static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
+                              || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
+                              || static_cast<bool>(undertemperature_fault_) || static_cast<bool>(open_wire_fault_)
+                              || (static_cast<bool>(external_kill_fault_) && current_state_ != BMSState::kShutdown));
 }
 
 void BMS::Tick()
@@ -83,6 +86,7 @@ void BMS::CalculateSOE()
     float power_capped_current = kMaxPowerOutput / pack_voltage_;
 
     max_allowed_discharge_current_ = std::min({uncapped_discharge_current, power_capped_current, kDischargeCurrent});
+    // Serial.println(max_allowed_discharge_current_);
     max_allowed_regen_current_ = std::min(uncapped_regen_current, kRegenCurrent);
 }
 
@@ -107,6 +111,15 @@ void BMS::UpdateValues()
     bq_.GetVoltages(voltages_);
     max_cell_voltage_ = *std::max_element(voltages_.begin(), voltages_.end());
     min_cell_voltage_ = *std::min_element(voltages_.begin(), voltages_.end());
+    CalculateSOE();
+    if (!coulomb_count_.Initialized())
+    {
+        coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), millis());
+    }
+    else
+    {
+        coulomb_count_.CountCoulombs(current_[0], millis());
+    }
 #if serialdebug
     Serial.print("Current: ");
     Serial.print(current_[0]);
@@ -124,16 +137,20 @@ void BMS::ProcessState()
     {
         case BMSState::kShutdown:
             // check for command to go to active
-            if (command_signal_ == Command::kPrechargeAndCloseContactors || digitalRead(charger_sense))
+            if (command_signal_ == Command::kPrechargeAndCloseContactors)
             {
                 ChangeState(BMSState::kPrecharge);
             }
             break;
         case BMSState::kPrecharge:
             // do a time-based precharge
+            if (command_signal_ == Command::kShutdown)
+            {
+                ChangeState(BMSState::kShutdown);
+            }
             if (millis() >= state_entry_time_ + kPrechargeTime)
             {
-                if (digitalRead(charger_sense))
+                if (charger_.IsConnected())
                 {
                     ChangeState(BMSState::kCharging);
                 }
@@ -153,13 +170,17 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kShutdown);
             }
-            coulomb_count_.CountCoulombs(current_[0], millis());
+            else if (charger_.IsConnected())
+            {
+                ChangeState(BMSState::kCharging);
+            }
             break;
         case BMSState::kCharging:
             static constexpr float kMaxChargeVoltage{4.19f};
 
-            if (!digitalRead(charger_sense))
+            if (!charger_.IsConnected() || command_signal_ == Command::kShutdown)
             {
+                charger_.Disable();
                 ChangeState(BMSState::kShutdown);
                 break;
             }
@@ -168,12 +189,12 @@ void BMS::ProcessState()
             // pause charging if danger of overvoltage
             if (max_cell_voltage_ > kMaxChargeVoltage)
             {
-                // pause charging, for now just disconnect positive, will actually set current to 0
-                digitalWrite(contactorp_ctrl, LOW);
+                charger_.SetVoltageCurrent(kMaxChargeVoltage * kNumCellsSeries, 0);
+                // pause charging, set current to 0
             }
             else
             {
-                digitalWrite(contactorp_ctrl, LOW);
+                charger_.SetVoltageCurrent(kMaxChargeVoltage * kNumCellsSeries, max_allowed_regen_current_);
             }
             // todo
             break;
@@ -181,6 +202,7 @@ void BMS::ProcessState()
             // check for clear faults command
             if (command_signal_ == Command::kClearFaults)
             {
+                external_kill_fault_ = BMSFault::kNotFaulted;
                 ChangeState(BMSState::kShutdown);
             }
             break;

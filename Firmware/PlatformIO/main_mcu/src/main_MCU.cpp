@@ -20,8 +20,20 @@ ElconCharger charger{vb_can};
 
 VirtualTimerGroup timer_group{};
 
+const uint8_t kNumSegmentsConfig = 6;
+
+ShutdownInput shutdown_input{A14, 1.0f / 7.0f, 15.0f, 10.0f};
+
 NXFT15XH103FA2B050 thermistor{};
-BMS bms{BQ79656{Serial8, 35, thermistor, 20, 16, 2}, 20, 16, charger, timer_group, hp_can, lp_can, vb_can};
+BMS bms{BQ79656{Serial8, 35, thermistor, 20 * kNumSegmentsConfig, 16 * kNumSegmentsConfig, 2 * kNumSegmentsConfig},
+        20 * kNumSegmentsConfig,
+        16 * kNumSegmentsConfig,
+        charger,
+        timer_group,
+        hp_can,
+        lp_can,
+        vb_can,
+        shutdown_input};
 
 void setup()
 {
@@ -33,9 +45,11 @@ void setup()
 #endif
     // put your setup code here, to run once:
     bms.Initialize();
+    Serial.println("BMS Inited");
     hp_can.Initialize(ICAN::BaudRate::kBaud1M);
     lp_can.Initialize(ICAN::BaudRate::kBaud1M);
     vb_can.Initialize(ICAN::BaudRate::kBaud1M);
+    Serial.println("CAN inited");
     timer_group.AddTimer(100, []() { bms.Tick(); });
     // delay(1000);
 }
