@@ -19,6 +19,49 @@ T clamp(const T& n, const T& lower, const T& upper)
     return std::max(lower, std::min(n, upper));
 }
 
+class ShutdownInput
+{
+public:
+    ShutdownInput(uint8_t pin, float resistor_ratio, float min_lv_voltage, float min_charger_voltage)
+        : pin_{pin},
+          resistor_ratio_{resistor_ratio},
+          min_lv_voltage_{min_lv_voltage},
+          min_charger_voltage_{min_charger_voltage}
+    {
+        pinMode(pin_, INPUT);
+    }
+
+    enum class InputState
+    {
+        kShutdown,
+        kCharging,
+        kActive,
+    };
+
+    InputState GetStatus()
+    {
+        float voltage = analogRead(pin_) * 3.3 / 4095 * resistor_ratio_;
+        if (voltage > min_lv_voltage_)
+        {
+            return InputState::kActive;
+        }
+        else if (voltage > min_charger_voltage_)
+        {
+            return InputState::kCharging;
+        }
+        else
+        {
+            return InputState::kShutdown;
+        }
+    }
+
+private:
+    uint8_t pin_;
+    float resistor_ratio_;
+    float min_lv_voltage_;
+    float min_charger_voltage_;
+};
+
 class BMS : public IBMS
 {
 public:
@@ -37,7 +80,8 @@ public:
         VirtualTimerGroup& timer_group,
         ICAN& hp_can,
         ICAN& lp_can,
-        ICAN& vb_can)
+        ICAN& vb_can,
+        ShutdownInput& shutdown_input)
         : bq_{bq},
           kNumCellsSeries{num_cells_series},
           kNumThermistors{num_thermistors},
@@ -46,6 +90,7 @@ public:
           hp_can_{hp_can},
           lp_can_{lp_can},
           vb_can_{vb_can},
+          shutdown_input_{shutdown_input},
           voltages_{std::vector<float>(kNumCellsSeries)},
           temperatures_{std::vector<float>(kNumThermistors)},
           current_{std::vector<float>(1)}
@@ -142,6 +187,8 @@ private:
     ICAN& hp_can_;
     ICAN& lp_can_;
     ICAN& vb_can_;
+
+    ShutdownInput& shutdown_input_;
 
     // Consts for SoE calculation + Fault Detection
     const int kNumCellsParallel{4};

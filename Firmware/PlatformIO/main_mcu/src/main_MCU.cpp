@@ -22,6 +22,8 @@ VirtualTimerGroup timer_group{};
 
 const uint8_t kNumSegmentsConfig = 6;
 
+ShutdownInput shutdown_input{A14, 1.0f / 7.0f, 15.0f, 10.0f};
+
 NXFT15XH103FA2B050 thermistor{};
 BMS bms{BQ79656{Serial8, 35, thermistor, 20 * kNumSegmentsConfig, 16 * kNumSegmentsConfig, 2 * kNumSegmentsConfig},
         20 * kNumSegmentsConfig,
@@ -30,7 +32,8 @@ BMS bms{BQ79656{Serial8, 35, thermistor, 20 * kNumSegmentsConfig, 16 * kNumSegme
         timer_group,
         hp_can,
         lp_can,
-        vb_can};
+        vb_can,
+        shutdown_input};
 
 void setup()
 {
