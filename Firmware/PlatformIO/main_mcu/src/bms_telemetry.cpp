@@ -92,6 +92,7 @@ void BMSTelemetry::UpdateFaultSignals()
     overtemperature_signal_ = bms_.GetOverTemperatureFault();
     overcurrent_signal_ = bms_.GetOverCurrentFault();
     external_kill_signal_ = bms_.GetExternalKillFault();
+    open_wire_signal_ = bms_.GetOpenWireFault();
 };
 
 void BMSTelemetry::UpdateStatusSignals()

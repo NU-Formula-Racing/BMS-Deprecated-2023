@@ -15,13 +15,13 @@ void BMS::CheckFaults()
     overcurrent_fault_ = static_cast<BMSFault>(current_[0] >= kOvercurrent);
     overtemperature_fault_ = static_cast<BMSFault>(max_cell_temperature_ >= kOvertemp);
     undertemperature_fault_ = static_cast<BMSFault>(min_cell_temperature_ <= kUndertemp);
-    external_kill_fault_ = static_cast<BMSFault>(shutdown_input_.GetStatus() == ShutdownInput::InputState::kShutdown
-                                                 && current_state_ != BMSState::kShutdown);
+    external_kill_fault_ = static_cast<BMSFault>(shutdown_input_.GetStatus() == ShutdownInput::InputState::kShutdown);
 
     fault_ =
         static_cast<BMSFault>(static_cast<bool>(overvoltage_fault_) || static_cast<bool>(undervoltage_fault_)
                               || static_cast<bool>(overcurrent_fault_) || static_cast<bool>(overtemperature_fault_)
-                              || static_cast<bool>(undertemperature_fault_) || static_cast<bool>(external_kill_fault_));
+                              || static_cast<bool>(undertemperature_fault_) || static_cast<bool>(open_wire_fault_)
+                              || (static_cast<bool>(external_kill_fault_) && current_state_ != BMSState::kShutdown));
 }
 
 void BMS::Tick()

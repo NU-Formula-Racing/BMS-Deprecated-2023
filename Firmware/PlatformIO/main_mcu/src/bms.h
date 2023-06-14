@@ -40,7 +40,7 @@ public:
 
     InputState GetStatus()
     {
-        float voltage = analogRead(pin_) * 3.3 / 4095 * resistor_ratio_;
+        float voltage = analogRead(pin_) * 3.3 / 1023 / resistor_ratio_;
         if (voltage > min_lv_voltage_)
         {
             return InputState::kActive;
@@ -131,6 +131,9 @@ public:
         config.timeout = 2; /* in seconds, 0->128 */
         config.callback = [this]() { this->ChangeState(BMSState::kFault); };
         watchdog_timer_.begin(config);
+
+        timer_group_.AddTimer(
+            15000, [this]() { this->open_wire_fault_ = static_cast<BMSFault>(this->bq_.RunOpenWireCheck()); });
     }
 
     void Tick();
@@ -168,6 +171,7 @@ public:
     BMSFault GetOverTemperatureFault() override { return overtemperature_fault_; }
     BMSFault GetOverCurrentFault() override { return overcurrent_fault_; }
     BMSFault GetExternalKillFault() override { return external_kill_fault_; }
+    BMSFault GetOpenWireFault() override { return open_wire_fault_; }
 
 private:
     INR21700P42A cell;
@@ -227,6 +231,7 @@ private:
     BMSFault overtemperature_fault_{BMSFault::kNotFaulted};
     BMSFault overcurrent_fault_{BMSFault::kNotFaulted};
     BMSFault external_kill_fault_{BMSFault::kNotFaulted};
+    BMSFault open_wire_fault_{BMSFault::kNotFaulted};
 
     static int fault_pin_;
     BMSFault fault_{BMSFault::kNotFaulted};
