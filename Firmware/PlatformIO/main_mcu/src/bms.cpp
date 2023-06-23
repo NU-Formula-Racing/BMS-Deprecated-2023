@@ -141,6 +141,11 @@ void BMS::ProcessState()
             {
                 ChangeState(BMSState::kPrecharge);
             }
+            else if (charger_.IsConnected() && !(command_signal_ == Command::kShutdown))
+            {
+                Serial.println("Detected charger");
+                ChangeState(BMSState::kPrecharge);
+            }
             break;
         case BMSState::kPrecharge:
             // do a time-based precharge
@@ -178,6 +183,8 @@ void BMS::ProcessState()
         case BMSState::kCharging:
             static constexpr float kMaxChargeVoltage{4.19f};
 
+            charger_.Tick(millis());
+
             if (!charger_.IsConnected() || command_signal_ == Command::kShutdown)
             {
                 charger_.Disable();
@@ -194,6 +201,16 @@ void BMS::ProcessState()
             }
             else
             {
+                if (high_current_charging_)
+                {
+                    // charger_.SetMaxCurrent(14);
+                    charger_.SetMaxPower(240 * 20);
+                }
+                else
+                {
+                    // charger_.SetMaxCurrent(0.1);
+                    charger_.SetMaxPower(120 * 15);
+                }
                 charger_.SetVoltageCurrent(kMaxChargeVoltage * kNumCellsSeries, max_allowed_regen_current_);
             }
             // todo
@@ -240,6 +257,9 @@ void BMS::ChangeState(BMSState new_state)
         case BMSState::kCharging:
             // enable charger?
             {
+                digitalWrite(contactorp_ctrl, HIGH);         // turn on car
+                digitalWrite(contactorprecharge_ctrl, LOW);  // disable precharge when car is running
+                coulomb_count_.Initialize(cell.VoltageToSOC(min_cell_voltage_), state_entry_time_);
                 charger_.Enable();
                 current_state_ = BMSState::kCharging;
                 break;
