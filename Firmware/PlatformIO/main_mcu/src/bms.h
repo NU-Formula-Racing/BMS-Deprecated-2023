@@ -152,12 +152,12 @@ public:
     float GetMinCellVoltage() override { return min_cell_voltage_; }
     float GetSOC() override
     {
-        /* if (BMSState::kActive == current_state_)
+        if (BMSState::kActive == current_state_)
         {
             return coulomb_count_.getSOC() * 100;
         }
-        else */
-        return cell.VoltageToSOC(min_cell_voltage_);
+        else
+            return cell.VoltageToSOC(min_cell_voltage_);
     }
 
     float GetMaxDischargeCurrent() override { return max_allowed_discharge_current_; }
@@ -208,8 +208,9 @@ private:
     const uint32_t kPrechargeTime{2000};
 
     MakeUnsignedCANSignal(Command, 0, 8, 1, 0) command_signal_{};
+    MakeUnsignedCANSignal(bool, 8, 1, 1, 0) high_current_charging_{};
     CANRXMessage<1> command_message_hp_{hp_can_, 0x242, command_signal_};
-    CANRXMessage<1> command_message_vb_{vb_can_, 0x242, command_signal_};
+    CANRXMessage<2> command_message_vb_{vb_can_, 0x242, command_signal_, high_current_charging_};
 
     std::vector<float> voltages_;
     std::vector<float> temperatures_;

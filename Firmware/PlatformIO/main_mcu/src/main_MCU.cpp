@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-#include "GWP-Charger.h"
+#include "ELCON-Charger.h"
 #include "bms.h"
 #include "bms_telemetry.h"
 #include "bq_comm.h"
@@ -16,7 +16,7 @@ TeensyCAN<1> hp_can{};
 TeensyCAN<2> lp_can{};
 TeensyCAN<3> vb_can{};
 
-GWPCharger charger{vb_can};
+ElconCharger charger{vb_can, 120 * 15, 14};
 
 VirtualTimerGroup timer_group{};
 
@@ -48,8 +48,9 @@ void setup()
     Serial.println("BMS Inited");
     hp_can.Initialize(ICAN::BaudRate::kBaud1M);
     lp_can.Initialize(ICAN::BaudRate::kBaud1M);
-    vb_can.Initialize(ICAN::BaudRate::kBaud1M);
+    vb_can.Initialize(ICAN::BaudRate::kBaud500K);
     Serial.println("CAN inited");
+    charger.Initialize();
     timer_group.AddTimer(100, []() { bms.Tick(); });
     // delay(1000);
 }
